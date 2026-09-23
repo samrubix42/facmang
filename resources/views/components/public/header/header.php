@@ -11,10 +11,10 @@ new class extends Component
     {
         return [
             ['label' => 'Home', 'href' => route('home')],
-            ['label' => 'About', 'href' => route('home').'#about'],
-            ['label' => 'Services', 'href' => route('home').'#services'],
+            ['label' => 'About Us', 'href' => route('about')],
+            ['label' => 'Services', 'href' => route('services')],
             ['label' => 'Why Us', 'href' => route('home').'#why-us'],
-            ['label' => 'Contact', 'href' => route('home').'#contact'],
+            ['label' => 'Contact', 'href' => route('contact')],
         ];
     }
 };
