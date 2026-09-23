@@ -27,9 +27,15 @@
                         <span>ops@facilitypro.com</span>
                     </a>
                     <span class="text-slate-700">•</span>
-                    <span class="text-slate-400 flex items-center gap-1.5">
-                        <i class="ri-map-pin-line text-emerald-400"></i> 100 Enterprise Plaza, Suite 400
-                    </span>
+                    @auth
+                        <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-1.5 text-emerald-400 font-semibold hover:text-emerald-300 transition">
+                            <i class="ri-dashboard-line"></i> Admin Console
+                        </a>
+                    @else
+                        <a href="{{ route('login') }}" class="flex items-center gap-1.5 text-slate-300 hover:text-emerald-400 transition">
+                            <i class="ri-user-line"></i> Staff Login
+                        </a>
+                    @endauth
                 </div>
             </div>
         </div>

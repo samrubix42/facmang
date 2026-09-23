@@ -13,6 +13,7 @@ Route::livewire('/login', 'pages::auth.login')->middleware('guest')->name('login
 
 Route::middleware('auth')->group(function () {
     Route::livewire('/admin', 'pages::admin.dashboard')->name('admin.dashboard');
+    Route::livewire('/admin/testimonials', 'admin::testimonial')->name('admin.testimonials');
 
     Route::post('/logout', function () {
         Auth::logout();

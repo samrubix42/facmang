@@ -779,34 +779,16 @@
             class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
             x-data="{
                 active: 0,
-                testimonials: [
-                    {
-                        quote: 'FacilityPro transformed our 400,000 sq. ft commercial tower. Restroom cleanliness ratings jumped 35% in month one, and their QR code inspection logs give our executives total visibility.',
-                        name: 'Marcus Vance',
-                        role: 'Senior VP of Operations',
-                        company: 'Harbor Executive Towers',
-                        metric: '+35% Cleanliness'
-                    },
-                    {
-                        quote: 'The level of professionalism in their office steward staff is unmatched. Uniformed, punctual, and highly proactive during executive boardroom prep and daily pantry management.',
-                        name: 'Sarah Jenkins',
-                        role: 'Head of Workplace Experience',
-                        company: 'Vertex Tech Labs HQ',
-                        metric: '100% W-2 Staff'
-                    },
-                    {
-                        quote: 'Managing 250,000 sq. ft of high-traffic office space required single-point SLA accountability. FacilityPro delivered an 18.4% overhead reduction with zero service disruptions.',
-                        name: 'David Thorne',
-                        role: 'Regional Asset Director',
-                        company: 'Brookfield Properties',
-                        metric: '18.4% Saved'
-                    }
-                ],
+                testimonials: @js($this->testimonials),
                 next() {
-                    this.active = (this.active + 1) % this.testimonials.length;
+                    if (this.testimonials.length > 0) {
+                        this.active = (this.active + 1) % this.testimonials.length;
+                    }
                 },
                 prev() {
-                    this.active = (this.active - 1 + this.testimonials.length) % this.testimonials.length;
+                    if (this.testimonials.length > 0) {
+                        this.active = (this.active - 1 + this.testimonials.length) % this.testimonials.length;
+                    }
                 }
             }"
         >

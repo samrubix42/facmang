@@ -30,6 +30,17 @@
                     </div>
                 </a>
 
+                <!-- Testimonials -->
+                <a
+                    href="{{ route('admin.testimonials') }}"
+                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.testimonials') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
+                >
+                    <div class="flex items-center gap-2.5">
+                        <i class="ri-chat-quote-line text-sm"></i>
+                        <span>Testimonials</span>
+                    </div>
+                </a>
+
                 <!-- Services -->
                 <a
                     href="{{ route('services') }}"
