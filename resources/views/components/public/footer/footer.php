@@ -10,11 +10,11 @@ new class extends Component
     public function serviceLinks(): array
     {
         return [
-            ['label' => 'Building Maintenance', 'href' => route('home').'#services'],
-            ['label' => 'Janitorial & Cleaning', 'href' => route('home').'#services'],
-            ['label' => 'Security Services', 'href' => route('home').'#services'],
-            ['label' => 'Energy Management', 'href' => route('home').'#services'],
-            ['label' => 'Grounds & Landscaping', 'href' => route('home').'#services'],
+            ['label' => 'Office Cleaning & Sweeping', 'href' => route('home').'#services'],
+            ['label' => 'Restroom & Toilet Hygiene', 'href' => route('home').'#services'],
+            ['label' => 'Office Boy & Pantry Support', 'href' => route('home').'#services'],
+            ['label' => 'Deep Disinfection Blitz', 'href' => route('home').'#services'],
+            ['label' => 'MEP & HVAC Maintenance', 'href' => route('home').'#services'],
         ];
     }
 
@@ -26,8 +26,9 @@ new class extends Component
         return [
             ['label' => 'About Us', 'href' => route('home').'#about'],
             ['label' => 'Why Choose Us', 'href' => route('home').'#why-us'],
-            ['label' => 'Our Services', 'href' => route('home').'#services'],
-            ['label' => 'Get a Quote', 'href' => route('home').'#contact'],
+            ['label' => 'SLA & Standards', 'href' => route('home').'#services'],
+            ['label' => 'Scope Calculator', 'href' => route('home').'#calculator'],
+            ['label' => 'Request Quote', 'href' => route('home').'#contact'],
         ];
     }
 };
