@@ -3,14 +3,9 @@
         <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.35fr] lg:gap-10">
             <!-- Brand Overview -->
             <div>
-                <a href="{{ route('home') }}" class="inline-flex items-center gap-3">
-                    <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-white p-1.5 shadow-lg shadow-black/20">
-                        <img src="{{ asset('logo.png') }}" alt="Facility Management Logo" class="h-full w-full object-contain" />
-                    </span>
-                    <span class="text-left leading-tight">
-                        <span class="block text-lg font-bold tracking-tight text-white">Facility<span class="text-emerald-400">Pro</span></span>
-                        <span class="block text-[10px] font-semibold uppercase tracking-[0.2em] text-emerald-400">Facility Operations</span>
-                    </span>
+                <!-- Brand Logo Only (Enlarged & Responsive) -->
+                <a href="{{ route('home') }}" class="inline-flex items-center">
+                    <img src="{{ asset('logo.png') }}" alt="Facility Management Logo" class="h-12 sm:h-14 lg:h-16 w-auto object-contain transition-transform hover:scale-105" />
                 </a>
                 <p class="mt-5 max-w-sm text-sm leading-relaxed text-emerald-200/80">
                     Architectural-grade facility management for enterprise workplaces. We deliver commercial sweeping, office cleaning, restroom sanitation, and dedicated pantry staffing with 99.8% SLA reliability.

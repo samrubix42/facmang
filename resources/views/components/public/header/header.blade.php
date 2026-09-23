@@ -4,15 +4,9 @@
 >
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between gap-4 lg:h-20">
-            <!-- Brand Logo -->
-            <a href="{{ route('home') }}" class="group flex shrink-0 items-center gap-3">
-                <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-50 p-1.5 ring-1 ring-emerald-200/80 shadow-xs transition group-hover:bg-emerald-100/70 lg:h-11 lg:w-11">
-                    <img src="{{ asset('logo.png') }}" alt="Facility Management Logo" class="h-full w-full object-contain" />
-                </span>
-                <span class="text-left leading-tight">
-                    <span class="block text-base font-bold tracking-tight text-slate-900 lg:text-lg">Facility<span class="text-emerald-600">Pro</span></span>
-                    <span class="block text-[10px] font-semibold uppercase tracking-[0.2em] text-emerald-700">Facility Operations</span>
-                </span>
+            <!-- Brand Logo Only (Enlarged & Responsive) -->
+            <a href="{{ route('home') }}" class="group flex shrink-0 items-center">
+                <img src="{{ asset('logo.png') }}" alt="Facility Management Logo" class="h-10 sm:h-12 lg:h-16 w-auto object-contain transition-transform group-hover:scale-105" />
             </a>
 
             <!-- Desktop Nav Links -->

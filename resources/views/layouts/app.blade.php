@@ -18,7 +18,7 @@
 
         @livewireStyles
     </head>
-    <body class="flex min-h-screen flex-col bg-slate-50 font-sans text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
+    <body class="flex min-h-screen flex-col bg-slate-50 font-sans text-slate-800 antialiased selection:bg-emerald-500 selection:text-white overflow-x-hidden">
         <livewire:public.header />
 
         <main class="flex-1">

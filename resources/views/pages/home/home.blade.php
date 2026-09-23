@@ -6,43 +6,43 @@
                     active: 0,
                     slides: [
                         {
-                            badge: 'ADMISSIONS OPEN 2027–2028',
-                            badgeStyle: 'bg-rose-50 text-rose-600 border-rose-200/80',
-                            title: 'Nurturing Minds, Shaping Futures',
-                            description: "Sahara Advanced World School (SAWS) Purnea blends traditional academic rigor with advanced methodologies to cultivate tomorrow's global leaders.",
-                            primaryBtn: 'Explore Admissions',
-                            primaryLink: '#calculator',
-                            secondaryBtn: 'Learn More',
-                            secondaryLink: '#services',
-                            image: '{{ asset("images/hero_facility.jpg") }}',
-                            tagTitle: 'HQ Campus Operations',
-                            tagSub: 'ISO 9001 & ISSA Certified'
-                        },
-                        {
                             badge: 'ENTERPRISE FACILITY OPERATIONS',
                             badgeStyle: 'bg-emerald-50 text-emerald-700 border-emerald-200/80',
-                            title: 'Architectural Precision for Workplace Operations',
+                            htmlTitle: 'Architectural Precision for <span class="text-emerald-600">Workplace Operations</span>',
                             description: 'Proactive commercial sweeping, hospital-grade restroom hygiene, dedicated corporate pantry staffing, and preventative MEP care with single-point SLA accountability.',
                             primaryBtn: 'Calculate SLA Scope',
                             primaryLink: '#calculator',
                             secondaryBtn: 'Explore Services',
                             secondaryLink: '#services',
-                            image: '{{ asset("images/office_sweeping_cleaning.jpg") }}',
+                            image: '{{ asset("images/hero_facility.jpg") }}',
                             tagTitle: 'Live SLA Dashboard',
                             tagSub: '99.85% Performance Rate'
                         },
                         {
-                            badge: 'SANITATION & HYGIENE CARE',
+                            badge: 'COMMERCIAL CLEANING & SWEEPING',
                             badgeStyle: 'bg-sky-50 text-sky-700 border-sky-200/80',
-                            title: 'Hospital-Grade Hygiene & Environmental Care',
-                            description: 'Continuous touchpoint disinfection, automated inventory replenishment, and certified eco-friendly cleaning formulas tailored to high-density workplaces.',
+                            htmlTitle: 'High-Performance Janitorial & <span class="text-emerald-600">Floor Care Services</span>',
+                            description: 'Motorized marble scrubbing, HEPA dust-free sweeping, diamond polishing, and workstation sanitization designed for corporate lobbies and commercial towers.',
+                            primaryBtn: 'Explore Janitorial Scope',
+                            primaryLink: '#calculator',
+                            secondaryBtn: 'Explore Services',
+                            secondaryLink: '#services',
+                            image: '{{ asset("images/office_sweeping_cleaning.jpg") }}',
+                            tagTitle: 'HEPA Dust-Free Care',
+                            tagSub: 'Zero Business Disruption'
+                        },
+                        {
+                            badge: 'RESTROOM SANITATION & HYGIENE',
+                            badgeStyle: 'bg-teal-50 text-teal-700 border-teal-200/80',
+                            htmlTitle: 'Hospital-Grade Toilet & <span class="text-emerald-600">Restroom Hygiene Care</span>',
+                            description: 'Microbial toilet washing, touchless sensor replenishment, 4-hour digital QR audit logging, and 100% eco-friendly virucidal sanitization formulas.',
                             primaryBtn: 'Book Sanitation Audit',
                             primaryLink: '#calculator',
                             secondaryBtn: 'View Portfolio',
                             secondaryLink: '#services',
                             image: '{{ asset("images/restroom_hygiene_sanitation.jpg") }}',
-                            tagTitle: 'Certified Sanitation',
-                            tagSub: '100% Non-Toxic Formulas'
+                            tagTitle: 'ISSA CIMS Certified',
+                            tagSub: '100% Eco-Safe Formulas'
                         }
                     ],
                     timer: null,
@@ -85,49 +85,49 @@
         class="relative overflow-hidden bg-white pt-8 pb-12 lg:pt-12 lg:pb-16"
     >
         <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid items-center gap-8 lg:grid-cols-12 lg:gap-12 min-h-[500px] lg:min-h-[560px]">
+            <div class="grid items-center gap-8 lg:grid-cols-12 lg:gap-12 min-h-0 lg:min-h-[560px]">
                 
                 <!-- Left Side: Content & Controls -->
-                <div class="z-10 max-w-2xl lg:col-span-6 lg:py-6">
+                <div class="z-10 max-w-2xl lg:col-span-6 lg:py-6 relative min-h-[300px] sm:min-h-[360px]">
                     <template x-for="(slide, index) in slides" :key="index">
                         <div 
                             x-show="active === index"
-                            x-transition:enter="transition ease-out duration-500 transform"
-                            x-transition:enter-start="opacity-0 translate-y-4"
-                            x-transition:enter-end="opacity-100 translate-y-0"
-                            x-transition:leave="transition ease-in duration-300 absolute"
-                            x-transition:leave-start="opacity-100 translate-y-0"
-                            x-transition:leave-end="opacity-0 -translate-y-4"
-                            class="space-y-6"
+                            x-transition:enter="transition-all duration-700 ease-in-out transform"
+                            x-transition:enter-start="translate-x-full opacity-0"
+                            x-transition:enter-end="translate-x-0 opacity-100"
+                            x-transition:leave="transition-all duration-700 ease-in-out transform absolute inset-0"
+                            x-transition:leave-start="translate-x-0 opacity-100"
+                            x-transition:leave-end="-translate-x-full opacity-0"
+                            class="space-y-5 sm:space-y-6"
                         >
                             <!-- Badge / Pill -->
                             <div>
                                 <span 
                                     :class="slide.badgeStyle"
-                                    class="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-bold uppercase tracking-widest shadow-xs"
+                                    class="inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest shadow-xs"
                                 >
                                     <span class="h-2 w-2 rounded-full bg-current animate-pulse"></span>
                                     <span x-text="slide.badge"></span>
                                 </span>
                             </div>
 
-                            <!-- Title -->
+                            <!-- Title with Theme Color Accent -->
                             <h1 
-                                class="text-3xl font-extrabold leading-[1.12] tracking-tight text-slate-900 sm:text-4xl lg:text-5xl"
-                                x-text="slide.title"
+                                class="text-2xl font-extrabold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl lg:text-5xl"
+                                x-html="slide.htmlTitle"
                             ></h1>
 
                             <!-- Description -->
                             <p 
-                                class="text-base leading-relaxed text-slate-600 sm:text-lg"
+                                class="text-sm leading-relaxed text-slate-600 sm:text-base lg:text-lg"
                                 x-text="slide.description"
                             ></p>
 
-                            <!-- Action Buttons -->
-                            <div class="flex flex-wrap items-center gap-4 pt-2">
+                            <!-- Action Buttons (Responsive Full Width on Mobile) -->
+                            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
                                 <a
                                     :href="slide.primaryLink"
-                                    class="inline-flex items-center gap-3 rounded-full bg-slate-900 px-8 py-4 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-slate-900/20 transition-all hover:bg-slate-800 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+                                    class="inline-flex items-center justify-center gap-3 rounded-full bg-emerald-600 px-7 sm:px-8 py-3.5 sm:py-4 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-emerald-600/25 transition-all hover:bg-emerald-700 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto"
                                 >
                                     <span x-text="slide.primaryBtn"></span>
                                     <i class="ri-arrow-right-line text-sm"></i>
@@ -135,7 +135,7 @@
                                 
                                 <a
                                     :href="slide.secondaryLink"
-                                    class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-7 py-4 text-xs font-bold uppercase tracking-wider text-slate-700 shadow-xs transition-all hover:border-slate-400 hover:bg-slate-50 hover:text-slate-900"
+                                    class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-6 sm:px-7 py-3.5 sm:py-4 text-xs font-bold uppercase tracking-wider text-slate-700 shadow-xs transition-all hover:border-emerald-400 hover:bg-emerald-50/50 hover:text-emerald-700 w-full sm:w-auto"
                                 >
                                     <span x-text="slide.secondaryBtn"></span>
                                     <i class="ri-arrow-down-line text-sm"></i>
@@ -151,14 +151,14 @@
                             <button 
                                 @click="prev()" 
                                 aria-label="Previous Slide"
-                                class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:border-slate-300 hover:bg-slate-900 hover:text-white active:scale-95 cursor-pointer"
+                                class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:border-emerald-600 hover:bg-emerald-600 hover:text-white active:scale-95 cursor-pointer"
                             >
                                 <i class="ri-arrow-left-line text-lg"></i>
                             </button>
                             <button 
                                 @click="next()" 
                                 aria-label="Next Slide"
-                                class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:border-slate-300 hover:bg-slate-900 hover:text-white active:scale-95 cursor-pointer"
+                                class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:border-emerald-600 hover:bg-emerald-600 hover:text-white active:scale-95 cursor-pointer"
                             >
                                 <i class="ri-arrow-right-line text-lg"></i>
                             </button>
@@ -170,36 +170,36 @@
                                 <template x-for="(slide, index) in slides" :key="index">
                                     <button 
                                         @click="goTo(index)"
-                                        :class="active === index ? 'w-8 bg-slate-900' : 'w-2.5 bg-slate-300 hover:bg-slate-400'"
+                                        :class="active === index ? 'w-8 bg-emerald-600' : 'w-2.5 bg-slate-300 hover:bg-slate-400'"
                                         class="h-2.5 rounded-full transition-all duration-300 cursor-pointer"
                                         :aria-label="'Go to slide ' + (index + 1)"
                                     ></button>
                                 </template>
                             </div>
                             <span class="text-xs font-bold tracking-widest text-slate-400">
-                                <span class="text-slate-900" x-text="'0' + (active + 1)"></span> / <span x-text="'0' + slides.length"></span>
+                                <span class="text-emerald-600" x-text="'0' + (active + 1)"></span> / <span x-text="'0' + slides.length"></span>
                             </span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Side: Image with Faded Left Edge (Matching Reference Image) -->
+                <!-- Right Side: Image with Faded Left Edge & Horizontal Slide Transition -->
                 <div class="relative lg:col-span-6 lg:h-full">
                     <div class="relative h-[380px] sm:h-[460px] lg:h-[540px] w-full overflow-hidden rounded-3xl border border-slate-100 shadow-2xl shadow-slate-200/60 bg-slate-50">
                         <template x-for="(slide, index) in slides" :key="index">
                             <div 
                                 x-show="active === index"
-                                x-transition:enter="transition ease-out duration-700 opacity-0 scale-105"
-                                x-transition:enter-start="opacity-0 scale-105"
-                                x-transition:enter-end="opacity-100 scale-100"
-                                x-transition:leave="transition ease-in duration-500 absolute inset-0"
-                                x-transition:leave-start="opacity-100"
-                                x-transition:leave-end="opacity-0"
+                                x-transition:enter="transition-all duration-700 ease-in-out transform"
+                                x-transition:enter-start="translate-x-full opacity-0 scale-105"
+                                x-transition:enter-end="translate-x-0 opacity-100 scale-100"
+                                x-transition:leave="transition-all duration-700 ease-in-out transform absolute inset-0"
+                                x-transition:leave-start="translate-x-0 opacity-100 scale-100"
+                                x-transition:leave-end="-translate-x-full opacity-0 scale-95"
                                 class="absolute inset-0"
                             >
                                 <img 
                                     :src="slide.image" 
-                                    :alt="slide.title"
+                                    :alt="slide.title || 'Facility Image'"
                                     class="h-full w-full object-cover object-center"
                                 />
 
@@ -210,7 +210,7 @@
                                 <!-- Floating Glass Telemetry Card -->
                                 <div class="absolute bottom-6 right-6 left-6 sm:left-auto sm:max-w-xs rounded-2xl border border-white/40 bg-white/80 p-4 shadow-xl backdrop-blur-md">
                                     <div class="flex items-center gap-3">
-                                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-white shadow-md">
+                                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white shadow-md">
                                             <i class="ri-shield-check-fill text-xl"></i>
                                         </div>
                                         <div>
@@ -228,50 +228,110 @@
         </div>
     </section>
 
-    {{-- Continuous Infinite Marquee Banner --}}
-    <section class="relative border-y border-slate-200/80 bg-slate-50 py-5 overflow-hidden">
+    {{-- Continuous Infinite Marquee Banner (Logos Only) --}}
+    <section class="relative border-y border-slate-200/80 bg-white py-6 overflow-hidden">
         <!-- Left & Right Soft Fade Gradients -->
-        <div class="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-slate-50 to-transparent"></div>
-        <div class="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-slate-50 to-transparent"></div>
+        <div class="pointer-events-none absolute left-0 top-0 z-10 h-full w-28 bg-gradient-to-r from-white to-transparent"></div>
+        <div class="pointer-events-none absolute right-0 top-0 z-10 h-full w-28 bg-gradient-to-l from-white to-transparent"></div>
 
         <!-- Marquee Track -->
         <div class="flex overflow-hidden select-none">
-            <div class="animate-marquee flex items-center gap-12 whitespace-nowrap text-xs font-bold uppercase tracking-wider text-slate-600">
-                <!-- Items Set 1 -->
-                <span class="flex items-center gap-2.5"><i class="ri-shield-star-fill text-emerald-600 text-base"></i> ISSA CIMS Certified Standards</span>
-                <span class="text-slate-300">•</span>
-                <span class="flex items-center gap-2.5"><i class="ri-building-4-line text-emerald-600 text-base"></i> Brookfield Properties</span>
-                <span class="text-slate-300">•</span>
-                <span class="flex items-center gap-2.5"><i class="ri-checkbox-circle-fill text-emerald-600 text-base"></i> 99.85% SLA Compliance Rate</span>
-                <span class="text-slate-300">•</span>
-                <span class="flex items-center gap-2.5"><i class="ri-government-line text-emerald-600 text-base"></i> JLL Commercial Real Estate</span>
-                <span class="text-slate-300">•</span>
-                <span class="flex items-center gap-2.5"><i class="ri-user-star-line text-emerald-600 text-base"></i> 350+ Vetted & Trained Staff</span>
-                <span class="text-slate-300">•</span>
-                <span class="flex items-center gap-2.5"><i class="ri-community-line text-emerald-600 text-base"></i> CBRE AssetCare Portfolio</span>
-                <span class="text-slate-300">•</span>
-                <span class="flex items-center gap-2.5"><i class="ri-flashlight-line text-emerald-600 text-base"></i> &lt;15 Min Emergency Response</span>
-                <span class="text-slate-300">•</span>
-                <span class="flex items-center gap-2.5"><i class="ri-bank-line text-emerald-600 text-base"></i> Vertex Tech Labs HQ</span>
-                <span class="text-slate-300">•</span>
+            <div class="animate-marquee flex items-center gap-16 whitespace-nowrap">
+                <!-- Logos Set 1 -->
+                <div class="flex items-center gap-16 grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100">
+                    <!-- Brookfield Properties Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 160 36" fill="currentColor" aria-label="Brookfield">
+                        <path d="M10 8h24c8 0 13 4 13 10 0 4-3 8-7 9 5 1 8 5 8 10 0 7-6 11-14 11H10V8zm8 14h14c4 0 7-2 7-5s-3-5-7-5H18v10zm0 18h15c5 0 8-2 8-6s-3-6-8-6H18v12zM52 24v24h-8V24h8zm0-16v8h-8V8h8zm14 16h8v4c2-3 5-5 10-5 2 0 4 1 5 2l-3 7c-1-1-3-1-4-1-4 0-8 3-8 9v12h-8V24zm32 0c9 0 16 7 16 16s-7 16-16 16-16-7-16-16 7-16 16-16zm0 24c5 0 9-4 9-8s-4-8-9-8-9 4-9 8 4 8 9 8z"/>
+                    </svg>
 
-                <!-- Items Set 2 (Duplicate for Continuous Loop) -->
-                <span class="flex items-center gap-2.5"><i class="ri-shield-star-fill text-emerald-600 text-base"></i> ISSA CIMS Certified Standards</span>
-                <span class="text-slate-300">•</span>
-                <span class="flex items-center gap-2.5"><i class="ri-building-4-line text-emerald-600 text-base"></i> Brookfield Properties</span>
-                <span class="text-slate-300">•</span>
-                <span class="flex items-center gap-2.5"><i class="ri-checkbox-circle-fill text-emerald-600 text-base"></i> 99.85% SLA Compliance Rate</span>
-                <span class="text-slate-300">•</span>
-                <span class="flex items-center gap-2.5"><i class="ri-government-line text-emerald-600 text-base"></i> JLL Commercial Real Estate</span>
-                <span class="text-slate-300">•</span>
-                <span class="flex items-center gap-2.5"><i class="ri-user-star-line text-emerald-600 text-base"></i> 350+ Vetted & Trained Staff</span>
-                <span class="text-slate-300">•</span>
-                <span class="flex items-center gap-2.5"><i class="ri-community-line text-emerald-600 text-base"></i> CBRE AssetCare Portfolio</span>
-                <span class="text-slate-300">•</span>
-                <span class="flex items-center gap-2.5"><i class="ri-flashlight-line text-emerald-600 text-base"></i> &lt;15 Min Emergency Response</span>
-                <span class="text-slate-300">•</span>
-                <span class="flex items-center gap-2.5"><i class="ri-bank-line text-emerald-600 text-base"></i> Vertex Tech Labs HQ</span>
-                <span class="text-slate-300">•</span>
+                    <!-- JLL Commercial Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 120 36" fill="currentColor" aria-label="JLL">
+                        <path d="M12 8h8v24h12v8H12V8zm28 0h8v32h-8V8zm20 0h8v24h12v8H60V8z"/>
+                    </svg>
+
+                    <!-- CBRE AssetCare Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 130 36" fill="currentColor" aria-label="CBRE">
+                        <path d="M12 24c0-9 7-16 16-16 6 0 11 3 14 8l-7 4c-2-3-4-4-7-4-5 0-9 4-9 8s4 8 9 8c3 0 5-1 7-4l7 4c-3 5-8 8-14 8-9 0-16-7-16-16zm36-16h20c5 0 9 2 9 6 0 3-2 5-5 6 4 1 6 3 6 7 0 5-4 7-10 7H48V8zm8 11h11c2 0 4-1 4-3s-2-3-4-3H56v6zm0 11h12c2 0 4-1 4-3s-2-3-4-3H56v6zm34-22h24v6H90v7h18v6H90v7h20v6H90V8z"/>
+                    </svg>
+
+                    <!-- Microsoft Enterprise Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 140 36" fill="currentColor" aria-label="Microsoft">
+                        <rect x="8" y="6" width="12" height="12" fill="#F25022"/>
+                        <rect x="23" y="6" width="12" height="12" fill="#7FBA00"/>
+                        <rect x="8" y="21" width="12" height="12" fill="#00A4EF"/>
+                        <rect x="23" y="21" width="12" height="12" fill="#FFB900"/>
+                        <text x="44" y="25" font-family="sans-serif" font-weight="600" font-size="16" fill="currentColor">Microsoft</text>
+                    </svg>
+
+                    <!-- Vertex Tech Labs Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 130 36" fill="currentColor" aria-label="Vertex">
+                        <path d="M10 8l12 28L34 8h-8l-8 19L18 8h-8zm30 0h24v6H48v7h16v6H48v7h16v6H40V8zm30 0h20c5 0 9 3 9 7 0 4-3 6-6 7 4 1 5 4 5 8v7h-8v-6c0-3-2-4-5-4h-7v10h-8V8zm8 13h10c2 0 4-1 4-3s-2-3-4-3H78v6zm30-13h24v6h-8v26h-8V14h-8V8z"/>
+                    </svg>
+
+                    <!-- Intel Commercial Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 110 36" fill="currentColor" aria-label="Intel">
+                        <path d="M12 14h8v22h-8V14zm0-10h8v7h-8V4zm14 10h8v3c2-2 5-4 9-4 8 0 11 5 11 12v11h-8V26c0-4-2-6-5-6-3 0-5 2-5 6v10h-8V14zm36-6h8v7h-8V8zm0 6h8v22h-8V14z"/>
+                    </svg>
+
+                    <!-- Salesforce Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 150 36" fill="currentColor" aria-label="Salesforce">
+                        <path d="M22 10c3-4 8-6 13-5 4-4 10-6 16-3 4-3 9-4 14-2 6 2 10 7 11 13 4 1 7 4 8 8 1 5-2 10-7 11H18c-5 0-9-4-10-9 0-5 3-9 8-10 1-5 3-9 6-13z"/>
+                        <text x="68" y="24" font-family="sans-serif" font-weight="700" font-size="15" fill="currentColor">salesforce</text>
+                    </svg>
+
+                    <!-- Tesla HQ Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 110 36" fill="currentColor" aria-label="Tesla">
+                        <path d="M10 12h32v4H28v20h-4V16H10v-4zm0-5c10-2 22-2 32 0v3c-10-2-22-2-32 0V7zm40 5h20v4H58v6h10v4H58v6h12v4H50V12zm28 0h18v4H84v6h10v4H84v12h-6V12z"/>
+                    </svg>
+                </div>
+
+                <!-- Logos Set 2 (Duplicate for Continuous Loop) -->
+                <div class="flex items-center gap-16 grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100">
+                    <!-- Brookfield Properties Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 160 36" fill="currentColor" aria-label="Brookfield">
+                        <path d="M10 8h24c8 0 13 4 13 10 0 4-3 8-7 9 5 1 8 5 8 10 0 7-6 11-14 11H10V8zm8 14h14c4 0 7-2 7-5s-3-5-7-5H18v10zm0 18h15c5 0 8-2 8-6s-3-6-8-6H18v12zM52 24v24h-8V24h8zm0-16v8h-8V8h8zm14 16h8v4c2-3 5-5 10-5 2 0 4 1 5 2l-3 7c-1-1-3-1-4-1-4 0-8 3-8 9v12h-8V24zm32 0c9 0 16 7 16 16s-7 16-16 16-16-7-16-16 7-16 16-16zm0 24c5 0 9-4 9-8s-4-8-9-8-9 4-9 8 4 8 9 8z"/>
+                    </svg>
+
+                    <!-- JLL Commercial Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 120 36" fill="currentColor" aria-label="JLL">
+                        <path d="M12 8h8v24h12v8H12V8zm28 0h8v32h-8V8zm20 0h8v24h12v8H60V8z"/>
+                    </svg>
+
+                    <!-- CBRE AssetCare Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 130 36" fill="currentColor" aria-label="CBRE">
+                        <path d="M12 24c0-9 7-16 16-16 6 0 11 3 14 8l-7 4c-2-3-4-4-7-4-5 0-9 4-9 8s4 8 9 8c3 0 5-1 7-4l7 4c-3 5-8 8-14 8-9 0-16-7-16-16zm36-16h20c5 0 9 2 9 6 0 3-2 5-5 6 4 1 6 3 6 7 0 5-4 7-10 7H48V8zm8 11h11c2 0 4-1 4-3s-2-3-4-3H56v6zm0 11h12c2 0 4-1 4-3s-2-3-4-3H56v6zm34-22h24v6H90v7h18v6H90v7h20v6H90V8z"/>
+                    </svg>
+
+                    <!-- Microsoft Enterprise Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 140 36" fill="currentColor" aria-label="Microsoft">
+                        <rect x="8" y="6" width="12" height="12" fill="#F25022"/>
+                        <rect x="23" y="6" width="12" height="12" fill="#7FBA00"/>
+                        <rect x="8" y="21" width="12" height="12" fill="#00A4EF"/>
+                        <rect x="23" y="21" width="12" height="12" fill="#FFB900"/>
+                        <text x="44" y="25" font-family="sans-serif" font-weight="600" font-size="16" fill="currentColor">Microsoft</text>
+                    </svg>
+
+                    <!-- Vertex Tech Labs Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 130 36" fill="currentColor" aria-label="Vertex">
+                        <path d="M10 8l12 28L34 8h-8l-8 19L18 8h-8zm30 0h24v6H48v7h16v6H48v7h16v6H40V8zm30 0h20c5 0 9 3 9 7 0 4-3 6-6 7 4 1 5 4 5 8v7h-8v-6c0-3-2-4-5-4h-7v10h-8V8zm8 13h10c2 0 4-1 4-3s-2-3-4-3H78v6zm30-13h24v6h-8v26h-8V14h-8V8z"/>
+                    </svg>
+
+                    <!-- Intel Commercial Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 110 36" fill="currentColor" aria-label="Intel">
+                        <path d="M12 14h8v22h-8V14zm0-10h8v7h-8V4zm14 10h8v3c2-2 5-4 9-4 8 0 11 5 11 12v11h-8V26c0-4-2-6-5-6-3 0-5 2-5 6v10h-8V14zm36-6h8v7h-8V8zm0 6h8v22h-8V14z"/>
+                    </svg>
+
+                    <!-- Salesforce Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 150 36" fill="currentColor" aria-label="Salesforce">
+                        <path d="M22 10c3-4 8-6 13-5 4-4 10-6 16-3 4-3 9-4 14-2 6 2 10 7 11 13 4 1 7 4 8 8 1 5-2 10-7 11H18c-5 0-9-4-10-9 0-5 3-9 8-10 1-5 3-9 6-13z"/>
+                        <text x="68" y="24" font-family="sans-serif" font-weight="700" font-size="15" fill="currentColor">salesforce</text>
+                    </svg>
+
+                    <!-- Tesla HQ Logo SVG -->
+                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 110 36" fill="currentColor" aria-label="Tesla">
+                        <path d="M10 12h32v4H28v20h-4V16H10v-4zm0-5c10-2 22-2 32 0v3c-10-2-22-2-32 0V7zm40 5h20v4H58v6h10v4H58v6h12v4H50V12zm28 0h18v4H84v6h10v4H84v12h-6V12z"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -553,6 +613,428 @@
                             <p class="mt-2 text-[11px] font-bold text-emerald-300">— Marcus Vance, Senior VP Property Operations</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- 4-Step Operational Onboarding Workflow --}}
+    <section id="workflow" class="scroll-mt-20 border-t border-slate-200 bg-white py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+                <div class="inline-flex items-center gap-2 rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-800">
+                    <i class="ri-git-commit-line text-emerald-600"></i>
+                    <span>Operational Blueprint</span>
+                </div>
+                <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                    4-Step SLA Onboarding Workflow
+                </h2>
+                <p class="mt-4 text-base leading-relaxed text-slate-600">
+                    From initial spatial audit to continuous SLA optimization, our seamless operational blueprint guarantees zero downtime during transition.
+                </p>
+            </div>
+
+            <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <!-- Step 1 -->
+                <div class="relative rounded-2xl border border-slate-200/90 bg-slate-50/50 p-6 transition duration-300 hover:border-emerald-400 hover:bg-white hover:shadow-xl hover:shadow-emerald-900/5">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-lg font-extrabold text-white shadow-md">01</span>
+                    <h3 class="mt-6 text-lg font-bold text-slate-900">Spatial & SLA Audit</h3>
+                    <p class="mt-2 text-xs leading-relaxed text-slate-600">
+                        Our senior operations director inspects floor plans, traffic patterns, and existing maintenance deficits to establish benchmark SLAs.
+                    </p>
+                    <span class="mt-4 inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600">
+                        Day 1-3 Baseline Assessment <i class="ri-arrow-right-line"></i>
+                    </span>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative rounded-2xl border border-slate-200/90 bg-slate-50/50 p-6 transition duration-300 hover:border-emerald-400 hover:bg-white hover:shadow-xl hover:shadow-emerald-900/5">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-600 text-lg font-extrabold text-white shadow-md">02</span>
+                    <h3 class="mt-6 text-lg font-bold text-slate-900">W-2 Staff Deployment</h3>
+                    <p class="mt-2 text-xs leading-relaxed text-slate-600">
+                        Vetted, background-checked, and uniformed janitorial operators and office stewards are deployed with site-specific protocols.
+                    </p>
+                    <span class="mt-4 inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600">
+                        100% W-2 Employed <i class="ri-arrow-right-line"></i>
+                    </span>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative rounded-2xl border border-slate-200/90 bg-slate-50/50 p-6 transition duration-300 hover:border-emerald-400 hover:bg-white hover:shadow-xl hover:shadow-emerald-900/5">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-lg font-extrabold text-white shadow-md">03</span>
+                    <h3 class="mt-6 text-lg font-bold text-slate-900">IoT & QR Telemetry</h3>
+                    <p class="mt-2 text-xs leading-relaxed text-slate-600">
+                        Restroom cleaning schedules and high-touch sanitization tasks are logged digitally via QR codes for instant manager audit access.
+                    </p>
+                    <span class="mt-4 inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600">
+                        Live Digital Audit Logs <i class="ri-arrow-right-line"></i>
+                    </span>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative rounded-2xl border border-slate-200/90 bg-slate-50/50 p-6 transition duration-300 hover:border-emerald-400 hover:bg-white hover:shadow-xl hover:shadow-emerald-900/5">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-600 text-lg font-extrabold text-white shadow-md">04</span>
+                    <h3 class="mt-6 text-lg font-bold text-slate-900">Monthly SLA Review</h3>
+                    <p class="mt-2 text-xs leading-relaxed text-slate-600">
+                        Dedicated SLA directors review cleaning metrics, expenditure analytics, and service enhancements every 30 days.
+                    </p>
+                    <span class="mt-4 inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600">
+                        Guaranteed ROI Metrics <i class="ri-arrow-right-line"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Enterprise Case Studies / Client Proof Grid --}}
+    <section id="case-studies" class="scroll-mt-20 border-t border-slate-200 bg-slate-50 py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+                <div class="inline-flex items-center gap-2 rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-800">
+                    <i class="ri-file-chart-line text-emerald-600"></i>
+                    <span>Enterprise Impact</span>
+                </div>
+                <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                    Proven Case Studies & Real Results
+                </h2>
+                <p class="mt-4 text-base leading-relaxed text-slate-600">
+                    See how leading corporate headquarters and commercial towers transformed their operational cleanliness and lowered total overhead.
+                </p>
+            </div>
+
+            <div class="mt-14 grid gap-8 md:grid-cols-3">
+                <!-- Case Study 1 -->
+                <div class="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Commercial Office Tower</span>
+                            <span class="rounded bg-slate-100 px-2.5 py-1 text-[10px] font-bold text-slate-600">400K Sq. Ft</span>
+                        </div>
+                        <h3 class="mt-4 text-lg font-bold text-slate-900">Harbor Executive Towers</h3>
+                        <p class="mt-2 text-xs leading-relaxed text-slate-600">
+                            Replaced fragmented vendors with single-point SLA management for sweeping, toilet hygiene, and office boy stewards.
+                        </p>
+                    </div>
+                    <div class="mt-6 rounded-xl bg-emerald-50/70 p-4 border border-emerald-100">
+                        <div class="grid grid-cols-2 gap-2 text-center">
+                            <div>
+                                <p class="text-xl font-extrabold text-slate-900">+38%</p>
+                                <p class="text-[10px] font-bold uppercase text-emerald-700">Hygiene Score</p>
+                            </div>
+                            <div>
+                                <p class="text-xl font-extrabold text-emerald-600">18.4%</p>
+                                <p class="text-[10px] font-bold uppercase text-emerald-700">Cost Reduced</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Tech Innovation Campus</span>
+                            <span class="rounded bg-slate-100 px-2.5 py-1 text-[10px] font-bold text-slate-600">250K Sq. Ft</span>
+                        </div>
+                        <h3 class="mt-4 text-lg font-bold text-slate-900">Vertex Global Labs</h3>
+                        <p class="mt-2 text-xs leading-relaxed text-slate-600">
+                            Deployed 24/7 MEP HVAC monitoring and electrostatic virus sanitization blitzes for cleanroom compliance.
+                        </p>
+                    </div>
+                    <div class="mt-6 rounded-xl bg-emerald-50/70 p-4 border border-emerald-100">
+                        <div class="grid grid-cols-2 gap-2 text-center">
+                            <div>
+                                <p class="text-xl font-extrabold text-slate-900">99.9%</p>
+                                <p class="text-[10px] font-bold uppercase text-emerald-700">MEP Uptime</p>
+                            </div>
+                            <div>
+                                <p class="text-xl font-extrabold text-emerald-600">&lt;12m</p>
+                                <p class="text-[10px] font-bold uppercase text-emerald-700">Dispatch Speed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Healthcare Facility</span>
+                            <span class="rounded bg-slate-100 px-2.5 py-1 text-[10px] font-bold text-slate-600">180K Sq. Ft</span>
+                        </div>
+                        <h3 class="mt-4 text-lg font-bold text-slate-900">St. Jude Medical Center</h3>
+                        <p class="mt-2 text-xs leading-relaxed text-slate-600">
+                            Implemented ISSA CIMS certified microbial toilet sanitization and digital QR code cleanliness tracking logs.
+                        </p>
+                    </div>
+                    <div class="mt-6 rounded-xl bg-emerald-50/70 p-4 border border-emerald-100">
+                        <div class="grid grid-cols-2 gap-2 text-center">
+                            <div>
+                                <p class="text-xl font-extrabold text-slate-900">100%</p>
+                                <p class="text-[10px] font-bold uppercase text-emerald-700">Audit Pass</p>
+                            </div>
+                            <div>
+                                <p class="text-xl font-extrabold text-emerald-600">0%</p>
+                                <p class="text-[10px] font-bold uppercase text-emerald-700">Chemical Toxicity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- 3-Card Interactive Testimonial Slider --}}
+    <section id="testimonials" class="scroll-mt-20 border-t border-slate-200 bg-white py-20 lg:py-28 overflow-hidden" x-data="{
+        active: 0,
+        testimonials: [
+            {
+                quote: 'FacilityPro transformed our 400,000 sq. ft commercial tower. Restroom cleanliness ratings jumped 35% in month one, and their QR code inspection logs give our executives total visibility.',
+                name: 'Marcus Vance',
+                role: 'Senior VP of Property Operations',
+                company: 'Harbor Executive Towers',
+                rating: 5,
+                metric: '+35% Hygiene Rating'
+            },
+            {
+                quote: 'The level of professionalism in their office boy steward staff is unmatched. Uniformed, punctual, and highly proactive during executive boardroom prep and daily pantry management.',
+                name: 'Sarah Jenkins',
+                role: 'Head of Workplace Experience',
+                company: 'Vertex Tech Labs HQ',
+                rating: 5,
+                metric: '100% W-2 Vetted Staff'
+            },
+            {
+                quote: 'Managing 250,000 sq. ft of high-traffic office space required single-point SLA accountability. FacilityPro delivered an 18.4% overhead reduction with zero service disruptions.',
+                name: 'David Thorne',
+                role: 'Regional Asset Director',
+                company: 'Brookfield Properties',
+                rating: 5,
+                metric: '18.4% Cost Overhead Saved'
+            },
+            {
+                quote: 'Their 15-minute emergency MEP dispatch saved us from a major water line disaster during peak hours. Their HVAC filter servicing cycle is the sharpest in the commercial industry.',
+                name: 'Elena Rostova',
+                role: 'Chief Facilities Engineer',
+                company: 'JLL Commercial Care',
+                rating: 5,
+                metric: '<15m Emergency Dispatch'
+            }
+        ],
+        next() {
+            this.active = (this.active + 1) % this.testimonials.length;
+        },
+        prev() {
+            this.active = (this.active - 1 + this.testimonials.length) % this.testimonials.length;
+        },
+        get visibleTestimonials() {
+            const list = [];
+            for (let i = 0; i < 3; i++) {
+                list.push(this.testimonials[(this.active + i) % this.testimonials.length]);
+            }
+            return list;
+        }
+    }">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center justify-between gap-6 sm:flex-row border-b border-slate-100 pb-8">
+                <div>
+                    <div class="inline-flex items-center gap-2 rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-800">
+                        <i class="ri-feedback-line text-emerald-600"></i>
+                        <span>Client Testimonials</span>
+                    </div>
+                    <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                        Trusted by Enterprise Facility Leaders
+                    </h2>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="flex items-center gap-3">
+                    <button 
+                        @click="prev()" 
+                        aria-label="Previous Testimonial"
+                        class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-xs transition hover:border-emerald-600 hover:bg-emerald-600 hover:text-white cursor-pointer active:scale-95"
+                    >
+                        <i class="ri-arrow-left-line text-lg"></i>
+                    </button>
+                    <button 
+                        @click="next()" 
+                        aria-label="Next Testimonial"
+                        class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-xs transition hover:border-emerald-600 hover:bg-emerald-600 hover:text-white cursor-pointer active:scale-95"
+                    >
+                        <i class="ri-arrow-right-line text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3 Card Testimonial Slider Grid -->
+            <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <template x-for="(item, index) in visibleTestimonials" :key="index">
+                    <div 
+                        class="flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-slate-50/50 p-7 shadow-xs transition duration-300 hover:-translate-y-1 hover:border-emerald-400 hover:bg-white hover:shadow-xl hover:shadow-emerald-900/5"
+                    >
+                        <div>
+                            <!-- Rating Stars & Metric Tag -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-1 text-amber-400">
+                                    <template x-for="star in item.rating">
+                                        <i class="ri-star-fill text-sm"></i>
+                                    </template>
+                                </div>
+                                <span class="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-[10px] font-bold text-emerald-800" x-text="item.metric"></span>
+                            </div>
+
+                            <!-- Quote Text -->
+                            <p class="mt-6 text-xs leading-relaxed text-slate-600 italic" x-text="'&ldquo;' + item.quote + '&rdquo;'"></p>
+                        </div>
+
+                        <!-- Client Info -->
+                        <div class="mt-8 flex items-center gap-3.5 border-t border-slate-200/60 pt-5">
+                            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-white font-bold text-sm shadow-md" x-text="item.name.charAt(0)"></div>
+                            <div>
+                                <h3 class="text-xs font-bold text-slate-900" x-text="item.name"></h3>
+                                <p class="text-[10px] font-medium text-slate-500" x-text="item.role + ' • ' + item.company"></p>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+
+    {{-- Clean & Professional FAQ Section --}}
+    <section id="faq" class="scroll-mt-20 border-t border-slate-200 bg-slate-50/70 py-20 lg:py-28" x-data="{ activeFaq: 1 }">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="inline-flex items-center gap-2 rounded-md border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-800">
+                    <i class="ri-questionnaire-line text-emerald-600"></i>
+                    <span>Operational Assurance & FAQ</span>
+                </div>
+                <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+                    Frequently Asked Questions
+                </h2>
+                <p class="mt-4 text-base leading-relaxed text-slate-600">
+                    Clear, transparent answers regarding SLA contracts, staff vetting, emergency response, and eco-friendly standards.
+                </p>
+            </div>
+
+            <div class="mt-14 space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="rounded-2xl border border-slate-200/90 bg-white shadow-xs transition-all duration-300 hover:border-emerald-300">
+                    <button 
+                        @click="activeFaq = (activeFaq === 1 ? null : 1)"
+                        class="flex w-full items-center justify-between p-6 text-left text-sm sm:text-base font-bold text-slate-900 transition hover:text-emerald-700 cursor-pointer gap-4"
+                    >
+                        <div class="flex items-center gap-3.5">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-200/60">
+                                <i class="ri-shield-keyhole-line text-lg"></i>
+                            </span>
+                            <span>How do you guarantee single-point SLA accountability?</span>
+                        </div>
+                        <i :class="activeFaq === 1 ? 'ri-subtract-line text-emerald-600' : 'ri-add-line text-slate-400'" class="text-xl shrink-0"></i>
+                    </button>
+                    <div x-show="activeFaq === 1" x-collapse class="px-6 pb-6 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-4">
+                        We assign a dedicated SLA Operations Director to your account who conducts weekly audits, manages all staff shifts, and serves as your single point of contact. If any service metric falls below 99% SLA, credits are automatically applied to your invoice.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="rounded-2xl border border-slate-200/90 bg-white shadow-xs transition-all duration-300 hover:border-emerald-300">
+                    <button 
+                        @click="activeFaq = (activeFaq === 2 ? null : 2)"
+                        class="flex w-full items-center justify-between p-6 text-left text-sm sm:text-base font-bold text-slate-900 transition hover:text-emerald-700 cursor-pointer gap-4"
+                    >
+                        <div class="flex items-center gap-3.5">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-200/60">
+                                <i class="ri-user-star-line text-lg"></i>
+                            </span>
+                            <span>Are all janitorial and office boy personnel W-2 employees?</span>
+                        </div>
+                        <i :class="activeFaq === 2 ? 'ri-subtract-line text-emerald-600' : 'ri-add-line text-slate-400'" class="text-xl shrink-0"></i>
+                    </button>
+                    <div x-show="activeFaq === 2" x-collapse class="px-6 pb-6 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-4">
+                        Yes. 100% of our on-site operators and pantry stewards are direct W-2 employees with full background checks, uniform standards, health benefits, and ongoing safety training. We do not subcontract core facility staff.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="rounded-2xl border border-slate-200/90 bg-white shadow-xs transition-all duration-300 hover:border-emerald-300">
+                    <button 
+                        @click="activeFaq = (activeFaq === 3 ? null : 3)"
+                        class="flex w-full items-center justify-between p-6 text-left text-sm sm:text-base font-bold text-slate-900 transition hover:text-emerald-700 cursor-pointer gap-4"
+                    >
+                        <div class="flex items-center gap-3.5">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-200/60">
+                                <i class="ri-flashlight-line text-lg"></i>
+                            </span>
+                            <span>What is your emergency dispatch response time for MEP failures?</span>
+                        </div>
+                        <i :class="activeFaq === 3 ? 'ri-subtract-line text-emerald-600' : 'ri-add-line text-slate-400'" class="text-xl shrink-0"></i>
+                    </button>
+                    <div x-show="activeFaq === 3" x-collapse class="px-6 pb-6 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-4">
+                        Our rapid-response emergency dispatch team guarantees an on-site technician within under 15 minutes for critical plumbing leaks, HVAC shut-offs, or electrical power trips across all managed properties.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="rounded-2xl border border-slate-200/90 bg-white shadow-xs transition-all duration-300 hover:border-emerald-300">
+                    <button 
+                        @click="activeFaq = (activeFaq === 4 ? null : 4)"
+                        class="flex w-full items-center justify-between p-6 text-left text-sm sm:text-base font-bold text-slate-900 transition hover:text-emerald-700 cursor-pointer gap-4"
+                    >
+                        <div class="flex items-center gap-3.5">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-200/60">
+                                <i class="ri-qr-code-line text-lg"></i>
+                            </span>
+                            <span>How does the IoT QR code digital cleaning log work?</span>
+                        </div>
+                        <i :class="activeFaq === 4 ? 'ri-subtract-line text-emerald-600' : 'ri-add-line text-slate-400'" class="text-xl shrink-0"></i>
+                    </button>
+                    <div x-show="activeFaq === 4" x-collapse class="px-6 pb-6 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-4">
+                        Each restroom and floor zone is equipped with a discreet QR code. Operators scan the code upon completion of each sanitation cycle, uploading instant timestamped proof to your online management portal.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="rounded-2xl border border-slate-200/90 bg-white shadow-xs transition-all duration-300 hover:border-emerald-300">
+                    <button 
+                        @click="activeFaq = (activeFaq === 5 ? null : 5)"
+                        class="flex w-full items-center justify-between p-6 text-left text-sm sm:text-base font-bold text-slate-900 transition hover:text-emerald-700 cursor-pointer gap-4"
+                    >
+                        <div class="flex items-center gap-3.5">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-200/60">
+                                <i class="ri-leaf-line text-lg"></i>
+                            </span>
+                            <span>What eco-friendly chemicals and equipment are used on-site?</span>
+                        </div>
+                        <i :class="activeFaq === 5 ? 'ri-subtract-line text-emerald-600' : 'ri-add-line text-slate-400'" class="text-xl shrink-0"></i>
+                    </button>
+                    <div x-show="activeFaq === 5" x-collapse class="px-6 pb-6 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-4">
+                        We exclusively use Green Seal certified non-toxic virucidal solutions and HEPA-filter motorized vacuum systems. All chemical formulas are 100% safe for building occupants and improve indoor air quality.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Live Performance Metrics Banner --}}
+    <section class="bg-gradient-to-r from-slate-950 via-emerald-950 to-slate-900 py-16 text-white border-y border-emerald-900/50">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 gap-8 lg:grid-cols-4 text-center">
+                <div>
+                    <p class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight">4.8M+</p>
+                    <p class="mt-2 text-xs font-bold uppercase tracking-wider text-emerald-400">Sq. Ft Managed</p>
+                </div>
+                <div>
+                    <p class="text-4xl lg:text-5xl font-extrabold text-emerald-400 tracking-tight">350+</p>
+                    <p class="mt-2 text-xs font-bold uppercase tracking-wider text-emerald-300">Vetted Staff</p>
+                </div>
+                <div>
+                    <p class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight">99.85%</p>
+                    <p class="mt-2 text-xs font-bold uppercase tracking-wider text-emerald-400">SLA Compliance</p>
+                </div>
+                <div>
+                    <p class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight">&lt;15m</p>
+                    <p class="mt-2 text-xs font-bold uppercase tracking-wider text-emerald-400">Emergency Dispatch</p>
                 </div>
             </div>
         </div>
