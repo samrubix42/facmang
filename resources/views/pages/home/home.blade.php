@@ -784,8 +784,8 @@
         </div>
     </section>
 
-    {{-- 3-Card Interactive Testimonial Slider --}}
-    <section id="testimonials" class="scroll-mt-20 border-t border-slate-200 bg-white py-20 lg:py-28 overflow-hidden" x-data="{
+    {{-- 3-Card Interactive Testimonial Slider (100% Responsive) --}}
+    <section id="testimonials" class="scroll-mt-20 border-t border-slate-200 bg-white py-16 sm:py-20 lg:py-28 overflow-hidden" x-data="{
         active: 0,
         testimonials: [
             {
@@ -826,23 +826,16 @@
         },
         prev() {
             this.active = (this.active - 1 + this.testimonials.length) % this.testimonials.length;
-        },
-        get visibleTestimonials() {
-            const list = [];
-            for (let i = 0; i < 3; i++) {
-                list.push(this.testimonials[(this.active + i) % this.testimonials.length]);
-            }
-            return list;
         }
     }">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col items-center justify-between gap-6 sm:flex-row border-b border-slate-100 pb-8">
-                <div>
+            <div class="flex flex-col items-center justify-between gap-4 sm:flex-row border-b border-slate-100 pb-6 sm:pb-8">
+                <div class="text-center sm:text-left">
                     <div class="inline-flex items-center gap-2 rounded-md border border-emerald-200 bg-emerald-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-800">
                         <i class="ri-feedback-line text-emerald-600"></i>
                         <span>Client Testimonials</span>
                     </div>
-                    <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                    <h2 class="mt-3 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl lg:text-4xl">
                         Trusted by Enterprise Facility Leaders
                     </h2>
                 </div>
@@ -852,47 +845,57 @@
                     <button 
                         @click="prev()" 
                         aria-label="Previous Testimonial"
-                        class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-xs transition hover:border-emerald-600 hover:bg-emerald-600 hover:text-white cursor-pointer active:scale-95"
+                        class="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-xs transition hover:border-emerald-600 hover:bg-emerald-600 hover:text-white cursor-pointer active:scale-95"
                     >
-                        <i class="ri-arrow-left-line text-lg"></i>
+                        <i class="ri-arrow-left-line text-base sm:text-lg"></i>
                     </button>
                     <button 
                         @click="next()" 
                         aria-label="Next Testimonial"
-                        class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-xs transition hover:border-emerald-600 hover:bg-emerald-600 hover:text-white cursor-pointer active:scale-95"
+                        class="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-xs transition hover:border-emerald-600 hover:bg-emerald-600 hover:text-white cursor-pointer active:scale-95"
                     >
-                        <i class="ri-arrow-right-line text-lg"></i>
+                        <i class="ri-arrow-right-line text-base sm:text-lg"></i>
                     </button>
                 </div>
             </div>
 
-            <!-- 3 Card Testimonial Slider Grid -->
-            <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <template x-for="(item, index) in visibleTestimonials" :key="index">
+            <!-- Responsive Testimonial Cards Container: 1 Card on Mobile, 2 on Tablet, 3 on Desktop -->
+            <div class="mt-8 sm:mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <template x-for="(cardOffset, i) in [0, 1, 2]" :key="i">
                     <div 
-                        class="flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-slate-50/50 p-7 shadow-xs transition duration-300 hover:-translate-y-1 hover:border-emerald-400 hover:bg-white hover:shadow-xl hover:shadow-emerald-900/5"
+                        :class="{
+                            'block': i === 0,
+                            'hidden md:block': i === 1,
+                            'hidden lg:block': i === 2
+                        }"
+                        class="transition-all duration-500"
                     >
-                        <div>
-                            <!-- Rating Stars & Metric Tag -->
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-1 text-amber-400">
-                                    <template x-for="star in item.rating">
-                                        <i class="ri-star-fill text-sm"></i>
-                                    </template>
+                        <div 
+                            x-data="{ get item() { return testimonials[(active + i) % testimonials.length] } }"
+                            class="flex flex-col justify-between h-full rounded-2xl border border-slate-200/90 bg-slate-50/50 p-6 sm:p-7 shadow-xs transition duration-300 hover:-translate-y-1 hover:border-emerald-400 hover:bg-white hover:shadow-xl hover:shadow-emerald-900/5"
+                        >
+                            <div>
+                                <!-- Rating Stars & Metric Tag -->
+                                <div class="flex items-center justify-between gap-2">
+                                    <div class="flex items-center gap-1 text-amber-400">
+                                        <template x-for="star in item.rating">
+                                            <i class="ri-star-fill text-xs sm:text-sm"></i>
+                                        </template>
+                                    </div>
+                                    <span class="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 sm:px-3 py-1 text-[10px] font-bold text-emerald-800 shrink-0" x-text="item.metric"></span>
                                 </div>
-                                <span class="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-[10px] font-bold text-emerald-800" x-text="item.metric"></span>
+
+                                <!-- Quote Text -->
+                                <p class="mt-5 sm:mt-6 text-xs sm:text-sm leading-relaxed text-slate-600 italic" x-text="'&ldquo;' + item.quote + '&rdquo;'"></p>
                             </div>
 
-                            <!-- Quote Text -->
-                            <p class="mt-6 text-xs leading-relaxed text-slate-600 italic" x-text="'&ldquo;' + item.quote + '&rdquo;'"></p>
-                        </div>
-
-                        <!-- Client Info -->
-                        <div class="mt-8 flex items-center gap-3.5 border-t border-slate-200/60 pt-5">
-                            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-white font-bold text-sm shadow-md" x-text="item.name.charAt(0)"></div>
-                            <div>
-                                <h3 class="text-xs font-bold text-slate-900" x-text="item.name"></h3>
-                                <p class="text-[10px] font-medium text-slate-500" x-text="item.role + ' • ' + item.company"></p>
+                            <!-- Client Info -->
+                            <div class="mt-6 sm:mt-8 flex items-center gap-3.5 border-t border-slate-200/60 pt-4 sm:pt-5">
+                                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-white font-bold text-sm shadow-md" x-text="item.name.charAt(0)"></div>
+                                <div>
+                                    <h3 class="text-xs sm:text-sm font-bold text-slate-900" x-text="item.name"></h3>
+                                    <p class="text-[10px] sm:text-xs font-medium text-slate-500" x-text="item.role + ' • ' + item.company"></p>
+                                </div>
                             </div>
                         </div>
                     </div>
