@@ -74,11 +74,11 @@
                         id="footer-email"
                         type="email"
                         placeholder="facility.manager@company.com"
-                        class="w-full rounded-lg border border-emerald-800/80 bg-emerald-900/40 px-3.5 py-2.5 text-xs text-white placeholder:text-emerald-400/60 focus:border-emerald-400 focus:outline-none focus:ring-1 focus:ring-emerald-400 sm:flex-1"
+                        class="w-full rounded-full border border-emerald-800/80 bg-emerald-900/40 px-4 py-2.5 text-xs text-white placeholder:text-emerald-400/60 focus:border-emerald-400 focus:outline-none focus:ring-1 focus:ring-emerald-400 sm:flex-1"
                     />
                     <button
                         type="button"
-                        class="rounded-lg bg-emerald-600 px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-emerald-500 shrink-0"
+                        class="rounded-full bg-emerald-600 px-5 py-2.5 text-xs font-semibold text-white transition hover:bg-emerald-500 shrink-0"
                     >
                         Subscribe
                     </button>

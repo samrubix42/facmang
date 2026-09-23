@@ -174,7 +174,7 @@
                     <!-- Request Quote Primary CTA -->
                     <a
                         href="{{ route('contact') }}"
-                        class="hidden items-center gap-2 rounded-xl bg-emerald-600 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-emerald-600/25 transition hover:bg-emerald-700 hover:shadow-lg sm:inline-flex"
+                        class="hidden items-center gap-2 rounded-full bg-emerald-600 px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition hover:bg-emerald-700 hover:shadow-md sm:inline-flex"
                     >
                         <span>Request Quote</span>
                         <i class="ri-arrow-right-line text-sm transition-transform group-hover:translate-x-0.5"></i>
@@ -280,7 +280,7 @@
                     <!-- Mobile Request Quote Button -->
                     <a
                         href="{{ route('contact') }}"
-                        class="mt-2 flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 py-3 text-center text-xs font-bold uppercase tracking-wider text-white shadow-md transition hover:bg-emerald-700"
+                        class="mt-2 flex items-center justify-center gap-2 rounded-full bg-emerald-600 px-5 py-3 text-center text-xs font-bold uppercase tracking-wider text-white shadow-sm transition hover:bg-emerald-700"
                         @click="menuOpen = false"
                     >
                         <span>Request Facility Quote</span>
