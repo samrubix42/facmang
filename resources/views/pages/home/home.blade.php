@@ -228,109 +228,184 @@
         </div>
     </section>
 
-    {{-- Continuous Infinite Marquee Banner (Logos Only) --}}
-    <section class="relative border-y border-slate-200/80 bg-white py-6 overflow-hidden">
+    {{-- Continuous Infinite Marquee Banner (Elevated Card Badges) --}}
+    <section class="relative border-y border-slate-200/80 bg-slate-50/70 py-7 overflow-hidden">
+        <!-- Header Trust Pill -->
+        <div class="mb-5 text-center px-4">
+            <span class="inline-flex items-center gap-2.5 rounded-full border border-slate-200/90 bg-white/90 px-4 py-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-600 shadow-xs backdrop-blur-xs">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span>Trusted by 500+ Enterprise Commercial Properties &amp; IT Parks</span>
+            </span>
+        </div>
+
         <!-- Left & Right Soft Fade Gradients -->
-        <div class="pointer-events-none absolute left-0 top-0 z-10 h-full w-28 bg-gradient-to-r from-white to-transparent"></div>
-        <div class="pointer-events-none absolute right-0 top-0 z-10 h-full w-28 bg-gradient-to-l from-white to-transparent"></div>
+        <div class="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 sm:w-48 bg-gradient-to-r from-slate-50 via-slate-50/90 to-transparent"></div>
+        <div class="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 sm:w-48 bg-gradient-to-l from-slate-50 via-slate-50/90 to-transparent"></div>
 
         <!-- Marquee Track -->
         <div class="flex overflow-hidden select-none">
-            <div class="animate-marquee flex items-center gap-16 whitespace-nowrap">
+            <div class="animate-marquee flex items-center gap-6 whitespace-nowrap">
                 <!-- Logos Set 1 -->
-                <div class="flex items-center gap-16 grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100">
-                    <!-- Brookfield Properties Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 160 36" fill="currentColor" aria-label="Brookfield">
-                        <path d="M10 8h24c8 0 13 4 13 10 0 4-3 8-7 9 5 1 8 5 8 10 0 7-6 11-14 11H10V8zm8 14h14c4 0 7-2 7-5s-3-5-7-5H18v10zm0 18h15c5 0 8-2 8-6s-3-6-8-6H18v12zM52 24v24h-8V24h8zm0-16v8h-8V8h8zm14 16h8v4c2-3 5-5 10-5 2 0 4 1 5 2l-3 7c-1-1-3-1-4-1-4 0-8 3-8 9v12h-8V24zm32 0c9 0 16 7 16 16s-7 16-16 16-16-7-16-16 7-16 16-16zm0 24c5 0 9-4 9-8s-4-8-9-8-9 4-9 8 4 8 9 8z"/>
-                    </svg>
+                <div class="flex items-center gap-6">
+                    <!-- Card 1: Brookfield -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-lg hover:shadow-emerald-500/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700 transition duration-300 group-hover:text-emerald-600" viewBox="0 0 160 36" fill="currentColor">
+                            <path d="M10 8h24c8 0 13 4 13 10 0 4-3 8-7 9 5 1 8 5 8 10 0 7-6 11-14 11H10V8zm8 14h14c4 0 7-2 7-5s-3-5-7-5H18v10zm0 18h15c5 0 8-2 8-6s-3-6-8-6H18v12zM52 24v24h-8V24h8zm0-16v8h-8V8h8zm14 16h8v4c2-3 5-5 10-5 2 0 4 1 5 2l-3 7c-1-1-3-1-4-1-4 0-8 3-8 9v12h-8V24zm32 0c9 0 16 7 16 16s-7 16-16 16-16-7-16-16 7-16 16-16zm0 24c5 0 9-4 9-8s-4-8-9-8-9 4-9 8 4 8 9 8z"/>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-emerald-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors">12M+ Sq Ft</span>
+                    </div>
 
-                    <!-- JLL Commercial Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 120 36" fill="currentColor" aria-label="JLL">
-                        <path d="M12 8h8v24h12v8H12V8zm28 0h8v32h-8V8zm20 0h8v24h12v8H60V8z"/>
-                    </svg>
+                    <!-- Card 2: JLL Commercial -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-600 hover:shadow-lg hover:shadow-blue-600/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700 transition duration-300 group-hover:text-blue-700" viewBox="0 0 120 36" fill="currentColor">
+                            <path d="M12 8h8v24h12v8H12V8zm28 0h8v32h-8V8zm20 0h8v24h12v8H60V8z"/>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-blue-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-blue-50 group-hover:text-blue-700 transition-colors">ISO 41001</span>
+                    </div>
 
-                    <!-- CBRE AssetCare Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 130 36" fill="currentColor" aria-label="CBRE">
-                        <path d="M12 24c0-9 7-16 16-16 6 0 11 3 14 8l-7 4c-2-3-4-4-7-4-5 0-9 4-9 8s4 8 9 8c3 0 5-1 7-4l7 4c-3 5-8 8-14 8-9 0-16-7-16-16zm36-16h20c5 0 9 2 9 6 0 3-2 5-5 6 4 1 6 3 6 7 0 5-4 7-10 7H48V8zm8 11h11c2 0 4-1 4-3s-2-3-4-3H56v6zm0 11h12c2 0 4-1 4-3s-2-3-4-3H56v6zm34-22h24v6H90v7h18v6H90v7h20v6H90V8z"/>
-                    </svg>
+                    <!-- Card 3: CBRE AssetCare -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-emerald-600 hover:shadow-lg hover:shadow-emerald-600/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700 transition duration-300 group-hover:text-emerald-700" viewBox="0 0 130 36" fill="currentColor">
+                            <path d="M12 24c0-9 7-16 16-16 6 0 11 3 14 8l-7 4c-2-3-4-4-7-4-5 0-9 4-9 8s4 8 9 8c3 0 5-1 7-4l7 4c-3 5-8 8-14 8-9 0-16-7-16-16zm36-16h20c5 0 9 2 9 6 0 3-2 5-5 6 4 1 6 3 6 7 0 5-4 7-10 7H48V8zm8 11h11c2 0 4-1 4-3s-2-3-4-3H56v6zm0 11h12c2 0 4-1 4-3s-2-3-4-3H56v6zm34-22h24v6H90v7h18v6H90v7h20v6H90V8z"/>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-emerald-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors">99.9% SLA</span>
+                    </div>
 
-                    <!-- Microsoft Enterprise Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 140 36" fill="currentColor" aria-label="Microsoft">
-                        <rect x="8" y="6" width="12" height="12" fill="#F25022"/>
-                        <rect x="23" y="6" width="12" height="12" fill="#7FBA00"/>
-                        <rect x="8" y="21" width="12" height="12" fill="#00A4EF"/>
-                        <rect x="23" y="21" width="12" height="12" fill="#FFB900"/>
-                        <text x="44" y="25" font-family="sans-serif" font-weight="600" font-size="16" fill="currentColor">Microsoft</text>
-                    </svg>
+                    <!-- Card 4: Cushman & Wakefield -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-rose-500 hover:shadow-lg hover:shadow-rose-500/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700 transition duration-300 group-hover:text-rose-600" viewBox="0 0 110 36" fill="currentColor">
+                            <path d="M10 12h32v4H28v20h-4V16H10v-4zm0-5c10-2 22-2 32 0v3c-10-2-22-2-32 0V7zm40 5h20v4H58v6h10v4H58v6h12v4H50V12zm28 0h18v4H84v6h10v4H84v12h-6V12z"/>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-rose-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-rose-50 group-hover:text-rose-700 transition-colors">45+ Towers</span>
+                    </div>
 
-                    <!-- Vertex Tech Labs Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 130 36" fill="currentColor" aria-label="Vertex">
-                        <path d="M10 8l12 28L34 8h-8l-8 19L18 8h-8zm30 0h24v6H48v7h16v6H48v7h16v6H40V8zm30 0h20c5 0 9 3 9 7 0 4-3 6-6 7 4 1 5 4 5 8v7h-8v-6c0-3-2-4-5-4h-7v10h-8V8zm8 13h10c2 0 4-1 4-3s-2-3-4-3H78v6zm30-13h24v6h-8v26h-8V14h-8V8z"/>
-                    </svg>
+                    <!-- Card 5: Microsoft -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-sky-500 hover:shadow-lg hover:shadow-sky-500/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700" viewBox="0 0 140 36" fill="currentColor">
+                            <rect x="8" y="6" width="12" height="12" fill="#F25022"/>
+                            <rect x="23" y="6" width="12" height="12" fill="#7FBA00"/>
+                            <rect x="8" y="21" width="12" height="12" fill="#00A4EF"/>
+                            <rect x="23" y="21" width="12" height="12" fill="#FFB900"/>
+                            <text x="44" y="25" font-family="sans-serif" font-weight="600" font-size="16" fill="#2d3748">Microsoft</text>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-sky-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-700 transition-colors">HEPA Care</span>
+                    </div>
 
-                    <!-- Intel Commercial Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 110 36" fill="currentColor" aria-label="Intel">
-                        <path d="M12 14h8v22h-8V14zm0-10h8v7h-8V4zm14 10h8v3c2-2 5-4 9-4 8 0 11 5 11 12v11h-8V26c0-4-2-6-5-6-3 0-5 2-5 6v10h-8V14zm36-6h8v7h-8V8zm0 6h8v22h-8V14z"/>
-                    </svg>
+                    <!-- Card 6: DLF Cybercity -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-lg hover:shadow-emerald-500/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700 transition duration-300 group-hover:text-emerald-600" viewBox="0 0 130 36" fill="currentColor">
+                            <path d="M10 8l12 28L34 8h-8l-8 19L18 8h-8zm30 0h24v6H48v7h16v6H48v7h16v6H40V8zm30 0h20c5 0 9 3 9 7 0 4-3 6-6 7 4 1 5 4 5 8v7h-8v-6c0-3-2-4-5-4h-7v10h-8V8zm8 13h10c2 0 4-1 4-3s-2-3-4-3H78v6zm30-13h24v6h-8v26h-8V14h-8V8z"/>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-emerald-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors">24/7 On-Site</span>
+                    </div>
 
-                    <!-- Salesforce Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 150 36" fill="currentColor" aria-label="Salesforce">
-                        <path d="M22 10c3-4 8-6 13-5 4-4 10-6 16-3 4-3 9-4 14-2 6 2 10 7 11 13 4 1 7 4 8 8 1 5-2 10-7 11H18c-5 0-9-4-10-9 0-5 3-9 8-10 1-5 3-9 6-13z"/>
-                        <text x="68" y="24" font-family="sans-serif" font-weight="700" font-size="15" fill="currentColor">salesforce</text>
-                    </svg>
+                    <!-- Card 7: Intel -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-sky-600 hover:shadow-lg hover:shadow-sky-600/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700 transition duration-300 group-hover:text-sky-600" viewBox="0 0 110 36" fill="currentColor">
+                            <path d="M12 14h8v22h-8V14zm0-10h8v7h-8V4zm14 10h8v3c2-2 5-4 9-4 8 0 11 5 11 12v11h-8V26c0-4-2-6-5-6-3 0-5 2-5 6v10h-8V14zm36-6h8v7h-8V8zm0 6h8v22h-8V14z"/>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-sky-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-700 transition-colors">Cleanroom</span>
+                    </div>
 
-                    <!-- Tesla HQ Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 110 36" fill="currentColor" aria-label="Tesla">
-                        <path d="M10 12h32v4H28v20h-4V16H10v-4zm0-5c10-2 22-2 32 0v3c-10-2-22-2-32 0V7zm40 5h20v4H58v6h10v4H58v6h12v4H50V12zm28 0h18v4H84v6h10v4H84v12h-6V12z"/>
-                    </svg>
+                    <!-- Card 8: Salesforce -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700 transition duration-300 group-hover:text-blue-500" viewBox="0 0 150 36" fill="currentColor">
+                            <path d="M22 10c3-4 8-6 13-5 4-4 10-6 16-3 4-3 9-4 14-2 6 2 10 7 11 13 4 1 7 4 8 8 1 5-2 10-7 11H18c-5 0-9-4-10-9 0-5 3-9 8-10 1-5 3-9 6-13z"/>
+                            <text x="68" y="24" font-family="sans-serif" font-weight="700" font-size="15" fill="currentColor">salesforce</text>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-blue-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-blue-50 group-hover:text-blue-700 transition-colors">Eco-Certified</span>
+                    </div>
                 </div>
 
-                <!-- Logos Set 2 (Duplicate for Continuous Loop) -->
-                <div class="flex items-center gap-16 grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100">
-                    <!-- Brookfield Properties Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 160 36" fill="currentColor" aria-label="Brookfield">
-                        <path d="M10 8h24c8 0 13 4 13 10 0 4-3 8-7 9 5 1 8 5 8 10 0 7-6 11-14 11H10V8zm8 14h14c4 0 7-2 7-5s-3-5-7-5H18v10zm0 18h15c5 0 8-2 8-6s-3-6-8-6H18v12zM52 24v24h-8V24h8zm0-16v8h-8V8h8zm14 16h8v4c2-3 5-5 10-5 2 0 4 1 5 2l-3 7c-1-1-3-1-4-1-4 0-8 3-8 9v12h-8V24zm32 0c9 0 16 7 16 16s-7 16-16 16-16-7-16-16 7-16 16-16zm0 24c5 0 9-4 9-8s-4-8-9-8-9 4-9 8 4 8 9 8z"/>
-                    </svg>
+                <!-- Logos Set 2 (Duplicate for Seamless Infinite Loop) -->
+                <div class="flex items-center gap-6">
+                    <!-- Card 1: Brookfield -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-lg hover:shadow-emerald-500/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700 transition duration-300 group-hover:text-emerald-600" viewBox="0 0 160 36" fill="currentColor">
+                            <path d="M10 8h24c8 0 13 4 13 10 0 4-3 8-7 9 5 1 8 5 8 10 0 7-6 11-14 11H10V8zm8 14h14c4 0 7-2 7-5s-3-5-7-5H18v10zm0 18h15c5 0 8-2 8-6s-3-6-8-6H18v12zM52 24v24h-8V24h8zm0-16v8h-8V8h8zm14 16h8v4c2-3 5-5 10-5 2 0 4 1 5 2l-3 7c-1-1-3-1-4-1-4 0-8 3-8 9v12h-8V24zm32 0c9 0 16 7 16 16s-7 16-16 16-16-7-16-16 7-16 16-16zm0 24c5 0 9-4 9-8s-4-8-9-8-9 4-9 8 4 8 9 8z"/>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-emerald-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors">12M+ Sq Ft</span>
+                    </div>
 
-                    <!-- JLL Commercial Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 120 36" fill="currentColor" aria-label="JLL">
-                        <path d="M12 8h8v24h12v8H12V8zm28 0h8v32h-8V8zm20 0h8v24h12v8H60V8z"/>
-                    </svg>
+                    <!-- Card 2: JLL Commercial -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-600 hover:shadow-lg hover:shadow-blue-600/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700 transition duration-300 group-hover:text-blue-700" viewBox="0 0 120 36" fill="currentColor">
+                            <path d="M12 8h8v24h12v8H12V8zm28 0h8v32h-8V8zm20 0h8v24h12v8H60V8z"/>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-blue-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-blue-50 group-hover:text-blue-700 transition-colors">ISO 41001</span>
+                    </div>
 
-                    <!-- CBRE AssetCare Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 130 36" fill="currentColor" aria-label="CBRE">
-                        <path d="M12 24c0-9 7-16 16-16 6 0 11 3 14 8l-7 4c-2-3-4-4-7-4-5 0-9 4-9 8s4 8 9 8c3 0 5-1 7-4l7 4c-3 5-8 8-14 8-9 0-16-7-16-16zm36-16h20c5 0 9 2 9 6 0 3-2 5-5 6 4 1 6 3 6 7 0 5-4 7-10 7H48V8zm8 11h11c2 0 4-1 4-3s-2-3-4-3H56v6zm0 11h12c2 0 4-1 4-3s-2-3-4-3H56v6zm34-22h24v6H90v7h18v6H90v7h20v6H90V8z"/>
-                    </svg>
+                    <!-- Card 3: CBRE AssetCare -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-emerald-600 hover:shadow-lg hover:shadow-emerald-600/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700 transition duration-300 group-hover:text-emerald-700" viewBox="0 0 130 36" fill="currentColor">
+                            <path d="M12 24c0-9 7-16 16-16 6 0 11 3 14 8l-7 4c-2-3-4-4-7-4-5 0-9 4-9 8s4 8 9 8c3 0 5-1 7-4l7 4c-3 5-8 8-14 8-9 0-16-7-16-16zm36-16h20c5 0 9 2 9 6 0 3-2 5-5 6 4 1 6 3 6 7 0 5-4 7-10 7H48V8zm8 11h11c2 0 4-1 4-3s-2-3-4-3H56v6zm0 11h12c2 0 4-1 4-3s-2-3-4-3H56v6zm34-22h24v6H90v7h18v6H90v7h20v6H90V8z"/>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-emerald-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors">99.9% SLA</span>
+                    </div>
 
-                    <!-- Microsoft Enterprise Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 140 36" fill="currentColor" aria-label="Microsoft">
-                        <rect x="8" y="6" width="12" height="12" fill="#F25022"/>
-                        <rect x="23" y="6" width="12" height="12" fill="#7FBA00"/>
-                        <rect x="8" y="21" width="12" height="12" fill="#00A4EF"/>
-                        <rect x="23" y="21" width="12" height="12" fill="#FFB900"/>
-                        <text x="44" y="25" font-family="sans-serif" font-weight="600" font-size="16" fill="currentColor">Microsoft</text>
-                    </svg>
+                    <!-- Card 4: Cushman & Wakefield -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-rose-500 hover:shadow-lg hover:shadow-rose-500/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700 transition duration-300 group-hover:text-rose-600" viewBox="0 0 110 36" fill="currentColor">
+                            <path d="M10 12h32v4H28v20h-4V16H10v-4zm0-5c10-2 22-2 32 0v3c-10-2-22-2-32 0V7zm40 5h20v4H58v6h10v4H58v6h12v4H50V12zm28 0h18v4H84v6h10v4H84v12h-6V12z"/>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-rose-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-rose-50 group-hover:text-rose-700 transition-colors">45+ Towers</span>
+                    </div>
 
-                    <!-- Vertex Tech Labs Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 130 36" fill="currentColor" aria-label="Vertex">
-                        <path d="M10 8l12 28L34 8h-8l-8 19L18 8h-8zm30 0h24v6H48v7h16v6H48v7h16v6H40V8zm30 0h20c5 0 9 3 9 7 0 4-3 6-6 7 4 1 5 4 5 8v7h-8v-6c0-3-2-4-5-4h-7v10h-8V8zm8 13h10c2 0 4-1 4-3s-2-3-4-3H78v6zm30-13h24v6h-8v26h-8V14h-8V8z"/>
-                    </svg>
+                    <!-- Card 5: Microsoft -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-sky-500 hover:shadow-lg hover:shadow-sky-500/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700" viewBox="0 0 140 36" fill="currentColor">
+                            <rect x="8" y="6" width="12" height="12" fill="#F25022"/>
+                            <rect x="23" y="6" width="12" height="12" fill="#7FBA00"/>
+                            <rect x="8" y="21" width="12" height="12" fill="#00A4EF"/>
+                            <rect x="23" y="21" width="12" height="12" fill="#FFB900"/>
+                            <text x="44" y="25" font-family="sans-serif" font-weight="600" font-size="16" fill="#2d3748">Microsoft</text>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-sky-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-700 transition-colors">HEPA Care</span>
+                    </div>
 
-                    <!-- Intel Commercial Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 110 36" fill="currentColor" aria-label="Intel">
-                        <path d="M12 14h8v22h-8V14zm0-10h8v7h-8V4zm14 10h8v3c2-2 5-4 9-4 8 0 11 5 11 12v11h-8V26c0-4-2-6-5-6-3 0-5 2-5 6v10h-8V14zm36-6h8v7h-8V8zm0 6h8v22h-8V14z"/>
-                    </svg>
+                    <!-- Card 6: DLF Cybercity -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-lg hover:shadow-emerald-500/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700 transition duration-300 group-hover:text-emerald-600" viewBox="0 0 130 36" fill="currentColor">
+                            <path d="M10 8l12 28L34 8h-8l-8 19L18 8h-8zm30 0h24v6H48v7h16v6H48v7h16v6H40V8zm30 0h20c5 0 9 3 9 7 0 4-3 6-6 7 4 1 5 4 5 8v7h-8v-6c0-3-2-4-5-4h-7v10h-8V8zm8 13h10c2 0 4-1 4-3s-2-3-4-3H78v6zm30-13h24v6h-8v26h-8V14h-8V8z"/>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-emerald-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-colors">24/7 On-Site</span>
+                    </div>
 
-                    <!-- Salesforce Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 150 36" fill="currentColor" aria-label="Salesforce">
-                        <path d="M22 10c3-4 8-6 13-5 4-4 10-6 16-3 4-3 9-4 14-2 6 2 10 7 11 13 4 1 7 4 8 8 1 5-2 10-7 11H18c-5 0-9-4-10-9 0-5 3-9 8-10 1-5 3-9 6-13z"/>
-                        <text x="68" y="24" font-family="sans-serif" font-weight="700" font-size="15" fill="currentColor">salesforce</text>
-                    </svg>
+                    <!-- Card 7: Intel -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-sky-600 hover:shadow-lg hover:shadow-sky-600/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700 transition duration-300 group-hover:text-sky-600" viewBox="0 0 110 36" fill="currentColor">
+                            <path d="M12 14h8v22h-8V14zm0-10h8v7h-8V4zm14 10h8v3c2-2 5-4 9-4 8 0 11 5 11 12v11h-8V26c0-4-2-6-5-6-3 0-5 2-5 6v10h-8V14zm36-6h8v7h-8V8zm0 6h8v22h-8V14z"/>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-sky-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-sky-50 group-hover:text-sky-700 transition-colors">Cleanroom</span>
+                    </div>
 
-                    <!-- Tesla HQ Logo SVG -->
-                    <svg class="h-7 w-auto text-slate-800" viewBox="0 0 110 36" fill="currentColor" aria-label="Tesla">
-                        <path d="M10 12h32v4H28v20h-4V16H10v-4zm0-5c10-2 22-2 32 0v3c-10-2-22-2-32 0V7zm40 5h20v4H58v6h10v4H58v6h12v4H50V12zm28 0h18v4H84v6h10v4H84v12h-6V12z"/>
-                    </svg>
+                    <!-- Card 8: Salesforce -->
+                    <div class="flex h-14 items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white px-6 py-2.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/10 group cursor-pointer">
+                        <svg class="h-5 sm:h-6 w-auto text-slate-700 transition duration-300 group-hover:text-blue-500" viewBox="0 0 150 36" fill="currentColor">
+                            <path d="M22 10c3-4 8-6 13-5 4-4 10-6 16-3 4-3 9-4 14-2 6 2 10 7 11 13 4 1 7 4 8 8 1 5-2 10-7 11H18c-5 0-9-4-10-9 0-5 3-9 8-10 1-5 3-9 6-13z"/>
+                            <text x="68" y="24" font-family="sans-serif" font-weight="700" font-size="15" fill="currentColor">salesforce</text>
+                        </svg>
+                        <span class="h-4 w-px bg-slate-200 group-hover:bg-blue-200 transition-colors"></span>
+                        <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-bold tracking-wide text-slate-600 group-hover:bg-blue-50 group-hover:text-blue-700 transition-colors">Eco-Certified</span>
+                    </div>
                 </div>
             </div>
         </div>
