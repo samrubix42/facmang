@@ -25,15 +25,15 @@
     })();
 </script>
 
-<div class="bg-white text-slate-800 antialiased font-sans selection:bg-emerald-500 selection:text-white">
+<div class="bg-white text-slate-800 antialiased font-sans selection:bg-red-500 selection:text-white">
 
     {{-- Hero Section --}}
     <section class="border-b border-slate-100 py-16 sm:py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-2xl text-center space-y-4">
                 <div>
-                    <span class="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-700">
-                        <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+                    <span class="inline-flex items-center gap-2 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
+                        <span class="h-2 w-2 rounded-full bg-red-500"></span>
                         <span>24/7 Operations Desk</span>
                     </span>
                 </div>
@@ -57,22 +57,22 @@
                 <!-- Card 1: Phone -->
                 <a 
                     href="tel:+18004928820"
-                    class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-emerald-300 hover:shadow-md"
+                    class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md"
                 >
-                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-700">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                         <i class="ri-phone-fill text-lg"></i>
                     </span>
                     <div class="min-w-0">
                         <p class="text-[11px] font-medium text-slate-400">24/7 Hotline</p>
                         <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">+1 (800) 492-8820</p>
-                        <p class="text-[10px] text-emerald-700 font-medium mt-0.5">&lt;15m Response</p>
+                        <p class="text-[10px] text-[#12233F] font-medium mt-0.5">&lt;15m Response</p>
                     </div>
                 </a>
 
                 <!-- Card 2: Email -->
                 <a 
                     href="mailto:ops@facilitypro.com"
-                    class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-emerald-300 hover:shadow-md"
+                    class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md"
                 >
                     <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-700">
                         <i class="ri-mail-fill text-lg"></i>
@@ -86,7 +86,7 @@
 
                 <!-- Card 3: Location -->
                 <div class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs">
-                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-700">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                         <i class="ri-map-pin-2-fill text-lg"></i>
                     </span>
                     <div class="min-w-0">
@@ -104,7 +104,7 @@
                     <div class="min-w-0">
                         <p class="text-[11px] font-medium text-slate-400">Operating Hours</p>
                         <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">Mon - Sat: 7am - 9pm</p>
-                        <p class="text-[10px] text-emerald-700 font-medium mt-0.5">Dispatch Active 24/7</p>
+                        <p class="text-[10px] text-[#12233F] font-medium mt-0.5">Dispatch Active 24/7</p>
                     </div>
                 </div>
 
@@ -122,7 +122,7 @@
                     <div class="rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-10 shadow-xs">
                         
                         <div class="mb-8">
-                            <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-700">
+                            <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
                                 <i class="ri-send-plane-line text-xs"></i> Proposal
                             </span>
                             <h2 class="mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">Request SLA Proposal</h2>
@@ -133,12 +133,12 @@
 
                         <!-- Success Alert Banner -->
                         @if ($submitted)
-                            <div class="mb-6 rounded-2xl bg-emerald-50 p-4 text-xs sm:text-sm text-emerald-900 border border-emerald-200">
+                            <div class="mb-6 rounded-2xl bg-[#12233F]/10 p-4 text-xs sm:text-sm text-[#12233F] border border-[#12233F]/10">
                                 <div class="flex items-center gap-3">
-                                    <i class="ri-checkbox-circle-fill text-xl text-emerald-600 shrink-0"></i>
+                                    <i class="ri-checkbox-circle-fill text-xl text-[#12233F] shrink-0"></i>
                                     <div>
                                         <p class="font-bold">Proposal Request Received</p>
-                                        <p class="text-xs text-emerald-700 mt-0.5">Our operations director will contact you within 24 hours.</p>
+                                        <p class="text-xs text-[#12233F] mt-0.5">Our operations director will contact you within 24 hours.</p>
                                     </div>
                                 </div>
                             </div>
@@ -154,7 +154,7 @@
                                     type="text"
                                     wire:model="name"
                                     placeholder="e.g. Jane Doe"
-                                    class="w-full rounded-full border border-slate-200 bg-white px-5 py-3 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                                    class="w-full rounded-full border border-slate-200 bg-white px-5 py-3 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
                                 />
                                 @error('name') <span class="text-xs text-rose-600 font-medium mt-1 block">{{ $message }}</span> @enderror
                             </div>
@@ -168,7 +168,7 @@
                                         type="email"
                                         wire:model="email"
                                         placeholder="jane@company.com"
-                                        class="w-full rounded-full border border-slate-200 bg-white px-5 py-3 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                                        class="w-full rounded-full border border-slate-200 bg-white px-5 py-3 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
                                     />
                                     @error('email') <span class="text-xs text-rose-600 font-medium mt-1 block">{{ $message }}</span> @enderror
                                 </div>
@@ -180,7 +180,7 @@
                                         type="tel"
                                         wire:model="phone"
                                         placeholder="+1 (555) 000-0000"
-                                        class="w-full rounded-full border border-slate-200 bg-white px-5 py-3 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                                        class="w-full rounded-full border border-slate-200 bg-white px-5 py-3 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
                                     />
                                     @error('phone') <span class="text-xs text-rose-600 font-medium mt-1 block">{{ $message }}</span> @enderror
                                 </div>
@@ -192,7 +192,7 @@
                                 <select
                                     id="property-type"
                                     wire:model="propertyType"
-                                    class="w-full rounded-full border border-slate-200 bg-white px-5 py-3 text-xs sm:text-sm text-slate-800 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 cursor-pointer"
+                                    class="w-full rounded-full border border-slate-200 bg-white px-5 py-3 text-xs sm:text-sm text-slate-800 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 cursor-pointer"
                                 >
                                     <option value="Corporate Office Tower">Corporate Office Tower</option>
                                     <option value="Tech Innovation Campus">Tech Innovation Campus</option>
@@ -210,7 +210,7 @@
                                     wire:model="message"
                                     rows="4"
                                     placeholder="Please provide floor space estimate and required services..."
-                                    class="w-full rounded-2xl border border-slate-200 bg-white px-5 py-3 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                                    class="w-full rounded-2xl border border-slate-200 bg-white px-5 py-3 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
                                 ></textarea>
                                 @error('message') <span class="text-xs text-rose-600 font-medium mt-1 block">{{ $message }}</span> @enderror
                             </div>
@@ -219,7 +219,7 @@
                             <div class="pt-2">
                                 <button
                                     type="submit"
-                                    class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-emerald-600 px-8 py-3.5 text-xs sm:text-sm font-semibold text-white shadow-sm hover:bg-emerald-700 transition active:scale-[0.98] cursor-pointer"
+                                    class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-red-600 px-8 py-3.5 text-xs sm:text-sm font-semibold text-white shadow-sm hover:bg-red-700 transition active:scale-[0.98] cursor-pointer"
                                 >
                                     <i class="ri-send-plane-fill text-sm"></i>
                                     <span>Submit Request</span>
@@ -234,7 +234,7 @@
                 <!-- Right: Guarantees & Support Cards -->
                 <div class="lg:col-span-5 space-y-6">
                     <div>
-                        <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-700">
+                        <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
                             <i class="ri-shield-check-line text-xs"></i> Direct Support
                         </span>
                         <h2 class="mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">Why Partner With Us?</h2>
@@ -245,7 +245,7 @@
 
                     <div class="space-y-4">
                         <div class="flex gap-4 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs">
-                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-700">
+                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                                 <i class="ri-flashlight-line text-lg"></i>
                             </span>
                             <div>
@@ -255,7 +255,7 @@
                         </div>
 
                         <div class="flex gap-4 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs">
-                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-900 text-white">
+                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#12233F] text-white">
                                 <i class="ri-file-search-line text-lg"></i>
                             </span>
                             <div>
@@ -265,7 +265,7 @@
                         </div>
 
                         <div class="flex gap-4 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs">
-                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-700">
+                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                                 <i class="ri-shield-user-line text-lg"></i>
                             </span>
                             <div>
@@ -276,8 +276,8 @@
                     </div>
 
                     <!-- Certification Strip -->
-                    <div class="rounded-3xl bg-slate-950 p-6 text-white shadow-sm border border-slate-800">
-                        <p class="text-[10px] font-semibold uppercase tracking-wider text-emerald-400">Compliance Standard</p>
+                    <div class="rounded-3xl bg-[#0B1A30] p-6 text-white shadow-sm border border-slate-800">
+                        <p class="text-[10px] font-semibold uppercase tracking-wider text-red-400">Compliance Standard</p>
                         <p class="mt-1 text-xs font-semibold text-slate-200">ISSA CIMS &amp; ISO 41001 Certified Facility Partner</p>
                     </div>
                 </div>
@@ -294,7 +294,7 @@
                 <!-- Header Bar -->
                 <div class="flex flex-wrap items-center justify-between gap-4 p-5 sm:px-8 border-b border-slate-100 bg-white">
                     <div class="flex items-center gap-3">
-                        <span class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-emerald-700">
+                        <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                             <i class="ri-map-pin-2-fill text-base"></i>
                         </span>
                         <div>
@@ -306,7 +306,7 @@
                         href="https://maps.google.com" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2 text-xs font-semibold text-slate-800 shadow-xs hover:border-emerald-400 hover:text-emerald-700 transition"
+                        class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2 text-xs font-semibold text-slate-800 shadow-xs hover:border-[#12233F]/40 hover:text-[#12233F] transition"
                     >
                         <span>Directions</span>
                         <i class="ri-external-link-line text-xs"></i>

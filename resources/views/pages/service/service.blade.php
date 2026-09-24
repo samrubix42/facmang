@@ -25,7 +25,7 @@
     })();
 </script>
 
-<div class="bg-white text-slate-800 antialiased font-sans selection:bg-emerald-500 selection:text-white">
+<div class="bg-white text-slate-800 antialiased font-sans selection:bg-red-500 selection:text-white">
 
     {{-- Hero Section --}}
     <section class="border-b border-slate-100 py-16 sm:py-20 lg:py-24">
@@ -35,8 +35,8 @@
                 <!-- Left Text Column -->
                 <div class="lg:col-span-7 space-y-6">
                     <div>
-                        <span class="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-700">
-                            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+                        <span class="inline-flex items-center gap-2 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
+                            <span class="h-2 w-2 rounded-full bg-red-500"></span>
                             <span>Enterprise Facility Capabilities</span>
                         </span>
                     </div>
@@ -56,7 +56,7 @@
                             <p class="text-[11px] font-medium text-slate-400 mt-0.5">SLA Compliance</p>
                         </div>
                         <div>
-                            <p class="text-2xl sm:text-3xl font-bold text-emerald-600 tracking-tight">15-Min</p>
+                            <p class="text-2xl sm:text-3xl font-bold text-[#12233F] tracking-tight">15-Min</p>
                             <p class="text-[11px] font-medium text-slate-400 mt-0.5">Emergency Dispatch</p>
                         </div>
                         <div>
@@ -64,7 +64,7 @@
                             <p class="text-[11px] font-medium text-slate-400 mt-0.5">W-2 Direct Staff</p>
                         </div>
                         <div>
-                            <p class="text-2xl sm:text-3xl font-bold text-emerald-600 tracking-tight">500+</p>
+                            <p class="text-2xl sm:text-3xl font-bold text-[#12233F] tracking-tight">500+</p>
                             <p class="text-[11px] font-medium text-slate-400 mt-0.5">Active Towers</p>
                         </div>
                     </div>
@@ -78,14 +78,14 @@
                             alt="Facility Management Professional Cleaning" 
                             class="h-full w-full object-cover"
                         />
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0B1A30]/70 via-transparent to-transparent"></div>
 
                         <!-- Top Badges -->
                         <div class="absolute top-4 left-4 right-4 flex justify-between items-center">
                             <span class="inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-slate-800 shadow-sm">
-                                <i class="ri-shield-star-fill text-emerald-600"></i> ISO 41001
+                                <i class="ri-shield-star-fill text-[#12233F]"></i> ISO 41001
                             </span>
-                            <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-600 px-3 py-1 text-xs font-semibold text-white shadow-sm">
+                            <span class="inline-flex items-center gap-1.5 rounded-full bg-red-600 px-3 py-1 text-xs font-semibold text-white shadow-sm">
                                 Backfill Guaranteed
                             </span>
                         </div>
@@ -93,7 +93,7 @@
                         <!-- Bottom Telemetry Card -->
                         <div class="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/20 bg-white/95 p-3.5 shadow-lg backdrop-blur-md">
                             <div class="flex items-center gap-3">
-                                <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-white">
+                                <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-red-600 text-white">
                                     <i class="ri-qr-code-line text-lg"></i>
                                 </div>
                                 <div class="min-w-0">
@@ -131,7 +131,7 @@
                         type="text"
                         wire:model.live.debounce.200ms="search"
                         placeholder="Search services, janitorial, MEP..."
-                        class="w-full rounded-full border border-slate-200 bg-white pl-10 pr-9 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 transition"
+                        class="w-full rounded-full border border-slate-200 bg-white pl-10 pr-9 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition"
                     />
                     @if ($search !== '')
                         <button
@@ -151,35 +151,35 @@
                 <button
                     type="button"
                     wire:click="setCategory('all')"
-                    class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'all' ? 'bg-emerald-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
+                    class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'all' ? 'bg-red-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
                 >
                     All Services ({{ count(\App\Services\ServiceCatalog::all()) }})
                 </button>
                 <button
                     type="button"
                     wire:click="setCategory('janitorial')"
-                    class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'janitorial' ? 'bg-emerald-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
+                    class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'janitorial' ? 'bg-red-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
                 >
                     <i class="ri-sweep-line mr-1"></i> Janitorial &amp; Floors
                 </button>
                 <button
                     type="button"
                     wire:click="setCategory('hygiene')"
-                    class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'hygiene' ? 'bg-emerald-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
+                    class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'hygiene' ? 'bg-red-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
                 >
                     <i class="ri-drop-line mr-1"></i> Restroom Hygiene
                 </button>
                 <button
                     type="button"
                     wire:click="setCategory('staffing')"
-                    class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'staffing' ? 'bg-emerald-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
+                    class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'staffing' ? 'bg-red-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
                 >
                     <i class="ri-cup-line mr-1"></i> Office Boys &amp; Pantry
                 </button>
                 <button
                     type="button"
                     wire:click="setCategory('technical')"
-                    class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'technical' ? 'bg-emerald-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
+                    class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'technical' ? 'bg-red-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
                 >
                     <i class="ri-tools-line mr-1"></i> MEP &amp; Technical
                 </button>
@@ -190,7 +190,7 @@
                 @forelse ($this->services as $service)
                     <div 
                         wire:key="service-{{ $service['slug'] }}"
-                        class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:border-emerald-300 hover:shadow-xl transition-all duration-300"
+                        class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:border-[#12233F]/30 hover:shadow-xl transition-all duration-300"
                     >
                         <!-- Card Image -->
                         <div class="relative h-48 overflow-hidden bg-slate-100">
@@ -199,13 +199,13 @@
                                 alt="{{ $service['title'] }}"
                                 class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                             />
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0B1A30]/60 via-transparent to-transparent"></div>
 
                             <span class="absolute top-4 left-4 rounded-full bg-white/95 px-3 py-1 text-[11px] font-semibold text-slate-800 shadow-xs">
-                                <i class="{{ $service['icon'] }} text-emerald-600 mr-1"></i> {{ $service['badge'] }}
+                                <i class="{{ $service['icon'] }} text-[#12233F] mr-1"></i> {{ $service['badge'] }}
                             </span>
 
-                            <span class="absolute bottom-3 left-3 rounded-full bg-slate-900/90 px-3 py-1 text-[10px] font-semibold text-emerald-400">
+                            <span class="absolute bottom-3 left-3 rounded-full bg-[#12233F]/90 px-3 py-1 text-[10px] font-semibold text-red-400">
                                 {{ $service['sla_rating'] }}
                             </span>
                         </div>
@@ -213,13 +213,13 @@
                         <!-- Card Body -->
                         <div class="flex flex-1 flex-col p-6 sm:p-7 justify-between">
                             <div>
-                                <h3 class="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition leading-snug">
+                                <h3 class="text-lg font-bold text-slate-900 group-hover:text-[#12233F] transition leading-snug">
                                     <a href="{{ route('services.show', ['slug' => $service['slug']]) }}">
                                         {{ $service['title'] }}
                                     </a>
                                 </h3>
 
-                                <p class="mt-1 text-xs font-semibold text-emerald-700">
+                                <p class="mt-1 text-xs font-semibold text-[#12233F]">
                                     {{ $service['tagline'] }}
                                 </p>
 
@@ -234,7 +234,7 @@
 
                                 <a
                                     href="{{ route('services.show', ['slug' => $service['slug']]) }}"
-                                    class="inline-flex items-center gap-1.5 rounded-full bg-slate-900 group-hover:bg-emerald-600 px-5 py-2 text-xs font-semibold text-white transition-colors"
+                                    class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-5 py-2 text-xs font-semibold text-white transition-colors"
                                 >
                                     <span>View Scope</span>
                                     <i class="ri-arrow-right-line text-xs"></i>
@@ -244,7 +244,7 @@
                     </div>
                 @empty
                     <div class="col-span-full rounded-3xl border border-dashed border-slate-200 bg-white p-12 text-center">
-                        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                             <i class="ri-search-2-line text-2xl"></i>
                         </div>
                         <h3 class="mt-4 text-base font-bold text-slate-900">No matching facility services found</h3>
@@ -254,7 +254,7 @@
                         <button
                             type="button"
                             wire:click="$set('search', ''); $set('category', 'all');"
-                            class="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-2.5 text-xs font-semibold text-white shadow-xs hover:bg-emerald-700 transition cursor-pointer"
+                            class="mt-4 inline-flex items-center gap-2 rounded-full bg-red-600 px-6 py-2.5 text-xs font-semibold text-white shadow-xs hover:bg-red-700 transition cursor-pointer"
                         >
                             Reset Filters
                         </button>
@@ -269,7 +269,7 @@
     <section class="border-y border-slate-100 bg-slate-50/50 py-16 sm:py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-xl mx-auto text-center">
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-700">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
                     <i class="ri-shield-flash-line text-xs"></i> Distinction
                 </span>
                 <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -282,8 +282,8 @@
 
             <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-emerald-300 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-50 text-emerald-700 mb-4">
+                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F] mb-4">
                         <i class="ri-contract-line text-lg"></i>
                     </span>
                     <h3 class="text-base font-bold text-slate-900">Single Master SLA</h3>
@@ -292,8 +292,8 @@
                     </p>
                 </div>
 
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-emerald-300 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-white mb-4">
+                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F] text-white mb-4">
                         <i class="ri-qr-code-line text-lg"></i>
                     </span>
                     <h3 class="text-base font-bold text-slate-900">IoT QR Telemetry</h3>
@@ -302,8 +302,8 @@
                     </p>
                 </div>
 
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-emerald-300 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-50 text-emerald-700 mb-4">
+                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F] mb-4">
                         <i class="ri-user-star-line text-lg"></i>
                     </span>
                     <h3 class="text-base font-bold text-slate-900">100% W-2 Direct Staff</h3>
@@ -312,8 +312,8 @@
                     </p>
                 </div>
 
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-emerald-300 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-white mb-4">
+                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F] text-white mb-4">
                         <i class="ri-leaf-line text-lg"></i>
                     </span>
                     <h3 class="text-base font-bold text-slate-900">Green Seal Eco-Formulas</h3>
@@ -329,9 +329,9 @@
     {{-- Bottom High-Conversion CTA (Rounded-Full Buttons) --}}
     <section class="py-20 sm:py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="relative overflow-hidden rounded-3xl bg-slate-950 px-6 py-14 sm:px-12 lg:py-16 text-center text-white border border-slate-800">
+            <div class="relative overflow-hidden rounded-3xl bg-[#0B1A30] px-6 py-14 sm:px-12 lg:py-16 text-center text-white border border-slate-800">
                 <div class="relative max-w-2xl mx-auto space-y-4">
-                    <span class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold text-emerald-400">
+                    <span class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold text-red-400">
                         <i class="ri-building-4-line text-xs"></i> Enterprise Facility Partnership
                     </span>
 
@@ -346,7 +346,7 @@
                     <div class="pt-4 flex flex-wrap items-center justify-center gap-3">
                         <a
                             href="{{ route('contact') }}"
-                            class="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-7 py-3.5 text-xs sm:text-sm font-semibold text-slate-950 shadow-sm transition hover:bg-emerald-400 active:scale-[0.98]"
+                            class="inline-flex items-center gap-2 rounded-full bg-red-500 px-7 py-3.5 text-xs sm:text-sm font-semibold text-slate-950 shadow-sm transition hover:bg-red-400 active:scale-[0.98]"
                         >
                             <span>Request Facility Audit</span>
                             <i class="ri-arrow-right-line text-sm"></i>
@@ -356,7 +356,7 @@
                             href="tel:+18004928820"
                             class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3.5 text-xs sm:text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/20 active:scale-[0.98]"
                         >
-                            <i class="ri-phone-line text-sm text-emerald-400"></i>
+                            <i class="ri-phone-line text-sm text-red-400"></i>
                             <span>+1 (800) 492-8820</span>
                         </a>
                     </div>

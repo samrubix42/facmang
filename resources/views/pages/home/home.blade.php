@@ -106,7 +106,7 @@
     })();
 </script>
 
-<div class="bg-white text-slate-800 antialiased font-sans selection:bg-emerald-500 selection:text-white">
+<div class="bg-white text-slate-800 antialiased font-sans selection:bg-red-600 selection:text-white">
     
     {{-- Clean Architectural Hero Slider matching Reference Design --}}
     <section 
@@ -117,7 +117,7 @@
         @keydown.arrow-left.window="prev()"
         @touchstart.passive="handleTouchStart($event)"
         @touchend.passive="handleTouchEnd($event)"
-        class="group relative w-full h-[72vh] sm:h-[78vh] lg:h-[84vh] min-h-[540px] max-h-[820px] overflow-hidden bg-slate-950 text-white select-none"
+        class="group relative w-full h-[72vh] sm:h-[78vh] lg:h-[84vh] min-h-[540px] max-h-[820px] overflow-hidden bg-[#0B1A30] text-white select-none"
     >
         <!-- Full-Bleed Background Images with Smooth Crossfade -->
         <template x-for="(slide, index) in slides" :key="index">
@@ -229,7 +229,7 @@
     <section class="border-b border-slate-100 bg-white py-8 overflow-hidden">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center mb-6">
             <span class="inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-slate-50 px-4 py-1 text-xs font-medium text-slate-600">
-                <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+                <span class="h-2 w-2 rounded-full bg-red-500"></span>
                 <span>Trusted by 500+ commercial towers and enterprise headquarters</span>
             </span>
         </div>
@@ -242,57 +242,57 @@
             <div class="animate-marquee flex items-center gap-8 whitespace-nowrap">
                 <!-- Logos Set 1 -->
                 <div class="flex items-center gap-8">
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-building-4-line text-emerald-600 text-sm"></i> Brookfield Properties
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-building-4-line text-[#12233F] text-sm"></i> Brookfield Properties
                     </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-community-line text-emerald-600 text-sm"></i> JLL Commercial
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-community-line text-[#12233F] text-sm"></i> JLL Commercial
                     </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-shield-star-line text-emerald-600 text-sm"></i> CBRE AssetCare
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-shield-star-line text-[#12233F] text-sm"></i> CBRE AssetCare
                     </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-hotel-line text-emerald-600 text-sm"></i> Cushman &amp; Wakefield
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-hotel-line text-[#12233F] text-sm"></i> Cushman &amp; Wakefield
                     </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-windows-line text-emerald-600 text-sm"></i> Microsoft Campus
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-windows-line text-[#12233F] text-sm"></i> Microsoft Campus
                     </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-building-2-line text-emerald-600 text-sm"></i> DLF Cybercity
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-building-2-line text-[#12233F] text-sm"></i> DLF Cybercity
                     </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-cpu-line text-emerald-600 text-sm"></i> Intel Operations
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-cpu-line text-[#12233F] text-sm"></i> Intel Operations
                     </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-cloud-line text-emerald-600 text-sm"></i> Salesforce Tower
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-cloud-line text-[#12233F] text-sm"></i> Salesforce Tower
                     </span>
                 </div>
 
                 <!-- Logos Set 2 (Duplicate for Loop) -->
                 <div class="flex items-center gap-8">
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-building-4-line text-emerald-600 text-sm"></i> Brookfield Properties
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-building-4-line text-[#12233F] text-sm"></i> Brookfield Properties
                     </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-community-line text-emerald-600 text-sm"></i> JLL Commercial
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-community-line text-[#12233F] text-sm"></i> JLL Commercial
                     </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-shield-star-line text-emerald-600 text-sm"></i> CBRE AssetCare
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-shield-star-line text-[#12233F] text-sm"></i> CBRE AssetCare
                     </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-hotel-line text-emerald-600 text-sm"></i> Cushman &amp; Wakefield
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-hotel-line text-[#12233F] text-sm"></i> Cushman &amp; Wakefield
                     </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-windows-line text-emerald-600 text-sm"></i> Microsoft Campus
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-windows-line text-[#12233F] text-sm"></i> Microsoft Campus
                     </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-building-2-line text-emerald-600 text-sm"></i> DLF Cybercity
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-building-2-line text-[#12233F] text-sm"></i> DLF Cybercity
                     </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-cpu-line text-emerald-600 text-sm"></i> Intel Operations
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-cpu-line text-[#12233F] text-sm"></i> Intel Operations
                     </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-emerald-400 transition cursor-pointer">
-                        <i class="ri-cloud-line text-emerald-600 text-sm"></i> Salesforce Tower
+                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
+                        <i class="ri-cloud-line text-[#12233F] text-sm"></i> Salesforce Tower
                     </span>
                 </div>
             </div>
@@ -309,7 +309,7 @@
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <!-- Minimal Clean Section Header -->
             <div class="max-w-xl mx-auto text-center">
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-700">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
                     <i class="ri-service-line text-xs"></i> Services
                 </span>
                 <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -326,7 +326,7 @@
                 <div 
                     x-data="scrollReveal(50)"
                     :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-emerald-300 transition-all duration-300"
+                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
                 >
                     <div class="relative h-48 overflow-hidden bg-slate-100">
                         <img
@@ -340,7 +340,7 @@
                     </div>
                     <div class="p-6 flex flex-1 flex-col justify-between">
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition">
+                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
                                 Office Sweeping & Cleaning
                             </h3>
                             <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -351,7 +351,7 @@
                             <span class="text-xs font-medium text-slate-400">Daily Night Shifts</span>
                             <a 
                                 href="{{ route('services.show', ['slug' => 'office-sweeping-cleaning']) }}" 
-                                class="inline-flex items-center gap-1.5 rounded-full bg-slate-900 group-hover:bg-emerald-600 px-4 py-2 text-xs font-medium text-white transition-colors"
+                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
                             >
                                 <span>View Scope</span>
                                 <i class="ri-arrow-right-line text-xs"></i>
@@ -364,7 +364,7 @@
                 <div 
                     x-data="scrollReveal(100)"
                     :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-emerald-300 transition-all duration-300"
+                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
                 >
                     <div class="relative h-48 overflow-hidden bg-slate-100">
                         <img
@@ -378,7 +378,7 @@
                     </div>
                     <div class="p-6 flex flex-1 flex-col justify-between">
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition">
+                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
                                 Restroom & Toilet Hygiene
                             </h3>
                             <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -389,7 +389,7 @@
                             <span class="text-xs font-medium text-slate-400">4-Hour Audits</span>
                             <a 
                                 href="{{ route('services.show', ['slug' => 'restroom-hygiene-sanitation']) }}" 
-                                class="inline-flex items-center gap-1.5 rounded-full bg-slate-900 group-hover:bg-emerald-600 px-4 py-2 text-xs font-medium text-white transition-colors"
+                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
                             >
                                 <span>View Scope</span>
                                 <i class="ri-arrow-right-line text-xs"></i>
@@ -402,7 +402,7 @@
                 <div 
                     x-data="scrollReveal(150)"
                     :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-emerald-300 transition-all duration-300"
+                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
                 >
                     <div class="relative h-48 overflow-hidden bg-slate-100">
                         <img
@@ -416,7 +416,7 @@
                     </div>
                     <div class="p-6 flex flex-1 flex-col justify-between">
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition">
+                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
                                 Pantry Stewarding & Staffing
                             </h3>
                             <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -427,7 +427,7 @@
                             <span class="text-xs font-medium text-slate-400">Dedicated Shifts</span>
                             <a 
                                 href="{{ route('services.show', ['slug' => 'corporate-pantry-staffing']) }}" 
-                                class="inline-flex items-center gap-1.5 rounded-full bg-slate-900 group-hover:bg-emerald-600 px-4 py-2 text-xs font-medium text-white transition-colors"
+                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
                             >
                                 <span>View Scope</span>
                                 <i class="ri-arrow-right-line text-xs"></i>
@@ -440,7 +440,7 @@
                 <div 
                     x-data="scrollReveal(200)"
                     :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-emerald-300 transition-all duration-300"
+                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
                 >
                     <div class="relative h-48 overflow-hidden bg-slate-100">
                         <img
@@ -454,7 +454,7 @@
                     </div>
                     <div class="p-6 flex flex-1 flex-col justify-between">
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition">
+                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
                                 Deep Sanitization Blitz
                             </h3>
                             <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -465,7 +465,7 @@
                             <span class="text-xs font-medium text-slate-400">EPA Certified</span>
                             <a 
                                 href="{{ route('services.show', ['slug' => 'deep-disinfection-sanitization']) }}" 
-                                class="inline-flex items-center gap-1.5 rounded-full bg-slate-900 group-hover:bg-emerald-600 px-4 py-2 text-xs font-medium text-white transition-colors"
+                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
                             >
                                 <span>View Scope</span>
                                 <i class="ri-arrow-right-line text-xs"></i>
@@ -478,7 +478,7 @@
                 <div 
                     x-data="scrollReveal(250)"
                     :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                    class="group flex flex-col sm:flex-row rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-emerald-300 transition-all duration-300 sm:col-span-2 lg:col-span-2"
+                    class="group flex flex-col sm:flex-row rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300 sm:col-span-2 lg:col-span-2"
                 >
                     <div class="relative h-48 sm:h-auto sm:w-1/2 overflow-hidden bg-slate-100">
                         <img
@@ -492,7 +492,7 @@
                     </div>
                     <div class="p-6 sm:p-8 flex flex-1 flex-col justify-between sm:w-1/2">
                         <div>
-                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-emerald-700 transition">
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-red-700 transition">
                                 MEP & HVAC Preventative Maintenance
                             </h3>
                             <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -500,10 +500,10 @@
                             </p>
                         </div>
                         <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-medium text-emerald-700">&lt;15m Response</span>
+                            <span class="text-xs font-medium text-[#12233F]">&lt;15m Response</span>
                             <a 
                                 href="{{ route('services.show', ['slug' => 'mep-hvac-maintenance']) }}" 
-                                class="inline-flex items-center gap-1.5 rounded-full bg-slate-900 group-hover:bg-emerald-600 px-5 py-2 text-xs font-medium text-white transition-colors"
+                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-5 py-2 text-xs font-medium text-white transition-colors"
                             >
                                 <span>View Scope</span>
                                 <i class="ri-arrow-right-line text-xs"></i>
@@ -517,7 +517,7 @@
             <div class="mt-12 text-center">
                 <a
                     href="{{ route('services') }}"
-                    class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-8 py-3.5 text-xs sm:text-sm font-semibold text-slate-800 shadow-xs hover:border-emerald-400 hover:text-emerald-700 transition active:scale-[0.98]"
+                    class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-8 py-3.5 text-xs sm:text-sm font-semibold text-slate-800 shadow-xs hover:border-[#12233F]/40 hover:text-[#12233F] transition active:scale-[0.98]"
                 >
                     <span>View All Services &amp; SLAs</span>
                     <i class="ri-arrow-right-line text-sm"></i>
@@ -537,7 +537,7 @@
             <div class="grid items-center gap-12 lg:grid-cols-12">
                 <!-- Left Details -->
                 <div class="lg:col-span-6 space-y-6">
-                    <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-700">
+                    <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
                         <i class="ri-shield-check-line text-xs"></i> The Standard
                     </span>
                     <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -549,7 +549,7 @@
 
                     <div class="grid gap-4 sm:grid-cols-2 pt-2">
                         <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs">
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-emerald-700">
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                                 <i class="ri-user-star-line text-lg"></i>
                             </span>
                             <h3 class="mt-3 text-sm font-bold text-slate-900">100% W-2 Employed</h3>
@@ -557,7 +557,7 @@
                         </div>
 
                         <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs">
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-emerald-700">
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                                 <i class="ri-qr-code-line text-lg"></i>
                             </span>
                             <h3 class="mt-3 text-sm font-bold text-slate-900">IoT QR Telemetry</h3>
@@ -565,7 +565,7 @@
                         </div>
 
                         <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs">
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-emerald-700">
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                                 <i class="ri-leaf-line text-lg"></i>
                             </span>
                             <h3 class="mt-3 text-sm font-bold text-slate-900">Green Seal Certified</h3>
@@ -573,7 +573,7 @@
                         </div>
 
                         <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs">
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-emerald-700">
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                                 <i class="ri-dashboard-line text-lg"></i>
                             </span>
                             <h3 class="mt-3 text-sm font-bold text-slate-900">Dedicated Director</h3>
@@ -584,13 +584,13 @@
 
                 <!-- Right High-Contrast Metric Card -->
                 <div class="lg:col-span-6">
-                    <div class="rounded-3xl bg-slate-950 p-8 sm:p-10 text-white shadow-xl">
+                    <div class="rounded-3xl bg-[#0B1A30] p-8 sm:p-10 text-white shadow-xl">
                         <div class="flex items-center justify-between border-b border-slate-800 pb-5">
                             <div>
-                                <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Benchmark Metrics</span>
+                                <span class="text-xs font-semibold uppercase tracking-wider text-red-400">Benchmark Metrics</span>
                                 <h3 class="text-lg font-bold text-white mt-0.5">Annual SLA Performance</h3>
                             </div>
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-red-500/20 text-red-400">
                                 <i class="ri-award-fill text-lg"></i>
                             </span>
                         </div>
@@ -601,7 +601,7 @@
                                 <p class="text-xs text-slate-400 mt-1">SLA Adherence</p>
                             </div>
                             <div>
-                                <p class="text-3xl sm:text-4xl font-extrabold text-emerald-400 tracking-tight">18.4%</p>
+                                <p class="text-3xl sm:text-4xl font-extrabold text-red-400 tracking-tight">18.4%</p>
                                 <p class="text-xs text-slate-400 mt-1">Overhead Saved</p>
                             </div>
                             <div>
@@ -609,7 +609,7 @@
                                 <p class="text-xs text-slate-400 mt-1">Emergency Dispatch</p>
                             </div>
                             <div>
-                                <p class="text-3xl sm:text-4xl font-extrabold text-emerald-400 tracking-tight">4.95<span class="text-base text-slate-400 font-normal">/5</span></p>
+                                <p class="text-3xl sm:text-4xl font-extrabold text-red-400 tracking-tight">4.95<span class="text-base text-slate-400 font-normal">/5</span></p>
                                 <p class="text-xs text-slate-400 mt-1">Client Rating</p>
                             </div>
                         </div>
@@ -618,7 +618,7 @@
                             <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">
                                 "FacilityPro took over our 400,000 sq.ft commercial tower with zero operational hiccup. Restroom cleanliness ratings jumped 35% in month one."
                             </p>
-                            <p class="mt-3 text-xs font-medium text-emerald-400">— Marcus Vance, Senior VP Property Operations</p>
+                            <p class="mt-3 text-xs font-medium text-red-400">— Marcus Vance, Senior VP Property Operations</p>
                         </div>
                     </div>
                 </div>
@@ -635,7 +635,7 @@
     >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-xl mx-auto text-center">
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-700">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
                     <i class="ri-git-commit-line text-xs"></i> Blueprint
                 </span>
                 <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -648,8 +648,8 @@
 
             <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 <!-- Step 1 -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-emerald-300 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-xs font-bold text-white">01</span>
+                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F] text-xs font-bold text-white">01</span>
                     <h3 class="mt-4 text-base font-bold text-slate-900">Spatial &amp; SLA Audit</h3>
                     <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
                         Thorough inspection of floor layouts and high-traffic zones to establish baseline metrics.
@@ -657,8 +657,8 @@
                 </div>
 
                 <!-- Step 2 -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-emerald-300 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600 text-xs font-bold text-white">02</span>
+                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-xs font-bold text-white">02</span>
                     <h3 class="mt-4 text-base font-bold text-slate-900">Staff Deployment</h3>
                     <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
                         Direct-employed, uniformed operators assigned with property-specific standard operating procedures.
@@ -666,8 +666,8 @@
                 </div>
 
                 <!-- Step 3 -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-emerald-300 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-xs font-bold text-white">03</span>
+                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F] text-xs font-bold text-white">03</span>
                     <h3 class="mt-4 text-base font-bold text-slate-900">IoT QR Telemetry</h3>
                     <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
                         Restroom cleaning schedules and high-touch points logged live via digital QR checkpoints.
@@ -675,8 +675,8 @@
                 </div>
 
                 <!-- Step 4 -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-emerald-300 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600 text-xs font-bold text-white">04</span>
+                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-xs font-bold text-white">04</span>
                     <h3 class="mt-4 text-base font-bold text-slate-900">Monthly SLA Review</h3>
                     <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
                         Dedicated directors review audit scores, consumables expenditure, and continuous optimization.
@@ -712,7 +712,7 @@
         >
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-10">
                 <div class="text-center sm:text-left">
-                    <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-700">
+                    <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
                         <i class="ri-feedback-line text-xs"></i> Testimonials
                     </span>
                     <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -725,14 +725,14 @@
                     <button 
                         @click="prev()" 
                         aria-label="Previous Testimonial"
-                        class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-xs hover:border-emerald-600 hover:bg-emerald-600 hover:text-white transition active:scale-95 cursor-pointer"
+                        class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-xs hover:border-red-600 hover:bg-red-600 hover:text-white transition active:scale-95 cursor-pointer"
                     >
                         <i class="ri-arrow-left-line text-sm"></i>
                     </button>
                     <button 
                         @click="next()" 
                         aria-label="Next Testimonial"
-                        class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-xs hover:border-emerald-600 hover:bg-emerald-600 hover:text-white transition active:scale-95 cursor-pointer"
+                        class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-xs hover:border-red-600 hover:bg-red-600 hover:text-white transition active:scale-95 cursor-pointer"
                     >
                         <i class="ri-arrow-right-line text-sm"></i>
                     </button>
@@ -751,7 +751,7 @@
                     >
                         <div 
                             x-data="{ get item() { return testimonials[(active + i) % testimonials.length] } }"
-                            class="flex flex-col justify-between h-full rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs hover:border-emerald-300 transition"
+                            class="flex flex-col justify-between h-full rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs hover:border-[#12233F]/30 transition"
                         >
                             <div>
                                 <div class="flex items-center justify-between">
@@ -762,13 +762,13 @@
                                         <i class="ri-star-fill"></i>
                                         <i class="ri-star-fill"></i>
                                     </div>
-                                    <span class="rounded-full bg-emerald-50 px-2.5 py-0.5 text-[10px] font-semibold text-emerald-800" x-text="item.metric"></span>
+                                    <span class="rounded-full bg-[#12233F]/10 px-2.5 py-0.5 text-[10px] font-semibold text-[#12233F]" x-text="item.metric"></span>
                                 </div>
                                 <p class="mt-5 text-xs sm:text-sm text-slate-600 italic leading-relaxed" x-text="'&ldquo;' + item.quote + '&rdquo;'"></p>
                             </div>
 
                             <div class="mt-6 pt-5 border-t border-slate-100 flex items-center gap-3">
-                                <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-900 text-white font-bold text-xs" x-text="item.name.charAt(0)"></div>
+                                <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#12233F] text-white font-bold text-xs" x-text="item.name.charAt(0)"></div>
                                 <div>
                                     <h3 class="text-xs sm:text-sm font-bold text-slate-900" x-text="item.name"></h3>
                                     <p class="text-[11px] text-slate-400" x-text="item.role + ' • ' + item.company"></p>
@@ -790,7 +790,7 @@
     >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-xl mx-auto text-center">
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-700">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
                     <i class="ri-calculator-line text-xs"></i> Scope Calculator
                 </span>
                 <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -818,7 +818,7 @@
                                 <button 
                                     type="button" 
                                     @click="propertyType = 'hq'"
-                                    :class="propertyType === 'hq' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-emerald-300'"
+                                    :class="propertyType === 'hq' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
                                     class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
                                 >
                                     Corporate HQ
@@ -826,7 +826,7 @@
                                 <button 
                                     type="button" 
                                     @click="propertyType = 'tower'"
-                                    :class="propertyType === 'tower' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-emerald-300'"
+                                    :class="propertyType === 'tower' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
                                     class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
                                 >
                                     Commercial Tower
@@ -834,7 +834,7 @@
                                 <button 
                                     type="button" 
                                     @click="propertyType = 'campus'"
-                                    :class="propertyType === 'campus' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-emerald-300'"
+                                    :class="propertyType === 'campus' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
                                     class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
                                 >
                                     Tech Campus
@@ -842,7 +842,7 @@
                                 <button 
                                     type="button" 
                                     @click="propertyType = 'healthcare'"
-                                    :class="propertyType === 'healthcare' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-emerald-300'"
+                                    :class="propertyType === 'healthcare' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
                                     class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
                                 >
                                     Healthcare &amp; Lab
@@ -857,7 +857,7 @@
                                 <button 
                                     type="button" 
                                     @click="sqFt = 'under15k'"
-                                    :class="sqFt === 'under15k' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-emerald-300'"
+                                    :class="sqFt === 'under15k' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
                                     class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
                                 >
                                     &lt; 15,000
@@ -865,7 +865,7 @@
                                 <button 
                                     type="button" 
                                     @click="sqFt = '15k-50k'"
-                                    :class="sqFt === '15k-50k' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-emerald-300'"
+                                    :class="sqFt === '15k-50k' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
                                     class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
                                 >
                                     15,000 - 50,000
@@ -873,7 +873,7 @@
                                 <button 
                                     type="button" 
                                     @click="sqFt = '50k-150k'"
-                                    :class="sqFt === '50k-150k' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-emerald-300'"
+                                    :class="sqFt === '50k-150k' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
                                     class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
                                 >
                                     50,000 - 150,000
@@ -881,7 +881,7 @@
                                 <button 
                                     type="button" 
                                     @click="sqFt = '150k+'"
-                                    :class="sqFt === '150k+' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-emerald-300'"
+                                    :class="sqFt === '150k+' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
                                     class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
                                 >
                                     150,000+
@@ -894,19 +894,19 @@
                             <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-3">3. Service Modules</label>
                             <div class="grid gap-2.5 sm:grid-cols-2">
                                 <label class="flex items-center gap-2.5 rounded-2xl border border-slate-200/80 bg-slate-50/50 p-3 text-xs font-medium text-slate-800 cursor-pointer">
-                                    <input type="checkbox" checked class="h-4 w-4 rounded-full text-emerald-600 focus:ring-emerald-500" />
+                                    <input type="checkbox" checked class="h-4 w-4 rounded-full text-red-600 focus:ring-red-500" />
                                     <span>Office Sweeping &amp; Janitorial</span>
                                 </label>
                                 <label class="flex items-center gap-2.5 rounded-2xl border border-slate-200/80 bg-slate-50/50 p-3 text-xs font-medium text-slate-800 cursor-pointer">
-                                    <input type="checkbox" checked class="h-4 w-4 rounded-full text-emerald-600 focus:ring-emerald-500" />
+                                    <input type="checkbox" checked class="h-4 w-4 rounded-full text-red-600 focus:ring-red-500" />
                                     <span>Restroom Hygiene &amp; Refill</span>
                                 </label>
                                 <label class="flex items-center gap-2.5 rounded-2xl border border-slate-200/80 bg-slate-50/50 p-3 text-xs font-medium text-slate-800 cursor-pointer">
-                                    <input type="checkbox" checked class="h-4 w-4 rounded-full text-emerald-600 focus:ring-emerald-500" />
+                                    <input type="checkbox" checked class="h-4 w-4 rounded-full text-red-600 focus:ring-red-500" />
                                     <span>Pantry Stewards &amp; Office Boys</span>
                                 </label>
                                 <label class="flex items-center gap-2.5 rounded-2xl border border-slate-200/80 bg-slate-50/50 p-3 text-xs font-medium text-slate-800 cursor-pointer">
-                                    <input type="checkbox" class="h-4 w-4 rounded-full text-emerald-600 focus:ring-emerald-500" />
+                                    <input type="checkbox" class="h-4 w-4 rounded-full text-red-600 focus:ring-red-500" />
                                     <span>MEP &amp; HVAC Filter Care</span>
                                 </label>
                             </div>
@@ -916,11 +916,11 @@
                         <div class="grid gap-3 pt-2 sm:grid-cols-2">
                             <div>
                                 <label class="block text-xs font-medium text-slate-600 mb-1">Work Email</label>
-                                <input type="email" required placeholder="manager@company.com" class="w-full rounded-full border border-slate-200 bg-white px-4 py-2.5 text-xs text-slate-800 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500" />
+                                <input type="email" required placeholder="manager@company.com" class="w-full rounded-full border border-slate-200 bg-white px-4 py-2.5 text-xs text-slate-800 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500" />
                             </div>
                             <div>
                                 <label class="block text-xs font-medium text-slate-600 mb-1">Phone Number</label>
-                                <input type="tel" required placeholder="+1 (555) 000-0000" class="w-full rounded-full border border-slate-200 bg-white px-4 py-2.5 text-xs text-slate-800 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500" />
+                                <input type="tel" required placeholder="+1 (555) 000-0000" class="w-full rounded-full border border-slate-200 bg-white px-4 py-2.5 text-xs text-slate-800 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500" />
                             </div>
                         </div>
 
@@ -928,7 +928,7 @@
                         <div class="pt-2 text-center">
                             <button
                                 type="submit"
-                                class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-emerald-600 px-8 py-3.5 text-xs sm:text-sm font-semibold text-white shadow-sm hover:bg-emerald-700 transition active:scale-[0.98] cursor-pointer"
+                                class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-red-600 px-8 py-3.5 text-xs sm:text-sm font-semibold text-white shadow-sm hover:bg-red-700 transition active:scale-[0.98] cursor-pointer"
                             >
                                 <span>Generate SLA Proposal</span>
                                 <i class="ri-arrow-right-line text-sm"></i>
@@ -936,7 +936,7 @@
                         </div>
 
                         <!-- Success Note -->
-                        <div x-show="submitted" x-cloak class="rounded-2xl bg-emerald-50 p-4 text-center text-xs font-medium text-emerald-800">
+                        <div x-show="submitted" x-cloak class="rounded-2xl bg-red-50 p-4 text-center text-xs font-medium text-red-800">
                             Thank you! Your request has been logged. Our operations director will reach out within 24 hours.
                         </div>
                     </div>
@@ -954,7 +954,7 @@
     >
         <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8" x-data="{ activeFaq: 1 }">
             <div class="text-center">
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-700">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
                     <i class="ri-questionnaire-line text-xs"></i> FAQ
                 </span>
                 <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -970,11 +970,11 @@
                 <div class="rounded-2xl border border-slate-200/80 bg-white shadow-xs overflow-hidden">
                     <button 
                         @click="activeFaq = (activeFaq === 1 ? null : 1)"
-                        class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-emerald-700 cursor-pointer gap-4"
+                        class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
                     >
                         <span>How do you guarantee single-point SLA accountability?</span>
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
-                            <i :class="activeFaq === 1 ? 'ri-subtract-line text-emerald-600' : 'ri-add-line'"></i>
+                            <i :class="activeFaq === 1 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
                         </span>
                     </button>
                     <div x-show="activeFaq === 1" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
@@ -986,11 +986,11 @@
                 <div class="rounded-2xl border border-slate-200/80 bg-white shadow-xs overflow-hidden">
                     <button 
                         @click="activeFaq = (activeFaq === 2 ? null : 2)"
-                        class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-emerald-700 cursor-pointer gap-4"
+                        class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
                     >
                         <span>Are all janitorial and steward staff direct W-2 employees?</span>
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
-                            <i :class="activeFaq === 2 ? 'ri-subtract-line text-emerald-600' : 'ri-add-line'"></i>
+                            <i :class="activeFaq === 2 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
                         </span>
                     </button>
                     <div x-show="activeFaq === 2" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
@@ -1002,11 +1002,11 @@
                 <div class="rounded-2xl border border-slate-200/80 bg-white shadow-xs overflow-hidden">
                     <button 
                         @click="activeFaq = (activeFaq === 3 ? null : 3)"
-                        class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-emerald-700 cursor-pointer gap-4"
+                        class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
                     >
                         <span>What is your emergency dispatch response time for MEP failures?</span>
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
-                            <i :class="activeFaq === 3 ? 'ri-subtract-line text-emerald-600' : 'ri-add-line'"></i>
+                            <i :class="activeFaq === 3 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
                         </span>
                     </button>
                     <div x-show="activeFaq === 3" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
@@ -1018,11 +1018,11 @@
                 <div class="rounded-2xl border border-slate-200/80 bg-white shadow-xs overflow-hidden">
                     <button 
                         @click="activeFaq = (activeFaq === 4 ? null : 4)"
-                        class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-emerald-700 cursor-pointer gap-4"
+                        class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
                     >
                         <span>How does the IoT QR code digital cleaning log work?</span>
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
-                            <i :class="activeFaq === 4 ? 'ri-subtract-line text-emerald-600' : 'ri-add-line'"></i>
+                            <i :class="activeFaq === 4 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
                         </span>
                     </button>
                     <div x-show="activeFaq === 4" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
@@ -1041,9 +1041,9 @@
         class="scroll-mt-20 py-20 sm:py-24 transition-all duration-700 ease-out"
     >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="relative overflow-hidden rounded-3xl bg-slate-950 px-6 py-14 sm:px-12 lg:py-16 text-center text-white border border-slate-800">
+            <div class="relative overflow-hidden rounded-3xl bg-[#0B1A30] px-6 py-14 sm:px-12 lg:py-16 text-center text-white border border-slate-800">
                 <div class="relative max-w-2xl mx-auto space-y-4">
-                    <span class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold text-emerald-400">
+                    <span class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold text-red-400">
                         <i class="ri-customer-service-2-line text-xs"></i> 24/7 Operations Desk
                     </span>
                     <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
@@ -1056,7 +1056,7 @@
                     <div class="pt-4 flex flex-wrap items-center justify-center gap-3">
                         <a
                             href="{{ route('contact') }}"
-                            class="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-7 py-3.5 text-xs sm:text-sm font-semibold text-slate-950 shadow-sm transition hover:bg-emerald-400 active:scale-[0.98]"
+                            class="inline-flex items-center gap-2 rounded-full bg-red-500 px-7 py-3.5 text-xs sm:text-sm font-semibold text-slate-950 shadow-sm transition hover:bg-red-400 active:scale-[0.98]"
                         >
                             <span>Request Facility Audit</span>
                             <i class="ri-arrow-right-line text-sm"></i>
@@ -1065,7 +1065,7 @@
                             href="tel:+18004928820"
                             class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3.5 text-xs sm:text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/20 active:scale-[0.98]"
                         >
-                            <i class="ri-phone-line text-sm text-emerald-400"></i>
+                            <i class="ri-phone-line text-sm text-red-400"></i>
                             <span>+1 (800) 492-8820</span>
                         </a>
                     </div>

@@ -1,9 +1,9 @@
 <header
-    class="sticky top-0 z-50 transition-all shadow-xs"
+    class="sticky top-0 z-50 transition-all bg-white shadow-sm"
     x-data="{ menuOpen: false }"
 >
     <!-- Main Navigation Bar -->
-    <div class="border-b border-slate-200/80 bg-white/95 backdrop-blur-md">
+    <div class="border-b border-slate-200/80 bg-white">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between gap-4 lg:h-20">
                 
@@ -33,11 +33,11 @@
                             >
                                 <a
                                     href="{{ $link['href'] }}"
-                                    class="relative inline-flex items-center gap-1 pb-1 text-base font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-emerald-600 after:transition-transform after:duration-200 hover:text-emerald-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-emerald-700 after:scale-x-100' : 'text-slate-700' }}"
+                                    class="relative inline-flex items-center gap-1 pb-1 text-base font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-red-600 after:transition-transform after:duration-200 hover:text-red-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-red-600 after:scale-x-100' : 'text-[#12233F]' }}"
                                     @click="open = !open"
                                 >
                                     <span>{{ $link['label'] }}</span>
-                                    <i class="ri-arrow-down-s-line text-base transition-transform duration-200" :class="open ? 'rotate-180 text-emerald-600' : 'text-slate-400'"></i>
+                                    <i class="ri-arrow-down-s-line text-base transition-transform duration-200" :class="open ? 'rotate-180 text-red-600' : 'text-slate-400'"></i>
                                 </a>
 
                                 <!-- Services Mega Dropdown Panel -->
@@ -55,12 +55,12 @@
                                     <div class="rounded-2xl border border-slate-200/90 bg-white p-5 shadow-2xl shadow-slate-900/10">
                                         <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
                                             <div>
-                                                <p class="text-xs font-extrabold uppercase tracking-wider text-slate-900">Enterprise Facility Capabilities</p>
+                                                <p class="text-xs font-extrabold uppercase tracking-wider text-[#12233F]">Enterprise Facility Capabilities</p>
                                                 <p class="text-[11px] text-slate-500">SLA-backed operations with single-point accountability</p>
                                             </div>
                                             <a
                                                 href="{{ route('services') }}"
-                                                class="inline-flex items-center gap-1 text-xs font-bold text-emerald-700 hover:text-emerald-800 transition"
+                                                class="inline-flex items-center gap-1 text-xs font-bold text-red-600 hover:text-red-700 transition"
                                             >
                                                 <span>All Services</span>
                                                 <i class="ri-arrow-right-line"></i>
@@ -74,11 +74,11 @@
                                                     href="{{ route('services.show', ['slug' => $service['slug']]) }}"
                                                     class="group flex items-start gap-3 rounded-xl p-3 transition hover:bg-slate-50 border border-transparent hover:border-slate-200/60"
                                                 >
-                                                    <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition shadow-xs border border-emerald-200/60">
+                                                    <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#12233F]/5 text-[#12233F] group-hover:bg-red-600 group-hover:text-white transition shadow-xs border border-[#12233F]/10">
                                                         <i class="{{ $service['icon'] }} text-base"></i>
                                                     </span>
                                                     <div class="min-w-0">
-                                                        <p class="text-xs font-bold text-slate-900 group-hover:text-emerald-700 transition truncate">
+                                                        <p class="text-xs font-bold text-slate-900 group-hover:text-red-600 transition truncate">
                                                             {{ $service['title'] }}
                                                         </p>
                                                         <p class="text-[11px] text-slate-500 truncate mt-0.5">
@@ -92,12 +92,12 @@
                                         <!-- Dropdown Bottom Highlight -->
                                         <div class="mt-4 -mx-5 -mb-5 rounded-b-2xl border-t border-slate-100 bg-slate-50/70 p-3.5 px-5 flex items-center justify-between text-xs">
                                             <div class="flex items-center gap-3 text-slate-600 font-medium">
-                                                <span class="flex items-center gap-1"><i class="ri-checkbox-circle-fill text-emerald-600"></i> 100% W-2 Staff</span>
-                                                <span class="flex items-center gap-1"><i class="ri-checkbox-circle-fill text-emerald-600"></i> IoT QR Logs</span>
+                                                <span class="flex items-center gap-1"><i class="ri-checkbox-circle-fill text-red-600"></i> 100% W-2 Staff</span>
+                                                <span class="flex items-center gap-1"><i class="ri-checkbox-circle-fill text-red-600"></i> IoT QR Logs</span>
                                             </div>
                                             <a
                                                 href="{{ route('contact') }}"
-                                                class="font-bold text-emerald-700 hover:text-emerald-800 transition inline-flex items-center gap-1"
+                                                class="font-bold text-red-600 hover:text-red-700 transition inline-flex items-center gap-1"
                                             >
                                                 <span>Request Custom Scope & Audit</span>
                                                 <i class="ri-arrow-right-line"></i>
@@ -109,7 +109,7 @@
                         @else
                             <a
                                 href="{{ $link['href'] }}"
-                                class="relative pb-1 text-base font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-emerald-600 after:transition-transform after:duration-200 hover:text-emerald-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-emerald-700 after:scale-x-100' : 'text-slate-700' }}"
+                                class="relative pb-1 text-base font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-red-600 after:transition-transform after:duration-200 hover:text-red-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-red-600 after:scale-x-100' : 'text-[#12233F]' }}"
                             >
                                 {{ $link['label'] }}
                             </a>
@@ -123,13 +123,13 @@
                     <!-- 24/7 Hotline -->
                     <a
                         href="tel:+18004928820"
-                        class="hidden items-center gap-2.5 rounded-full border border-slate-200 bg-slate-50/60 px-3.5 py-1.5 text-xs font-semibold text-slate-700 transition hover:border-emerald-300 hover:bg-white hover:text-emerald-700 hover:shadow-xs xl:flex"
+                        class="hidden items-center gap-2.5 rounded-full border border-slate-200 bg-slate-50/60 px-3.5 py-1.5 text-xs font-semibold text-slate-700 transition hover:border-red-300 hover:bg-white hover:text-red-700 xl:flex"
                     >
-                        <span class="relative flex h-7 w-7 items-center justify-center rounded-full bg-emerald-600 text-white shadow-xs">
+                        <span class="relative flex h-7 w-7 items-center justify-center rounded-full bg-red-600 text-white shadow-xs">
                             <i class="ri-phone-fill text-xs"></i>
                             <span class="absolute -top-0.5 -right-0.5 flex h-2.5 w-2.5">
-                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
                             </span>
                         </span>
                         <div>
@@ -141,7 +141,7 @@
                     <!-- Request Quote Primary CTA -->
                     <a
                         href="{{ route('contact') }}"
-                        class="hidden items-center gap-2 rounded-full bg-emerald-600 px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition hover:bg-emerald-700 hover:shadow-md sm:inline-flex"
+                        class="hidden items-center gap-2 rounded-full bg-red-600 px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition hover:bg-red-500 hover:shadow-md sm:inline-flex"
                     >
                         <span>Request Quote</span>
                         <i class="ri-arrow-right-line text-sm transition-transform group-hover:translate-x-0.5"></i>
@@ -150,7 +150,7 @@
                     <!-- Mobile Menu Hamburger Button -->
                     <button
                         type="button"
-                        class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 transition hover:bg-emerald-50 hover:text-emerald-700 lg:hidden shadow-xs"
+                        class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 transition hover:bg-red-50 hover:text-red-600 lg:hidden shadow-xs"
                         @click="menuOpen = !menuOpen"
                         aria-label="Toggle navigation menu"
                         :aria-expanded="menuOpen.toString()"
@@ -183,17 +183,17 @@
                         @if (! empty($link['is_dropdown']))
                             <!-- Mobile Services Accordion -->
                             <div>
-                                <div class="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold transition {{ $isActive ? 'bg-emerald-50 text-emerald-800' : 'text-slate-700 hover:bg-slate-50' }}">
+                                <div class="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold transition {{ $isActive ? 'bg-red-50 text-red-600' : 'text-[#12233F] hover:bg-slate-50' }}">
                                     <a href="{{ $link['href'] }}" @click="menuOpen = false" class="flex-1">
                                         <span>{{ $link['label'] }}</span>
                                     </a>
                                     <button
                                         type="button"
                                         @click="mobileServicesOpen = !mobileServicesOpen"
-                                        class="p-1 text-slate-400 hover:text-emerald-700"
+                                        class="p-1 text-slate-400 hover:text-red-600"
                                         aria-label="Toggle services list"
                                     >
-                                        <i class="ri-arrow-down-s-line text-lg transition-transform duration-200" :class="mobileServicesOpen ? 'rotate-180 text-emerald-600' : ''"></i>
+                                        <i class="ri-arrow-down-s-line text-lg transition-transform duration-200" :class="mobileServicesOpen ? 'rotate-180 text-red-600' : ''"></i>
                                     </button>
                                 </div>
 
@@ -201,16 +201,16 @@
                                     @foreach ($this->services() as $service)
                                         <a
                                             href="{{ route('services.show', ['slug' => $service['slug']]) }}"
-                                            class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-medium text-slate-600 hover:bg-white hover:text-emerald-700 transition"
+                                            class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-medium text-slate-600 hover:bg-white hover:text-red-700 transition"
                                             @click="menuOpen = false"
                                         >
-                                            <i class="{{ $service['icon'] }} text-emerald-600"></i>
+                                            <i class="{{ $service['icon'] }} text-red-600"></i>
                                             <span class="truncate">{{ $service['title'] }}</span>
                                         </a>
                                     @endforeach
                                     <a
                                         href="{{ route('services') }}"
-                                        class="flex items-center justify-between rounded-lg px-3 py-2 text-xs font-bold text-emerald-700 hover:bg-white transition border-t border-slate-200/60 mt-2 pt-2"
+                                        class="flex items-center justify-between rounded-lg px-3 py-2 text-xs font-bold text-red-600 hover:bg-white transition border-t border-slate-200/60 mt-2 pt-2"
                                         @click="menuOpen = false"
                                     >
                                         <span>Explore All Capabilities</span>
@@ -221,7 +221,7 @@
                         @else
                             <a
                                 href="{{ $link['href'] }}"
-                                class="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold transition {{ $isActive ? 'bg-emerald-50 text-emerald-800 font-bold' : 'text-slate-700 hover:bg-slate-50 hover:text-emerald-700' }}"
+                                class="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold transition {{ $isActive ? 'bg-red-50 text-red-600 font-bold' : 'text-[#12233F] hover:bg-slate-50 hover:text-red-600' }}"
                                 @click="menuOpen = false"
                             >
                                 <span>{{ $link['label'] }}</span>
@@ -235,7 +235,7 @@
                         href="tel:+18004928820"
                         class="mt-3 flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-800"
                     >
-                        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600 text-white">
+                        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-red-600 text-white">
                             <i class="ri-phone-fill text-sm"></i>
                         </span>
                         <div>
@@ -247,7 +247,7 @@
                     <!-- Mobile Request Quote Button -->
                     <a
                         href="{{ route('contact') }}"
-                        class="mt-2 flex items-center justify-center gap-2 rounded-full bg-emerald-600 px-5 py-3 text-center text-xs font-bold uppercase tracking-wider text-white shadow-sm transition hover:bg-emerald-700"
+                        class="mt-2 flex items-center justify-center gap-2 rounded-full bg-red-600 px-5 py-3 text-center text-xs font-bold uppercase tracking-wider text-white shadow-sm transition hover:bg-red-500"
                         @click="menuOpen = false"
                     >
                         <span>Request Facility Quote</span>
@@ -256,9 +256,9 @@
 
                     <!-- Mobile Badges Footer -->
                     <div class="mt-4 flex items-center justify-center gap-4 text-[11px] text-slate-400 border-t border-slate-100 pt-4">
-                        <span class="flex items-center gap-1"><i class="ri-shield-star-line text-emerald-600"></i> ISO 41001</span>
-                        <span class="flex items-center gap-1"><i class="ri-award-line text-emerald-600"></i> ISSA CIMS</span>
-                        <span class="flex items-center gap-1"><i class="ri-check-line text-emerald-600"></i> 100% W-2</span>
+                        <span class="flex items-center gap-1"><i class="ri-shield-star-line text-red-600"></i> ISO 41001</span>
+                        <span class="flex items-center gap-1"><i class="ri-award-line text-red-600"></i> ISSA CIMS</span>
+                        <span class="flex items-center gap-1"><i class="ri-check-line text-red-600"></i> 100% W-2</span>
                     </div>
                 </nav>
             </div>
