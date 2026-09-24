@@ -29,6 +29,7 @@ new class extends Component
             ['label' => 'Why Choose Us', 'href' => route('home').'#why-us'],
             ['label' => 'SLA & Standards', 'href' => route('home').'#services'],
             ['label' => 'Scope Calculator', 'href' => route('home').'#calculator'],
+            ['label' => 'Project Gallery', 'href' => route('gallery')],
             ['label' => 'Contact Us', 'href' => route('contact')],
         ];
     }

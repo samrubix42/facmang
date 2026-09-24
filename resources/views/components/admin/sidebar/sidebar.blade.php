@@ -41,6 +41,17 @@
                     </div>
                 </a>
 
+                <!-- Gallery Categories -->
+                <a
+                    href="{{ route('admin.gallery-categories') }}"
+                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.gallery-categories') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
+                >
+                    <div class="flex items-center gap-2.5">
+                        <i class="ri-gallery-line text-sm"></i>
+                        <span>Gallery Categories</span>
+                    </div>
+                </a>
+
                 <!-- Services -->
                 <a
                     href="{{ route('services') }}"

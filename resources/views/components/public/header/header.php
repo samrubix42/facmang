@@ -15,6 +15,7 @@ new class extends Component
             ['label' => 'About Us', 'href' => route('about'), 'route' => 'about'],
             ['label' => 'Services', 'href' => route('services'), 'route' => 'services*', 'is_dropdown' => true],
             ['label' => 'Why Us', 'href' => route('home').'#why-us', 'route' => 'why-us'],
+            ['label' => 'Gallery', 'href' => route('gallery'), 'route' => 'gallery'],
             ['label' => 'Contact', 'href' => route('contact'), 'route' => 'contact'],
         ];
     }
