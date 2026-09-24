@@ -2,45 +2,6 @@
     class="sticky top-0 z-50 transition-all shadow-xs"
     x-data="{ menuOpen: false }"
 >
-    <!-- Top Utility Announcement Bar (Desktop) -->
-    <div class="hidden border-b border-slate-900/10 bg-slate-900 text-slate-300 text-[11px] lg:block">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="flex h-9 items-center justify-between">
-                <!-- Left Info -->
-                <div class="flex items-center gap-4">
-                    <span class="inline-flex items-center gap-1.5 text-emerald-400 font-bold">
-                        <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                        24/7 SLA Rapid Dispatch Active
-                    </span>
-                    <span class="text-slate-700">•</span>
-                    <span class="text-slate-400 flex items-center gap-1.5">
-                        <i class="ri-shield-star-fill text-emerald-400"></i> ISO 41001 & ISSA CIMS Certified
-                    </span>
-                    <span class="text-slate-700">•</span>
-                    <span class="text-slate-400">Single-Contract Corporate Operations</span>
-                </div>
-
-                <!-- Right Info -->
-                <div class="flex items-center gap-5">
-                    <a href="mailto:ops@facilitypro.com" class="flex items-center gap-1.5 text-slate-300 hover:text-emerald-400 transition">
-                        <i class="ri-mail-line text-emerald-400"></i>
-                        <span>ops@facilitypro.com</span>
-                    </a>
-                    <span class="text-slate-700">•</span>
-                    @auth
-                        <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-1.5 text-emerald-400 font-semibold hover:text-emerald-300 transition">
-                            <i class="ri-dashboard-line"></i> Admin Console
-                        </a>
-                    @else
-                        <a href="{{ route('login') }}" class="flex items-center gap-1.5 text-slate-300 hover:text-emerald-400 transition">
-                            <i class="ri-user-line"></i> Staff Login
-                        </a>
-                    @endauth
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Main Navigation Bar -->
     <div class="border-b border-slate-200/80 bg-white/95 backdrop-blur-md">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -56,7 +17,7 @@
                 </a>
 
                 <!-- Desktop Nav Links -->
-                <nav class="hidden items-center gap-1 rounded-full border border-slate-200/80 bg-slate-50/80 p-1.5 lg:flex shadow-xs" aria-label="Primary">
+                <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
                     @foreach ($this->navLinks() as $link)
                         @php
                             $isActive = request()->routeIs($link['route']);
@@ -72,11 +33,11 @@
                             >
                                 <a
                                     href="{{ $link['href'] }}"
-                                    class="inline-flex items-center gap-1 rounded-full px-4 py-2 text-xs font-semibold transition {{ $isActive ? 'bg-white text-emerald-800 font-bold shadow-xs border border-slate-200/60' : 'text-slate-700 hover:bg-white hover:text-emerald-700 hover:shadow-xs' }}"
+                                    class="relative inline-flex items-center gap-1 pb-1 text-base font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-emerald-600 after:transition-transform after:duration-200 hover:text-emerald-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-emerald-700 after:scale-x-100' : 'text-slate-700' }}"
                                     @click="open = !open"
                                 >
                                     <span>{{ $link['label'] }}</span>
-                                    <i class="ri-arrow-down-s-line text-xs transition-transform duration-200" :class="open ? 'rotate-180 text-emerald-600' : 'text-slate-400'"></i>
+                                    <i class="ri-arrow-down-s-line text-base transition-transform duration-200" :class="open ? 'rotate-180 text-emerald-600' : 'text-slate-400'"></i>
                                 </a>
 
                                 <!-- Services Mega Dropdown Panel -->
@@ -148,7 +109,7 @@
                         @else
                             <a
                                 href="{{ $link['href'] }}"
-                                class="rounded-full px-4 py-2 text-xs font-semibold transition {{ $isActive ? 'bg-white text-emerald-800 font-bold shadow-xs border border-slate-200/60' : 'text-slate-700 hover:bg-white hover:text-emerald-700 hover:shadow-xs' }}"
+                                class="relative pb-1 text-base font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-emerald-600 after:transition-transform after:duration-200 hover:text-emerald-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-emerald-700 after:scale-x-100' : 'text-slate-700' }}"
                             >
                                 {{ $link['label'] }}
                             </a>

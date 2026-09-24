@@ -159,9 +159,9 @@
                         x-transition:leave-end="opacity-0 -translate-y-4"
                         class="space-y-0"
                     >
-                        <!-- Large Editorial Serif Heading -->
+                        <!-- Large Editorial Heading in Montserrat font -->
                         <h1 
-                            class="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-normal leading-[1.16] tracking-tight drop-shadow-sm" 
+                            class="font-['Montserrat',sans-serif] text-3xl sm:text-5xl lg:text-6xl text-white font-normal leading-[1.16] tracking-tight drop-shadow-sm" 
                             x-text="slide.title"
                         ></h1>
 
@@ -177,7 +177,7 @@
                         <div>
                             <a 
                                 :href="slide.buttonLink"
-                                class="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-xs sm:text-sm font-medium text-slate-900 shadow-md hover:bg-slate-100 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 cursor-pointer"
+                                class="font-['Montserrat',sans-serif] inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-xs sm:text-sm font-medium text-slate-900 shadow-md hover:bg-slate-100 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 cursor-pointer"
                             >
                                 <span x-text="slide.buttonText"></span>
                             </a>
