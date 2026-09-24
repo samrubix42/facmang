@@ -137,11 +137,6 @@
                         />
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0B1A30]/85 via-[#0B1A30]/15 to-transparent"></div>
 
-                        <span class="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-white/90 px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-[#12233F] backdrop-blur-sm">
-                            <i class="ri-checkbox-circle-fill text-[10px] text-red-600"></i>
-                            <span x-text="item.tag"></span>
-                        </span>
-
                         <span class="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-[#12233F] backdrop-blur-sm transition group-hover:bg-red-600 group-hover:text-white">
                             <i class="ri-zoom-in-line text-sm"></i>
                         </span>
@@ -230,7 +225,6 @@
                 <figcaption class="mt-4 flex flex-wrap items-center justify-between gap-3">
                     <div class="min-w-0">
                         <p class="text-sm font-bold text-white" x-text="active.title"></p>
-                        <p class="mt-0.5 text-xs text-slate-400" x-text="active.tag"></p>
                     </div>
                     <span class="rounded-full bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-red-400" x-text="(currentIndex + 1) + ' / ' + list().length"></span>
                 </figcaption>
