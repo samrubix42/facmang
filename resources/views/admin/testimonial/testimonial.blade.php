@@ -1,32 +1,5 @@
 <div class="space-y-6">
 
-    <!-- Flash Status Alert (shadcn Alert) -->
-    @if (session()->has('status'))
-        <div 
-            x-data="{ show: true }" 
-            x-show="show" 
-            x-transition 
-            class="relative w-full rounded-lg border border-emerald-200 bg-emerald-50/60 p-4 text-xs text-emerald-950 shadow-xs flex items-center justify-between"
-            role="alert"
-        >
-            <div class="flex items-center gap-3">
-                <i class="ri-checkbox-circle-line text-base text-emerald-600"></i>
-                <div>
-                    <h5 class="font-medium tracking-tight text-emerald-900">Success</h5>
-                    <p class="text-xs text-emerald-700 mt-0.5">{{ session('status') }}</p>
-                </div>
-            </div>
-            <button 
-                type="button" 
-                @click="show = false" 
-                class="rounded-sm opacity-70 transition-opacity hover:opacity-100 text-emerald-700 hover:text-emerald-950 p-1"
-                aria-label="Dismiss alert"
-            >
-                <i class="ri-close-line text-base"></i>
-            </button>
-        </div>
-    @endif
-
     <!-- Page Header (shadcn style) -->
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-slate-200/80 pb-5">
         <div class="space-y-1">

@@ -98,10 +98,18 @@ new #[Layout('layouts::admin')] #[Title('Gallery Categories - FacilityPro Admin'
         if ($this->isEditing && $this->galleryCategoryId) {
             $record = Gallerycategory::findOrFail($this->galleryCategoryId);
             $record->update($validated);
-            session()->flash('status', 'Gallery category successfully updated.');
+            $this->dispatch('toast-show', [
+                'message' => 'Gallery category successfully updated.',
+                'type' => 'success',
+                'position' => 'top-right',
+            ]);
         } else {
             Gallerycategory::create($validated);
-            session()->flash('status', 'Gallery category created successfully.');
+            $this->dispatch('toast-show', [
+                'message' => 'Gallery category created successfully.',
+                'type' => 'success',
+                'position' => 'top-right',
+            ]);
         }
 
         $this->closeModal();
@@ -114,7 +122,11 @@ new #[Layout('layouts::admin')] #[Title('Gallery Categories - FacilityPro Admin'
             'is_active' => ! $record->is_active,
         ]);
 
-        session()->flash('status', 'Status updated for "'.$record->name.'".');
+        $this->dispatch('toast-show', [
+            'message' => 'Status updated for "'.$record->name.'".',
+            'type' => 'success',
+            'position' => 'top-right',
+        ]);
     }
 
     public function confirmDelete(int $id): void
@@ -136,7 +148,11 @@ new #[Layout('layouts::admin')] #[Title('Gallery Categories - FacilityPro Admin'
             if ($record) {
                 $name = $record->name;
                 $record->delete();
-                session()->flash('status', 'Gallery category "'.$name.'" deleted.');
+                $this->dispatch('toast-show', [
+                    'message' => 'Gallery category "'.$name.'" deleted.',
+                    'type' => 'success',
+                    'position' => 'top-right',
+                ]);
             }
         }
 

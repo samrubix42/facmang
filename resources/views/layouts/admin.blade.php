@@ -94,6 +94,8 @@
 
         </div>
 
+        @include('components.admin.toast')
+
         @livewireScripts
     </body>
 </html>

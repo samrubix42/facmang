@@ -97,10 +97,18 @@ new #[Layout('layouts::admin')] #[Title('Testimonials - FacilityPro Admin')] cla
         if ($this->isEditing && $this->testimonialId) {
             $record = Testimonial::findOrFail($this->testimonialId);
             $record->update($validated);
-            session()->flash('status', 'Testimonial successfully updated.');
+            $this->dispatch('toast-show', [
+                'message' => 'Testimonial successfully updated.',
+                'type' => 'success',
+                'position' => 'top-right',
+            ]);
         } else {
             Testimonial::create($validated);
-            session()->flash('status', 'Testimonial created successfully.');
+            $this->dispatch('toast-show', [
+                'message' => 'Testimonial created successfully.',
+                'type' => 'success',
+                'position' => 'top-right',
+            ]);
         }
 
         $this->closeModal();
@@ -113,7 +121,11 @@ new #[Layout('layouts::admin')] #[Title('Testimonials - FacilityPro Admin')] cla
             'is_active' => ! $record->is_active,
         ]);
 
-        session()->flash('status', 'Status updated for "'.$record->name.'".');
+        $this->dispatch('toast-show', [
+            'message' => 'Status updated for "'.$record->name.'".',
+            'type' => 'success',
+            'position' => 'top-right',
+        ]);
     }
 
     public function confirmDelete(int $id): void
@@ -135,7 +147,11 @@ new #[Layout('layouts::admin')] #[Title('Testimonials - FacilityPro Admin')] cla
             if ($record) {
                 $name = $record->name;
                 $record->delete();
-                session()->flash('status', 'Testimonial from "'.$name.'" deleted.');
+                $this->dispatch('toast-show', [
+                    'message' => 'Testimonial from "'.$name.'" deleted.',
+                    'type' => 'success',
+                    'position' => 'top-right',
+                ]);
             }
         }
 
