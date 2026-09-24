@@ -52,7 +52,7 @@
                     <!-- Key Stats Bar -->
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 border-t border-slate-100 pt-6">
                         <div>
-                            <p class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">12+</p>
+                            <p class="text-2xl sm:text-3xl font-bold text-[#12233F] tracking-tight">12+</p>
                             <p class="text-[11px] font-medium text-slate-400 mt-0.5">Years Experience</p>
                         </div>
                         <div>
@@ -60,11 +60,11 @@
                             <p class="text-[11px] font-medium text-slate-400 mt-0.5">Properties Managed</p>
                         </div>
                         <div>
-                            <p class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">4.8M+</p>
+                            <p class="text-2xl sm:text-3xl font-bold text-[#12233F] tracking-tight">4.8M+</p>
                             <p class="text-[11px] font-medium text-slate-400 mt-0.5">Sq. Ft Maintained</p>
                         </div>
                         <div>
-                            <p class="text-2xl sm:text-3xl font-bold text-[#12233F] tracking-tight">99.85%</p>
+                            <p class="text-2xl sm:text-3xl font-bold text-red-600 tracking-tight">99.85%</p>
                             <p class="text-[11px] font-medium text-slate-400 mt-0.5">SLA Adherence</p>
                         </div>
                     </div>
@@ -79,6 +79,14 @@
                             class="h-full w-full object-cover"
                         />
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0B1A30]/70 via-transparent to-transparent"></div>
+
+                        <!-- Floating Crew Pill -->
+                        <div class="absolute top-5 right-5 rounded-full border border-white/40 bg-white/95 px-3.5 py-2 shadow-lg backdrop-blur-md">
+                            <div class="flex items-center gap-2">
+                                <i class="ri-team-fill text-sm text-red-600"></i>
+                                <p class="text-[11px] font-bold text-slate-900">2,400+ Certified Crew</p>
+                            </div>
+                        </div>
 
                         <!-- Floating Certification Pill -->
                         <div class="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/20 bg-white/95 p-4 shadow-lg backdrop-blur-md">
@@ -109,7 +117,8 @@
             <div class="grid gap-8 md:grid-cols-2">
                 
                 <!-- Mission Card -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-8 sm:p-10 shadow-xs hover:border-[#12233F]/30 transition">
+                <div class="relative rounded-3xl border border-slate-200/80 bg-white p-8 sm:p-10 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="absolute top-6 right-6 inline-flex items-center justify-center rounded-full bg-red-600 px-2.5 py-1 text-[10px] font-bold text-white">01</span>
                     <span class="flex h-11 w-11 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F] mb-6">
                         <i class="ri-compass-3-line text-xl"></i>
                     </span>
@@ -126,7 +135,8 @@
                 </div>
 
                 <!-- Vision Card -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-8 sm:p-10 shadow-xs hover:border-[#12233F]/30 transition">
+                <div class="relative rounded-3xl border border-slate-200/80 bg-white p-8 sm:p-10 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="absolute top-6 right-6 inline-flex items-center justify-center rounded-full bg-red-600 px-2.5 py-1 text-[10px] font-bold text-white">02</span>
                     <span class="flex h-11 w-11 items-center justify-center rounded-full bg-[#12233F] text-white mb-6">
                         <i class="ri-eye-line text-xl"></i>
                     </span>
@@ -167,7 +177,8 @@
 
             <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 <!-- Pillar 1 -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs hover:border-[#12233F]/30 transition">
+                <div class="relative rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="absolute top-5 right-5 inline-flex items-center justify-center rounded-full bg-[#12233F]/5 border border-[#12233F]/10 px-2 py-0.5 text-[10px] font-semibold text-[#12233F]">01</span>
                     <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F] mb-4">
                         <i class="ri-user-heart-line text-lg"></i>
                     </span>
@@ -178,7 +189,8 @@
                 </div>
 
                 <!-- Pillar 2 -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs hover:border-[#12233F]/30 transition">
+                <div class="relative rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="absolute top-5 right-5 inline-flex items-center justify-center rounded-full bg-[#12233F]/5 border border-[#12233F]/10 px-2 py-0.5 text-[10px] font-semibold text-[#12233F]">02</span>
                     <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F] text-white mb-4">
                         <i class="ri-qr-code-line text-lg"></i>
                     </span>
@@ -189,7 +201,8 @@
                 </div>
 
                 <!-- Pillar 3 -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs hover:border-[#12233F]/30 transition">
+                <div class="relative rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="absolute top-5 right-5 inline-flex items-center justify-center rounded-full bg-[#12233F]/5 border border-[#12233F]/10 px-2 py-0.5 text-[10px] font-semibold text-[#12233F]">03</span>
                     <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F] mb-4">
                         <i class="ri-leaf-line text-lg"></i>
                     </span>
@@ -200,7 +213,8 @@
                 </div>
 
                 <!-- Pillar 4 -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs hover:border-[#12233F]/30 transition">
+                <div class="relative rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="absolute top-5 right-5 inline-flex items-center justify-center rounded-full bg-[#12233F]/5 border border-[#12233F]/10 px-2 py-0.5 text-[10px] font-semibold text-[#12233F]">04</span>
                     <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F] text-white mb-4">
                         <i class="ri-hand-coin-line text-lg"></i>
                     </span>
@@ -211,7 +225,8 @@
                 </div>
 
                 <!-- Pillar 5 -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs hover:border-[#12233F]/30 transition">
+                <div class="relative rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="absolute top-5 right-5 inline-flex items-center justify-center rounded-full bg-[#12233F]/5 border border-[#12233F]/10 px-2 py-0.5 text-[10px] font-semibold text-[#12233F]">05</span>
                     <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F] mb-4">
                         <i class="ri-flashlight-line text-lg"></i>
                     </span>
@@ -222,7 +237,8 @@
                 </div>
 
                 <!-- Pillar 6 -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs hover:border-[#12233F]/30 transition">
+                <div class="relative rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs hover:border-[#12233F]/30 transition">
+                    <span class="absolute top-5 right-5 inline-flex items-center justify-center rounded-full bg-[#12233F]/5 border border-[#12233F]/10 px-2 py-0.5 text-[10px] font-semibold text-[#12233F]">06</span>
                     <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F] text-white mb-4">
                         <i class="ri-medal-line text-lg"></i>
                     </span>
@@ -265,6 +281,11 @@
                     <p class="mt-3 text-xs text-slate-500 leading-relaxed">
                         Former CBRE Operations Director with 18 years experience scaling programs across 10M+ sq. ft.
                     </p>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-center gap-2">
+                        <a href="mailto:evance@facilitypro.com" class="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-400 transition hover:border-[#12233F] hover:bg-[#12233F] hover:text-white" aria-label="Email Elena Vance">
+                            <i class="ri-mail-line text-xs"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Leader 2 -->
@@ -277,6 +298,11 @@
                     <p class="mt-3 text-xs text-slate-500 leading-relaxed">
                         Pioneer of IoT QR audit logging systems. Oversees 350+ direct staff with 99.85% SLA reliability.
                     </p>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-center gap-2">
+                        <a href="mailto:mvance@facilitypro.com" class="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-400 transition hover:border-[#12233F] hover:bg-[#12233F] hover:text-white" aria-label="Email Marcus Vance">
+                            <i class="ri-mail-line text-xs"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Leader 3 -->
@@ -289,6 +315,11 @@
                     <p class="mt-3 text-xs text-slate-500 leading-relaxed">
                         Licensed engineer leading emergency dispatch, HVAC filter cycles, and electrical safety diagnostics.
                     </p>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-center gap-2">
+                        <a href="mailto:dthorne@facilitypro.com" class="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-400 transition hover:border-[#12233F] hover:bg-[#12233F] hover:text-white" aria-label="Email David Thorne">
+                            <i class="ri-mail-line text-xs"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Leader 4 -->
@@ -301,6 +332,11 @@
                     <p class="mt-3 text-xs text-slate-500 leading-relaxed">
                         Manages monthly client audit reviews, SLA credit guarantees, and site steward hospitality training.
                     </p>
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-center gap-2">
+                        <a href="mailto:sjenkins@facilitypro.com" class="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 text-slate-400 transition hover:border-[#12233F] hover:bg-[#12233F] hover:text-white" aria-label="Email Sarah Jenkins">
+                            <i class="ri-mail-line text-xs"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -309,19 +345,31 @@
     {{-- Industry Certifications Strip --}}
     <section class="border-b border-slate-100 bg-white py-10">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-center text-xs font-semibold text-slate-600">
-                <span class="flex items-center gap-2">
-                    <i class="ri-shield-check-fill text-lg text-[#12233F]"></i> ISSA CIMS Certified
-                </span>
-                <span class="flex items-center gap-2">
-                    <i class="ri-award-fill text-lg text-[#12233F]"></i> ISO 41001 Standard
-                </span>
-                <span class="flex items-center gap-2">
-                    <i class="ri-verified-badge-fill text-lg text-[#12233F]"></i> ISO 9001 Quality
-                </span>
-                <span class="flex items-center gap-2">
-                    <i class="ri-heart-pulse-fill text-lg text-[#12233F]"></i> OSHA 30-Hr Safe
-                </span>
+            <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
+                <div class="flex items-center justify-center gap-3 lg:px-6">
+                    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
+                        <i class="ri-shield-check-fill text-base"></i>
+                    </span>
+                    <span class="text-xs font-semibold text-slate-600">ISSA CIMS Certified</span>
+                </div>
+                <div class="flex items-center justify-center gap-3 lg:px-6 lg:border-l lg:border-slate-100">
+                    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
+                        <i class="ri-award-fill text-base"></i>
+                    </span>
+                    <span class="text-xs font-semibold text-slate-600">ISO 41001 Standard</span>
+                </div>
+                <div class="flex items-center justify-center gap-3 lg:px-6 lg:border-l lg:border-slate-100">
+                    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
+                        <i class="ri-verified-badge-fill text-base"></i>
+                    </span>
+                    <span class="text-xs font-semibold text-slate-600">ISO 9001 Quality</span>
+                </div>
+                <div class="flex items-center justify-center gap-3 lg:px-6 lg:border-l lg:border-slate-100">
+                    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
+                        <i class="ri-heart-pulse-fill text-base"></i>
+                    </span>
+                    <span class="text-xs font-semibold text-slate-600">OSHA 30-Hr Safe</span>
+                </div>
             </div>
         </div>
     </section>

@@ -59,7 +59,7 @@
                     href="tel:+18004928820"
                     class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md"
                 >
-                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-red-600 text-white">
                         <i class="ri-phone-fill text-lg"></i>
                     </span>
                     <div class="min-w-0">
@@ -74,7 +74,7 @@
                     href="mailto:ops@facilitypro.com"
                     class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md"
                 >
-                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-700">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                         <i class="ri-mail-fill text-lg"></i>
                     </span>
                     <div class="min-w-0">
@@ -98,7 +98,7 @@
 
                 <!-- Card 4: Hours -->
                 <div class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs">
-                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-700">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                         <i class="ri-time-fill text-lg"></i>
                     </span>
                     <div class="min-w-0">
@@ -143,6 +143,22 @@
                                 </div>
                             </div>
                         @endif
+
+                        <!-- Response Time Expectations -->
+                        <div class="mb-6 grid grid-cols-3 gap-3 rounded-2xl border border-slate-200/80 bg-slate-50/50 p-4">
+                            <div class="text-center">
+                                <p class="text-xs font-bold text-[#12233F]">&lt;2 hrs</p>
+                                <p class="text-[10px] text-slate-500 mt-0.5">Email response</p>
+                            </div>
+                            <div class="text-center border-x border-slate-200">
+                                <p class="text-xs font-bold text-[#12233F]">24 hrs</p>
+                                <p class="text-[10px] text-slate-500 mt-0.5">SLA proposal</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-xs font-bold text-red-600">&lt;15 min</p>
+                                <p class="text-[10px] text-slate-500 mt-0.5">Emergency dispatch</p>
+                            </div>
+                        </div>
 
                         <form wire:submit="submit" class="space-y-5">
                             
@@ -280,6 +296,23 @@
                         <p class="text-[10px] font-semibold uppercase tracking-wider text-red-400">Compliance Standard</p>
                         <p class="mt-1 text-xs font-semibold text-slate-200">ISSA CIMS &amp; ISO 41001 Certified Facility Partner</p>
                     </div>
+
+                    <!-- Emergency Dispatch CTA -->
+                    <a
+                        href="tel:+18004928820"
+                        class="flex items-center justify-between gap-4 rounded-3xl bg-red-600 p-6 text-white shadow-sm transition hover:bg-red-700 active:scale-[0.99]"
+                    >
+                        <div class="flex items-center gap-3">
+                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/15">
+                                <i class="ri-customer-service-2-line text-lg"></i>
+                            </span>
+                            <div>
+                                <h3 class="text-sm font-bold">24/7 Emergency Dispatch</h3>
+                                <p class="text-[10px] text-white/80">Direct operations line — always live</p>
+                            </div>
+                        </div>
+                        <i class="ri-arrow-right-line text-lg"></i>
+                    </a>
                 </div>
 
             </div>
