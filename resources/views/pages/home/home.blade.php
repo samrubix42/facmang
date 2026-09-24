@@ -6,86 +6,43 @@
                     Alpine.data('heroSlider', () => ({
                         active: 0,
                         timer: null,
+                        touchStartX: 0,
+                        touchEndX: 0,
                         slides: [
                             {
-                                badge: 'Corporate Operations',
-                                tag: '99.85% SLA Compliance',
-                                titleBefore: 'Architectural Facility Care for',
-                                titleHighlight: 'Class-A Real Estate',
-                                description: 'Single-contract facility operations with 100% W-2 personnel, IoT QR hygiene telemetry, and hospital-grade sanitization.',
-                                primaryBtn: 'Request Assessment',
-                                primaryLink: '{{ route("contact") }}',
-                                secondaryBtn: 'Explore Services',
-                                secondaryLink: '{{ route("services") }}',
-                                image: '{{ asset("images/hero_facility.jpg") }}',
-                                stat1Num: '99.85%',
-                                stat1Label: 'SLA Compliance',
-                                stat2Num: '15-Min',
-                                stat2Label: 'Emergency Dispatch'
+                                title: 'Celebrating the past & developing the future',
+                                buttonText: 'Real Estate Development',
+                                buttonLink: '{{ route("services") }}',
+                                image: '{{ asset("images/estate_development.jpg") }}',
+                                alt: 'Luxury architectural estate with swimming pool and landscaped grounds'
                             },
                             {
-                                badge: 'Commercial Cleaning',
-                                tag: 'HEPA Dust-Free Standard',
-                                titleBefore: 'Precision Janitorial & Sweeping for',
-                                titleHighlight: 'Commercial Towers',
-                                description: 'Motorized orbital scrubbing, high-shine marble crystallization, and dust-free HEPA air containment executed on twilight shifts.',
-                                primaryBtn: 'Explore Janitorial Scope',
-                                primaryLink: '{{ route("services.show", ["slug" => "office-sweeping-cleaning"]) }}',
-                                secondaryBtn: 'Calculate Scope',
-                                secondaryLink: '#calculator',
+                                title: 'Architectural facility care for modern commercial assets',
+                                buttonText: 'Class-A Operations',
+                                buttonLink: '{{ route("services") }}',
+                                image: '{{ asset("images/commercial_tower.jpg") }}',
+                                alt: 'Commercial tower headquarters and plaza'
+                            },
+                            {
+                                title: 'Precision janitorial & dust-free HEPA environmental care',
+                                buttonText: 'Janitorial & Floor Care',
+                                buttonLink: '{{ route("services.show", ["slug" => "office-sweeping-cleaning"]) }}',
                                 image: '{{ asset("images/office_sweeping_cleaning.jpg") }}',
-                                stat1Num: '99.9%',
-                                stat1Label: 'Cleanliness SLA',
-                                stat2Num: 'HEPA 500',
-                                stat2Label: 'Dust Containment'
+                                alt: 'Commercial sweeping and floor restoration'
                             },
                             {
-                                badge: 'Hygiene & Sanitation',
-                                tag: 'IoT QR Code Checkpoints',
-                                titleBefore: 'Restroom Hygiene & Molecular',
-                                titleHighlight: 'Odor Eradication',
-                                description: 'Touchless sensor replenishment, microbial enzymatic sanitization, and tamper-proof IoT QR checkpoint logging.',
-                                primaryBtn: 'Inspect Protocols',
-                                primaryLink: '{{ route("services.show", ["slug" => "restroom-hygiene-sanitation"]) }}',
-                                secondaryBtn: 'Book Sanitation Audit',
-                                secondaryLink: '{{ route("contact") }}',
+                                title: 'Molecular restroom hygiene & touchless sanitation telemetry',
+                                buttonText: 'Hygiene & Sanitation',
+                                buttonLink: '{{ route("services.show", ["slug" => "restroom-hygiene-sanitation"]) }}',
                                 image: '{{ asset("images/restroom_hygiene_sanitation.jpg") }}',
-                                stat1Num: '4-Hour',
-                                stat1Label: 'Audit Rounds',
-                                stat2Num: '100%',
-                                stat2Label: 'Touchless Refill'
+                                alt: 'Restroom hygiene and sanitation protocols'
                             },
                             {
-                                badge: 'Corporate Stewarding',
-                                tag: '100% Attendance Backfill',
-                                titleBefore: 'Executive Pantry Stewards &',
-                                titleHighlight: 'Boardroom Hospitality',
-                                description: 'Uniformed, background-screened attendants delivering executive beverage service, boardroom prep, and seamless floor support.',
-                                primaryBtn: 'Inspect Staffing Scope',
-                                primaryLink: '{{ route("services.show", ["slug" => "corporate-pantry-staffing"]) }}',
-                                secondaryBtn: 'View All Services',
-                                secondaryLink: '{{ route("services") }}',
-                                image: '{{ asset("images/office_boy_pantry_service.jpg") }}',
-                                stat1Num: '100%',
-                                stat1Label: 'Backfill Guarantee',
-                                stat2Num: '5-Star',
-                                stat2Label: 'Hospitality Standard'
-                            },
-                            {
-                                badge: 'Technical Operations',
-                                tag: '15-Min Rapid Dispatch',
-                                titleBefore: 'Preventative MEP & Certified',
-                                titleHighlight: 'HVAC Infrastructure',
-                                description: 'Licensed engineers managing air filter cycles, electrical distribution safety, plumbing audits, and 24/7 emergency dispatch.',
-                                primaryBtn: 'Explore MEP Scope',
-                                primaryLink: '{{ route("services.show", ["slug" => "mep-hvac-maintenance"]) }}',
-                                secondaryBtn: 'Call Operations Desk',
-                                secondaryLink: 'tel:+18004928820',
+                                title: 'Preventative MEP engineering & critical HVAC infrastructure',
+                                buttonText: 'Technical Operations',
+                                buttonLink: '{{ route("services.show", ["slug" => "mep-hvac-maintenance"]) }}',
                                 image: '{{ asset("images/mep_hvac_maintenance.jpg") }}',
-                                stat1Num: '99.98%',
-                                stat1Label: 'Equipment Uptime',
-                                stat2Num: '24/7',
-                                stat2Label: 'On-Call Engineers'
+                                alt: 'MEP HVAC maintenance and technical engineering'
                             }
                         ],
                         init() {
@@ -95,7 +52,7 @@
                             this.stopAutoplay();
                             this.timer = setInterval(() => {
                                 this.next();
-                            }, 6500);
+                            }, 6000);
                         },
                         stopAutoplay() {
                             if (this.timer) clearInterval(this.timer);
@@ -109,6 +66,17 @@
                         goTo(index) {
                             this.active = index;
                             this.startAutoplay();
+                        },
+                        handleTouchStart(e) {
+                            this.touchStartX = e.changedTouches[0].screenX;
+                        },
+                        handleTouchEnd(e) {
+                            this.touchEndX = e.changedTouches[0].screenX;
+                            if (this.touchStartX - this.touchEndX > 50) {
+                                this.next();
+                            } else if (this.touchEndX - this.touchStartX > 50) {
+                                this.prev();
+                            }
                         }
                     }));
                 }
@@ -140,14 +108,16 @@
 
 <div class="bg-white text-slate-800 antialiased font-sans selection:bg-emerald-500 selection:text-white">
     
-    {{-- Modern Minimal Hero Slider --}}
+    {{-- Clean Architectural Hero Slider matching Reference Design --}}
     <section 
         x-data="heroSlider"
         @mouseenter="stopAutoplay()"
         @mouseleave="startAutoplay()"
         @keydown.arrow-right.window="next()"
         @keydown.arrow-left.window="prev()"
-        class="relative w-full h-[calc(100vh-80px)] min-h-[620px] max-h-[860px] overflow-hidden bg-slate-950 text-white select-none"
+        @touchstart.passive="handleTouchStart($event)"
+        @touchend.passive="handleTouchEnd($event)"
+        class="group relative w-full h-[72vh] sm:h-[78vh] lg:h-[84vh] min-h-[540px] max-h-[820px] overflow-hidden bg-slate-950 text-white select-none"
     >
         <!-- Full-Bleed Background Images with Smooth Crossfade -->
         <template x-for="(slide, index) in slides" :key="index">
@@ -163,44 +133,21 @@
             >
                 <img 
                     :src="slide.image" 
-                    :alt="slide.badge"
-                    class="h-full w-full object-cover object-center scale-105 transition-transform duration-7000 ease-out"
+                    :alt="slide.alt"
+                    class="h-full w-full object-cover object-center transform transition-transform duration-7000 ease-out"
+                    :class="active === index ? 'scale-105' : 'scale-100'"
                 />
 
-                <!-- Modern Clean Gradient Overlays -->
-                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/50 to-transparent"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/20"></div>
+                <!-- Subtle Clean Gradient Overlays for High Contrast Text & Retaining Image Radiance -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent"></div>
             </div>
         </template>
 
-        <!-- Slide Content Container -->
-        <div class="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-between py-10 sm:py-14">
+        <!-- Slide Content Container (Lower-Left Placement Matching Reference) -->
+        <div class="relative z-20 mx-auto max-w-7xl px-6 sm:px-10 lg:px-12 h-full flex flex-col justify-end pb-16 sm:pb-20 lg:pb-24">
             
-            <!-- Top Status Row -->
-            <div class="flex items-center justify-between">
-                <template x-for="(slide, index) in slides" :key="index">
-                    <div 
-                        x-show="active === index"
-                        x-transition:enter="transition ease-out duration-500 delay-100"
-                        x-transition:enter-start="opacity-0 -translate-y-2"
-                        x-transition:enter-end="opacity-100 translate-y-0"
-                    >
-                        <span class="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-950/60 px-4 py-1.5 text-xs font-medium text-emerald-300 backdrop-blur-md">
-                            <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                            <span x-text="slide.tag"></span>
-                        </span>
-                    </div>
-                </template>
-
-                <!-- Certification Pill -->
-                <div class="hidden sm:flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-slate-300 backdrop-blur-md">
-                    <i class="ri-shield-check-line text-emerald-400"></i>
-                    <span>ISO 41001 & ISSA CIMS Certified</span>
-                </div>
-            </div>
-
-            <!-- Center Content: Minimal & High-Impact -->
-            <div class="max-w-2xl my-auto py-6">
+            <div class="max-w-2xl sm:max-w-3xl">
                 <template x-for="(slide, index) in slides" :key="index">
                     <div 
                         x-show="active === index"
@@ -210,101 +157,72 @@
                         x-transition:leave="transition-all duration-300 ease-in absolute"
                         x-transition:leave-start="opacity-100 translate-y-0"
                         x-transition:leave-end="opacity-0 -translate-y-4"
-                        class="space-y-5"
+                        class="space-y-0"
                     >
-                        <span class="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400" x-text="slide.badge"></span>
-                        
-                        <h1 class="text-3xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-6xl">
-                            <span x-text="slide.titleBefore"></span>
-                            <span class="text-emerald-400 block mt-1" x-text="slide.titleHighlight"></span>
-                        </h1>
+                        <!-- Large Editorial Serif Heading -->
+                        <h1 
+                            class="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-normal leading-[1.16] tracking-tight drop-shadow-sm" 
+                            x-text="slide.title"
+                        ></h1>
 
-                        <p class="text-sm leading-relaxed text-slate-300 sm:text-base max-w-xl font-normal" x-text="slide.description"></p>
+                        <!-- Accent Horizontal Line with Highlight Bar Segment -->
+                        <div class="relative w-full max-w-xl h-[1.5px] bg-white/25 my-5 sm:my-6 rounded-full overflow-hidden">
+                            <div 
+                                class="absolute top-0 bottom-0 bg-white rounded-full transition-all duration-700 ease-out"
+                                :style="'left: ' + (active * 20) + '%; width: 20%; min-width: 55px;'"
+                            ></div>
+                        </div>
 
-                        <!-- Clean Rounded Pill Action Buttons -->
-                        <div class="flex flex-wrap items-center gap-3 pt-3">
+                        <!-- Clean White Pill Button -->
+                        <div>
                             <a 
-                                :href="slide.primaryLink"
-                                class="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-7 py-3 text-xs sm:text-sm font-semibold text-slate-950 shadow-sm transition hover:bg-emerald-400 hover:shadow-md hover:scale-[1.02] active:scale-[0.98]"
+                                :href="slide.buttonLink"
+                                class="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-xs sm:text-sm font-medium text-slate-900 shadow-md hover:bg-slate-100 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 cursor-pointer"
                             >
-                                <span x-text="slide.primaryBtn"></span>
-                                <i class="ri-arrow-right-line text-sm"></i>
-                            </a>
-
-                            <a 
-                                :href="slide.secondaryLink"
-                                class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-xs sm:text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/20 hover:border-white/30 active:scale-[0.98]"
-                            >
-                                <span x-text="slide.secondaryBtn"></span>
-                                <i class="ri-arrow-right-up-line text-sm text-slate-400"></i>
+                                <span x-text="slide.buttonText"></span>
                             </a>
                         </div>
                     </div>
                 </template>
             </div>
 
-            <!-- Bottom Minimalist Controls & Stat Bar -->
-            <div class="border-t border-white/10 pt-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-                
-                <!-- Telemetry Metrics -->
-                <div class="flex items-center gap-6 sm:gap-10 w-full sm:w-auto text-left">
-                    <div>
-                        <p class="text-xl sm:text-2xl font-bold text-white tracking-tight">99.85%</p>
-                        <p class="text-[11px] font-medium text-slate-400 mt-0.5">SLA Adherence</p>
-                    </div>
-                    <div class="h-8 w-px bg-white/10"></div>
-                    <div>
-                        <p class="text-xl sm:text-2xl font-bold text-emerald-400 tracking-tight">15-Min</p>
-                        <p class="text-[11px] font-medium text-slate-400 mt-0.5">Rapid Dispatch</p>
-                    </div>
-                    <div class="h-8 w-px bg-white/10 hidden sm:block"></div>
-                    <div class="hidden sm:block">
-                        <p class="text-xl sm:text-2xl font-bold text-white tracking-tight">4.8M+</p>
-                        <p class="text-[11px] font-medium text-slate-400 mt-0.5">Sq. Ft Managed</p>
-                    </div>
-                </div>
-
-                <!-- Navigation Controls -->
-                <div class="flex items-center gap-4 shrink-0">
-                    <!-- Dot Indicators -->
-                    <div class="flex items-center gap-2">
-                        <template x-for="(slide, index) in slides" :key="index">
-                            <button 
-                                @click="goTo(index)"
-                                :class="active === index ? 'w-8 bg-emerald-400' : 'w-2 bg-white/30 hover:bg-white/60'"
-                                class="h-2 rounded-full transition-all duration-300 cursor-pointer"
-                                :aria-label="'Go to slide ' + (index + 1)"
-                            ></button>
-                        </template>
-                    </div>
-
-                    <!-- Slide Numbers -->
-                    <span class="text-xs font-medium tracking-wider text-slate-400">
-                        <span class="text-white font-semibold" x-text="'0' + (active + 1)"></span> / <span x-text="'0' + slides.length"></span>
-                    </span>
-
-                    <!-- Rounded Circular Arrows -->
-                    <div class="flex items-center gap-2 ml-1">
-                        <button 
-                            @click="prev()" 
-                            aria-label="Previous Slide"
-                            class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-md transition hover:bg-emerald-500 hover:text-slate-950 hover:border-emerald-500 active:scale-95 cursor-pointer"
-                        >
-                            <i class="ri-arrow-left-line text-sm"></i>
-                        </button>
-                        <button 
-                            @click="next()" 
-                            aria-label="Next Slide"
-                            class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-md transition hover:bg-emerald-500 hover:text-slate-950 hover:border-emerald-500 active:scale-95 cursor-pointer"
-                        >
-                            <i class="ri-arrow-right-line text-sm"></i>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-
         </div>
+
+        <!-- Minimalist Edge Navigation Arrows (Discreet, appear on hover/touch) -->
+        <button 
+            @click="prev()" 
+            aria-label="Previous Slide"
+            class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-black/25 hover:bg-black/50 text-white/80 hover:text-white backdrop-blur-xs border border-white/10 hover:border-white/25 transition-all duration-200 active:scale-95 cursor-pointer opacity-70 sm:opacity-0 group-hover:opacity-100 focus:opacity-100"
+        >
+            <i class="ri-arrow-left-s-line text-xl sm:text-2xl"></i>
+        </button>
+
+        <button 
+            @click="next()" 
+            aria-label="Next Slide"
+            class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-black/25 hover:bg-black/50 text-white/80 hover:text-white backdrop-blur-xs border border-white/10 hover:border-white/25 transition-all duration-200 active:scale-95 cursor-pointer opacity-70 sm:opacity-0 group-hover:opacity-100 focus:opacity-100"
+        >
+            <i class="ri-arrow-right-s-line text-xl sm:text-2xl"></i>
+        </button>
+
+        <!-- Bottom Centered Pagination Dots (Exact design from user screenshot) -->
+        <div class="absolute bottom-6 sm:bottom-7 left-1/2 -translate-x-1/2 z-30 flex items-center justify-center gap-2.5 sm:gap-3">
+            <template x-for="(slide, index) in slides" :key="index">
+                <button 
+                    @click="goTo(index)"
+                    :aria-label="'Go to slide ' + (index + 1)"
+                    class="group relative flex items-center justify-center p-1.5 focus:outline-none cursor-pointer"
+                >
+                    <span 
+                        class="block rounded-full transition-all duration-300"
+                        :class="active === index 
+                            ? 'h-2 sm:h-2.5 w-2 sm:w-2.5 bg-white ring-2 ring-white ring-offset-2 ring-offset-black/50 scale-110 shadow-sm' 
+                            : 'h-1.5 sm:h-2 w-1.5 sm:w-2 bg-white/40 group-hover:bg-white/75 group-hover:scale-110'"
+                    ></span>
+                </button>
+            </template>
+        </div>
+
     </section>
 
     {{-- Clean Minimalist Client Logo Marquee --}}
