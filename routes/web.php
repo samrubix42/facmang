@@ -17,6 +17,7 @@ Route::middleware('auth')->group(function () {
     Route::livewire('/admin/testimonials', 'admin::testimonial')->name('admin.testimonials');
     Route::livewire('/admin/gallery', 'admin::gallery')->name('admin.gallery');
     Route::livewire('/admin/gallery-categories', 'admin::gallery-category')->name('admin.gallery-categories');
+    Route::livewire('/admin/service-categories', 'admin::service.category')->name('admin.service-categories');
 
     Route::post('/logout', function () {
         Auth::logout();
