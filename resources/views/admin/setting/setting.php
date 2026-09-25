@@ -1,10 +1,11 @@
 <?php
 
 use App\Models\Setting;
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Title('Site Settings - Admin Console')] class extends Component
+new #[Layout('layouts::admin')] #[Title('Site Settings - Admin Console')] class extends Component
 {
     public string $company_name = '';
 
