@@ -46,7 +46,7 @@
            <ul
                x-data="{ 
                 toasts: [],
-                toastsHovered: false,
+                toastsHovered: false, 
                 expanded: false,
                 layout: 'default',
                 position: 'top-center',
