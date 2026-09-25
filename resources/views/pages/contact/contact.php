@@ -23,7 +23,7 @@ new #[Title('Contact Us & Office Location - Facility Management')] class extends
 
     public bool $submitted = false;
 
-    public function submit(): void
+    public function addcontact(): void
     {
         $this->validate();
 

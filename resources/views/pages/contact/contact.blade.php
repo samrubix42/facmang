@@ -1,29 +1,4 @@
-<script>
-    (function() {
-        const registerScrollReveal = () => {
-            if (typeof Alpine !== 'undefined' && !Alpine.data('scrollReveal')) {
-                Alpine.data('scrollReveal', (delay = 0) => ({
-                    shown: false,
-                    init() {
-                        const observer = new IntersectionObserver((entries) => {
-                            entries.forEach(entry => {
-                                if (entry.isIntersecting) {
-                                    setTimeout(() => {
-                                        this.shown = true;
-                                    }, delay);
-                                    observer.unobserve(entry.target);
-                                }
-                            });
-                        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-                        observer.observe(this.$el);
-                    }
-                }));
-            }
-        };
-        document.addEventListener('alpine:init', registerScrollReveal);
-        if (window.Alpine) { registerScrollReveal(); }
-    })();
-</script>
+
 
 <div class="bg-white text-slate-800 antialiased font-sans selection:bg-red-500 selection:text-white">
 
@@ -159,7 +134,7 @@
                             </div>
                         </div>
 
-                        <form wire:submit.prevent="submit" @submit.prevent="submit" class="space-y-5">
+                        <form wire:submit.prevent="addcontact" class="space-y-5">
                             
                             <!-- Name -->
                             <div>
@@ -233,18 +208,16 @@
                             <!-- Submit Button with Interactive Loading State -->
                             <div class="pt-2">
                                 <button
-                                    type="button"
-                                    wire:click="submit"
-                                    wire:loading.attr="disabled"
-                                    wire:target="submit"
+                                    type="submit"
+                                  
                                     class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-red-600 px-8 py-3.5 text-xs sm:text-sm font-semibold text-white shadow-sm hover:bg-red-700 transition active:scale-[0.98] cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
-                                    <span wire:loading.remove wire:target="submit" class="inline-flex items-center gap-2">
+                                    <span wire:loading.remove wire:target="addcontact" class="inline-flex items-center gap-2">
                                         <i class="ri-send-plane-fill text-sm"></i>
                                         <span>Submit Request</span>
                                     </span>
 
-                                    <span wire:loading wire:target="submit" class="inline-flex items-center gap-2">
+                                    <span wire:loading wire:target="addcontact" class="inline-flex items-center gap-2">
                                         <i class="ri-loader-4-line text-sm animate-spin"></i>
                                         <span>Submitting Request...</span>
                                     </span>

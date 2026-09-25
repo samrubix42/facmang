@@ -6,12 +6,14 @@ use Livewire\Livewire;
 
 test('public contact form submits successfully and saves inquiry to database', function () {
     Livewire::test('pages::contact')
+        ->assertSeeHtml('wire:submit="addcontact"')
+        ->assertSeeHtml('type="submit"')
         ->set('name', 'John Smith')
         ->set('email', 'jsmith@enterprise.com')
         ->set('phone', '+1 (555) 123-4567')
         ->set('propertyType', 'Corporate Office Tower')
         ->set('message', 'Requesting an on-site spatial audit and SLA proposal.')
-        ->call('submit')
+        ->call('addcontact')
         ->assertSet('submitted', true);
 
     expect(Contact::count())->toBe(1);
