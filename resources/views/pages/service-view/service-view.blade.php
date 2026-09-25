@@ -515,8 +515,8 @@
                                 <i class="ri-phone-fill text-base"></i>
                             </span>
                             <div>
-                                <a href="tel:+18004928820" class="text-sm font-bold text-slate-900 hover:text-[#12233F] transition block">
-                                    +1 (800) 492-8820
+                                <a href="tel:{{ setting('phone', '+1 (800) 492-8820') }}" class="text-sm font-bold text-slate-900 hover:text-[#12233F] transition block">
+                                    {{ setting('phone', '+1 (800) 492-8820') }}
                                 </a>
                                 <p class="text-[11px] text-slate-400 mt-0.5">24/7 Control Center Dispatch</p>
                             </div>
@@ -640,11 +640,11 @@
                             <i class="ri-arrow-right-line text-sm"></i>
                         </a>
                         <a
-                            href="tel:+18004928820"
+                            href="tel:{{ setting('phone', '+1 (800) 492-8820') }}"
                             class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3.5 text-xs sm:text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/20 active:scale-[0.98]"
                         >
                             <i class="ri-phone-line text-sm text-red-400"></i>
-                            <span>+1 (800) 492-8820</span>
+                            <span>{{ setting('phone', '+1 (800) 492-8820') }}</span>
                         </a>
                     </div>
                 </div>

@@ -11,24 +11,61 @@
                     Architectural-grade facility management for enterprise workplaces. We deliver commercial sweeping, office cleaning, restroom sanitation, and dedicated pantry staffing with 99.8% SLA reliability.
                 </p>
                 <div class="mt-6 space-y-3 text-xs text-slate-300">
-                    <a href="tel:+18004928820" class="flex items-center gap-3 transition hover:text-red-400">
+                    <a href="tel:{{ setting('phone', '+1 (800) 492-8820') }}" class="flex items-center gap-3 transition hover:text-red-400">
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/10 text-red-400 border border-white/10">
                             <i class="ri-phone-fill text-xs"></i>
                         </span>
-                        <span class="font-medium">+1 (800) 492-8820</span>
+                        <span class="font-medium">{{ setting('phone', '+1 (800) 492-8820') }}</span>
                     </a>
-                    <a href="mailto:ops@facilitypro.com" class="flex items-center gap-3 transition hover:text-red-400">
+                    @if(setting('whatsapp'))
+                        <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', setting('whatsapp')) }}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 transition hover:text-emerald-400">
+                            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/10 text-emerald-400 border border-white/10">
+                                <i class="ri-whatsapp-fill text-xs"></i>
+                            </span>
+                            <span class="font-medium">{{ setting('whatsapp') }}</span>
+                        </a>
+                    @endif
+                    <a href="mailto:{{ setting('email', 'ops@facilitypro.com') }}" class="flex items-center gap-3 transition hover:text-red-400">
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/10 text-red-400 border border-white/10">
                             <i class="ri-mail-fill text-xs"></i>
                         </span>
-                        <span class="font-medium">ops@facilitypro.com</span>
+                        <span class="font-medium">{{ setting('email', 'ops@facilitypro.com') }}</span>
                     </a>
                     <p class="flex items-center gap-3">
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/10 text-red-400 border border-white/10">
                             <i class="ri-map-pin-fill text-xs"></i>
                         </span>
-                        <span class="font-medium">100 Enterprise Plaza, Suite 400</span>
+                        <span class="font-medium">{{ setting('address', '100 Enterprise Plaza, Suite 400') }}</span>
                     </p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="mt-6 flex items-center gap-3 text-slate-400">
+                    @if(setting('facebook'))
+                        <a href="{{ setting('facebook') }}" target="_blank" rel="noopener noreferrer" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 hover:bg-red-600 hover:text-white transition border border-white/10">
+                            <i class="ri-facebook-fill text-sm"></i>
+                        </a>
+                    @endif
+                    @if(setting('twitter'))
+                        <a href="{{ setting('twitter') }}" target="_blank" rel="noopener noreferrer" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 hover:bg-red-600 hover:text-white transition border border-white/10">
+                            <i class="ri-twitter-x-fill text-sm"></i>
+                        </a>
+                    @endif
+                    @if(setting('instagram'))
+                        <a href="{{ setting('instagram') }}" target="_blank" rel="noopener noreferrer" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 hover:bg-red-600 hover:text-white transition border border-white/10">
+                            <i class="ri-instagram-fill text-sm"></i>
+                        </a>
+                    @endif
+                    @if(setting('linkedin'))
+                        <a href="{{ setting('linkedin') }}" target="_blank" rel="noopener noreferrer" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 hover:bg-red-600 hover:text-white transition border border-white/10">
+                            <i class="ri-linkedin-fill text-sm"></i>
+                        </a>
+                    @endif
+                    @if(setting('youtube'))
+                        <a href="{{ setting('youtube') }}" target="_blank" rel="noopener noreferrer" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 hover:bg-red-600 hover:text-white transition border border-white/10">
+                            <i class="ri-youtube-fill text-sm"></i>
+                        </a>
+                    @endif
                 </div>
             </div>
 
@@ -92,7 +129,7 @@
         </div>
 
         <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-slate-500 sm:flex-row">
-            <p>© {{ date('Y') }} FacilityPro Management Inc. All rights reserved.</p>
+            <p>© {{ date('Y') }} {{ setting('company_name', 'FacilityPro Management Inc.') }}. All rights reserved.</p>
             <div class="flex items-center gap-6">
                 <a href="#" class="transition hover:text-red-400">Privacy SLA</a>
                 <a href="#" class="transition hover:text-red-400">Terms of Operations</a>

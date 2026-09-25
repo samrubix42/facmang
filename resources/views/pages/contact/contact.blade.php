@@ -56,7 +56,7 @@
                 
                 <!-- Card 1: Phone -->
                 <a 
-                    href="tel:+18004928820"
+                    href="tel:{{ setting('phone', '+1 (800) 492-8820') }}"
                     class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md"
                 >
                     <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-red-600 text-white">
@@ -64,14 +64,14 @@
                     </span>
                     <div class="min-w-0">
                         <p class="text-[11px] font-medium text-slate-400">24/7 Hotline</p>
-                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">+1 (800) 492-8820</p>
+                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">{{ setting('phone', '+1 (800) 492-8820') }}</p>
                         <p class="text-[10px] text-[#12233F] font-medium mt-0.5">&lt;15m Response</p>
                     </div>
                 </a>
 
                 <!-- Card 2: Email -->
                 <a 
-                    href="mailto:ops@facilitypro.com"
+                    href="mailto:{{ setting('email', 'ops@facilitypro.com') }}"
                     class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md"
                 >
                     <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
@@ -79,7 +79,7 @@
                     </span>
                     <div class="min-w-0">
                         <p class="text-[11px] font-medium text-slate-400">Operations Email</p>
-                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">ops@facilitypro.com</p>
+                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">{{ setting('email', 'ops@facilitypro.com') }}</p>
                         <p class="text-[10px] text-slate-400 mt-0.5">Response &lt;2 hours</p>
                     </div>
                 </a>
@@ -91,8 +91,7 @@
                     </span>
                     <div class="min-w-0">
                         <p class="text-[11px] font-medium text-slate-400">Corporate HQ</p>
-                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">100 Enterprise Plaza</p>
-                        <p class="text-[10px] text-slate-400 mt-0.5">Suite 400, Financial Dist.</p>
+                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">{{ setting('address', '100 Enterprise Plaza, Suite 400') }}</p>
                     </div>
                 </div>
 
@@ -299,7 +298,7 @@
 
                     <!-- Emergency Dispatch CTA -->
                     <a
-                        href="tel:+18004928820"
+                        href="tel:{{ setting('phone', '+1 (800) 492-8820') }}"
                         class="flex items-center justify-between gap-4 rounded-3xl bg-red-600 p-6 text-white shadow-sm transition hover:bg-red-700 active:scale-[0.99]"
                     >
                         <div class="flex items-center gap-3">
@@ -308,7 +307,7 @@
                             </span>
                             <div>
                                 <h3 class="text-sm font-bold">24/7 Emergency Dispatch</h3>
-                                <p class="text-[10px] text-white/80">Direct operations line — always live</p>
+                                <p class="text-[10px] text-white/80">Direct operations line — always live ({{ setting('phone', '+1 (800) 492-8820') }})</p>
                             </div>
                         </div>
                         <i class="ri-arrow-right-line text-lg"></i>
@@ -331,12 +330,12 @@
                             <i class="ri-map-pin-2-fill text-base"></i>
                         </span>
                         <div>
-                            <h3 class="text-sm font-bold text-slate-900">FacilityPro Operations HQ</h3>
-                            <p class="text-xs text-slate-500">100 Enterprise Plaza, Suite 400, Financial District</p>
+                            <h3 class="text-sm font-bold text-slate-900">{{ setting('company_name', 'FacilityPro Operations HQ') }}</h3>
+                            <p class="text-xs text-slate-500">{{ setting('address', '100 Enterprise Plaza, Suite 400, Financial District') }}</p>
                         </div>
                     </div>
                     <a 
-                        href="https://maps.google.com" 
+                        href="{{ setting('google_map_link', 'https://maps.google.com') }}" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2 text-xs font-semibold text-slate-800 shadow-xs hover:border-[#12233F]/40 hover:text-[#12233F] transition"
@@ -350,7 +349,7 @@
                 <div class="relative h-[420px] sm:h-[480px] w-full">
                     <iframe 
                         title="FacilityPro Headquarters Location Map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.95373631531825!3d-37.81627977975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2s!4v1625000000000!5m2!1sen!2s" 
+                        src="{{ setting('google_map_link', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.95373631531825!3d-37.81627977975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2s!4v1625000000000!5m2!1sen!2s') }}" 
                         class="h-full w-full border-0" 
                         allowfullscreen="" 
                         loading="lazy"
