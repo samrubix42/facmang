@@ -28,6 +28,15 @@
                 window.dispatchEvent(new CustomEvent('toast-show', { detail : { type: type, message: message, description: description, position : position, html: html }}));
             }
 
+            @if(session('toast'))
+                setTimeout(() => {
+                    toast(@json(session('toast.message')), {
+                        type: @json(session('toast.type', 'success')),
+                        position: @json(session('toast.position', 'top-right'))
+                    });
+                }, 100);
+            @endif
+
             window.customToastHTML = `
                 <div class='relative flex items-start justify-center p-4'>
                     <img src='https://cdn.devdojo.com/images/august2023/headshot-new.jpeg' class='w-10 h-10 mr-2 rounded-full'>

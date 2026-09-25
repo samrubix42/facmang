@@ -18,6 +18,9 @@ Route::middleware('auth')->group(function () {
     Route::livewire('/admin/gallery', 'admin::gallery')->name('admin.gallery');
     Route::livewire('/admin/gallery-categories', 'admin::gallery-category')->name('admin.gallery-categories');
     Route::livewire('/admin/service-categories', 'admin::service.category')->name('admin.service-categories');
+    Route::livewire('/admin/services', 'admin::service.list')->name('admin.services.index');
+    Route::livewire('/admin/services/create', 'admin::service.add')->name('admin.services.create');
+    Route::livewire('/admin/services/{service}/edit', 'admin::service.update')->name('admin.services.edit');
 
     Route::post('/logout', function () {
         Auth::logout();

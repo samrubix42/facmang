@@ -14,6 +14,9 @@
         <!-- Remix Icon CDN -->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 
+        <!-- TinyMCE Rich Text Editor -->
+        <script src="{{ asset('tinymce/tinymce.min.js') }}" referrerpolicy="origin"></script>
+
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         @livewireStyles

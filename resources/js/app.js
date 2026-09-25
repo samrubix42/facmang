@@ -1,1 +1,1 @@
-//
+import './tinymce-editor';

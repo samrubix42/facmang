@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class ServiceCategory extends Model
+class Service extends Model
 {
     use HasFactory;
 
@@ -14,10 +14,16 @@ class ServiceCategory extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'service_category_id',
         'title',
         'slug',
-        'description',
+        'image',
         'is_active',
+        'short_description',
+        'content',
+        'meta_title',
+        'meta_description',
+        'meta_keyword',
     ];
 
     /**
@@ -28,10 +34,10 @@ class ServiceCategory extends Model
     ];
 
     /**
-     * @return HasMany<Service, $this>
+     * @return BelongsTo<ServiceCategory, $this>
      */
-    public function services(): HasMany
+    public function category(): BelongsTo
     {
-        return $this->hasMany(Service::class, 'service_category_id');
+        return $this->belongsTo(ServiceCategory::class, 'service_category_id');
     }
 }

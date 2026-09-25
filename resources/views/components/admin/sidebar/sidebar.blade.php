@@ -63,28 +63,26 @@
                     </div>
                 </a>
 
+                <!-- Services -->
+                <a
+                    href="{{ route('admin.services.index') }}"
+                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.services*') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
+                >
+                    <div class="flex items-center gap-2.5">
+                        <i class="ri-service-line text-sm"></i>
+                        <span>Services</span>
+                    </div>
+                </a>
+
                 <!-- Service Categories -->
                 <a
                     href="{{ route('admin.service-categories') }}"
-                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.service-categories') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
+                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.service-categories*') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
                 >
                     <div class="flex items-center gap-2.5">
                         <i class="ri-folders-line text-sm"></i>
                         <span>Service Categories</span>
                     </div>
-                </a>
-
-                <!-- Services -->
-                <a
-                    href="{{ route('services') }}"
-                    target="_blank"
-                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition"
-                >
-                    <div class="flex items-center gap-2.5">
-                        <i class="ri-service-line text-sm"></i>
-                        <span>Service Catalog</span>
-                    </div>
-                    <i class="ri-external-link-line text-xs text-slate-400"></i>
                 </a>
 
                 <!-- Inquiries & Proposals -->
