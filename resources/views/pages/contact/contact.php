@@ -37,6 +37,8 @@ new #[Title('Contact Us & Office Location - Facility Management')] class extends
             'is_read' => false,
         ]);
 
+        session()->flash('success', 'Your proposal request has been submitted successfully! Our operations director will contact you within 24 hours.');
+
         $this->submitted = true;
 
         $this->reset(['name', 'email', 'phone', 'message']);

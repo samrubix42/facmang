@@ -131,13 +131,13 @@
                         </div>
 
                         <!-- Success Alert Banner -->
-                        @if ($submitted)
-                            <div class="mb-6 rounded-2xl bg-[#12233F]/10 p-4 text-xs sm:text-sm text-[#12233F] border border-[#12233F]/10">
+                        @if (session()->has('success') || $submitted)
+                            <div class="mb-6 rounded-2xl bg-emerald-50 p-4 text-xs sm:text-sm text-emerald-900 border border-emerald-200 shadow-xs flex items-center justify-between">
                                 <div class="flex items-center gap-3">
-                                    <i class="ri-checkbox-circle-fill text-xl text-[#12233F] shrink-0"></i>
+                                    <i class="ri-checkbox-circle-fill text-xl text-emerald-600 shrink-0"></i>
                                     <div>
                                         <p class="font-bold">Proposal Request Received</p>
-                                        <p class="text-xs text-[#12233F] mt-0.5">Our operations director will contact you within 24 hours.</p>
+                                        <p class="text-xs text-emerald-700 mt-0.5">{{ session('success', 'Our operations director will contact you within 24 hours.') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -159,7 +159,7 @@
                             </div>
                         </div>
 
-                        <form wire:submit="submit" class="space-y-5">
+                        <form wire:submit.prevent="submit" @submit.prevent="submit" class="space-y-5">
                             
                             <!-- Name -->
                             <div>
@@ -230,14 +230,24 @@
                                 @error('message') <span class="text-xs text-rose-600 font-medium mt-1 block">{{ $message }}</span> @enderror
                             </div>
 
-                            <!-- Submit Button (Clean Rounded-Full Pill) -->
+                            <!-- Submit Button with Interactive Loading State -->
                             <div class="pt-2">
                                 <button
-                                    type="submit"
-                                    class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-red-600 px-8 py-3.5 text-xs sm:text-sm font-semibold text-white shadow-sm hover:bg-red-700 transition active:scale-[0.98] cursor-pointer"
+                                    type="button"
+                                    wire:click="submit"
+                                    wire:loading.attr="disabled"
+                                    wire:target="submit"
+                                    class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-red-600 px-8 py-3.5 text-xs sm:text-sm font-semibold text-white shadow-sm hover:bg-red-700 transition active:scale-[0.98] cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
-                                    <i class="ri-send-plane-fill text-sm"></i>
-                                    <span>Submit Request</span>
+                                    <span wire:loading.remove wire:target="submit" class="inline-flex items-center gap-2">
+                                        <i class="ri-send-plane-fill text-sm"></i>
+                                        <span>Submit Request</span>
+                                    </span>
+
+                                    <span wire:loading wire:target="submit" class="inline-flex items-center gap-2">
+                                        <i class="ri-loader-4-line text-sm animate-spin"></i>
+                                        <span>Submitting Request...</span>
+                                    </span>
                                 </button>
                             </div>
 
