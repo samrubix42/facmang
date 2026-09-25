@@ -13,7 +13,7 @@ test('clients page renders successfully with status 200', function () {
 
 test('clients page renders client images from database', function () {
     Client::updateOrCreate(
-        ['image' => 'clients/01-1-150x150.jpg'],
+        ['image' => 'images/clients/01-1-150x150.jpg'],
         [
             'title' => 'Partner 01',
             'is_active' => true,
@@ -22,6 +22,6 @@ test('clients page renders client images from database', function () {
     );
 
     Livewire::test('pages::clients')
-        ->assertSee('clients/01-1-150x150.jpg')
+        ->assertSee('images/clients/01-1-150x150.jpg')
         ->assertStatus(200);
 });

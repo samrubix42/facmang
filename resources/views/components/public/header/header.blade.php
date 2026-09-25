@@ -17,7 +17,7 @@
                 </a>
 
                 <!-- Desktop Nav Links -->
-                <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
+                <nav class="hidden items-center gap-6 lg:flex" aria-label="Primary">
                     @foreach ($this->navLinks() as $link)
                         @php
                             $isActive = request()->routeIs($link['route']);
@@ -33,11 +33,11 @@
                             >
                                 <a
                                     href="{{ $link['href'] }}"
-                                    class="relative inline-flex items-center gap-1 pb-1 text-base font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-red-600 after:transition-transform after:duration-200 hover:text-red-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-red-600 after:scale-x-100' : 'text-[#12233F]' }}"
+                                    class="relative inline-flex items-center gap-1 pb-1 text-sm font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-red-600 after:transition-transform after:duration-200 hover:text-red-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-red-600 after:scale-x-100' : 'text-[#12233F]' }}"
                                     @click="open = !open"
                                 >
                                     <span>{{ $link['label'] }}</span>
-                                    <i class="ri-arrow-down-s-line text-base transition-transform duration-200" :class="open ? 'rotate-180 text-red-600' : 'text-slate-400'"></i>
+                                    <i class="ri-arrow-down-s-line text-sm transition-transform duration-200" :class="open ? 'rotate-180 text-red-600' : 'text-slate-400'"></i>
                                 </a>
 
                                 <!-- Services Mega Dropdown Panel -->
@@ -115,7 +115,7 @@
                         @else
                             <a
                                 href="{{ $link['href'] }}"
-                                class="relative pb-1 text-base font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-red-600 after:transition-transform after:duration-200 hover:text-red-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-red-600 after:scale-x-100' : 'text-[#12233F]' }}"
+                                class="relative pb-1 text-sm font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-red-600 after:transition-transform after:duration-200 hover:text-red-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-red-600 after:scale-x-100' : 'text-[#12233F]' }}"
                             >
                                 {{ $link['label'] }}
                             </a>

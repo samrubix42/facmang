@@ -13,13 +13,16 @@ class ClientSeeder extends Seeder
      */
     public function run(): void
     {
-        $clientsPath = public_path('clients');
+        $clientsPath = public_path('images/clients');
 
         if (! File::isDirectory($clientsPath)) {
             return;
         }
 
-        $files = File::files($clientsPath);
+        $files = array_filter(
+            File::files($clientsPath),
+            fn ($file) => in_array(strtolower($file->getExtension()), ['jpg', 'jpeg', 'png', 'svg', 'webp', 'gif'])
+        );
 
         // Sort files by filename naturally
         usort($files, fn ($a, $b) => strnatcasecmp($a->getFilename(), $b->getFilename()));
@@ -27,7 +30,7 @@ class ClientSeeder extends Seeder
         $index = 1;
         foreach ($files as $file) {
             $filename = $file->getFilename();
-            $relativePath = 'clients/'.$filename;
+            $relativePath = 'images/clients/'.$filename;
 
             // Clean title based on filename
             $baseName = pathinfo($filename, PATHINFO_FILENAME);
