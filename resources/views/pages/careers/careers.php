@@ -63,10 +63,26 @@ new #[Title('Careers - Join Our Operations Team - FacilityPro')] class extends C
         $this->submitted = false;
     }
 
+    public function removeResume(): void
+    {
+        $this->resume = null;
+    }
+
     public function resetSubmission(): void
     {
         $this->submitted = false;
     }
+
+    #[Computed]
+    public function activeJob(): ?JobApplication
+    {
+        if ($this->selectedJobId) {
+            return JobApplication::find($this->selectedJobId);
+        }
+
+        return null;
+    }
+
 
     /**
      * @return array<string, array<string, string>>

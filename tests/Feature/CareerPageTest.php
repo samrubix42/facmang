@@ -55,3 +55,19 @@ test('application requires mandatory fields', function () {
         ->call('apply')
         ->assertHasErrors(['applicantName', 'applicantEmail', 'applicantPhone', 'selectedJobId', 'experience']);
 });
+
+test('after applying user sees only we will get back to you message', function () {
+    $job = JobApplication::first();
+
+    Livewire::test('pages::careers')
+        ->set('selectedJobId', $job->id)
+        ->set('applicantName', 'Jane Doe')
+        ->set('applicantEmail', 'jane.doe@example.com')
+        ->set('applicantPhone', '9876543210')
+        ->set('experience', '1-3 years')
+        ->set('shift', 'Day Shift')
+        ->call('apply')
+        ->assertSee('We will get back to you shortly.')
+        ->assertDontSee('Submit Another Application');
+});
+
