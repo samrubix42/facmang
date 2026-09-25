@@ -10,18 +10,18 @@
         </span>
     </div>
 
-    <!-- Navigation Links (shadcn style) -->
+    <!-- Navigation Links -->
     <div class="flex-1 px-4 py-5 space-y-6 overflow-y-auto">
         
-        <!-- Main Section -->
         <div>
             <p class="px-2.5 text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">
-                Operations
+                Management
             </p>
             <nav class="space-y-1">
-                <!-- Dashboard -->
+                <!-- Dashboard / Overview -->
                 <a
                     href="{{ route('admin.dashboard') }}"
+                    wire:navigate
                     class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.dashboard') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
                 >
                     <div class="flex items-center gap-2.5">
@@ -30,42 +30,10 @@
                     </div>
                 </a>
 
-                <!-- Testimonials -->
-                <a
-                    href="{{ route('admin.testimonials') }}"
-                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.testimonials') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
-                >
-                    <div class="flex items-center gap-2.5">
-                        <i class="ri-chat-quote-line text-sm"></i>
-                        <span>Testimonials</span>
-                    </div>
-                </a>
-
-                <!-- Gallery -->
-                <a
-                    href="{{ route('admin.gallery') }}"
-                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.gallery') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
-                >
-                    <div class="flex items-center gap-2.5">
-                        <i class="ri-image-2-line text-sm"></i>
-                        <span>Gallery</span>
-                    </div>
-                </a>
-
-                <!-- Gallery Categories -->
-                <a
-                    href="{{ route('admin.gallery-categories') }}"
-                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.gallery-categories') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
-                >
-                    <div class="flex items-center gap-2.5">
-                        <i class="ri-gallery-line text-sm"></i>
-                        <span>Gallery Categories</span>
-                    </div>
-                </a>
-
                 <!-- Services -->
                 <a
                     href="{{ route('admin.services.index') }}"
+                    wire:navigate
                     class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.services*') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
                 >
                     <div class="flex items-center gap-2.5">
@@ -77,6 +45,7 @@
                 <!-- Service Categories -->
                 <a
                     href="{{ route('admin.service-categories') }}"
+                    wire:navigate
                     class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.service-categories*') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
                 >
                     <div class="flex items-center gap-2.5">
@@ -85,62 +54,40 @@
                     </div>
                 </a>
 
-                <!-- Inquiries & Proposals -->
+                <!-- Gallery -->
                 <a
-                    href="{{ route('admin.dashboard') }}"
-                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition"
+                    href="{{ route('admin.gallery') }}"
+                    wire:navigate
+                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.gallery') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
                 >
                     <div class="flex items-center gap-2.5">
-                        <i class="ri-file-text-line text-sm"></i>
-                        <span>SLA Proposals</span>
+                        <i class="ri-image-2-line text-sm"></i>
+                        <span>Gallery</span>
                     </div>
-                    <span class="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700 border border-emerald-200">
-                        4 New
-                    </span>
                 </a>
 
-                <!-- Checkpoints -->
+                <!-- Gallery Categories -->
                 <a
-                    href="{{ route('admin.dashboard') }}"
-                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition"
+                    href="{{ route('admin.gallery-categories') }}"
+                    wire:navigate
+                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.gallery-categories') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
                 >
                     <div class="flex items-center gap-2.5">
-                        <i class="ri-qr-code-line text-sm"></i>
-                        <span>IoT QR Checkpoints</span>
+                        <i class="ri-gallery-line text-sm"></i>
+                        <span>Gallery Categories</span>
                     </div>
-                    <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                </a>
-            </nav>
-        </div>
-
-        <!-- System Section -->
-        <div>
-            <p class="px-2.5 text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">
-                Management
-            </p>
-            <nav class="space-y-1">
-                <a
-                    href="{{ route('contact') }}"
-                    target="_blank"
-                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition"
-                >
-                    <div class="flex items-center gap-2.5">
-                        <i class="ri-customer-service-2-line text-sm"></i>
-                        <span>24/7 Operations Desk</span>
-                    </div>
-                    <i class="ri-external-link-line text-xs text-slate-400"></i>
                 </a>
 
+                <!-- Testimonials -->
                 <a
-                    href="{{ route('home') }}"
-                    target="_blank"
-                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition"
+                    href="{{ route('admin.testimonials') }}"
+                    wire:navigate
+                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.testimonials') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
                 >
                     <div class="flex items-center gap-2.5">
-                        <i class="ri-global-line text-sm"></i>
-                        <span>Public Website</span>
+                        <i class="ri-chat-quote-line text-sm"></i>
+                        <span>Testimonials</span>
                     </div>
-                    <i class="ri-external-link-line text-xs text-slate-400"></i>
                 </a>
             </nav>
         </div>

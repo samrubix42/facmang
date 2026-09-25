@@ -23,11 +23,7 @@
     <!-- Right Controls -->
     <div class="flex items-center gap-3">
         
-        <!-- Live Status Pill -->
-        <div class="hidden sm:inline-flex items-center gap-2 rounded-full border border-emerald-200/80 bg-emerald-50 px-3.5 py-1 text-xs font-medium text-emerald-800">
-            <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>SLA Audit Telemetry: 99.85%</span>
-        </div>
+
 
         <!-- View Live Site Link -->
         <a
