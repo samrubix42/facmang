@@ -40,6 +40,7 @@ test('authenticated user can view service create page', function () {
     $response->assertSuccessful();
     $response->assertSee('Create New Service');
     $response->assertSee('Save Service');
+    $response->assertSee('Meta Keywords');
 });
 
 test('authenticated user can view service update page', function () {
@@ -52,6 +53,7 @@ test('authenticated user can view service update page', function () {
     $response->assertSuccessful();
     $response->assertSee('Edit: '.$service->title);
     $response->assertSee('Update Service');
+    $response->assertSee('Meta Keywords');
 });
 
 test('service seeder correctly populates records', function () {

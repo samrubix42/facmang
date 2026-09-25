@@ -94,6 +94,15 @@ new #[Layout('layouts::admin')] #[Title('Add New Service - FacilityPro Admin')] 
         return ServiceCategory::where('is_active', true)->orderBy('title')->get();
     }
 
+    public function imagePreview(): ?string
+    {
+        if ($this->image instanceof UploadedFile) {
+            return $this->image->temporaryUrl();
+        }
+
+        return null;
+    }
+
     public function save(bool $createAnother = false): mixed
     {
         if (trim($this->slug) === '') {

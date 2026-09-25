@@ -81,18 +81,7 @@
                     </div>
                 </main>
 
-                <!-- Clean Footer -->
-                <footer class="border-t border-slate-200/80 bg-white py-4 px-6 text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-2">
-                    <p>&copy; {{ date('Y') }} FacilityPro Admin Console. All rights reserved.</p>
-                    <div class="flex items-center gap-4 text-[11px]">
-                        <span class="inline-flex items-center gap-1.5 text-emerald-600 font-medium">
-                            <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                            Telemetry Operational
-                        </span>
-                        <span>•</span>
-                        <span>v2.4.0 (Enterprise)</span>
-                    </div>
-                </footer>
+                
             </div>
 
         </div>

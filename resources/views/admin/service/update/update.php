@@ -102,6 +102,15 @@ new #[Layout('layouts::admin')] #[Title('Edit Service - FacilityPro Admin')] cla
         return ServiceCategory::where('is_active', true)->orderBy('title')->get();
     }
 
+    public function imagePreview(): ?string
+    {
+        if ($this->image instanceof UploadedFile) {
+            return $this->image->temporaryUrl();
+        }
+
+        return $this->existingImage ? asset($this->existingImage) : null;
+    }
+
     public function save(): mixed
     {
         if (trim($this->slug) === '') {
