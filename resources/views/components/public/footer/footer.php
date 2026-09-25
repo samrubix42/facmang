@@ -9,6 +9,15 @@ new class extends Component
      */
     public function serviceLinks(): array
     {
+        $services = \App\Models\Service::where('is_active', true)->take(6)->get();
+
+        if ($services->isNotEmpty()) {
+            return $services->map(fn ($s) => [
+                'label' => $s->title,
+                'href' => route('services.show', ['slug' => $s->slug]),
+            ])->all();
+        }
+
         return [
             ['label' => 'Office Cleaning & Sweeping', 'href' => route('services.show', ['slug' => 'office-sweeping-cleaning'])],
             ['label' => 'Restroom & Toilet Hygiene', 'href' => route('services.show', ['slug' => 'restroom-hygiene-sanitation'])],

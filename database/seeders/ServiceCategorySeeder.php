@@ -20,6 +20,18 @@ class ServiceCategorySeeder extends Seeder
                 'is_active' => true,
             ],
             [
+                'title' => 'Restroom & Hygiene Sanitation',
+                'slug' => 'hygiene',
+                'description' => 'Touchless replenishment, enzymatic drain wash, odor eradication, and scheduled sanitization.',
+                'is_active' => true,
+            ],
+            [
+                'title' => 'Office Boy & Pantry Staffing',
+                'slug' => 'staffing',
+                'description' => 'Executive pantry stewards, barista service, boardroom setup, and confidential desk support.',
+                'is_active' => true,
+            ],
+            [
                 'title' => 'Technical, MEP & Engineering',
                 'slug' => 'technical',
                 'description' => 'Preventive HVAC chiller maintenance, HT/LT electrical panels, DG sync sets, and plumbing.',

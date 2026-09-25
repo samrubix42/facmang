@@ -21,11 +21,14 @@ new class extends Component
         ];
     }
 
-    /**
-     * @return array<int, array<string, mixed>>
-     */
-    public function services(): array
+    public function services()
     {
+        $services = \App\Models\Service::where('is_active', true)->with('category')->take(6)->get();
+
+        if ($services->isNotEmpty()) {
+            return $services;
+        }
+
         return ServiceCatalog::all();
     }
 };

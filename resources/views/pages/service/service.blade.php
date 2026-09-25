@@ -153,60 +153,46 @@
                     wire:click="setCategory('all')"
                     class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'all' ? 'bg-red-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
                 >
-                    All Services ({{ count(\App\Services\ServiceCatalog::all()) }})
+                    All Services ({{ $this->totalServicesCount }})
                 </button>
-                <button
-                    type="button"
-                    wire:click="setCategory('janitorial')"
-                    class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'janitorial' ? 'bg-red-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
-                >
-                    <i class="ri-sweep-line mr-1"></i> Janitorial &amp; Floors
-                </button>
-                <button
-                    type="button"
-                    wire:click="setCategory('hygiene')"
-                    class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'hygiene' ? 'bg-red-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
-                >
-                    <i class="ri-drop-line mr-1"></i> Restroom Hygiene
-                </button>
-                <button
-                    type="button"
-                    wire:click="setCategory('staffing')"
-                    class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'staffing' ? 'bg-red-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
-                >
-                    <i class="ri-cup-line mr-1"></i> Office Boys &amp; Pantry
-                </button>
-                <button
-                    type="button"
-                    wire:click="setCategory('technical')"
-                    class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'technical' ? 'bg-red-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
-                >
-                    <i class="ri-tools-line mr-1"></i> MEP &amp; Technical
-                </button>
+                @foreach ($this->categories as $cat)
+                    <button
+                        type="button"
+                        wire:key="category-pill-{{ $cat->id }}"
+                        wire:click="setCategory('{{ $cat->slug }}')"
+                        class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === $cat->slug ? 'bg-red-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
+                    >
+                        <span>{{ $cat->title }}</span>
+                        @if ($cat->services_count > 0)
+                            <span class="ml-1 text-[11px] opacity-75">({{ $cat->services_count }})</span>
+                        @endif
+                    </button>
+                @endforeach
             </div>
 
             <!-- Services Grid with Modern Rounded-3xl Cards & Rounded-Full Buttons -->
             <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 @forelse ($this->services as $service)
                     <div 
-                        wire:key="service-{{ $service['slug'] }}"
+                        wire:key="service-{{ $service->id }}"
                         class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:border-[#12233F]/30 hover:shadow-xl transition-all duration-300"
                     >
                         <!-- Card Image -->
                         <div class="relative h-48 overflow-hidden bg-slate-100">
                             <img
-                                src="{{ asset($service['image']) }}"
-                                alt="{{ $service['title'] }}"
+                                src="{{ asset($service->image) }}"
+                                alt="{{ $service->title }}"
                                 class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                onerror="this.onerror=null; this.src='https://placehold.co/600x400?text={{ urlencode($service->title) }}';"
                             />
                             <div class="absolute inset-0 bg-gradient-to-t from-[#0B1A30]/60 via-transparent to-transparent"></div>
 
                             <span class="absolute top-4 left-4 rounded-full bg-white/95 px-3 py-1 text-[11px] font-semibold text-slate-800 shadow-xs">
-                                <i class="{{ $service['icon'] }} text-[#12233F] mr-1"></i> {{ $service['badge'] }}
+                                <i class="ri-shield-check-line text-[#12233F] mr-1"></i> {{ $service->category?->title ?? 'Facility Service' }}
                             </span>
 
                             <span class="absolute bottom-3 left-3 rounded-full bg-[#12233F]/90 px-3 py-1 text-[10px] font-semibold text-red-400">
-                                {{ $service['sla_rating'] }}
+                                SLA Guaranteed
                             </span>
                         </div>
 
@@ -214,26 +200,28 @@
                         <div class="flex flex-1 flex-col p-6 sm:p-7 justify-between">
                             <div>
                                 <h3 class="text-lg font-bold text-slate-900 group-hover:text-[#12233F] transition leading-snug">
-                                    <a href="{{ route('services.show', ['slug' => $service['slug']]) }}">
-                                        {{ $service['title'] }}
+                                    <a href="{{ route('services.show', ['slug' => $service->slug]) }}">
+                                        {{ $service->title }}
                                     </a>
                                 </h3>
 
                                 <p class="mt-1 text-xs font-semibold text-[#12233F]">
-                                    {{ $service['tagline'] }}
+                                    {{ $service->category?->title ?? 'Commercial Facility Solution' }}
                                 </p>
 
-                                <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-2">
-                                    {{ $service['short_description'] }}
+                                <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-3">
+                                    {{ $service->short_description }}
                                 </p>
                             </div>
 
                             <!-- Footer with Clean Rounded-Full Action Button -->
                             <div class="mt-6 pt-5 border-t border-slate-100 flex items-center justify-between gap-3">
-                                <span class="text-xs font-medium text-slate-400">{{ $service['frequency'] }}</span>
+                                <span class="text-xs font-medium text-slate-400">
+                                    <i class="ri-time-line text-[11px] mr-1 text-slate-400"></i> Scheduled Care
+                                </span>
 
                                 <a
-                                    href="{{ route('services.show', ['slug' => $service['slug']]) }}"
+                                    href="{{ route('services.show', ['slug' => $service->slug]) }}"
                                     class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-5 py-2 text-xs font-semibold text-white transition-colors"
                                 >
                                     <span>View Scope</span>

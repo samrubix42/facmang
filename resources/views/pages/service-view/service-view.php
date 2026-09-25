@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\Service;
 use App\Services\ServiceCatalog;
+use Illuminate\Database\Eloquent\Collection;
+use Livewire\Attributes\Computed;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 
@@ -8,10 +11,7 @@ new class extends Component
 {
     public string $slug = '';
 
-    /**
-     * @var array<string, mixed>
-     */
-    public array $service = [];
+    public Service $service;
 
     #[Rule('required|min:3', message: 'Please enter your full name')]
     public string $name = '';
@@ -35,15 +35,27 @@ new class extends Component
     public function mount(string $slug = ''): void
     {
         $this->slug = $slug;
-        $found = ServiceCatalog::findBySlug($slug);
 
-        if (! $found) {
-            $all = ServiceCatalog::all();
-            $found = $all[0];
-            $this->slug = $found['slug'];
+        $service = null;
+        if ($slug !== '') {
+            $service = Service::where('slug', $slug)
+                ->where('is_active', true)
+                ->with('category')
+                ->first();
         }
 
-        $this->service = $found;
+        if (! $service) {
+            $service = Service::where('is_active', true)
+                ->with('category')
+                ->first();
+        }
+
+        if (! $service) {
+            abort(404, 'Service not found');
+        }
+
+        $this->service = $service;
+        $this->slug = $service->slug;
     }
 
     public function submitQuote(): void
@@ -55,10 +67,46 @@ new class extends Component
     }
 
     /**
-     * @return array<int, array<string, mixed>>
+     * @return Collection<int, Service>
      */
-    public function getRelatedServicesProperty(): array
+    #[Computed]
+    public function relatedServices(): Collection
     {
-        return ServiceCatalog::related($this->slug, 3);
+        return Service::where('is_active', true)
+            ->where('id', '!=', $this->service->id)
+            ->when($this->service->service_category_id, function ($q) {
+                $q->orderByRaw('CASE WHEN service_category_id = ? THEN 0 ELSE 1 END', [$this->service->service_category_id]);
+            })
+            ->take(3)
+            ->get();
+    }
+
+    /**
+     * @return Collection<int, Service>
+     */
+    #[Computed]
+    public function allServices(): Collection
+    {
+        return Service::where('is_active', true)
+            ->select('id', 'title', 'slug', 'service_category_id')
+            ->orderBy('title')
+            ->get();
+    }
+
+    /**
+     * @return array<string, mixed>|null
+     */
+    #[Computed]
+    public function catalogData(): ?array
+    {
+        return ServiceCatalog::findBySlug($this->service->slug);
+    }
+
+    public function render()
+    {
+        $title = ($this->service->meta_title ?: $this->service->title) . ' - FacilityPro';
+
+        return view('pages.service-view.service-view')
+            ->title($title);
     }
 };

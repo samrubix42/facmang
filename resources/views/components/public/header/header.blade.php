@@ -70,19 +70,25 @@
                                         <!-- 2-Column Services Grid -->
                                         <div class="grid grid-cols-2 gap-2.5">
                                             @foreach ($this->services() as $service)
+                                                @php
+                                                    $sSlug = is_array($service) ? $service['slug'] : $service->slug;
+                                                    $sTitle = is_array($service) ? $service['title'] : $service->title;
+                                                    $sTagline = is_array($service) ? ($service['tagline'] ?? '') : ($service->category?->title ?? $service->short_description ?? '');
+                                                    $sIcon = is_array($service) ? ($service['icon'] ?? 'ri-shield-check-line') : 'ri-shield-check-line';
+                                                @endphp
                                                 <a
-                                                    href="{{ route('services.show', ['slug' => $service['slug']]) }}"
+                                                    href="{{ route('services.show', ['slug' => $sSlug]) }}"
                                                     class="group flex items-start gap-3 rounded-xl p-3 transition hover:bg-slate-50 border border-transparent hover:border-slate-200/60"
                                                 >
                                                     <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#12233F]/5 text-[#12233F] group-hover:bg-red-600 group-hover:text-white transition shadow-xs border border-[#12233F]/10">
-                                                        <i class="{{ $service['icon'] }} text-base"></i>
+                                                        <i class="{{ $sIcon }} text-base"></i>
                                                     </span>
                                                     <div class="min-w-0">
                                                         <p class="text-xs font-bold text-slate-900 group-hover:text-red-600 transition truncate">
-                                                            {{ $service['title'] }}
+                                                            {{ $sTitle }}
                                                         </p>
                                                         <p class="text-[11px] text-slate-500 truncate mt-0.5">
-                                                            {{ $service['tagline'] }}
+                                                            {{ $sTagline }}
                                                         </p>
                                                     </div>
                                                 </a>
@@ -199,13 +205,18 @@
 
                                 <div x-show="mobileServicesOpen" x-collapse class="pl-4 pr-2 py-2 space-y-1 bg-slate-50/60 rounded-xl mb-1">
                                     @foreach ($this->services() as $service)
+                                        @php
+                                            $sSlug = is_array($service) ? $service['slug'] : $service->slug;
+                                            $sTitle = is_array($service) ? $service['title'] : $service->title;
+                                            $sIcon = is_array($service) ? ($service['icon'] ?? 'ri-shield-check-line') : 'ri-shield-check-line';
+                                        @endphp
                                         <a
-                                            href="{{ route('services.show', ['slug' => $service['slug']]) }}"
+                                            href="{{ route('services.show', ['slug' => $sSlug]) }}"
                                             class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-medium text-slate-600 hover:bg-white hover:text-red-700 transition"
                                             @click="menuOpen = false"
                                         >
-                                            <i class="{{ $service['icon'] }} text-red-600"></i>
-                                            <span class="truncate">{{ $service['title'] }}</span>
+                                            <i class="{{ $sIcon }} text-red-600"></i>
+                                            <span class="truncate">{{ $sTitle }}</span>
                                         </a>
                                     @endforeach
                                     <a

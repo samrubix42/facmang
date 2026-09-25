@@ -1,3 +1,7 @@
+@php
+    $catalog = $this->catalogData;
+@endphp
+
 <div class="bg-white text-slate-800 antialiased font-sans selection:bg-red-500 selection:text-white">
 
     {{-- Breadcrumb Navigation Bar --}}
@@ -9,7 +13,7 @@
                     <i class="ri-arrow-right-s-line text-slate-300"></i>
                     <a href="{{ route('services') }}" class="transition hover:text-[#12233F] font-medium">Services</a>
                     <i class="ri-arrow-right-s-line text-slate-300"></i>
-                    <span class="font-semibold text-slate-800 truncate max-w-[220px] sm:max-w-none">{{ $service['title'] }}</span>
+                    <span class="font-semibold text-slate-800 truncate max-w-[220px] sm:max-w-none">{{ $service->title }}</span>
                 </nav>
 
                 <a 
@@ -32,8 +36,8 @@
                 <div class="lg:col-span-8 space-y-4">
                     <div class="flex flex-wrap items-center gap-2">
                         <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
-                            <i class="{{ $service['icon'] }}"></i>
-                            <span>{{ $service['badge'] }}</span>
+                            <i class="{{ $catalog['icon'] ?? 'ri-shield-star-line' }}"></i>
+                            <span>{{ $service->category?->title ?? $catalog['badge'] ?? 'Enterprise Service' }}</span>
                         </span>
                         <span class="inline-flex items-center gap-1 rounded-full bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 border border-slate-200/80">
                             <i class="ri-shield-check-fill text-[#12233F]"></i> ISO 41001 Certified
@@ -44,15 +48,15 @@
                     </div>
 
                     <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl leading-tight">
-                        {{ $service['title'] }}
+                        {{ $service->title }}
                     </h1>
 
                     <p class="text-base font-semibold text-[#12233F]">
-                        {{ $service['tagline'] }}
+                        {{ $catalog['tagline'] ?? $service->category?->title ?? 'Industrial Sweeping, Floor Scrubbing & Diamond Marble Polish' }}
                     </p>
 
                     <p class="text-sm leading-relaxed text-slate-600 sm:text-base max-w-3xl font-normal">
-                        {{ $service['full_description'] }}
+                        {{ $service->short_description ?? $catalog['full_description'] ?? '' }}
                     </p>
                 </div>
 
@@ -69,19 +73,19 @@
                         <dl class="space-y-3 text-xs">
                             <div class="flex items-center justify-between">
                                 <dt class="text-slate-400 font-medium">Cleanliness SLA:</dt>
-                                <dd class="font-bold text-[#12233F] text-sm">{{ $service['sla_rating'] }}</dd>
+                                <dd class="font-bold text-[#12233F] text-sm">{{ $catalog['sla_rating'] ?? '99.85% Standard' }}</dd>
                             </div>
                             <div class="flex items-center justify-between">
                                 <dt class="text-slate-400 font-medium">Response Window:</dt>
-                                <dd class="font-bold text-slate-800">{{ $service['response_time'] }}</dd>
+                                <dd class="font-bold text-slate-800">{{ $catalog['response_time'] ?? '15-Min Dispatch' }}</dd>
                             </div>
                             <div class="flex items-center justify-between">
                                 <dt class="text-slate-400 font-medium">Staffing:</dt>
-                                <dd class="font-bold text-slate-800">{{ $service['staff_standard'] }}</dd>
+                                <dd class="font-bold text-slate-800">{{ $catalog['staff_standard'] ?? '100% W-2 Direct Staff' }}</dd>
                             </div>
                             <div class="flex items-center justify-between">
                                 <dt class="text-slate-400 font-medium">Schedule:</dt>
-                                <dd class="font-bold text-slate-800">{{ $service['frequency'] }}</dd>
+                                <dd class="font-bold text-slate-800">{{ $catalog['frequency'] ?? 'Daily Night & Day Shifts' }}</dd>
                             </div>
                         </dl>
                         <a
@@ -100,19 +104,19 @@
             <div class="mt-8 grid grid-cols-2 gap-4 border-t border-slate-100 pt-6 sm:grid-cols-4">
                 <div class="rounded-2xl border border-slate-100 bg-slate-50/50 p-4">
                     <span class="text-[11px] font-medium text-slate-400">Guaranteed SLA</span>
-                    <p class="mt-1 text-base sm:text-lg font-bold text-[#12233F]">{{ $service['sla_rating'] }}</p>
+                    <p class="mt-1 text-base sm:text-lg font-bold text-[#12233F]">{{ $catalog['sla_rating'] ?? '99.85%' }}</p>
                 </div>
                 <div class="rounded-2xl border border-slate-100 bg-slate-50/50 p-4">
                     <span class="text-[11px] font-medium text-slate-400">Response Window</span>
-                    <p class="mt-1 text-base sm:text-lg font-bold text-slate-800">{{ $service['response_time'] }}</p>
+                    <p class="mt-1 text-base sm:text-lg font-bold text-slate-800">{{ $catalog['response_time'] ?? '15-Min Dispatch' }}</p>
                 </div>
                 <div class="rounded-2xl border border-slate-100 bg-slate-50/50 p-4">
                     <span class="text-[11px] font-medium text-slate-400">Staff Qualification</span>
-                    <p class="mt-1 text-xs sm:text-sm font-bold text-[#12233F] line-clamp-1">{{ $service['staff_standard'] }}</p>
+                    <p class="mt-1 text-xs sm:text-sm font-bold text-[#12233F] line-clamp-1">{{ $catalog['staff_standard'] ?? '100% W-2 Vetted & Trained' }}</p>
                 </div>
                 <div class="rounded-2xl border border-slate-100 bg-slate-50/50 p-4">
                     <span class="text-[11px] font-medium text-slate-400">Shift Availability</span>
-                    <p class="mt-1 text-base sm:text-lg font-bold text-slate-800">{{ $service['frequency'] }}</p>
+                    <p class="mt-1 text-base sm:text-lg font-bold text-slate-800">{{ $catalog['frequency'] ?? '24/7 Operations' }}</p>
                 </div>
             </div>
         </div>
@@ -129,9 +133,10 @@
                     <!-- Featured Image Banner -->
                     <div class="relative overflow-hidden rounded-3xl border border-slate-100 bg-slate-100 aspect-16/9 sm:aspect-21/9 max-h-[380px] shadow-sm">
                         <img 
-                            src="{{ asset($service['image']) }}" 
-                            alt="{{ $service['title'] }}" 
+                            src="{{ asset($service->image) }}" 
+                            alt="{{ $service->title }}" 
                             class="h-full w-full object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/1200x600?text={{ urlencode($service->title) }}';"
                         />
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0B1A30]/70 via-transparent to-transparent"></div>
 
@@ -153,133 +158,163 @@
                         </div>
                     </div>
 
-                    <!-- Operational Scope of Work -->
-                    <div class="rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-9 shadow-xs space-y-7">
-                        <div>
-                            <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3 py-1 text-xs font-semibold text-[#12233F]">
-                                <i class="ri-file-list-3-line text-xs"></i> Operational Scope
-                            </span>
-                            <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">
-                                Standardized Daily &amp; Periodic Care
-                            </h2>
-                            <p class="mt-1 text-xs sm:text-sm text-slate-500">
-                                Executed according to standardized checklists and verified via supervisor digital review.
-                            </p>
-                        </div>
-
-                        <!-- Daily Routine -->
-                        <div>
-                            <h3 class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">
-                                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-red-600 text-white text-xs">
-                                    <i class="ri-sun-line"></i>
+                    <!-- Dynamic Rich Content from Database (TinyMCE) -->
+                    @if (!empty($service->content))
+                        <div class="rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-9 shadow-xs space-y-4">
+                            <div class="flex items-center gap-2 border-b border-slate-100 pb-4">
+                                <span class="flex h-8 w-8 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F] text-xs">
+                                    <i class="ri-file-text-line"></i>
                                 </span>
-                                <span>Daily Operational Routine</span>
-                            </h3>
-                            <div class="grid gap-3 sm:grid-cols-2">
-                                @foreach ($service['scope']['daily'] as $task)
-                                    <div class="flex items-start gap-2.5 rounded-2xl border border-slate-100 bg-slate-50/50 p-4 text-xs text-slate-700">
-                                        <i class="ri-checkbox-circle-fill text-[#12233F] mt-0.5 shrink-0 text-sm"></i>
-                                        <span class="leading-relaxed">{{ $task }}</span>
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-
-                        <!-- Periodic Treatments -->
-                        <div class="border-t border-slate-100 pt-6">
-                            <h3 class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">
-                                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-[#12233F] text-white text-xs">
-                                    <i class="ri-calendar-check-line"></i>
-                                </span>
-                                <span>Periodic &amp; Deep Maintenance</span>
-                            </h3>
-                            <div class="grid gap-3 sm:grid-cols-2">
-                                @foreach ($service['scope']['periodic'] as $task)
-                                    <div class="flex items-start gap-2.5 rounded-2xl border border-slate-100 bg-slate-50/50 p-4 text-xs text-slate-700">
-                                        <i class="ri-sparkling-fill text-[#12233F] mt-0.5 shrink-0 text-sm"></i>
-                                        <span class="leading-relaxed">{{ $task }}</span>
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Equipment & Chemical Technology -->
-                    <div class="rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-9 shadow-xs space-y-6">
-                        <div>
-                            <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3 py-1 text-xs font-semibold text-[#12233F]">
-                                <i class="ri-cpu-line text-xs"></i> Technology
-                            </span>
-                            <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">
-                                Industrial Equipment &amp; Eco-Formulas
-                            </h2>
-                            <p class="mt-1 text-xs sm:text-sm text-slate-500">
-                                Professional-grade machinery and EPA/Green Seal compliant chemistries for occupant health.
-                            </p>
-                        </div>
-
-                        <div class="grid gap-3 sm:grid-cols-2">
-                            @foreach ($service['equipment'] as $item)
-                                <div class="flex items-center gap-3.5 rounded-2xl border border-slate-200/80 bg-slate-50/50 p-4 transition hover:border-[#12233F]/30">
-                                    <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
-                                        <i class="ri-tools-fill text-sm"></i>
-                                    </span>
-                                    <span class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">{{ $item }}</span>
+                                <div>
+                                    <h2 class="text-xl font-bold tracking-tight text-slate-900">
+                                        Scope &amp; Service Specifications
+                                    </h2>
+                                    <p class="text-xs text-slate-500">Official scope of work and enterprise deliverables</p>
                                 </div>
-                            @endforeach
+                            </div>
+                            <div class="prose prose-slate max-w-none prose-headings:font-bold prose-headings:text-slate-900 prose-h2:text-xl prose-h3:text-base prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 prose-table:w-full prose-th:bg-slate-50 prose-th:p-2.5 prose-th:text-xs prose-td:p-2.5 prose-td:text-xs prose-td:border prose-th:border leading-relaxed text-xs sm:text-sm">
+                                {!! $service->content !!}
+                            </div>
                         </div>
-                    </div>
+                    @endif
 
-                    <!-- Vendor Comparison Matrix -->
-                    <div class="rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-9 shadow-xs space-y-6">
-                        <div>
-                            <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3 py-1 text-xs font-semibold text-[#12233F]">
-                                <i class="ri-scales-3-line text-xs"></i> Comparison
-                            </span>
-                            <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">
-                                FacilityPro vs Traditional Vendors
-                            </h2>
-                            <p class="mt-1 text-xs sm:text-sm text-slate-500">
-                                Why enterprise property directors choose single-contract SLA governance.
-                            </p>
-                        </div>
+                    @if (!empty($catalog['scope']['daily']) || !empty($catalog['scope']['periodic']))
+                        <!-- Operational Scope of Work -->
+                        <div class="rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-9 shadow-xs space-y-7">
+                            <div>
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3 py-1 text-xs font-semibold text-[#12233F]">
+                                    <i class="ri-file-list-3-line text-xs"></i> Operational Scope
+                                </span>
+                                <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">
+                                    Standardized Daily &amp; Periodic Care
+                                </h2>
+                                <p class="mt-1 text-xs sm:text-sm text-slate-500">
+                                    Executed according to standardized checklists and verified via supervisor digital review.
+                                </p>
+                            </div>
 
-                        <div class="overflow-x-auto rounded-2xl border border-slate-200">
-                            <table class="w-full text-left text-xs table-fixed min-w-[540px]">
-                                <thead class="bg-slate-50 border-b border-slate-200 text-slate-700 font-semibold uppercase tracking-wider">
-                                    <tr>
-                                        <th class="w-1/3 p-4">Criteria</th>
-                                        <th class="w-1/3 p-4 bg-[#12233F]/10 text-[#12233F] border-x border-[#12233F]/10">
-                                            <div class="flex items-center gap-1.5">
-                                                <i class="ri-checkbox-circle-fill text-[#12233F]"></i>
-                                                <span>FacilityPro Standard</span>
+                            @if (!empty($catalog['scope']['daily']))
+                                <!-- Daily Routine -->
+                                <div>
+                                    <h3 class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">
+                                        <span class="flex h-6 w-6 items-center justify-center rounded-full bg-red-600 text-white text-xs">
+                                            <i class="ri-sun-line"></i>
+                                        </span>
+                                        <span>Daily Operational Routine</span>
+                                    </h3>
+                                    <div class="grid gap-3 sm:grid-cols-2">
+                                        @foreach ($catalog['scope']['daily'] as $task)
+                                            <div class="flex items-start gap-2.5 rounded-2xl border border-slate-100 bg-slate-50/50 p-4 text-xs text-slate-700">
+                                                <i class="ri-checkbox-circle-fill text-[#12233F] mt-0.5 shrink-0 text-sm"></i>
+                                                <span class="leading-relaxed">{{ $task }}</span>
                                             </div>
-                                        </th>
-                                        <th class="w-1/3 p-4 text-slate-500">Typical Contractor</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-slate-100">
-                                    @foreach ($service['comparison'] as $row)
-                                        <tr class="hover:bg-slate-50/50 transition">
-                                            <td class="p-4 font-bold text-slate-900 align-top">{{ $row['feature'] }}</td>
-                                            <td class="p-4 bg-[#12233F]/5 font-medium text-[#12233F] border-x border-[#12233F]/10 align-top">
-                                                <div class="flex items-start gap-1.5">
-                                                    <i class="ri-check-line text-[#12233F] text-base shrink-0"></i>
-                                                    <span class="font-bold leading-relaxed">{{ $row['us'] }}</span>
-                                                </div>
-                                            </td>
-                                            <td class="p-4 text-slate-500 align-top">
-                                                <div class="flex items-start gap-1.5">
-                                                    <i class="ri-close-line text-rose-500 text-base shrink-0"></i>
-                                                    <span class="leading-relaxed">{{ $row['others'] }}</span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            @endif
+
+                            @if (!empty($catalog['scope']['periodic']))
+                                <!-- Periodic Treatments -->
+                                <div class="border-t border-slate-100 pt-6">
+                                    <h3 class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">
+                                        <span class="flex h-6 w-6 items-center justify-center rounded-full bg-[#12233F] text-white text-xs">
+                                            <i class="ri-calendar-check-line"></i>
+                                        </span>
+                                        <span>Periodic &amp; Deep Maintenance</span>
+                                    </h3>
+                                    <div class="grid gap-3 sm:grid-cols-2">
+                                        @foreach ($catalog['scope']['periodic'] as $task)
+                                            <div class="flex items-start gap-2.5 rounded-2xl border border-slate-100 bg-slate-50/50 p-4 text-xs text-slate-700">
+                                                <i class="ri-sparkling-fill text-[#12233F] mt-0.5 shrink-0 text-sm"></i>
+                                                <span class="leading-relaxed">{{ $task }}</span>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            @endif
                         </div>
-                    </div>
+                    @endif
+
+                    @if (!empty($catalog['equipment']))
+                        <!-- Equipment & Chemical Technology -->
+                        <div class="rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-9 shadow-xs space-y-6">
+                            <div>
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3 py-1 text-xs font-semibold text-[#12233F]">
+                                    <i class="ri-cpu-line text-xs"></i> Technology
+                                </span>
+                                <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">
+                                    Industrial Equipment &amp; Eco-Formulas
+                                </h2>
+                                <p class="mt-1 text-xs sm:text-sm text-slate-500">
+                                    Professional-grade machinery and EPA/Green Seal compliant chemistries for occupant health.
+                                </p>
+                            </div>
+
+                            <div class="grid gap-3 sm:grid-cols-2">
+                                @foreach ($catalog['equipment'] as $item)
+                                    <div class="flex items-center gap-3.5 rounded-2xl border border-slate-200/80 bg-slate-50/50 p-4 transition hover:border-[#12233F]/30">
+                                        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
+                                            <i class="ri-tools-fill text-sm"></i>
+                                        </span>
+                                        <span class="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">{{ $item }}</span>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    @endif
+
+                    @if (!empty($catalog['comparison']))
+                        <!-- Vendor Comparison Matrix -->
+                        <div class="rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-9 shadow-xs space-y-6">
+                            <div>
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3 py-1 text-xs font-semibold text-[#12233F]">
+                                    <i class="ri-scales-3-line text-xs"></i> Comparison
+                                </span>
+                                <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">
+                                    FacilityPro vs Traditional Vendors
+                                </h2>
+                                <p class="mt-1 text-xs sm:text-sm text-slate-500">
+                                    Why enterprise property directors choose single-contract SLA governance.
+                                </p>
+                            </div>
+
+                            <div class="overflow-x-auto rounded-2xl border border-slate-200">
+                                <table class="w-full text-left text-xs table-fixed min-w-[540px]">
+                                    <thead class="bg-slate-50 border-b border-slate-200 text-slate-700 font-semibold uppercase tracking-wider">
+                                        <tr>
+                                            <th class="w-1/3 p-4">Criteria</th>
+                                            <th class="w-1/3 p-4 bg-[#12233F]/10 text-[#12233F] border-x border-[#12233F]/10">
+                                                <div class="flex items-center gap-1.5">
+                                                    <i class="ri-checkbox-circle-fill text-[#12233F]"></i>
+                                                    <span>FacilityPro Standard</span>
+                                                </div>
+                                            </th>
+                                            <th class="w-1/3 p-4 text-slate-500">Typical Contractor</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100">
+                                        @foreach ($catalog['comparison'] as $row)
+                                            <tr class="hover:bg-slate-50/50 transition">
+                                                <td class="p-4 font-bold text-slate-900 align-top">{{ $row['feature'] }}</td>
+                                                <td class="p-4 bg-[#12233F]/5 font-medium text-[#12233F] border-x border-[#12233F]/10 align-top">
+                                                    <div class="flex items-start gap-1.5">
+                                                        <i class="ri-check-line text-[#12233F] text-base shrink-0"></i>
+                                                        <span class="font-bold leading-relaxed">{{ $row['us'] }}</span>
+                                                    </div>
+                                                </td>
+                                                <td class="p-4 text-slate-500 align-top">
+                                                    <div class="flex items-start gap-1.5">
+                                                        <i class="ri-close-line text-rose-500 text-base shrink-0"></i>
+                                                        <span class="leading-relaxed">{{ $row['others'] }}</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    @endif
 
                     <!-- SOP Quality Assurance Steps -->
                     <div class="rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-9 shadow-xs space-y-6">
@@ -316,35 +351,37 @@
                         </div>
                     </div>
 
-                    <!-- Service FAQs -->
-                    <div class="rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-9 shadow-xs space-y-6" x-data="{ activeFaq: 0 }">
-                        <div>
-                            <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3 py-1 text-xs font-semibold text-[#12233F]">
-                                <i class="ri-questionnaire-line text-xs"></i> Questions
-                            </span>
-                            <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">
-                                {{ $service['title'] }} FAQs
-                            </h2>
-                        </div>
+                    @if (!empty($catalog['faqs']))
+                        <!-- Service FAQs -->
+                        <div class="rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-9 shadow-xs space-y-6" x-data="{ activeFaq: 0 }">
+                            <div>
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3 py-1 text-xs font-semibold text-[#12233F]">
+                                    <i class="ri-questionnaire-line text-xs"></i> Questions
+                                </span>
+                                <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">
+                                    {{ $service->title }} FAQs
+                                </h2>
+                            </div>
 
-                        <div class="space-y-3">
-                            @foreach ($service['faqs'] as $index => $faq)
-                                <div class="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-xs">
-                                    <button
-                                        type="button"
-                                        class="flex w-full items-center justify-between p-4 sm:p-5 text-left text-xs sm:text-sm font-semibold text-slate-900 transition hover:text-[#12233F] cursor-pointer"
-                                        @click="activeFaq = (activeFaq === {{ $index }} ? null : {{ $index }})"
-                                    >
-                                        <span>{{ $faq['q'] }}</span>
-                                        <i class="ri-arrow-down-s-line text-base text-slate-400 transition-transform duration-200 shrink-0 ml-2" :class="activeFaq === {{ $index }} ? 'rotate-180 text-[#12233F]' : ''"></i>
-                                    </button>
-                                    <div x-show="activeFaq === {{ $index }}" x-collapse class="border-t border-slate-100 p-4 sm:p-5 text-xs sm:text-sm leading-relaxed text-slate-600 bg-slate-50/50">
-                                        {{ $faq['a'] }}
+                            <div class="space-y-3">
+                                @foreach ($catalog['faqs'] as $index => $faq)
+                                    <div class="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-xs">
+                                        <button
+                                            type="button"
+                                            class="flex w-full items-center justify-between p-4 sm:p-5 text-left text-xs sm:text-sm font-semibold text-slate-900 transition hover:text-[#12233F] cursor-pointer"
+                                            @click="activeFaq = (activeFaq === {{ $index }} ? null : {{ $index }})"
+                                        >
+                                            <span>{{ $faq['q'] }}</span>
+                                            <i class="ri-arrow-down-s-line text-base text-slate-400 transition-transform duration-200 shrink-0 ml-2" :class="activeFaq === {{ $index }} ? 'rotate-180 text-[#12233F]' : ''"></i>
+                                        </button>
+                                        <div x-show="activeFaq === {{ $index }}" x-collapse class="border-t border-slate-100 p-4 sm:p-5 text-xs sm:text-sm leading-relaxed text-slate-600 bg-slate-50/50">
+                                            {{ $faq['a'] }}
+                                        </div>
                                     </div>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            </div>
                         </div>
-                    </div>
+                    @endif
 
                 </div>
 
@@ -497,14 +534,14 @@
                             </a>
                         </div>
                         <div class="space-y-1">
-                            @foreach (\App\Services\ServiceCatalog::all() as $navService)
+                            @foreach ($this->allServices as $navService)
                                 <a
-                                    href="{{ route('services.show', ['slug' => $navService['slug']]) }}"
-                                    class="flex items-center justify-between rounded-full px-3.5 py-2 text-xs transition {{ $navService['slug'] === $service['slug'] ? 'bg-[#12233F]/10 text-[#12233F] font-bold border border-[#12233F]/20' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
+                                    href="{{ route('services.show', ['slug' => $navService->slug]) }}"
+                                    class="flex items-center justify-between rounded-full px-3.5 py-2 text-xs transition {{ $navService->slug === $service->slug ? 'bg-[#12233F]/10 text-[#12233F] font-bold border border-[#12233F]/20' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
                                 >
                                     <span class="flex items-center gap-2 truncate">
-                                        <i class="{{ $navService['icon'] }} {{ $navService['slug'] === $service['slug'] ? 'text-[#12233F]' : 'text-slate-400' }} text-sm"></i>
-                                        <span class="truncate">{{ $navService['title'] }}</span>
+                                        <i class="ri-checkbox-circle-line {{ $navService->slug === $service->slug ? 'text-[#12233F]' : 'text-slate-400' }} text-sm"></i>
+                                        <span class="truncate">{{ $navService->title }}</span>
                                     </span>
                                     <i class="ri-arrow-right-s-line text-slate-400 shrink-0 text-xs"></i>
                                 </a>
@@ -542,30 +579,31 @@
                     <div class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:border-[#12233F]/30 hover:shadow-xl transition-all duration-300">
                         <div class="relative h-44 overflow-hidden bg-slate-100">
                             <img
-                                src="{{ asset($related['image']) }}"
-                                alt="{{ $related['title'] }}"
+                                src="{{ asset($related->image) }}"
+                                alt="{{ $related->title }}"
                                 class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                onerror="this.onerror=null; this.src='https://placehold.co/600x400?text={{ urlencode($related->title) }}';"
                             />
                             <div class="absolute inset-0 bg-gradient-to-t from-[#0B1A30]/60 to-transparent"></div>
                             <span class="absolute bottom-3 left-3 rounded-full bg-[#12233F]/90 px-2.5 py-1 text-[10px] font-semibold text-red-400">
-                                {{ $related['badge'] }}
+                                {{ $related->category?->title ?? 'Facility Service' }}
                             </span>
                         </div>
                         <div class="flex flex-1 flex-col p-6 justify-between">
                             <div>
                                 <h3 class="text-base font-bold text-slate-900 group-hover:text-[#12233F] transition">
-                                    <a href="{{ route('services.show', ['slug' => $related['slug']]) }}">
-                                        {{ $related['title'] }}
+                                    <a href="{{ route('services.show', ['slug' => $related->slug]) }}">
+                                        {{ $related->title }}
                                     </a>
                                 </h3>
                                 <p class="mt-1.5 text-xs text-slate-500 line-clamp-2 leading-relaxed">
-                                    {{ $related['short_description'] }}
+                                    {{ $related->short_description }}
                                 </p>
                             </div>
                             <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
-                                <span class="text-[11px] font-semibold text-[#12233F]">{{ $related['sla_rating'] }}</span>
+                                <span class="text-[11px] font-semibold text-[#12233F]">SLA Guaranteed</span>
                                 <a
-                                    href="{{ route('services.show', ['slug' => $related['slug']]) }}"
+                                    href="{{ route('services.show', ['slug' => $related->slug]) }}"
                                     class="inline-flex items-center gap-1 text-xs font-semibold text-slate-900 hover:text-[#12233F] transition"
                                 >
                                     <span>Scope</span>
