@@ -28,5 +28,6 @@ class DatabaseSeeder extends Seeder
         $this->call(GallerySeeder::class);
         $this->call(ServiceCategorySeeder::class);
         $this->call(ServiceSeeder::class);
+        $this->call(JobApplicationSeeder::class);
     }
 }
