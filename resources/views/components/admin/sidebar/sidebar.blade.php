@@ -120,6 +120,24 @@
                             {{ $pendingAppsCount }}
                         </span>
                     @endif
+                <!-- Contact Inquiries -->
+                <a
+                    href="{{ route('admin.contacts.index') }}"
+                    wire:navigate
+                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.contacts*') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
+                >
+                    <div class="flex items-center gap-2.5">
+                        <i class="ri-contacts-book-line text-sm"></i>
+                        <span>Contact Inquiries</span>
+                    </div>
+                    @php
+                        $unreadContactsCount = \App\Models\Contact::where('is_read', false)->count();
+                    @endphp
+                    @if ($unreadContactsCount > 0)
+                        <span class="rounded-full bg-red-600 px-1.5 py-0.2 text-[10px] font-bold text-white">
+                            {{ $unreadContactsCount }}
+                        </span>
+                    @endif
                 </a>
 
                 <!-- Site Settings -->

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Contact;
 use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -25,6 +26,16 @@ new #[Title('Contact Us & Office Location - Facility Management')] class extends
     public function submit(): void
     {
         $this->validate();
+
+        Contact::create([
+            'name' => $this->name,
+            'email' => $this->email,
+            'phone' => $this->phone,
+            'property_type' => $this->propertyType,
+            'subject' => 'SLA Proposal Request - '.$this->propertyType,
+            'message' => $this->message,
+            'is_read' => false,
+        ]);
 
         $this->submitted = true;
 

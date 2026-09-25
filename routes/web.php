@@ -25,6 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::livewire('/admin/services/{service}/edit', 'admin::service.update')->name('admin.services.edit');
     Route::livewire('/admin/jobs', 'admin::job.job-application')->name('admin.jobs.index');
     Route::livewire('/admin/job-applied', 'admin::job.job-applied')->name('admin.job-applied.index');
+    Route::livewire('/admin/contacts', 'admin::contact')->name('admin.contacts.index');
     Route::livewire('/admin/settings', 'admin::setting')->name('admin.settings');
 
     Route::post('/logout', function () {
