@@ -1,6 +1,16 @@
 <?php
 
+use Database\Seeders\ServiceCategorySeeder;
+use Database\Seeders\ServiceSeeder;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;
+
+uses(RefreshDatabase::class);
+
+beforeEach(function () {
+    $this->seed(ServiceCategorySeeder::class);
+    $this->seed(ServiceSeeder::class);
+});
 
 test('services page renders successfully with status 200', function () {
     $response = $this->get(route('services'));

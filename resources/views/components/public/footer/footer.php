@@ -39,6 +39,7 @@ new class extends Component
             ['label' => 'SLA & Standards', 'href' => route('home').'#services'],
             ['label' => 'Scope Calculator', 'href' => route('home').'#calculator'],
             ['label' => 'Project Gallery', 'href' => route('gallery')],
+            ['label' => 'Our Clients', 'href' => route('clients')],
             ['label' => 'Careers & Jobs', 'href' => route('careers')],
             ['label' => 'Contact Us', 'href' => route('contact')],
         ];
