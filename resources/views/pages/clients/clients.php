@@ -8,9 +8,7 @@ use Livewire\Component;
 
 new #[Title('Our Clients & Corporate Partners - FacilityPro')] class extends Component
 {
-    /**
-     * @return Collection<int, Client>
-     */
+    
     #[Computed]
     public function clients(): Collection
     {
