@@ -803,11 +803,8 @@
         class="py-14 transition-all duration-700 ease-out sm:py-20"
     >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="relative overflow-hidden rounded-3xl border border-slate-800 bg-[#0B1A30] px-6 py-14 text-center text-white sm:px-12 lg:py-16">
-                <div class="pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full bg-red-600/15 blur-3xl"></div>
-                <div class="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-[#12233F]/40 blur-3xl"></div>
-
-                <div class="relative mx-auto max-w-2xl space-y-4">
+            <div class="rounded-3xl border border-slate-800 bg-[#0B1A30] px-6 py-14 text-center text-white sm:px-12 lg:py-16">
+                <div class="mx-auto max-w-2xl space-y-4">
                     <span class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/10 px-3.5 py-1 text-xs font-semibold text-red-400">
                         <i class="ri-customer-service-2-line text-xs"></i> Direct Operations Desk
                     </span>
