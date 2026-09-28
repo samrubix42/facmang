@@ -50,11 +50,8 @@
 
 <div class="bg-white text-slate-800 antialiased font-sans selection:bg-red-500 selection:text-white" x-data="galleryApp">
 
-    {{-- Hero Section (Dark Blue & Red Accent Branding) --}}
-    <section class="relative border-b border-slate-100 bg-gradient-to-b from-[#12233F]/[0.03] via-white to-white py-16 sm:py-24 overflow-hidden">
-        {{-- Ambient decorative background orbs --}}
-        <div class="absolute -top-40 left-1/2 -translate-x-1/2 h-96 w-[800px] bg-gradient-to-tr from-[#12233F]/10 via-red-500/10 to-transparent blur-3xl rounded-full pointer-events-none -z-10"></div>
-
+    {{-- Hero Section --}}
+    <section class="border-b border-slate-100 bg-white py-16 sm:py-24 overflow-hidden">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-3xl text-center space-y-5">
                 
@@ -159,12 +156,12 @@
             </div>
 
             {{-- Gallery Cards Grid --}}
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
 
                 <template x-for="(item, index) in list()" :key="item.id || (item.image + index)">
                     <div
                         @click="open(item, index)"
-                        class="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-200/80 bg-[#0B1A30] shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-[#12233F]/40 cursor-pointer"
+                        class="group relative aspect-[3/2] w-full overflow-hidden rounded-2xl border border-slate-200/80 bg-[#0B1A30] shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-[#12233F]/40 cursor-pointer"
                     >
                         {{-- Photo Image with subtle hover zoom --}}
                         <img
@@ -173,9 +170,6 @@
                             loading="lazy"
                             class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                         />
-
-                        {{-- Dark Navy Gradient Overlay --}}
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0B1A30]/95 via-[#0B1A30]/40 to-transparent"></div>
 
                         {{-- Category Badge (Top Left) --}}
                         <div class="absolute top-3.5 left-3.5">
@@ -191,51 +185,33 @@
                                 <i class="ri-fullscreen-line text-sm"></i>
                             </span>
                         </div>
-
-                        {{-- Card Bottom Info --}}
-                        <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                            <h3 class="text-sm font-bold tracking-tight text-white line-clamp-1 leading-snug" x-text="item.title"></h3>
-                            
-                            <div class="mt-1 flex items-center justify-between text-[11px] text-slate-300">
-                                <span class="flex items-center gap-1.5 text-red-400 font-medium">
-                                    <span class="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse"></span>
-                                    <span>QR Audit Verified</span>
-                                </span>
-                                <span class="text-xs font-semibold text-white/90 group-hover:text-red-400 transition flex items-center gap-1">
-                                    <span>Inspect</span>
-                                    <i class="ri-arrow-right-s-line text-sm"></i>
-                                </span>
-                            </div>
-                        </div>
                     </div>
                 </template>
 
                 {{-- Interactive CTA Card at end of grid (Dark Blue with Red Highlights) --}}
                 <a
                     href="{{ route('contact') }}"
-                    class="group relative aspect-[4/3] w-full flex flex-col justify-between overflow-hidden rounded-2xl bg-[#12233F] p-6 text-white border border-[#12233F] shadow-xs hover:bg-[#0B1A30] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                    class="group relative aspect-[3/2] w-full flex flex-col justify-between overflow-hidden rounded-2xl bg-[#12233F] p-7 sm:p-8 text-white border border-[#12233F] shadow-xs hover:bg-[#0B1A30] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                 >
-                    <span class="absolute -top-12 -right-12 h-36 w-36 rounded-full bg-red-600/20 blur-xl transition group-hover:bg-red-600/30"></span>
-
                     <div class="relative flex items-center justify-between">
-                        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600 text-white shadow-sm">
-                            <i class="ri-clipboard-line text-xl"></i>
+                        <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-red-600 text-white shadow-sm">
+                            <i class="ri-clipboard-line text-2xl"></i>
                         </span>
                         <span class="rounded-full bg-red-600/20 px-2.5 py-0.5 text-[10px] font-bold text-red-400 border border-red-500/30">
                             Free Assessment
                         </span>
                     </div>
 
-                    <div class="relative space-y-1.5">
-                        <h3 class="text-base font-bold tracking-tight text-white leading-tight">
+                    <div class="relative space-y-2">
+                        <h3 class="text-lg sm:text-xl font-bold tracking-tight text-white leading-tight">
                             Request Live Site Photographic Audit
                         </h3>
-                        <p class="text-xs text-slate-300 leading-relaxed">
+                        <p class="text-sm text-slate-300 leading-relaxed">
                             Receive a filmed, time-stamped visual audit of your facilities with tailored SLA benchmarks.
                         </p>
                     </div>
 
-                    <div class="relative flex items-center gap-1 text-xs font-semibold text-red-400 group-hover:text-red-300 transition">
+                    <div class="relative flex items-center gap-1.5 text-sm font-semibold text-red-400 group-hover:text-red-300 transition">
                         <span>Book 30-Min Audit</span>
                         <i class="ri-arrow-right-line transition-transform group-hover:translate-x-1"></i>
                     </div>
@@ -424,10 +400,6 @@
     <section class="py-14 sm:py-20 lg:py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="relative overflow-hidden rounded-3xl bg-[#0B1A30] px-6 py-14 sm:px-12 lg:py-16 text-center text-white border border-slate-800 shadow-xl">
-                {{-- Decorative background glow --}}
-                <div class="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-red-600/15 blur-3xl pointer-events-none"></div>
-                <div class="absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-[#12233F]/40 blur-3xl pointer-events-none"></div>
-
                 <div class="relative max-w-2xl mx-auto space-y-5">
                     <div class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold text-red-400 border border-white/10">
                         <i class="ri-calendar-check-line text-xs"></i>

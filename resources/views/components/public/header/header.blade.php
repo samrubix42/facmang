@@ -23,103 +23,12 @@
                             $isActive = request()->routeIs($link['route']);
                         @endphp
 
-                        @if (! empty($link['is_dropdown']))
-                            <!-- Services Dropdown Trigger -->
-                            <div 
-                                class="relative" 
-                                x-data="{ open: false }" 
-                                @mouseenter="open = true" 
-                                @mouseleave="open = false"
-                            >
-                                <a
-                                    href="{{ $link['href'] }}"
-                                    class="relative inline-flex items-center gap-1 pb-1 text-sm font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-red-600 after:transition-transform after:duration-200 hover:text-red-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-red-600 after:scale-x-100' : 'text-[#12233F]' }}"
-                                    @click="open = !open"
-                                >
-                                    <span>{{ $link['label'] }}</span>
-                                    <i class="ri-arrow-down-s-line text-sm transition-transform duration-200" :class="open ? 'rotate-180 text-red-600' : 'text-slate-400'"></i>
-                                </a>
-
-                                <!-- Services Mega Dropdown Panel -->
-                                <div
-                                    x-show="open"
-                                    x-cloak
-                                    x-transition:enter="transition ease-out duration-200"
-                                    x-transition:enter-start="opacity-0 translate-y-2 scale-98"
-                                    x-transition:enter-end="opacity-100 translate-y-0 scale-100"
-                                    x-transition:leave="transition ease-in duration-150"
-                                    x-transition:leave-start="opacity-100 translate-y-0 scale-100"
-                                    x-transition:leave-end="opacity-0 translate-y-2 scale-98"
-                                    class="absolute left-1/2 top-full -translate-x-1/2 pt-2.5 z-50 w-[min(660px,calc(100vw-2rem))]"
-                                >
-                                    <div class="rounded-2xl border border-slate-200/90 bg-white p-5 shadow-2xl shadow-slate-900/10">
-                                        <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-slate-100 pb-3 mb-4">
-                                            <div class="min-w-0">
-                                                <p class="text-xs font-extrabold uppercase tracking-wider text-[#12233F]">Enterprise Facility Capabilities</p>
-                                                <p class="text-[11px] text-slate-500">SLA-backed operations with single-point accountability</p>
-                                            </div>
-                                            <a
-                                                href="{{ route('services') }}"
-                                                class="inline-flex shrink-0 items-center gap-1 text-xs font-bold text-red-600 hover:text-red-700 transition"
-                                            >
-                                                <span>All Services</span>
-                                                <i class="ri-arrow-right-line"></i>
-                                            </a>
-                                        </div>
-
-                                        <!-- Services Grid -->
-                                        <div class="grid grid-cols-1 gap-2.5 min-[1150px]:grid-cols-2">
-                                            @foreach ($this->services() as $service)
-                                                @php
-                                                    $sSlug = is_array($service) ? $service['slug'] : $service->slug;
-                                                    $sTitle = is_array($service) ? $service['title'] : $service->title;
-                                                    $sTagline = is_array($service) ? ($service['tagline'] ?? '') : ($service->category?->title ?? $service->short_description ?? '');
-                                                    $sIcon = is_array($service) ? ($service['icon'] ?? 'ri-shield-check-line') : 'ri-shield-check-line';
-                                                @endphp
-                                                <a
-                                                    href="{{ route('services.show', ['slug' => $sSlug]) }}"
-                                                    class="group flex items-start gap-3 rounded-xl p-3 transition hover:bg-slate-50 border border-transparent hover:border-slate-200/60"
-                                                >
-                                                    <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#12233F]/5 text-[#12233F] group-hover:bg-red-600 group-hover:text-white transition shadow-xs border border-[#12233F]/10">
-                                                        <i class="{{ $sIcon }} text-base"></i>
-                                                    </span>
-                                                    <div class="min-w-0">
-                                                        <p class="text-xs font-bold text-slate-900 group-hover:text-red-600 transition truncate">
-                                                            {{ $sTitle }}
-                                                        </p>
-                                                        <p class="text-[11px] text-slate-500 truncate mt-0.5">
-                                                            {{ $sTagline }}
-                                                        </p>
-                                                    </div>
-                                                </a>
-                                            @endforeach
-                                        </div>
-
-                                        <!-- Dropdown Bottom Highlight -->
-                                        <div class="mt-4 -mx-5 -mb-5 rounded-b-2xl border-t border-slate-100 bg-slate-50/70 p-3.5 px-5 flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between text-xs">
-                                            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-slate-600 font-medium">
-                                                <span class="flex items-center gap-1"><i class="ri-checkbox-circle-fill text-red-600"></i> 100% W-2 Staff</span>
-                                                <span class="flex items-center gap-1"><i class="ri-checkbox-circle-fill text-red-600"></i> IoT QR Logs</span>
-                                            </div>
-                                            <a
-                                                href="{{ route('contact') }}"
-                                                class="font-bold text-red-600 hover:text-red-700 transition inline-flex items-center gap-1"
-                                            >
-                                                <span>Request Custom Scope & Audit</span>
-                                                <i class="ri-arrow-right-line"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @else
-                            <a
-                                href="{{ $link['href'] }}"
-                                class="relative pb-1 text-sm font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-red-600 after:transition-transform after:duration-200 hover:text-red-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-red-600 after:scale-x-100' : 'text-[#12233F]' }}"
-                            >
-                                {{ $link['label'] }}
-                            </a>
-                        @endif
+                        <a
+                            href="{{ $link['href'] }}"
+                            class="relative pb-1 text-sm font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-red-600 after:transition-transform after:duration-200 hover:text-red-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-red-600 after:scale-x-100' : 'text-[#12233F]' }}"
+                        >
+                            {{ $link['label'] }}
+                        </a>
                     @endforeach
                 </nav>
 
@@ -178,7 +87,6 @@
                 x-transition:leave-start="translate-y-0 opacity-100"
                 x-transition:leave-end="translate-y-1 opacity-0"
                 class="border-t border-slate-100 py-4 lg:hidden max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain"
-                x-data="{ mobileServicesOpen: false }"
             >
                 <nav class="flex flex-col gap-1" aria-label="Mobile">
                     @foreach ($this->navLinks() as $link)
@@ -186,59 +94,14 @@
                             $isActive = request()->routeIs($link['route']);
                         @endphp
 
-                        @if (! empty($link['is_dropdown']))
-                            <!-- Mobile Services Accordion -->
-                            <div>
-                                <div class="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold transition {{ $isActive ? 'bg-red-50 text-red-600' : 'text-[#12233F] hover:bg-slate-50' }}">
-                                    <a href="{{ $link['href'] }}" @click="menuOpen = false" class="flex-1">
-                                        <span>{{ $link['label'] }}</span>
-                                    </a>
-                                    <button
-                                        type="button"
-                                        @click="mobileServicesOpen = !mobileServicesOpen"
-                                        class="p-1 text-slate-400 hover:text-red-600"
-                                        aria-label="Toggle services list"
-                                    >
-                                        <i class="ri-arrow-down-s-line text-lg transition-transform duration-200" :class="mobileServicesOpen ? 'rotate-180 text-red-600' : ''"></i>
-                                    </button>
-                                </div>
-
-                                <div x-show="mobileServicesOpen" x-collapse class="pl-4 pr-2 py-2 space-y-1 bg-slate-50/60 rounded-xl mb-1">
-                                    @foreach ($this->services() as $service)
-                                        @php
-                                            $sSlug = is_array($service) ? $service['slug'] : $service->slug;
-                                            $sTitle = is_array($service) ? $service['title'] : $service->title;
-                                            $sIcon = is_array($service) ? ($service['icon'] ?? 'ri-shield-check-line') : 'ri-shield-check-line';
-                                        @endphp
-                                        <a
-                                            href="{{ route('services.show', ['slug' => $sSlug]) }}"
-                                            class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-medium text-slate-600 hover:bg-white hover:text-red-700 transition"
-                                            @click="menuOpen = false"
-                                        >
-                                            <i class="{{ $sIcon }} text-red-600"></i>
-                                            <span class="truncate">{{ $sTitle }}</span>
-                                        </a>
-                                    @endforeach
-                                    <a
-                                        href="{{ route('services') }}"
-                                        class="flex items-center justify-between rounded-lg px-3 py-2 text-xs font-bold text-red-600 hover:bg-white transition border-t border-slate-200/60 mt-2 pt-2"
-                                        @click="menuOpen = false"
-                                    >
-                                        <span>Explore All Capabilities</span>
-                                        <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        @else
-                            <a
-                                href="{{ $link['href'] }}"
-                                class="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold transition {{ $isActive ? 'bg-red-50 text-red-600 font-bold' : 'text-[#12233F] hover:bg-slate-50 hover:text-red-600' }}"
-                                @click="menuOpen = false"
-                            >
-                                <span>{{ $link['label'] }}</span>
-                                <i class="ri-arrow-right-s-line text-slate-400"></i>
-                            </a>
-                        @endif
+                        <a
+                            href="{{ $link['href'] }}"
+                            class="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold transition {{ $isActive ? 'bg-red-50 text-red-600 font-bold' : 'text-[#12233F] hover:bg-slate-50 hover:text-red-600' }}"
+                            @click="menuOpen = false"
+                        >
+                            <span>{{ $link['label'] }}</span>
+                            <i class="ri-arrow-right-s-line text-slate-400"></i>
+                        </a>
                     @endforeach
 
                     <!-- Mobile Hotline Link -->
