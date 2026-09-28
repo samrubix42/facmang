@@ -16,7 +16,7 @@
     $secondaryHref ??= route('services');
 @endphp
 
-<x-layouts.error :document-title="$title.' ('.$code.') | '.config('app.name')">
+<x-layouts.error :document-title="$title.' ('.$code.') | '.setting('company_name', 'FacilityPro')">
     <div class="flex min-h-[72vh] items-center bg-white py-16 sm:py-20">
         <div class="mx-auto w-full max-w-xl px-4 text-center sm:px-6">
 
