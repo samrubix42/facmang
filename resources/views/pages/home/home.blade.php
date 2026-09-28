@@ -634,6 +634,162 @@
         </div>
     </section>
 
+    {{-- Why Choose Us (Animated Counters + Reasons) --}}
+    <section 
+        id="why-us"
+        x-data="scrollReveal(0)"
+        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
+        class="scroll-mt-20 py-14 transition-all duration-700 ease-out sm:py-20 lg:py-24"
+    >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="max-w-xl mx-auto text-center">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
+                    <i class="ri-shield-star-line text-xs"></i> Why Choose Us
+                </span>
+                <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                    Why Facility Managers Choose Us
+                </h2>
+                <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+                    Six things that make a real difference on the ground, shift after shift.
+                </p>
+            </div>
+
+            <!-- Animated Counters -->
+            <div class="mt-14 grid grid-cols-2 gap-6 border-y border-slate-100 py-10 lg:grid-cols-4">
+                <div class="text-center" x-data="countUp(99.85, 2)">
+                    <p class="text-3xl font-extrabold tracking-tight text-[#12233F] sm:text-4xl">
+                        <span x-text="display">0</span>%
+                    </p>
+                    <p class="mt-1 text-[11px] font-medium text-slate-400">Monthly Quality Score</p>
+                </div>
+
+                <div class="text-center" x-data="countUp(2400, 0)">
+                    <p class="text-3xl font-extrabold tracking-tight text-[#12233F] sm:text-4xl">
+                        <span x-text="display">0</span>+
+                    </p>
+                    <p class="mt-1 text-[11px] font-medium text-slate-400">Trained In-House Staff</p>
+                </div>
+
+                <div class="text-center" x-data="countUp(4.8, 1)">
+                    <p class="text-3xl font-extrabold tracking-tight text-[#12233F] sm:text-4xl">
+                        <span x-text="display">0</span>M+
+                    </p>
+                    <p class="mt-1 text-[11px] font-medium text-slate-400">Sq. Ft. Under Management</p>
+                </div>
+
+                <div class="text-center" x-data="countUp(18.4, 1)">
+                    <p class="text-3xl font-extrabold tracking-tight text-red-600 sm:text-4xl">
+                        <span x-text="display">0</span>%
+                    </p>
+                    <p class="mt-1 text-[11px] font-medium text-slate-400">Average Cost Reduction</p>
+                </div>
+            </div>
+
+            <!-- Reasons Grid -->
+            <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div 
+                    x-data="scrollReveal(0)"
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                    class="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs transition hover:border-[#12233F]/30"
+                >
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F] text-white">
+                        <i class="ri-user-heart-line text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-base font-bold text-slate-900">The Same Team Every Day</h3>
+                    <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
+                        Your cleaners and technicians are on our payroll, not a rotating pool of subcontractors.
+                        You get the same trained people on your site, shift after shift.
+                    </p>
+                </div>
+
+                <div 
+                    x-data="scrollReveal(60)"
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                    class="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs transition hover:border-[#12233F]/30"
+                >
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
+                        <i class="ri-links-line text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-base font-bold text-slate-900">One Invoice, One Contact</h3>
+                    <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
+                        Housekeeping, washrooms, pantry and repairs sit on one contract. If something is missed
+                        you call one number, not four vendors pointing at each other.
+                    </p>
+                </div>
+
+                <div 
+                    x-data="scrollReveal(120)"
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                    class="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs transition hover:border-[#12233F]/30"
+                >
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
+                        <i class="ri-qr-code-line text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-base font-bold text-slate-900">You Can See What Was Done</h3>
+                    <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
+                        Every task is scanned and time-stamped from a phone. Open the report and you know which
+                        washroom was cleaned, by whom, and exactly when.
+                    </p>
+                </div>
+
+                <div 
+                    x-data="scrollReveal(0)"
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                    class="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs transition hover:border-[#12233F]/30"
+                >
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F] text-white">
+                        <i class="ri-leaf-line text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-base font-bold text-slate-900">Products That Pass Your Audit</h3>
+                    <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
+                        Eco-certified chemicals and HEPA vacuums, so your health and safety checks clear
+                        without a second round of approvals and paperwork.
+                    </p>
+                </div>
+
+                <div 
+                    x-data="scrollReveal(60)"
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                    class="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs transition hover:border-[#12233F]/30"
+                >
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
+                        <i class="ri-flashlight-line text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-base font-bold text-slate-900">Help in Under 15 Minutes</h3>
+                    <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
+                        Leaking tap, tripped power, no AC at 2pm? Our engineers are on call 24/7
+                        and on site within 15 minutes.
+                    </p>
+                </div>
+
+                <div 
+                    x-data="scrollReveal(120)"
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                    class="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs transition hover:border-[#12233F]/30"
+                >
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-white">
+                        <i class="ri-medal-line text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-base font-bold text-slate-900">If We Miss, You Don't Pay</h3>
+                    <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
+                        Score under 99% on the monthly audit and the credit lands on your next invoice
+                        automatically. You don't have to chase it.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a
+                    href="{{ route('contact') }}"
+                    class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-8 py-3.5 text-xs font-semibold text-slate-800 shadow-xs transition hover:border-[#12233F]/40 hover:text-[#12233F] active:scale-[0.98] sm:text-sm"
+                >
+                    <span>Book a Free Site Walkthrough</span>
+                    <i class="ri-arrow-right-line text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
     {{-- Clean Testimonials Carousel --}}
     <section 
         id="testimonials" 
