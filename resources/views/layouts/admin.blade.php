@@ -62,6 +62,7 @@
                         x-transition:leave-start="translate-x-0"
                         x-transition:leave-end="-translate-x-full"
                         class="relative mr-16 flex w-full max-w-xs flex-1 bg-white"
+                        @click="if ($event.target.closest('a[href]')) mobileSidebarOpen = false"
                     >
                         <livewire:admin.sidebar />
                     </div>

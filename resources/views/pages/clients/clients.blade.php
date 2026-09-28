@@ -41,7 +41,7 @@
     </section>
 
     {{-- Clients Image Gallery Grid --}}
-    <section class="py-16 sm:py-20 lg:py-24">
+    <section class="py-14 sm:py-20 lg:py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6">
@@ -63,7 +63,7 @@
                         <div class="absolute inset-0 rounded-2xl sm:rounded-3xl border-2 border-transparent group-hover:border-red-500/20 pointer-events-none transition-colors"></div>
                     </div>
                 @empty
-                    <div class="col-span-full rounded-3xl border border-dashed border-slate-200 bg-white p-12 text-center">
+                    <div class="col-span-full rounded-3xl border border-dashed border-slate-200 bg-white p-8 text-center sm:p-12">
                         <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                             <i class="ri-building-line text-2xl"></i>
                         </div>
@@ -79,7 +79,7 @@
     </section>
 
     {{-- Bottom Enterprise CTA Strip --}}
-    <section class="border-t border-slate-100 bg-slate-50/50 py-16 sm:py-20">
+    <section class="border-t border-slate-100 bg-slate-50/50 py-14 sm:py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="relative overflow-hidden rounded-3xl bg-[#0B1A30] px-6 py-14 sm:px-12 lg:py-16 text-center text-white border border-slate-800 shadow-xl">
                 <div class="relative max-w-2xl mx-auto space-y-4">

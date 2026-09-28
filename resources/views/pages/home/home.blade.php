@@ -188,11 +188,11 @@
 
         </div>
 
-        <!-- Minimalist Edge Navigation Arrows (Discreet, appear on hover/touch) -->
+        <!-- Minimalist Edge Navigation Arrows (Move to the bottom row on phones so they never overlap the headline) -->
         <button 
             @click="prev()" 
             aria-label="Previous Slide"
-            class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-black/25 hover:bg-black/50 text-white/80 hover:text-white backdrop-blur-xs border border-white/10 hover:border-white/25 transition-all duration-200 active:scale-95 cursor-pointer opacity-70 sm:opacity-0 group-hover:opacity-100 focus:opacity-100"
+            class="absolute left-3 sm:left-6 bottom-5 sm:bottom-auto top-auto sm:top-1/2 sm:-translate-y-1/2 z-30 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-black/25 hover:bg-black/50 text-white/80 hover:text-white backdrop-blur-xs border border-white/10 hover:border-white/25 transition-all duration-200 active:scale-95 cursor-pointer opacity-70 sm:opacity-0 group-hover:opacity-100 focus:opacity-100"
         >
             <i class="ri-arrow-left-s-line text-xl sm:text-2xl"></i>
         </button>
@@ -200,7 +200,7 @@
         <button 
             @click="next()" 
             aria-label="Next Slide"
-            class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-black/25 hover:bg-black/50 text-white/80 hover:text-white backdrop-blur-xs border border-white/10 hover:border-white/25 transition-all duration-200 active:scale-95 cursor-pointer opacity-70 sm:opacity-0 group-hover:opacity-100 focus:opacity-100"
+            class="absolute right-3 sm:right-6 bottom-5 sm:bottom-auto top-auto sm:top-1/2 sm:-translate-y-1/2 z-30 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-black/25 hover:bg-black/50 text-white/80 hover:text-white backdrop-blur-xs border border-white/10 hover:border-white/25 transition-all duration-200 active:scale-95 cursor-pointer opacity-70 sm:opacity-0 group-hover:opacity-100 focus:opacity-100"
         >
             <i class="ri-arrow-right-s-line text-xl sm:text-2xl"></i>
         </button>
@@ -304,7 +304,7 @@
         id="services" 
         x-data="scrollReveal(0)"
         :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
-        class="scroll-mt-20 py-20 sm:py-24 transition-all duration-700 ease-out"
+        class="scroll-mt-20 py-14 sm:py-20 lg:py-24 transition-all duration-700 ease-out"
     >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <!-- Minimal Clean Section Header -->
@@ -531,7 +531,7 @@
         id="why-us" 
         x-data="scrollReveal(0)"
         :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
-        class="scroll-mt-20 border-y border-slate-100 bg-slate-50/60 py-20 sm:py-24 transition-all duration-700 ease-out"
+        class="scroll-mt-20 border-y border-slate-100 bg-slate-50/60 py-14 sm:py-20 lg:py-24 transition-all duration-700 ease-out"
     >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="grid items-center gap-12 lg:grid-cols-12">
@@ -631,7 +631,7 @@
         id="workflow" 
         x-data="scrollReveal(0)"
         :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
-        class="scroll-mt-20 py-20 sm:py-24 transition-all duration-700 ease-out"
+        class="scroll-mt-20 py-14 sm:py-20 lg:py-24 transition-all duration-700 ease-out"
     >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-xl mx-auto text-center">
@@ -691,7 +691,7 @@
         id="testimonials" 
         x-data="scrollReveal(0)"
         :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
-        class="scroll-mt-20 border-t border-slate-100 bg-slate-50/50 py-20 sm:py-24 transition-all duration-700 ease-out"
+        class="scroll-mt-20 border-t border-slate-100 bg-slate-50/50 py-14 sm:py-20 lg:py-24 transition-all duration-700 ease-out"
     >
         <div 
             class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
@@ -786,7 +786,7 @@
         id="calculator" 
         x-data="scrollReveal(0)"
         :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
-        class="scroll-mt-20 py-20 sm:py-24 transition-all duration-700 ease-out"
+        class="scroll-mt-20 py-14 sm:py-20 lg:py-24 transition-all duration-700 ease-out"
     >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-xl mx-auto text-center">
@@ -802,7 +802,7 @@
             </div>
 
             <div 
-                class="mx-auto mt-12 max-w-2xl rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-10 shadow-sm"
+                class="mx-auto mt-12 max-w-2xl rounded-3xl border border-slate-200/80 bg-white p-5 sm:p-8 lg:p-10 shadow-sm"
                 x-data="{
                     propertyType: 'hq',
                     sqFt: '15k-50k',
@@ -950,7 +950,7 @@
         id="faq" 
         x-data="scrollReveal(0)"
         :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
-        class="scroll-mt-20 border-t border-slate-100 bg-slate-50/50 py-20 sm:py-24 transition-all duration-700 ease-out"
+        class="scroll-mt-20 border-t border-slate-100 bg-slate-50/50 py-14 sm:py-20 lg:py-24 transition-all duration-700 ease-out"
     >
         <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8" x-data="{ activeFaq: 1 }">
             <div class="text-center">
@@ -1038,7 +1038,7 @@
         id="contact" 
         x-data="scrollReveal(0)"
         :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
-        class="scroll-mt-20 py-20 sm:py-24 transition-all duration-700 ease-out"
+        class="scroll-mt-20 py-14 sm:py-20 lg:py-24 transition-all duration-700 ease-out"
     >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="relative overflow-hidden rounded-3xl bg-[#0B1A30] px-6 py-14 sm:px-12 lg:py-16 text-center text-white border border-slate-800">

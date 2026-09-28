@@ -50,25 +50,25 @@
                                     x-transition:leave="transition ease-in duration-150"
                                     x-transition:leave-start="opacity-100 translate-y-0 scale-100"
                                     x-transition:leave-end="opacity-0 translate-y-2 scale-98"
-                                    class="absolute left-1/2 top-full -translate-x-1/2 pt-2.5 w-[660px] z-50"
+                                    class="absolute left-1/2 top-full -translate-x-1/2 pt-2.5 z-50 w-[min(660px,calc(100vw-2rem))]"
                                 >
                                     <div class="rounded-2xl border border-slate-200/90 bg-white p-5 shadow-2xl shadow-slate-900/10">
-                                        <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-                                            <div>
+                                        <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-slate-100 pb-3 mb-4">
+                                            <div class="min-w-0">
                                                 <p class="text-xs font-extrabold uppercase tracking-wider text-[#12233F]">Enterprise Facility Capabilities</p>
                                                 <p class="text-[11px] text-slate-500">SLA-backed operations with single-point accountability</p>
                                             </div>
                                             <a
                                                 href="{{ route('services') }}"
-                                                class="inline-flex items-center gap-1 text-xs font-bold text-red-600 hover:text-red-700 transition"
+                                                class="inline-flex shrink-0 items-center gap-1 text-xs font-bold text-red-600 hover:text-red-700 transition"
                                             >
                                                 <span>All Services</span>
                                                 <i class="ri-arrow-right-line"></i>
                                             </a>
                                         </div>
 
-                                        <!-- 2-Column Services Grid -->
-                                        <div class="grid grid-cols-2 gap-2.5">
+                                        <!-- Services Grid -->
+                                        <div class="grid grid-cols-1 gap-2.5 min-[1150px]:grid-cols-2">
                                             @foreach ($this->services() as $service)
                                                 @php
                                                     $sSlug = is_array($service) ? $service['slug'] : $service->slug;
@@ -96,8 +96,8 @@
                                         </div>
 
                                         <!-- Dropdown Bottom Highlight -->
-                                        <div class="mt-4 -mx-5 -mb-5 rounded-b-2xl border-t border-slate-100 bg-slate-50/70 p-3.5 px-5 flex items-center justify-between text-xs">
-                                            <div class="flex items-center gap-3 text-slate-600 font-medium">
+                                        <div class="mt-4 -mx-5 -mb-5 rounded-b-2xl border-t border-slate-100 bg-slate-50/70 p-3.5 px-5 flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between text-xs">
+                                            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-slate-600 font-medium">
                                                 <span class="flex items-center gap-1"><i class="ri-checkbox-circle-fill text-red-600"></i> 100% W-2 Staff</span>
                                                 <span class="flex items-center gap-1"><i class="ri-checkbox-circle-fill text-red-600"></i> IoT QR Logs</span>
                                             </div>
@@ -177,7 +177,7 @@
                 x-transition:leave="transition ease-in duration-150"
                 x-transition:leave-start="translate-y-0 opacity-100"
                 x-transition:leave-end="translate-y-1 opacity-0"
-                class="border-t border-slate-100 py-4 lg:hidden"
+                class="border-t border-slate-100 py-4 lg:hidden max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain"
                 x-data="{ mobileServicesOpen: false }"
             >
                 <nav class="flex flex-col gap-1" aria-label="Mobile">
@@ -266,7 +266,7 @@
                     </a>
 
                     <!-- Mobile Badges Footer -->
-                    <div class="mt-4 flex items-center justify-center gap-4 text-[11px] text-slate-400 border-t border-slate-100 pt-4">
+                    <div class="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[11px] text-slate-400 border-t border-slate-100 pt-4">
                         <span class="flex items-center gap-1"><i class="ri-shield-star-line text-red-600"></i> ISO 41001</span>
                         <span class="flex items-center gap-1"><i class="ri-award-line text-red-600"></i> ISSA CIMS</span>
                         <span class="flex items-center gap-1"><i class="ri-check-line text-red-600"></i> 100% W-2</span>

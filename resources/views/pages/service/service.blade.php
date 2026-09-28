@@ -28,7 +28,7 @@
 <div class="bg-white text-slate-800 antialiased font-sans selection:bg-red-500 selection:text-white">
 
     {{-- Hero Section --}}
-    <section class="border-b border-slate-100 py-16 sm:py-20 lg:py-24">
+    <section class="border-b border-slate-100 py-14 sm:py-20 lg:py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
                 
@@ -110,7 +110,7 @@
     </section>
 
     {{-- Filter & Services Portfolio Section --}}
-    <section class="py-16 sm:py-20 lg:py-24">
+    <section class="py-14 sm:py-20 lg:py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             
             <!-- Controls Bar: Title & Search -->
@@ -231,7 +231,7 @@
                         </div>
                     </div>
                 @empty
-                    <div class="col-span-full rounded-3xl border border-dashed border-slate-200 bg-white p-12 text-center">
+                    <div class="col-span-full rounded-3xl border border-dashed border-slate-200 bg-white p-8 text-center sm:p-12">
                         <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                             <i class="ri-search-2-line text-2xl"></i>
                         </div>
@@ -254,7 +254,7 @@
     </section>
 
     {{-- SLA & Operational Standards Differentiator Strip --}}
-    <section class="border-y border-slate-100 bg-slate-50/50 py-16 sm:py-20">
+    <section class="border-y border-slate-100 bg-slate-50/50 py-14 sm:py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-xl mx-auto text-center">
                 <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
@@ -315,7 +315,7 @@
     </section>
 
     {{-- Bottom High-Conversion CTA (Rounded-Full Buttons) --}}
-    <section class="py-20 sm:py-24">
+    <section class="py-14 sm:py-20 lg:py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="relative overflow-hidden rounded-3xl bg-[#0B1A30] px-6 py-14 sm:px-12 lg:py-16 text-center text-white border border-slate-800">
                 <div class="relative max-w-2xl mx-auto space-y-4">

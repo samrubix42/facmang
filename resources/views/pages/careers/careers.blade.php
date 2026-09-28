@@ -26,11 +26,11 @@
             <div class="mx-auto max-w-3xl text-center space-y-3.5">
                 
                 {{-- Eyebrow badge --}}
-                <div class="inline-flex items-center gap-2 rounded-full border border-[#12233F]/15 bg-[#12233F]/5 px-3.5 py-1.5 text-xs font-semibold text-[#12233F] shadow-2xs">
-                    <span class="flex h-2 w-2 rounded-full bg-red-600 animate-pulse"></span>
+                <div class="mx-auto inline-flex max-w-full flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full border border-[#12233F]/15 bg-[#12233F]/5 px-3.5 py-1.5 text-center text-xs font-semibold text-[#12233F] shadow-2xs">
+                    <span class="flex h-2 w-2 shrink-0 rounded-full bg-red-600 animate-pulse"></span>
                     <span>Join Our Operations Fleet</span>
-                    <span class="text-slate-300">•</span>
-                    <span class="text-slate-600 font-normal">Direct Company Rolls (On-Roll)</span>
+                    <span class="hidden text-slate-300 sm:inline">•</span>
+                    <span class="hidden text-slate-600 font-normal sm:inline">Direct Company Rolls (On-Roll)</span>
                 </div>
 
                 {{-- Headline --}}
@@ -132,12 +132,12 @@
                                     
                                     {{-- Row 1: Department & Salary --}}
                                     <div class="flex items-center justify-between gap-2">
-                                        <span class="inline-flex items-center gap-1 rounded bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-700">
-                                            <i class="ri-building-line text-xs text-red-600"></i>
-                                            <span>{{ $job->department }}</span>
+                                        <span class="inline-flex min-w-0 items-center gap-1 rounded bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-700">
+                                            <i class="ri-building-line text-xs text-red-600 shrink-0"></i>
+                                            <span class="truncate">{{ $job->department }}</span>
                                         </span>
 
-                                        <span class="text-xs sm:text-sm font-bold text-red-600">
+                                        <span class="shrink-0 whitespace-nowrap text-xs sm:text-sm font-bold text-red-600">
                                             {{ $job->salary }}
                                         </span>
                                     </div>
@@ -206,7 +206,7 @@
                                     {{-- JD Rich Text --}}
                                     <div class="space-y-1">
                                         <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Job Description</p>
-                                        <div class="text-xs text-slate-700 leading-relaxed bg-white p-3 rounded-lg border border-slate-200/60">
+                                        <div class="rich-content rich-content-compact text-slate-700 bg-white p-3 rounded-lg border border-slate-200/60">
                                             {!! $job->job_description !!}
                                         </div>
                                     </div>

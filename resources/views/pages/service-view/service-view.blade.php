@@ -172,7 +172,7 @@
                                     <p class="text-xs text-slate-500">Official scope of work and enterprise deliverables</p>
                                 </div>
                             </div>
-                            <div class="prose prose-slate max-w-none prose-headings:font-bold prose-headings:text-slate-900 prose-h2:text-xl prose-h3:text-base prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 prose-table:w-full prose-th:bg-slate-50 prose-th:p-2.5 prose-th:text-xs prose-td:p-2.5 prose-td:text-xs prose-td:border prose-th:border leading-relaxed text-xs sm:text-sm">
+                            <div class="rich-content">
                                 {!! $service->content !!}
                             </div>
                         </div>
@@ -556,7 +556,7 @@
     </section>
 
     {{-- Frequently Bundled Companion Services --}}
-    <section class="border-t border-slate-100 bg-slate-50/50 py-16 sm:py-20">
+    <section class="border-t border-slate-100 bg-slate-50/50 py-14 sm:py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 border-b border-slate-200/80 pb-6">
                 <div>
@@ -618,7 +618,7 @@
     </section>
 
     {{-- Bottom Enterprise CTA (Rounded-Full Buttons) --}}
-    <section class="py-20 sm:py-24">
+    <section class="py-14 sm:py-20 lg:py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="relative overflow-hidden rounded-3xl bg-[#0B1A30] px-6 py-14 sm:px-12 lg:py-16 text-center text-white border border-slate-800">
                 <div class="relative max-w-2xl mx-auto space-y-4">

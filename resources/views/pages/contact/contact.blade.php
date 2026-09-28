@@ -3,7 +3,7 @@
 <div class="bg-white text-slate-800 antialiased font-sans selection:bg-red-500 selection:text-white">
 
     {{-- Hero Section --}}
-    <section class="border-b border-slate-100 py-16 sm:py-20">
+    <section class="border-b border-slate-100 py-14 sm:py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-2xl text-center space-y-4">
                 <div>
@@ -87,13 +87,13 @@
     </section>
 
     {{-- Contact Form & Operational Guarantees --}}
-    <section class="py-16 sm:py-20 lg:py-24">
+    <section class="py-14 sm:py-20 lg:py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="grid gap-12 lg:grid-cols-12 lg:gap-16 items-start">
                 
                 <!-- Left: Livewire Form with Rounded-Full Elements -->
                 <div class="lg:col-span-7">
-                    <div class="rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-10 shadow-xs">
+                    <div class="rounded-3xl border border-slate-200/80 bg-white p-5 sm:p-8 lg:p-10 shadow-xs">
                         
                         <div class="mb-8">
                             <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
@@ -119,18 +119,18 @@
                         @endif
 
                         <!-- Response Time Expectations -->
-                        <div class="mb-6 grid grid-cols-3 gap-3 rounded-2xl border border-slate-200/80 bg-slate-50/50 p-4">
+                        <div class="mb-6 grid grid-cols-3 gap-2 rounded-2xl border border-slate-200/80 bg-slate-50/50 p-4 sm:gap-3">
                             <div class="text-center">
                                 <p class="text-xs font-bold text-[#12233F]">&lt;2 hrs</p>
-                                <p class="text-[10px] text-slate-500 mt-0.5">Email response</p>
+                                <p class="text-[10px] leading-tight text-slate-500 mt-0.5">Email response</p>
                             </div>
                             <div class="text-center border-x border-slate-200">
                                 <p class="text-xs font-bold text-[#12233F]">24 hrs</p>
-                                <p class="text-[10px] text-slate-500 mt-0.5">SLA proposal</p>
+                                <p class="text-[10px] leading-tight text-slate-500 mt-0.5">SLA proposal</p>
                             </div>
                             <div class="text-center">
                                 <p class="text-xs font-bold text-red-600">&lt;15 min</p>
-                                <p class="text-[10px] text-slate-500 mt-0.5">Emergency dispatch</p>
+                                <p class="text-[10px] leading-tight text-slate-500 mt-0.5">Dispatch SLA</p>
                             </div>
                         </div>
 
@@ -302,7 +302,7 @@
     </section>
 
     {{-- Map Section (Clean Rounded Frame) --}}
-    <section class="border-t border-slate-100 bg-slate-50/50 py-16 sm:py-20">
+    <section class="border-t border-slate-100 bg-slate-50/50 py-14 sm:py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-xs">
                 

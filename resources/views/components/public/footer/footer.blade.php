@@ -31,11 +31,11 @@
                         </span>
                         <span class="font-medium">{{ setting('email', 'ops@facilitypro.com') }}</span>
                     </a>
-                    <p class="flex items-center gap-3">
+                    <p class="flex items-start gap-3">
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/10 text-red-400 border border-white/10">
                             <i class="ri-map-pin-fill text-xs"></i>
                         </span>
-                        <span class="font-medium">{{ setting('address', '100 Enterprise Plaza, Suite 400') }}</span>
+                        <span class="min-w-0 font-medium">{{ setting('address', '100 Enterprise Plaza, Suite 400') }}</span>
                     </p>
                 </div>
 
@@ -128,9 +128,9 @@
             </div>
         </div>
 
-        <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-slate-500 sm:flex-row">
+        <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-center text-xs text-slate-500 sm:flex-row sm:text-left">
             <p>© {{ date('Y') }} {{ setting('company_name', 'FacilityPro Management Inc.') }}. All rights reserved.</p>
-            <div class="flex items-center gap-6">
+            <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:justify-end">
                 <a href="#" class="transition hover:text-red-400">Privacy SLA</a>
                 <a href="#" class="transition hover:text-red-400">Terms of Operations</a>
                 <a href="#" class="transition hover:text-red-400">Security Compliance</a>

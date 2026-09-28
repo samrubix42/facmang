@@ -1,11 +1,11 @@
 <header class="sticky top-0 z-20 flex h-16 shrink-0 items-center justify-between border-b border-slate-200/80 bg-white/95 px-4 sm:px-6 lg:px-8 backdrop-blur-md">
     
     <!-- Left: Mobile Menu Toggle & Title -->
-    <div class="flex items-center gap-3">
+    <div class="flex min-w-0 items-center gap-3">
         <!-- Mobile Drawer Button -->
         <button
             type="button"
-            class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-100 lg:hidden cursor-pointer"
+            class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-100 lg:hidden cursor-pointer"
             @click="mobileSidebarOpen = true"
             aria-label="Open sidebar"
         >
@@ -13,15 +13,15 @@
         </button>
 
         <!-- Breadcrumb / Location -->
-        <div class="flex items-center gap-2 text-xs">
-            <span class="font-medium text-slate-400">Console</span>
-            <i class="ri-arrow-right-s-line text-slate-300"></i>
-            <span class="font-bold text-slate-900">Facility Operations Command</span>
+        <div class="flex min-w-0 items-center gap-2 text-xs">
+            <span class="hidden shrink-0 font-medium text-slate-400 sm:inline">Console</span>
+            <i class="ri-arrow-right-s-line hidden shrink-0 text-slate-300 sm:inline"></i>
+            <span class="truncate font-bold text-slate-900">Facility Operations Command</span>
         </div>
     </div>
 
     <!-- Right Controls -->
-    <div class="flex items-center gap-3">
+    <div class="flex shrink-0 items-center gap-2 sm:gap-3">
         
 
 

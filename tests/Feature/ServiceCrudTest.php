@@ -6,9 +6,22 @@ use App\Models\User;
 use Database\Seeders\ServiceSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\File;
 use Livewire\Livewire;
 
 uses(RefreshDatabase::class);
+
+beforeEach(function () {
+    $this->preExistingImages = glob(public_path('images').'/*');
+});
+
+afterEach(function () {
+    foreach (glob(public_path('images').'/*') as $image) {
+        if (! in_array($image, $this->preExistingImages, true)) {
+            File::delete($image);
+        }
+    }
+});
 
 test('unauthenticated user cannot access service list page', function () {
     $response = $this->get(route('admin.services.index'));

@@ -28,7 +28,7 @@
 <div class="bg-white text-slate-800 antialiased font-sans selection:bg-red-500 selection:text-white">
 
     {{-- Hero Header Section --}}
-    <section class="border-b border-slate-100 py-16 sm:py-20 lg:py-24">
+    <section class="border-b border-slate-100 py-14 sm:py-20 lg:py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
                 
@@ -111,7 +111,7 @@
     <section 
         x-data="scrollReveal(0)"
         :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
-        class="py-20 sm:py-24 bg-slate-50/50 border-b border-slate-100 transition-all duration-700 ease-out"
+        class="py-14 sm:py-20 lg:py-24 bg-slate-50/50 border-b border-slate-100 transition-all duration-700 ease-out"
     >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="grid gap-8 md:grid-cols-2">
@@ -160,7 +160,7 @@
     <section 
         x-data="scrollReveal(0)"
         :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
-        class="py-20 sm:py-24 border-b border-slate-100 transition-all duration-700 ease-out"
+        class="py-14 sm:py-20 lg:py-24 border-b border-slate-100 transition-all duration-700 ease-out"
     >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-xl mx-auto text-center">
@@ -255,7 +255,7 @@
     <section 
         x-data="scrollReveal(0)"
         :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
-        class="py-20 sm:py-24 bg-slate-50/50 border-b border-slate-100 transition-all duration-700 ease-out"
+        class="py-14 sm:py-20 lg:py-24 bg-slate-50/50 border-b border-slate-100 transition-all duration-700 ease-out"
     >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-xl mx-auto text-center">
@@ -378,7 +378,7 @@
     <section 
         x-data="scrollReveal(0)"
         :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
-        class="py-20 sm:py-24 transition-all duration-700 ease-out"
+        class="py-14 sm:py-20 lg:py-24 transition-all duration-700 ease-out"
     >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="relative overflow-hidden rounded-3xl bg-[#0B1A30] px-6 py-14 sm:px-12 lg:py-16 text-center text-white border border-slate-800">

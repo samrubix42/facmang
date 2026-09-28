@@ -120,6 +120,8 @@
                             {{ $pendingAppsCount }}
                         </span>
                     @endif
+                </a>
+
                 <!-- Contact Inquiries -->
                 <a
                     href="{{ route('admin.contacts.index') }}"

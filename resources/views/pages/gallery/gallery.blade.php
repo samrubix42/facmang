@@ -59,11 +59,11 @@
             <div class="mx-auto max-w-3xl text-center space-y-5">
                 
                 {{-- Eyebrow badge --}}
-                <div class="inline-flex items-center gap-2 rounded-full border border-[#12233F]/15 bg-[#12233F]/5 px-3.5 py-1.5 text-xs font-semibold text-[#12233F] shadow-2xs">
-                    <span class="flex h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
+                <div class="mx-auto inline-flex max-w-full flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full border border-[#12233F]/15 bg-[#12233F]/5 px-3.5 py-1.5 text-center text-xs font-semibold text-[#12233F] shadow-2xs">
+                    <span class="flex h-2 w-2 shrink-0 rounded-full bg-red-500 animate-pulse"></span>
                     <span>Verified Project Archive</span>
-                    <span class="text-slate-300">•</span>
-                    <span class="text-slate-600 font-normal">Tamper-Proof Field Proof</span>
+                    <span class="hidden text-slate-300 sm:inline">•</span>
+                    <span class="hidden text-slate-600 font-normal sm:inline">Tamper-Proof Field Proof</span>
                 </div>
 
                 {{-- Headline --}}
@@ -247,7 +247,7 @@
             <div
                 x-show="list().length === 0"
                 x-cloak
-                class="rounded-2xl border border-slate-200 bg-slate-50/50 p-12 text-center space-y-4"
+                class="rounded-2xl border border-slate-200 bg-slate-50/50 p-8 text-center sm:p-12 space-y-4"
             >
                 <div class="flex h-12 w-12 mx-auto items-center justify-center rounded-full bg-white text-slate-400 border border-slate-200">
                     <i class="ri-image-line text-xl"></i>
@@ -366,13 +366,13 @@
     {{-- Field Telemetry & Quality Standards Bar (Brand Dark Blue & Red) --}}
     <section class="border-y border-slate-100 bg-slate-50/50 py-16">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-2 gap-6 sm:gap-8 lg:grid-cols-4">
                 
                 {{-- Metric 1 --}}
                 <div class="space-y-2 text-center sm:text-left">
-                    <div class="flex items-center justify-center sm:justify-start gap-2">
+                    <div class="flex flex-wrap items-center justify-center gap-x-2 sm:justify-start">
                         <i class="ri-qr-code-line text-xl text-red-600"></i>
-                        <span class="text-3xl font-extrabold text-[#12233F] tracking-tight">12,400+</span>
+                        <span class="text-2xl sm:text-3xl font-extrabold text-[#12233F] tracking-tight">12,400+</span>
                     </div>
                     <p class="text-xs font-bold text-slate-900">QR Checkpoints Logged</p>
                     <p class="text-[11px] text-slate-500 leading-relaxed">
@@ -382,9 +382,9 @@
 
                 {{-- Metric 2 --}}
                 <div class="space-y-2 text-center sm:text-left">
-                    <div class="flex items-center justify-center sm:justify-start gap-2">
+                    <div class="flex flex-wrap items-center justify-center gap-x-2 sm:justify-start">
                         <i class="ri-building-line text-xl text-[#12233F]"></i>
-                        <span class="text-3xl font-extrabold text-[#12233F] tracking-tight">480+</span>
+                        <span class="text-2xl sm:text-3xl font-extrabold text-[#12233F] tracking-tight">480+</span>
                     </div>
                     <p class="text-xs font-bold text-slate-900">Delivered Facilities</p>
                     <p class="text-[11px] text-slate-500 leading-relaxed">
@@ -394,9 +394,9 @@
 
                 {{-- Metric 3 --}}
                 <div class="space-y-2 text-center sm:text-left">
-                    <div class="flex items-center justify-center sm:justify-start gap-2">
+                    <div class="flex flex-wrap items-center justify-center gap-x-2 sm:justify-start">
                         <i class="ri-user-star-line text-xl text-[#12233F]"></i>
-                        <span class="text-3xl font-extrabold text-[#12233F] tracking-tight">100%</span>
+                        <span class="text-2xl sm:text-3xl font-extrabold text-[#12233F] tracking-tight">100%</span>
                     </div>
                     <p class="text-xs font-bold text-slate-900">W-2 Certified Personnel</p>
                     <p class="text-[11px] text-slate-500 leading-relaxed">
@@ -406,9 +406,9 @@
 
                 {{-- Metric 4 --}}
                 <div class="space-y-2 text-center sm:text-left">
-                    <div class="flex items-center justify-center sm:justify-start gap-2">
+                    <div class="flex flex-wrap items-center justify-center gap-x-2 sm:justify-start">
                         <i class="ri-shield-check-line text-xl text-red-600"></i>
-                        <span class="text-3xl font-extrabold text-red-600 tracking-tight">99.85%</span>
+                        <span class="text-2xl sm:text-3xl font-extrabold text-red-600 tracking-tight">99.85%</span>
                     </div>
                     <p class="text-xs font-bold text-slate-900">SLA Adherence Rate</p>
                     <p class="text-[11px] text-slate-500 leading-relaxed">
@@ -421,7 +421,7 @@
     </section>
 
     {{-- Call to Action Banner (Dark Navy #0B1A30 with Red Accents) --}}
-    <section class="py-20 sm:py-24">
+    <section class="py-14 sm:py-20 lg:py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="relative overflow-hidden rounded-3xl bg-[#0B1A30] px-6 py-14 sm:px-12 lg:py-16 text-center text-white border border-slate-800 shadow-xl">
                 {{-- Decorative background glow --}}

@@ -6,7 +6,7 @@ use Livewire\Livewire;
 
 test('public contact form submits successfully and saves inquiry to database', function () {
     Livewire::test('pages::contact')
-        ->assertSeeHtml('wire:submit="addcontact"')
+        ->assertSeeHtml('wire:submit.prevent="addcontact"')
         ->assertSeeHtml('type="submit"')
         ->set('name', 'John Smith')
         ->set('email', 'jsmith@enterprise.com')
