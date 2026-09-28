@@ -9,8 +9,8 @@ Route::livewire('/services', 'pages::service')->name('services');
 Route::livewire('/services/{slug}', 'pages::service-view')->name('services.show');
 Route::livewire('/contact', 'pages::contact')->name('contact');
 Route::livewire('/gallery', 'pages::gallery')->name('gallery');
-Route::livewire('/careers', 'pages::careers')->name('careers');
 Route::livewire('/clients', 'pages::clients')->name('clients');
+Route::livewire('/careers', 'pages::careers')->name('careers');
 
 Route::livewire('/login', 'pages::auth.login')->middleware('guest')->name('login');
 
