@@ -29,7 +29,33 @@
 
  
 
-    {{-- Service Detail Hero Section --}}
+    {{-- Page Hero --}}
+    <section class="bg-[#0B1A30]">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+            <nav class="border-b border-white/10 py-3.5 text-xs" aria-label="Breadcrumb">
+                <ol class="flex flex-wrap items-center gap-1.5">
+                    <li><a href="{{ route('home') }}" class="font-medium text-slate-400 transition hover:text-white">Home</a></li>
+                    <li aria-hidden="true"><i class="ri-arrow-right-s-line text-slate-600"></i></li>
+                    <li><a href="{{ route('services') }}" class="font-medium text-slate-400 transition hover:text-white">Services</a></li>
+                    <li aria-hidden="true"><i class="ri-arrow-right-s-line text-slate-600"></i></li>
+                    <li><span class="font-semibold text-white" aria-current="page">{{ $service->title }}</span></li>
+                </ol>
+            </nav>
+
+            <div class="py-14 sm:py-20 lg:py-24">
+                <h1 class="max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tighter text-white sm:text-5xl lg:text-6xl">
+                    {{ $service->title }}
+                </h1>
+
+                <p class="mt-4 max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base">
+                    {{ $service->short_description ?? $catalog['tagline'] ?? $service->category?->title ?? '' }}
+                </p>
+            </div>
+        </div>
+    </section>
+
+    {{-- Service Detail Section --}}
     <section class="border-b border-slate-100 py-12 lg:py-16">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="grid items-center gap-8 lg:grid-cols-12">
@@ -49,15 +75,11 @@
                         </span>
                     </div>
 
-                    <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] leading-tight">
-                        {{ $service->title }}
-                    </h1>
-
-                    <p class="text-base font-semibold text-[#12233F]">
+                    <p class="max-w-2xl text-base font-semibold text-[#12233F]">
                         {{ $catalog['tagline'] ?? $service->category?->title ?? 'Industrial Sweeping, Floor Scrubbing & Diamond Marble Polish' }}
                     </p>
 
-                    <p class="text-sm leading-relaxed text-slate-600 sm:text-base max-w-3xl font-normal">
+                    <p class="max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
                         {{ $service->short_description ?? $catalog['full_description'] ?? '' }}
                     </p>
                 </div>

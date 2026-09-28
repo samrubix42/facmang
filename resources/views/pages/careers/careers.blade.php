@@ -17,60 +17,26 @@
     }"
 >
 
-    {{-- Breadcrumb --}}
-    <nav class="border-b border-slate-100 bg-white" aria-label="Breadcrumb">
+    {{-- Page Hero --}}
+    <section class="bg-[#0B1A30]">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <ol class="flex flex-wrap items-center gap-1.5 py-3.5 text-xs">
-                <li><a href="{{ route('home') }}" class="font-medium text-slate-400 transition hover:text-[#12233F]">Home</a></li>
-                <li aria-hidden="true"><i class="ri-arrow-right-s-line text-slate-300"></i></li>
-                <li><span class="font-semibold text-slate-800" aria-current="page">Careers</span></li>
-            </ol>
-        </div>
-    </nav>
 
-    {{-- Hero Header Section (Clean & Polished) --}}
-    <section class="border-b border-slate-100 bg-white py-12 sm:py-16 lg:py-20">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="mx-auto max-w-3xl text-center space-y-5">
-                
-                {{-- Eyebrow badge --}}
-                <div class="mx-auto inline-flex max-w-full flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full border border-[#12233F]/10 bg-[#12233F]/[0.04] px-3.5 py-1.5 text-center text-xs font-semibold text-[#12233F]">
-                    <i class="ri-briefcase-line text-red-600"></i>
-                    <span>Join Our Operations Fleet</span>
-                    <span class="hidden text-slate-300 sm:inline">•</span>
-                    <span class="hidden text-slate-600 font-normal sm:inline">Direct Company Payroll</span>
-                </div>
+            <nav class="border-b border-white/10 py-3.5 text-xs" aria-label="Breadcrumb">
+                <ol class="flex flex-wrap items-center gap-1.5">
+                    <li><a href="{{ route('home') }}" class="font-medium text-slate-400 transition hover:text-white">Home</a></li>
+                    <li aria-hidden="true"><i class="ri-arrow-right-s-line text-slate-600"></i></li>
+                    <li><span class="font-semibold text-white" aria-current="page">Careers</span></li>
+                </ol>
+            </nav>
 
-                {{-- Headline --}}
-                <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] sm:leading-[1.15]">
-                    Build A High-Impact Career In Modern Facility Operations
+            <div class="py-14 sm:py-20 lg:py-24">
+                <h1 class="text-4xl font-extrabold leading-[1.05] tracking-tighter text-white sm:text-5xl lg:text-6xl">
+                    Careers
                 </h1>
 
-                {{-- Subtitle --}}
-                <p class="mx-auto max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
-                    Explore verified on-roll positions with guaranteed monthly compensation in Indian Rupees, statutory ESI &amp; PF coverage, sponsored skill certifications, and fast-track promotions.
+                <p class="mt-4 max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base">
+                    Open roles with guaranteed pay and training paid for by us.
                 </p>
-
-                {{-- Key Highlights in Rupees & Benefits --}}
-                <div class="flex flex-wrap items-center justify-center gap-2 text-xs font-medium text-slate-700">
-                    <div class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/80 bg-slate-50 px-3.5 py-1.5">
-                        <i class="ri-money-rupee-circle-fill text-red-600"></i>
-                        <span class="font-bold text-slate-900">₹18,000 – ₹60,000+ / mo</span>
-                    </div>
-                    <div class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/80 bg-slate-50 px-3.5 py-1.5">
-                        <i class="ri-shield-check-line text-[#12233F]"></i>
-                        <span>ESI &amp; Provident Fund (PF)</span>
-                    </div>
-                    <div class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/80 bg-slate-50 px-3.5 py-1.5">
-                        <i class="ri-award-line text-red-600"></i>
-                        <span>Free Skill Certifications</span>
-                    </div>
-                    <div class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/80 bg-slate-50 px-3.5 py-1.5">
-                        <i class="ri-calendar-check-line text-[#12233F]"></i>
-                        <span>Timely Monthly Payouts</span>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>

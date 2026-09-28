@@ -27,93 +27,26 @@
 
 <div class="bg-white text-slate-800 antialiased font-sans selection:bg-red-500 selection:text-white">
 
-    {{-- Breadcrumb --}}
-    <nav class="border-b border-slate-100 bg-white" aria-label="Breadcrumb">
+    {{-- Page Hero --}}
+    <section class="bg-[#0B1A30]">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <ol class="flex flex-wrap items-center gap-1.5 py-3.5 text-xs">
-                <li><a href="{{ route('home') }}" class="font-medium text-slate-400 transition hover:text-[#12233F]">Home</a></li>
-                <li aria-hidden="true"><i class="ri-arrow-right-s-line text-slate-300"></i></li>
-                <li><span class="font-semibold text-slate-800" aria-current="page">About Us</span></li>
-            </ol>
-        </div>
-    </nav>
 
-    {{-- Hero Header Section --}}
-    <section class="border-b border-slate-100 py-12 sm:py-16 lg:py-20">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-                
-                <!-- Left Text Column -->
-                <div class="lg:col-span-7 space-y-5">
-                    <div>
-                        <span class="inline-flex items-center gap-2 rounded-full border border-[#12233F]/10 bg-[#12233F]/[0.04] px-3.5 py-1.5 text-xs font-semibold text-[#12233F]">
-                            <i class="ri-team-line text-red-600"></i>
-                            <span>About FacilityPro</span>
-                        </span>
-                    </div>
+            <nav class="border-b border-white/10 py-3.5 text-xs" aria-label="Breadcrumb">
+                <ol class="flex flex-wrap items-center gap-1.5">
+                    <li><a href="{{ route('home') }}" class="font-medium text-slate-400 transition hover:text-white">Home</a></li>
+                    <li aria-hidden="true"><i class="ri-arrow-right-s-line text-slate-600"></i></li>
+                    <li><span class="font-semibold text-white" aria-current="page">About Us</span></li>
+                </ol>
+            </nav>
 
-                    <h1 class="text-3xl font-extrabold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem]">
-                        Architectural-grade facility care for high-performance workplaces.
-                    </h1>
+            <div class="py-14 sm:py-20 lg:py-24">
+                <h1 class="text-4xl font-extrabold leading-[1.05] tracking-tighter text-white sm:text-5xl lg:text-6xl">
+                    About Us
+                </h1>
 
-                    <p class="max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
-                        We replace fragmented vendors with single-point SLA accountability. Combining 100% direct-employed W-2 personnel, IoT QR telemetry, and eco-certified sanitation.
-                    </p>
-
-                    <!-- Key Stats Bar -->
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 border-t border-slate-100 pt-6">
-                        <div>
-                            <p class="text-2xl sm:text-3xl font-bold text-[#12233F] tracking-tight">12+</p>
-                            <p class="text-[11px] font-medium text-slate-400 mt-0.5">Years Experience</p>
-                        </div>
-                        <div>
-                            <p class="text-2xl sm:text-3xl font-bold text-[#12233F] tracking-tight">500+</p>
-                            <p class="text-[11px] font-medium text-slate-400 mt-0.5">Properties Managed</p>
-                        </div>
-                        <div>
-                            <p class="text-2xl sm:text-3xl font-bold text-[#12233F] tracking-tight">4.8M+</p>
-                            <p class="text-[11px] font-medium text-slate-400 mt-0.5">Sq. Ft Maintained</p>
-                        </div>
-                        <div>
-                            <p class="text-2xl sm:text-3xl font-bold text-red-600 tracking-tight">99.85%</p>
-                            <p class="text-[11px] font-medium text-slate-400 mt-0.5">SLA Adherence</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Feature Image -->
-                <div class="lg:col-span-5 relative">
-                        <div class="relative h-[320px] sm:h-[400px] w-full overflow-hidden rounded-3xl border border-slate-100 bg-slate-100 shadow-sm">
-                            <img 
-                                src="{{ asset('images/hero_facility.jpg') }}" 
-                                alt="Facility Management Operations Team" 
-                                class="h-full w-full object-cover"
-                            />
-
-
-                        <!-- Floating Crew Pill -->
-                        <div class="absolute top-5 right-5 rounded-full border border-white/40 bg-white/95 px-3.5 py-2 shadow-lg backdrop-blur-md">
-                            <div class="flex items-center gap-2">
-                                <i class="ri-team-fill text-sm text-red-600"></i>
-                                <p class="text-[11px] font-bold text-slate-900">2,400+ Certified Crew</p>
-                            </div>
-                        </div>
-
-                        <!-- Floating Certification Pill -->
-                        <div class="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/20 bg-white/95 p-4 shadow-lg backdrop-blur-md">
-                            <div class="flex items-center gap-3">
-                                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-red-600 text-white">
-                                    <i class="ri-award-fill text-lg"></i>
-                                </div>
-                                <div class="min-w-0">
-                                    <p class="text-xs font-bold text-slate-900 truncate">ISSA CIMS &amp; ISO 41001 Certified</p>
-                                    <p class="text-[11px] text-slate-500 truncate">Gold Standard Commercial Compliance</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                <p class="mt-4 max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base">
+                    Who we are and how we look after your building every day.
+                </p>
             </div>
         </div>
     </section>
