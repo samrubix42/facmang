@@ -4,28 +4,7 @@
 
 <div class="bg-white text-slate-800 antialiased font-sans selection:bg-red-500 selection:text-white">
 
-    {{-- Breadcrumb Navigation Bar --}}
-    <div class="border-b border-slate-100 bg-white">
-        <div class="mx-auto max-w-7xl px-4 py-3.5 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap items-center justify-between gap-3 text-xs">
-                <nav class="flex items-center gap-2 text-slate-400" aria-label="Breadcrumb">
-                    <a href="{{ route('home') }}" class="transition hover:text-[#12233F] font-medium">Home</a>
-                    <i class="ri-arrow-right-s-line text-slate-300"></i>
-                    <a href="{{ route('services') }}" class="transition hover:text-[#12233F] font-medium">Services</a>
-                    <i class="ri-arrow-right-s-line text-slate-300"></i>
-                    <span class="font-semibold text-slate-800 truncate max-w-[220px] sm:max-w-none">{{ $service->title }}</span>
-                </nav>
-
-                <a 
-                    href="{{ route('services') }}" 
-                    class="inline-flex items-center gap-1.5 font-semibold text-[#12233F] hover:text-[#12233F] transition group"
-                >
-                    <i class="ri-arrow-left-line transition-transform group-hover:-translate-x-1"></i>
-                    <span>All Services</span>
-                </a>
-            </div>
-        </div>
-    </div>
+    
 
  
 
@@ -55,96 +34,7 @@
         </div>
     </section>
 
-    {{-- Service Detail Section --}}
-    <section class="border-b border-slate-100 py-12 lg:py-16">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid items-center gap-8 lg:grid-cols-12">
-                
-                <!-- Left Title & Meta Column -->
-                <div class="lg:col-span-8 space-y-4">
-                    <div class="flex flex-wrap items-center gap-2">
-                        <span class="inline-flex items-center gap-1.5 rounded-full border border-[#12233F]/10 bg-[#12233F]/[0.04] px-3.5 py-1.5 text-xs font-semibold text-[#12233F]">
-                            <i class="{{ $catalog['icon'] ?? 'ri-shield-star-line' }} text-red-600"></i>
-                            <span>{{ $service->category?->title ?? $catalog['badge'] ?? 'Enterprise Service' }}</span>
-                        </span>
-                        <span class="inline-flex items-center gap-1 rounded-full bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 border border-slate-200/80">
-                            <i class="ri-shield-check-fill text-[#12233F]"></i> ISO 41001 Certified
-                        </span>
-                        <span class="inline-flex items-center gap-1 rounded-full bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 border border-slate-200/80">
-                            <i class="ri-checkbox-circle-fill text-[#12233F]"></i> Single Master SLA
-                        </span>
-                    </div>
-
-                    <p class="max-w-2xl text-base font-semibold text-[#12233F]">
-                        {{ $catalog['tagline'] ?? $service->category?->title ?? 'Industrial Sweeping, Floor Scrubbing & Diamond Marble Polish' }}
-                    </p>
-
-                    <p class="max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
-                        {{ $service->short_description ?? $catalog['full_description'] ?? '' }}
-                    </p>
-                </div>
-
-                <!-- Right Quick SLA Snapshot Card -->
-                <div class="lg:col-span-4">
-                    <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs">
-                        <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-700">SLA Snapshot</span>
-                            <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-[#12233F] bg-[#12233F]/10 px-2.5 py-0.5 rounded-full">
-                                <span class="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
-                                Live Standard
-                            </span>
-                        </div>
-                        <dl class="space-y-3 text-xs">
-                            <div class="flex items-center justify-between">
-                                <dt class="text-slate-400 font-medium">Cleanliness SLA:</dt>
-                                <dd class="font-bold text-[#12233F] text-sm">{{ $catalog['sla_rating'] ?? '99.85% Standard' }}</dd>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <dt class="text-slate-400 font-medium">Response Window:</dt>
-                                <dd class="font-bold text-slate-800">{{ $catalog['response_time'] ?? '15-Min Dispatch' }}</dd>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <dt class="text-slate-400 font-medium">Staffing:</dt>
-                                <dd class="font-bold text-slate-800">{{ $catalog['staff_standard'] ?? '100% W-2 Direct Staff' }}</dd>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <dt class="text-slate-400 font-medium">Schedule:</dt>
-                                <dd class="font-bold text-slate-800">{{ $catalog['frequency'] ?? 'Daily Night & Day Shifts' }}</dd>
-                            </div>
-                        </dl>
-                        <a
-                            href="#quote-form"
-                            class="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-red-600 py-3 text-xs font-semibold text-white shadow-xs transition hover:bg-red-700"
-                        >
-                            <span>Schedule Service Audit</span>
-                            <i class="ri-arrow-down-line text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Key SLA Metrics Strip (4 Uniform Columns) -->
-            <div class="mt-8 grid grid-cols-2 gap-4 border-t border-slate-100 pt-6 sm:grid-cols-4">
-                <div class="rounded-2xl border border-slate-100 bg-slate-50/50 p-4">
-                    <span class="text-[11px] font-medium text-slate-400">Guaranteed SLA</span>
-                    <p class="mt-1 text-base sm:text-lg font-bold text-[#12233F]">{{ $catalog['sla_rating'] ?? '99.85%' }}</p>
-                </div>
-                <div class="rounded-2xl border border-slate-100 bg-slate-50/50 p-4">
-                    <span class="text-[11px] font-medium text-slate-400">Response Window</span>
-                    <p class="mt-1 text-base sm:text-lg font-bold text-slate-800">{{ $catalog['response_time'] ?? '15-Min Dispatch' }}</p>
-                </div>
-                <div class="rounded-2xl border border-slate-100 bg-slate-50/50 p-4">
-                    <span class="text-[11px] font-medium text-slate-400">Staff Qualification</span>
-                    <p class="mt-1 text-xs sm:text-sm font-bold text-[#12233F] line-clamp-1">{{ $catalog['staff_standard'] ?? '100% W-2 Vetted & Trained' }}</p>
-                </div>
-                <div class="rounded-2xl border border-slate-100 bg-slate-50/50 p-4">
-                    <span class="text-[11px] font-medium text-slate-400">Shift Availability</span>
-                    <p class="mt-1 text-base sm:text-lg font-bold text-slate-800">{{ $catalog['frequency'] ?? '24/7 Operations' }}</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  
 
     {{-- Main Body: 2 Columns Layout --}}
     <section class="py-14 sm:py-20">
