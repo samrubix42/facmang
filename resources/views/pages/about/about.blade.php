@@ -27,25 +27,36 @@
 
 <div class="bg-white text-slate-800 antialiased font-sans selection:bg-red-500 selection:text-white">
 
+    {{-- Breadcrumb --}}
+    <nav class="border-b border-slate-100 bg-white" aria-label="Breadcrumb">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <ol class="flex flex-wrap items-center gap-1.5 py-3.5 text-xs">
+                <li><a href="{{ route('home') }}" class="font-medium text-slate-400 transition hover:text-[#12233F]">Home</a></li>
+                <li aria-hidden="true"><i class="ri-arrow-right-s-line text-slate-300"></i></li>
+                <li><span class="font-semibold text-slate-800" aria-current="page">About Us</span></li>
+            </ol>
+        </div>
+    </nav>
+
     {{-- Hero Header Section --}}
-    <section class="border-b border-slate-100 py-14 sm:py-20 lg:py-24">
+    <section class="border-b border-slate-100 py-12 sm:py-16 lg:py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
                 
                 <!-- Left Text Column -->
-                <div class="lg:col-span-7 space-y-6">
+                <div class="lg:col-span-7 space-y-5">
                     <div>
-                        <span class="inline-flex items-center gap-2 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
-                            <span class="h-2 w-2 rounded-full bg-red-500"></span>
+                        <span class="inline-flex items-center gap-2 rounded-full border border-[#12233F]/10 bg-[#12233F]/[0.04] px-3.5 py-1.5 text-xs font-semibold text-[#12233F]">
+                            <i class="ri-team-line text-red-600"></i>
                             <span>About FacilityPro</span>
                         </span>
                     </div>
 
-                    <h1 class="text-3xl font-extrabold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+                    <h1 class="text-3xl font-extrabold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem]">
                         Architectural-grade facility care for high-performance workplaces.
                     </h1>
 
-                    <p class="text-sm sm:text-base leading-relaxed text-slate-600 max-w-2xl font-normal">
+                    <p class="max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
                         We replace fragmented vendors with single-point SLA accountability. Combining 100% direct-employed W-2 personnel, IoT QR telemetry, and eco-certified sanitation.
                     </p>
 
@@ -72,13 +83,13 @@
 
                 <!-- Right Feature Image -->
                 <div class="lg:col-span-5 relative">
-                    <div class="relative h-[320px] sm:h-[400px] w-full overflow-hidden rounded-3xl border border-slate-100 bg-slate-100 shadow-sm">
-                        <img 
-                            src="{{ asset('images/hero_facility.jpg') }}" 
-                            alt="Facility Management Operations Team" 
-                            class="h-full w-full object-cover"
-                        />
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0B1A30]/70 via-transparent to-transparent"></div>
+                        <div class="relative h-[320px] sm:h-[400px] w-full overflow-hidden rounded-3xl border border-slate-100 bg-slate-100 shadow-sm">
+                            <img 
+                                src="{{ asset('images/hero_facility.jpg') }}" 
+                                alt="Facility Management Operations Team" 
+                                class="h-full w-full object-cover"
+                            />
+
 
                         <!-- Floating Crew Pill -->
                         <div class="absolute top-5 right-5 rounded-full border border-white/40 bg-white/95 px-3.5 py-2 shadow-lg backdrop-blur-md">

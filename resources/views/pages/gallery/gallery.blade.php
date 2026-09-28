@@ -50,40 +50,51 @@
 
 <div class="bg-white text-slate-800 antialiased font-sans selection:bg-red-500 selection:text-white" x-data="galleryApp">
 
+    {{-- Breadcrumb --}}
+    <nav class="border-b border-slate-100 bg-white" aria-label="Breadcrumb">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <ol class="flex flex-wrap items-center gap-1.5 py-3.5 text-xs">
+                <li><a href="{{ route('home') }}" class="font-medium text-slate-400 transition hover:text-[#12233F]">Home</a></li>
+                <li aria-hidden="true"><i class="ri-arrow-right-s-line text-slate-300"></i></li>
+                <li><span class="font-semibold text-slate-800" aria-current="page">Gallery</span></li>
+            </ol>
+        </div>
+    </nav>
+
     {{-- Hero Section --}}
-    <section class="border-b border-slate-100 bg-white py-16 sm:py-24 overflow-hidden">
+    <section class="border-b border-slate-100 bg-white py-12 sm:py-16 lg:py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-3xl text-center space-y-5">
-                
+
                 {{-- Eyebrow badge --}}
-                <div class="mx-auto inline-flex max-w-full flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full border border-[#12233F]/15 bg-[#12233F]/5 px-3.5 py-1.5 text-center text-xs font-semibold text-[#12233F] shadow-2xs">
-                    <span class="flex h-2 w-2 shrink-0 rounded-full bg-red-500 animate-pulse"></span>
+                <div class="mx-auto inline-flex max-w-full flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full border border-[#12233F]/10 bg-[#12233F]/[0.04] px-3.5 py-1.5 text-center text-xs font-semibold text-[#12233F]">
+                    <i class="ri-image-2-line text-red-600"></i>
                     <span>Verified Project Archive</span>
                     <span class="hidden text-slate-300 sm:inline">•</span>
                     <span class="hidden text-slate-600 font-normal sm:inline">Tamper-Proof Field Proof</span>
                 </div>
 
                 {{-- Headline --}}
-                <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl sm:leading-[1.15]">
-                    Real Work. Clean Results.<br class="hidden sm:inline" /> Documented To The Minute.
+                <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] sm:leading-[1.15]">
+                    Real Work. Clean Results. Documented To The Minute.
                 </h1>
 
                 {{-- Subtitle --}}
-                <p class="text-sm sm:text-base leading-relaxed text-slate-600 font-normal max-w-2xl mx-auto">
+                <p class="mx-auto max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
                     Explore high-resolution visual records from our delivered commercial contracts — precision sweeping, molecular hygiene, executive pantries, MEP care, and facade maintenance programs.
                 </p>
 
                 {{-- Key Trust Pillars --}}
-                <div class="pt-4 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs text-slate-700 font-medium">
-                    <div class="inline-flex items-center gap-1.5 rounded-lg bg-[#12233F]/5 px-3.5 py-1.5 border border-[#12233F]/10">
+                <div class="flex flex-wrap items-center justify-center gap-2 text-xs font-medium text-slate-700">
+                    <div class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/80 bg-slate-50 px-3.5 py-1.5">
                         <i class="ri-qr-code-line text-red-600"></i>
                         <span>QR Time-Stamped Audits</span>
                     </div>
-                    <div class="inline-flex items-center gap-1.5 rounded-lg bg-[#12233F]/5 px-3.5 py-1.5 border border-[#12233F]/10">
+                    <div class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/80 bg-slate-50 px-3.5 py-1.5">
                         <i class="ri-shield-check-line text-[#12233F]"></i>
                         <span>100% W-2 Direct Staff</span>
                     </div>
-                    <div class="inline-flex items-center gap-1.5 rounded-lg bg-[#12233F]/5 px-3.5 py-1.5 border border-[#12233F]/10">
+                    <div class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/80 bg-slate-50 px-3.5 py-1.5">
                         <i class="ri-checkbox-circle-line text-red-600"></i>
                         <span>Zero Quality Defects</span>
                     </div>

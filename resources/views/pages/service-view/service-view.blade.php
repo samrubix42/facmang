@@ -27,6 +27,8 @@
         </div>
     </div>
 
+ 
+
     {{-- Service Detail Hero Section --}}
     <section class="border-b border-slate-100 py-12 lg:py-16">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -35,8 +37,8 @@
                 <!-- Left Title & Meta Column -->
                 <div class="lg:col-span-8 space-y-4">
                     <div class="flex flex-wrap items-center gap-2">
-                        <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
-                            <i class="{{ $catalog['icon'] ?? 'ri-shield-star-line' }}"></i>
+                        <span class="inline-flex items-center gap-1.5 rounded-full border border-[#12233F]/10 bg-[#12233F]/[0.04] px-3.5 py-1.5 text-xs font-semibold text-[#12233F]">
+                            <i class="{{ $catalog['icon'] ?? 'ri-shield-star-line' }} text-red-600"></i>
                             <span>{{ $service->category?->title ?? $catalog['badge'] ?? 'Enterprise Service' }}</span>
                         </span>
                         <span class="inline-flex items-center gap-1 rounded-full bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 border border-slate-200/80">
@@ -47,7 +49,7 @@
                         </span>
                     </div>
 
-                    <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl leading-tight">
+                    <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] leading-tight">
                         {{ $service->title }}
                     </h1>
 
