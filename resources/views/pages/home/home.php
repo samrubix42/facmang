@@ -1,11 +1,27 @@
 <?php
 
+use App\Models\Client;
 use App\Models\Testimonial;
+use Illuminate\Database\Eloquent\Collection;
+use Livewire\Attributes\Computed;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
 new #[Title('FacilityPro - Architectural-Grade Facility Management & Operations')] class extends Component
 {
+    /**
+     * @return Collection<int, Client>
+     */
+    #[Computed]
+    public function clients(): Collection
+    {
+        return Client::where('is_active', true)
+            ->orderBy('sort_order')
+            ->orderBy('id')
+            ->take(12)
+            ->get();
+    }
+
     /**
      * @return array<int, array<string, mixed>>
      */

@@ -99,6 +99,45 @@
                         }
                     }));
                 }
+
+                if (!Alpine.data('countUp')) {
+                    Alpine.data('countUp', (target, decimals = 0) => ({
+                        value: 0,
+                        target: Number(target) || 0,
+                        decimals: Number(decimals) || 0,
+                        get display() {
+                            return this.value.toLocaleString(undefined, {
+                                minimumFractionDigits: this.decimals,
+                                maximumFractionDigits: this.decimals
+                            });
+                        },
+                        init() {
+                            const observer = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                    if (entry.isIntersecting) {
+                                        this.animate();
+                                        observer.unobserve(entry.target);
+                                    }
+                                });
+                            }, { threshold: 0.5 });
+                            observer.observe(this.$el);
+                        },
+                        animate() {
+                            const duration = 1400;
+                            const startedAt = performance.now();
+                            const step = (now) => {
+                                const progress = Math.min((now - startedAt) / duration, 1);
+                                this.value = this.target * (1 - Math.pow(1 - progress, 3));
+                                if (progress < 1) {
+                                    requestAnimationFrame(step);
+                                } else {
+                                    this.value = this.target;
+                                }
+                            };
+                            requestAnimationFrame(step);
+                        }
+                    }));
+                }
             }
         };
         document.addEventListener('alpine:init', registerHeroSlider);
@@ -225,76 +264,85 @@
 
     </section>
 
-    {{-- Clean Minimalist Client Logo Marquee --}}
-    <section class="border-b border-slate-100 bg-white py-8 overflow-hidden">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center mb-6">
-            <span class="inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-slate-50 px-4 py-1 text-xs font-medium text-slate-600">
-                <span class="h-2 w-2 rounded-full bg-red-500"></span>
-                <span>Trusted by 500+ commercial towers and enterprise headquarters</span>
-            </span>
-        </div>
+    {{-- Who We Are (Image Left / Content Right) --}}
+    <section 
+        id="who-we-are"
+        x-data="scrollReveal(0)"
+        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
+        class="scroll-mt-20 border-b border-slate-100 bg-white py-14 transition-all duration-700 ease-out sm:py-20 lg:py-24"
+    >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
-        <div class="relative flex overflow-hidden select-none">
-            <!-- Left & Right Soft Fade Gradients -->
-            <div class="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 sm:w-36 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 sm:w-36 bg-gradient-to-l from-white to-transparent"></div>
-
-            <div class="animate-marquee flex items-center gap-8 whitespace-nowrap">
-                <!-- Logos Set 1 -->
-                <div class="flex items-center gap-8">
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-building-4-line text-[#12233F] text-sm"></i> Brookfield Properties
-                    </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-community-line text-[#12233F] text-sm"></i> JLL Commercial
-                    </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-shield-star-line text-[#12233F] text-sm"></i> CBRE AssetCare
-                    </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-hotel-line text-[#12233F] text-sm"></i> Cushman &amp; Wakefield
-                    </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-windows-line text-[#12233F] text-sm"></i> Microsoft Campus
-                    </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-building-2-line text-[#12233F] text-sm"></i> DLF Cybercity
-                    </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-cpu-line text-[#12233F] text-sm"></i> Intel Operations
-                    </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-cloud-line text-[#12233F] text-sm"></i> Salesforce Tower
-                    </span>
+                <!-- Left Image (Clean, No Overlay Or Badge) -->
+                <div class="order-1">
+                    <img
+                        src="{{ asset('images/hero_facility.jpg') }}"
+                        alt="FacilityPro operations team managing a commercial workplace"
+                        loading="lazy"
+                        decoding="async"
+                        class="h-[280px] w-full rounded-2xl object-cover sm:h-[380px] lg:h-[520px]"
+                    />
                 </div>
 
-                <!-- Logos Set 2 (Duplicate for Loop) -->
-                <div class="flex items-center gap-8">
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-building-4-line text-[#12233F] text-sm"></i> Brookfield Properties
+                <!-- Right Content -->
+                <div class="order-2">
+                    <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
+                        <i class="ri-team-line text-xs"></i> Who We Are
                     </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-community-line text-[#12233F] text-sm"></i> JLL Commercial
-                    </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-shield-star-line text-[#12233F] text-sm"></i> CBRE AssetCare
-                    </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-hotel-line text-[#12233F] text-sm"></i> Cushman &amp; Wakefield
-                    </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-windows-line text-[#12233F] text-sm"></i> Microsoft Campus
-                    </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-building-2-line text-[#12233F] text-sm"></i> DLF Cybercity
-                    </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-cpu-line text-[#12233F] text-sm"></i> Intel Operations
-                    </span>
-                    <span class="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs hover:border-[#12233F]/40 transition cursor-pointer">
-                        <i class="ri-cloud-line text-[#12233F] text-sm"></i> Salesforce Tower
-                    </span>
+
+                    <h2 class="mt-4 text-3xl font-extrabold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl">
+                        A single partner for every facility operation.
+                    </h2>
+
+                    <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
+                        FacilityPro is a facility management and operations company serving commercial towers, corporate
+                        headquarters and enterprise campuses. We bring housekeeping, hygiene, pantry service, security
+                        support and technical maintenance under a single contract, so property teams work with one point
+                        of accountability instead of juggling multiple vendors.
+                    </p>
+
+                    <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
+                        Every technician is directly employed, trained and audited, and every task is digitally logged
+                        so clients can verify service levels in real time.
+                    </p>
+
+                    <ul class="mt-7 grid gap-3 sm:grid-cols-2">
+                        <li class="flex items-start gap-2.5 text-sm text-slate-700">
+                            <i class="ri-checkbox-circle-fill mt-0.5 text-sm text-red-600"></i>
+                            <span>100% direct-employed crews</span>
+                        </li>
+                        <li class="flex items-start gap-2.5 text-sm text-slate-700">
+                            <i class="ri-checkbox-circle-fill mt-0.5 text-sm text-red-600"></i>
+                            <span>Single-contract accountability</span>
+                        </li>
+                        <li class="flex items-start gap-2.5 text-sm text-slate-700">
+                            <i class="ri-checkbox-circle-fill mt-0.5 text-sm text-red-600"></i>
+                            <span>Digital, auditable service logs</span>
+                        </li>
+                        <li class="flex items-start gap-2.5 text-sm text-slate-700">
+                            <i class="ri-checkbox-circle-fill mt-0.5 text-sm text-red-600"></i>
+                            <span>24/7 on-call technical support</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-9 flex flex-wrap items-center gap-3">
+                        <a
+                            href="{{ route('about') }}"
+                            class="inline-flex items-center gap-2 rounded-full bg-[#12233F] px-6 py-3 text-xs font-semibold text-white transition hover:bg-[#0B1A30] active:scale-[0.98] sm:text-sm"
+                        >
+                            <span>More About Us</span>
+                            <i class="ri-arrow-right-line text-sm"></i>
+                        </a>
+                        <a
+                            href="{{ route('contact') }}"
+                            class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-xs font-medium text-slate-700 transition hover:border-[#12233F]/40 hover:text-slate-900 active:scale-[0.98] sm:text-sm"
+                        >
+                            <span>Talk to Us</span>
+                        </a>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -526,163 +574,63 @@
         </div>
     </section>
 
-    {{-- The Operational Standard (Minimalist 2-Column Showcase) --}}
+    {{-- Client Logos Grid --}}
     <section 
-        id="why-us" 
+        id="clients"
         x-data="scrollReveal(0)"
         :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
-        class="scroll-mt-20 border-y border-slate-100 bg-slate-50/60 py-14 sm:py-20 lg:py-24 transition-all duration-700 ease-out"
+        class="scroll-mt-20 border-y border-slate-100 bg-slate-50/50 py-14 transition-all duration-700 ease-out sm:py-20 lg:py-24"
     >
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid items-center gap-12 lg:grid-cols-12">
-                <!-- Left Details -->
-                <div class="lg:col-span-6 space-y-6">
-                    <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
-                        <i class="ri-shield-check-line text-xs"></i> The Standard
-                    </span>
-                    <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                        Single-contract accountability with live SLA metrics.
-                    </h2>
-                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
-                        We replace fragmented vendors with direct-employed teams, digital verification, and fixed monthly reviews.
-                    </p>
-
-                    <div class="grid gap-4 sm:grid-cols-2 pt-2">
-                        <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs">
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
-                                <i class="ri-user-star-line text-lg"></i>
-                            </span>
-                            <h3 class="mt-3 text-sm font-bold text-slate-900">100% W-2 Employed</h3>
-                            <p class="mt-1 text-xs text-slate-500">Fully vetted, background-screened staff.</p>
-                        </div>
-
-                        <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs">
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
-                                <i class="ri-qr-code-line text-lg"></i>
-                            </span>
-                            <h3 class="mt-3 text-sm font-bold text-slate-900">IoT QR Telemetry</h3>
-                            <p class="mt-1 text-xs text-slate-500">Live timestamped cleaning verification.</p>
-                        </div>
-
-                        <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs">
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
-                                <i class="ri-leaf-line text-lg"></i>
-                            </span>
-                            <h3 class="mt-3 text-sm font-bold text-slate-900">Green Seal Certified</h3>
-                            <p class="mt-1 text-xs text-slate-500">Indoor air safe eco-certified chemicals.</p>
-                        </div>
-
-                        <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs">
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
-                                <i class="ri-dashboard-line text-lg"></i>
-                            </span>
-                            <h3 class="mt-3 text-sm font-bold text-slate-900">Dedicated Director</h3>
-                            <p class="mt-1 text-xs text-slate-500">Single accountable point of contact.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right High-Contrast Metric Card -->
-                <div class="lg:col-span-6">
-                    <div class="rounded-3xl bg-[#0B1A30] p-8 sm:p-10 text-white shadow-xl">
-                        <div class="flex items-center justify-between border-b border-slate-800 pb-5">
-                            <div>
-                                <span class="text-xs font-semibold uppercase tracking-wider text-red-400">Benchmark Metrics</span>
-                                <h3 class="text-lg font-bold text-white mt-0.5">Annual SLA Performance</h3>
-                            </div>
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-red-500/20 text-red-400">
-                                <i class="ri-award-fill text-lg"></i>
-                            </span>
-                        </div>
-
-                        <div class="mt-8 grid grid-cols-2 gap-6 sm:gap-8">
-                            <div>
-                                <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">99.85%</p>
-                                <p class="text-xs text-slate-400 mt-1">SLA Adherence</p>
-                            </div>
-                            <div>
-                                <p class="text-3xl sm:text-4xl font-extrabold text-red-400 tracking-tight">18.4%</p>
-                                <p class="text-xs text-slate-400 mt-1">Overhead Saved</p>
-                            </div>
-                            <div>
-                                <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">&lt;15 min</p>
-                                <p class="text-xs text-slate-400 mt-1">Emergency Dispatch</p>
-                            </div>
-                            <div>
-                                <p class="text-3xl sm:text-4xl font-extrabold text-red-400 tracking-tight">4.95<span class="text-base text-slate-400 font-normal">/5</span></p>
-                                <p class="text-xs text-slate-400 mt-1">Client Rating</p>
-                            </div>
-                        </div>
-
-                        <div class="mt-8 rounded-2xl bg-white/5 border border-white/10 p-5">
-                            <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">
-                                "FacilityPro took over our 400,000 sq.ft commercial tower with zero operational hiccup. Restroom cleanliness ratings jumped 35% in month one."
-                            </p>
-                            <p class="mt-3 text-xs font-medium text-red-400">— Marcus Vance, Senior VP Property Operations</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- Seamless 4-Step Onboarding Blueprint --}}
-    <section 
-        id="workflow" 
-        x-data="scrollReveal(0)"
-        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
-        class="scroll-mt-20 py-14 sm:py-20 lg:py-24 transition-all duration-700 ease-out"
-    >
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="max-w-xl mx-auto text-center">
+            <div class="max-w-2xl mx-auto text-center">
                 <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
-                    <i class="ri-git-commit-line text-xs"></i> Blueprint
+                    <i class="ri-building-line text-xs"></i> Our Clients
                 </span>
                 <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                    4-Step Onboarding Workflow
+                    Trusted by 500+ commercial towers and enterprise headquarters
                 </h2>
                 <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-                    Zero-downtime transition from spatial audit to active continuous operations.
+                    Property managers and corporate enterprises trust FacilityPro for single-contract,
+                    SLA-guaranteed facility operations.
                 </p>
             </div>
 
-            <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                <!-- Step 1 -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F] text-xs font-bold text-white">01</span>
-                    <h3 class="mt-4 text-base font-bold text-slate-900">Spatial &amp; SLA Audit</h3>
-                    <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Thorough inspection of floor layouts and high-traffic zones to establish baseline metrics.
-                    </p>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-xs font-bold text-white">02</span>
-                    <h3 class="mt-4 text-base font-bold text-slate-900">Staff Deployment</h3>
-                    <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Direct-employed, uniformed operators assigned with property-specific standard operating procedures.
-                    </p>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F] text-xs font-bold text-white">03</span>
-                    <h3 class="mt-4 text-base font-bold text-slate-900">IoT QR Telemetry</h3>
-                    <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Restroom cleaning schedules and high-touch points logged live via digital QR checkpoints.
-                    </p>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-xs font-bold text-white">04</span>
-                    <h3 class="mt-4 text-base font-bold text-slate-900">Monthly SLA Review</h3>
-                    <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Dedicated directors review audit scores, consumables expenditure, and continuous optimization.
-                    </p>
-                </div>
+            <div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-6">
+                @forelse ($this->clients as $client)
+                    <div
+                        wire:key="client-logo-{{ $client->id }}"
+                        class="flex h-32 items-center justify-center rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-lg sm:h-36"
+                    >
+                        <img
+                            src="{{ asset($client->image) }}"
+                            alt="{{ $client->title ?? 'Client Logo' }}"
+                            loading="lazy"
+                            decoding="async"
+                            class="max-h-20 max-w-[85%] object-contain"
+                            onerror="this.onerror=null; this.src='https://placehold.co/150x150?text=Client';"
+                        />
+                    </div>
+                @empty
+                    <div class="col-span-full rounded-2xl border border-dashed border-slate-200 bg-white p-10 text-center">
+                        <h3 class="text-base font-bold text-slate-900">No client images available</h3>
+                        <p class="mt-1 text-xs text-slate-500">
+                            Client logos will appear here once added to the portfolio.
+                        </p>
+                    </div>
+                @endforelse
             </div>
+
+            @if ($this->clients->isNotEmpty())
+                <div class="mt-10 text-center">
+                    <a
+                        href="{{ route('clients') }}"
+                        class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-8 py-3.5 text-xs sm:text-sm font-semibold text-slate-800 shadow-xs transition hover:border-[#12233F]/40 hover:text-[#12233F] active:scale-[0.98]"
+                    >
+                        <span>View All Clients</span>
+                        <i class="ri-arrow-right-line text-sm"></i>
+                    </a>
+                </div>
+            @endif
         </div>
     </section>
 
@@ -781,169 +729,7 @@
         </div>
     </section>
 
-    {{-- Interactive SLA Scope & Pricing Calculator (Clean with Rounded-Full Pills) --}}
-    <section 
-        id="calculator" 
-        x-data="scrollReveal(0)"
-        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
-        class="scroll-mt-20 py-14 sm:py-20 lg:py-24 transition-all duration-700 ease-out"
-    >
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="max-w-xl mx-auto text-center">
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
-                    <i class="ri-calculator-line text-xs"></i> Scope Calculator
-                </span>
-                <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                    Estimate Facility Scope &amp; SLA
-                </h2>
-                <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-                    Select your facility specs to receive a customized operational proposal.
-                </p>
-            </div>
 
-            <div 
-                class="mx-auto mt-12 max-w-2xl rounded-3xl border border-slate-200/80 bg-white p-5 sm:p-8 lg:p-10 shadow-sm"
-                x-data="{
-                    propertyType: 'hq',
-                    sqFt: '15k-50k',
-                    submitted: false
-                }"
-            >
-                <form @submit.prevent="submitted = true">
-                    <div class="space-y-7">
-                        <!-- Step 1: Property Type with Rounded-Full Pills -->
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-3">1. Property Type</label>
-                            <div class="flex flex-wrap gap-2.5">
-                                <button 
-                                    type="button" 
-                                    @click="propertyType = 'hq'"
-                                    :class="propertyType === 'hq' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
-                                    class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
-                                >
-                                    Corporate HQ
-                                </button>
-                                <button 
-                                    type="button" 
-                                    @click="propertyType = 'tower'"
-                                    :class="propertyType === 'tower' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
-                                    class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
-                                >
-                                    Commercial Tower
-                                </button>
-                                <button 
-                                    type="button" 
-                                    @click="propertyType = 'campus'"
-                                    :class="propertyType === 'campus' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
-                                    class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
-                                >
-                                    Tech Campus
-                                </button>
-                                <button 
-                                    type="button" 
-                                    @click="propertyType = 'healthcare'"
-                                    :class="propertyType === 'healthcare' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
-                                    class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
-                                >
-                                    Healthcare &amp; Lab
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Step 2: Floor Area with Rounded-Full Pills -->
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-3">2. Estimated Floor Space (Sq. Ft)</label>
-                            <div class="flex flex-wrap gap-2.5">
-                                <button 
-                                    type="button" 
-                                    @click="sqFt = 'under15k'"
-                                    :class="sqFt === 'under15k' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
-                                    class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
-                                >
-                                    &lt; 15,000
-                                </button>
-                                <button 
-                                    type="button" 
-                                    @click="sqFt = '15k-50k'"
-                                    :class="sqFt === '15k-50k' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
-                                    class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
-                                >
-                                    15,000 - 50,000
-                                </button>
-                                <button 
-                                    type="button" 
-                                    @click="sqFt = '50k-150k'"
-                                    :class="sqFt === '50k-150k' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
-                                    class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
-                                >
-                                    50,000 - 150,000
-                                </button>
-                                <button 
-                                    type="button" 
-                                    @click="sqFt = '150k+'"
-                                    :class="sqFt === '150k+' ? 'bg-red-600 text-white border-red-600' : 'bg-slate-50 text-slate-700 border-slate-200 hover:border-red-300'"
-                                    class="rounded-full border px-5 py-2 text-xs font-medium transition cursor-pointer"
-                                >
-                                    150,000+
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Step 3: Required Services -->
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-3">3. Service Modules</label>
-                            <div class="grid gap-2.5 sm:grid-cols-2">
-                                <label class="flex items-center gap-2.5 rounded-2xl border border-slate-200/80 bg-slate-50/50 p-3 text-xs font-medium text-slate-800 cursor-pointer">
-                                    <input type="checkbox" checked class="h-4 w-4 rounded-full text-red-600 focus:ring-red-500" />
-                                    <span>Office Sweeping &amp; Janitorial</span>
-                                </label>
-                                <label class="flex items-center gap-2.5 rounded-2xl border border-slate-200/80 bg-slate-50/50 p-3 text-xs font-medium text-slate-800 cursor-pointer">
-                                    <input type="checkbox" checked class="h-4 w-4 rounded-full text-red-600 focus:ring-red-500" />
-                                    <span>Restroom Hygiene &amp; Refill</span>
-                                </label>
-                                <label class="flex items-center gap-2.5 rounded-2xl border border-slate-200/80 bg-slate-50/50 p-3 text-xs font-medium text-slate-800 cursor-pointer">
-                                    <input type="checkbox" checked class="h-4 w-4 rounded-full text-red-600 focus:ring-red-500" />
-                                    <span>Pantry Stewards &amp; Office Boys</span>
-                                </label>
-                                <label class="flex items-center gap-2.5 rounded-2xl border border-slate-200/80 bg-slate-50/50 p-3 text-xs font-medium text-slate-800 cursor-pointer">
-                                    <input type="checkbox" class="h-4 w-4 rounded-full text-red-600 focus:ring-red-500" />
-                                    <span>MEP &amp; HVAC Filter Care</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Contact Inputs with Rounded-Full styling -->
-                        <div class="grid gap-3 pt-2 sm:grid-cols-2">
-                            <div>
-                                <label class="block text-xs font-medium text-slate-600 mb-1">Work Email</label>
-                                <input type="email" required placeholder="manager@company.com" class="w-full rounded-full border border-slate-200 bg-white px-4 py-2.5 text-xs text-slate-800 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500" />
-                            </div>
-                            <div>
-                                <label class="block text-xs font-medium text-slate-600 mb-1">Phone Number</label>
-                                <input type="tel" required placeholder="+1 (555) 000-0000" class="w-full rounded-full border border-slate-200 bg-white px-4 py-2.5 text-xs text-slate-800 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500" />
-                            </div>
-                        </div>
-
-                        <!-- Submit Button (Clean Rounded-Full Pill) -->
-                        <div class="pt-2 text-center">
-                            <button
-                                type="submit"
-                                class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-red-600 px-8 py-3.5 text-xs sm:text-sm font-semibold text-white shadow-sm hover:bg-red-700 transition active:scale-[0.98] cursor-pointer"
-                            >
-                                <span>Generate SLA Proposal</span>
-                                <i class="ri-arrow-right-line text-sm"></i>
-                            </button>
-                        </div>
-
-                        <!-- Success Note -->
-                        <div x-show="submitted" x-cloak class="rounded-2xl bg-red-50 p-4 text-center text-xs font-medium text-red-800">
-                            Thank you! Your request has been logged. Our operations director will reach out within 24 hours.
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
 
     {{-- Clean FAQ Accordion --}}
     <section 
