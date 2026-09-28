@@ -44,8 +44,8 @@ test('authenticated user can view admin dashboard', function () {
 
     $response->assertSuccessful();
     $response->assertSee('Operations Overview');
-    $response->assertSee('Recent SLA Scope Proposals');
-    $response->assertSee('IoT QR Telemetry');
+    $response->assertSee('Recent Website Inquiries');
+    $response->assertSee('Hiring Pipeline');
 });
 
 test('authenticated user can logout via post route', function () {
