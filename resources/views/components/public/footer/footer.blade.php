@@ -1,140 +1,140 @@
-<footer class="border-t border-[#12233F]/40 bg-[#0B1A30] text-white">
-    <div class="mx-auto max-w-7xl px-4 pb-10 pt-16 sm:px-6 lg:px-8">
-        <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.35fr] lg:gap-10">
-            <!-- Brand Overview -->
-            <div>
-                <!-- Brand Logo Only (Enlarged & Responsive) -->
-                <a href="{{ route('home') }}" class="inline-flex items-center">
-                    <img src="{{ asset('logo.png') }}" alt="Facility Management Logo" class="h-12 sm:h-14 lg:h-16 w-auto object-contain transition-transform hover:scale-105" />
-                </a>
-                <p class="mt-5 max-w-sm text-sm leading-relaxed text-slate-400">
-                    Architectural-grade facility management for enterprise workplaces. We deliver commercial sweeping, office cleaning, restroom sanitation, and dedicated pantry staffing with 99.8% SLA reliability.
-                </p>
-                <div class="mt-6 space-y-3 text-xs text-slate-300">
-                    <a href="tel:{{ setting('phone', '+1 (800) 492-8820') }}" class="flex items-center gap-3 transition hover:text-red-400">
-                        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/10 text-red-400 border border-white/10">
-                            <i class="ri-phone-fill text-xs"></i>
-                        </span>
-                        <span class="font-medium">{{ setting('phone', '+1 (800) 492-8820') }}</span>
-                    </a>
-                    @if(setting('whatsapp'))
-                        <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', setting('whatsapp')) }}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 transition hover:text-emerald-400">
-                            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/10 text-emerald-400 border border-white/10">
-                                <i class="ri-whatsapp-fill text-xs"></i>
-                            </span>
-                            <span class="font-medium">{{ setting('whatsapp') }}</span>
-                        </a>
-                    @endif
-                    <a href="mailto:{{ setting('email', 'ops@facilitypro.com') }}" class="flex items-center gap-3 transition hover:text-red-400">
-                        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/10 text-red-400 border border-white/10">
-                            <i class="ri-mail-fill text-xs"></i>
-                        </span>
-                        <span class="font-medium">{{ setting('email', 'ops@facilitypro.com') }}</span>
-                    </a>
-                    <p class="flex items-start gap-3">
-                        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/10 text-red-400 border border-white/10">
-                            <i class="ri-map-pin-fill text-xs"></i>
-                        </span>
-                        <span class="min-w-0 font-medium">{{ setting('address', '100 Enterprise Plaza, Suite 400') }}</span>
-                    </p>
-                </div>
+<footer class="border-t border-white/5 bg-[#0B1A30] text-slate-300">
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
 
-                <!-- Social Links -->
-                <div class="mt-6 flex items-center gap-3 text-slate-400">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
+
+            {{-- Brand --}}
+            <div class="lg:col-span-4">
+                <a href="{{ route('home') }}" class="inline-flex items-center">
+                    <img
+                        src="{{ asset('logo.png') }}"
+                        alt="FacilityPro Management Logo"
+                        loading="lazy"
+                        decoding="async"
+                        class="h-9 w-auto object-contain sm:h-11"
+                    />
+                </a>
+
+                <p class="mt-4 max-w-xs text-xs leading-relaxed text-slate-400">
+                    Housekeeping, washrooms, pantry and MEP maintenance for offices and commercial
+                    buildings — by our own trained team, on one contract.
+                </p>
+
+                <div class="mt-5 flex flex-wrap items-center gap-2">
                     @if(setting('facebook'))
-                        <a href="{{ setting('facebook') }}" target="_blank" rel="noopener noreferrer" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 hover:bg-red-600 hover:text-white transition border border-white/10">
+                        <a href="{{ setting('facebook') }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-slate-400 transition hover:border-red-500/40 hover:bg-red-600 hover:text-white">
                             <i class="ri-facebook-fill text-sm"></i>
                         </a>
                     @endif
                     @if(setting('twitter'))
-                        <a href="{{ setting('twitter') }}" target="_blank" rel="noopener noreferrer" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 hover:bg-red-600 hover:text-white transition border border-white/10">
+                        <a href="{{ setting('twitter') }}" target="_blank" rel="noopener noreferrer" aria-label="X" class="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-slate-400 transition hover:border-red-500/40 hover:bg-red-600 hover:text-white">
                             <i class="ri-twitter-x-fill text-sm"></i>
                         </a>
                     @endif
-                    @if(setting('instagram'))
-                        <a href="{{ setting('instagram') }}" target="_blank" rel="noopener noreferrer" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 hover:bg-red-600 hover:text-white transition border border-white/10">
-                            <i class="ri-instagram-fill text-sm"></i>
-                        </a>
-                    @endif
                     @if(setting('linkedin'))
-                        <a href="{{ setting('linkedin') }}" target="_blank" rel="noopener noreferrer" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 hover:bg-red-600 hover:text-white transition border border-white/10">
+                        <a href="{{ setting('linkedin') }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-slate-400 transition hover:border-red-500/40 hover:bg-red-600 hover:text-white">
                             <i class="ri-linkedin-fill text-sm"></i>
                         </a>
                     @endif
+                    @if(setting('instagram'))
+                        <a href="{{ setting('instagram') }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-slate-400 transition hover:border-red-500/40 hover:bg-red-600 hover:text-white">
+                            <i class="ri-instagram-fill text-sm"></i>
+                        </a>
+                    @endif
                     @if(setting('youtube'))
-                        <a href="{{ setting('youtube') }}" target="_blank" rel="noopener noreferrer" class="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 hover:bg-red-600 hover:text-white transition border border-white/10">
+                        <a href="{{ setting('youtube') }}" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-slate-400 transition hover:border-red-500/40 hover:bg-red-600 hover:text-white">
                             <i class="ri-youtube-fill text-sm"></i>
                         </a>
                     @endif
                 </div>
+
+                <a
+                    href="{{ route('contact') }}"
+                    class="mt-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-[11px] font-semibold text-white transition hover:bg-red-600"
+                >
+                    <i class="ri-calendar-check-line text-xs"></i>
+                    <span>Book a free site walkthrough</span>
+                </a>
             </div>
 
-            <!-- Services -->
-            <div>
-                <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-red-400">Services</h3>
-                <ul class="mt-5 space-y-3 text-xs font-medium text-slate-300">
+            {{-- Services --}}
+            <div class="lg:col-span-3">
+                <h2 class="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-500">Services</h2>
+                <ul class="mt-4 space-y-2.5 text-xs text-slate-400">
                     @foreach ($this->serviceLinks() as $link)
                         <li>
-                            <a href="{{ $link['href'] }}" class="flex items-center gap-2 transition hover:text-red-400">
-                                <i class="ri-arrow-right-s-line text-red-500"></i>
-                                <span>{{ $link['label'] }}</span>
+                            <a href="{{ $link['href'] }}" class="inline-block transition hover:text-white">
+                                {{ $link['label'] }}
                             </a>
                         </li>
                     @endforeach
                 </ul>
             </div>
 
-            <!-- Company -->
-            <div>
-                <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-red-400">Company</h3>
-                <ul class="mt-5 space-y-3 text-xs font-medium text-slate-300">
+            {{-- Company --}}
+            <div class="lg:col-span-2">
+                <h2 class="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-500">Company</h2>
+                <ul class="mt-4 space-y-2.5 text-xs text-slate-400">
                     @foreach ($this->companyLinks() as $link)
                         <li>
-                            <a href="{{ $link['href'] }}" class="flex items-center gap-2 transition hover:text-red-400">
-                                <i class="ri-arrow-right-s-line text-red-500"></i>
-                                <span>{{ $link['label'] }}</span>
+                            <a href="{{ $link['href'] }}" class="inline-block transition hover:text-white">
+                                {{ $link['label'] }}
                             </a>
                         </li>
                     @endforeach
                 </ul>
             </div>
 
-            <!-- Newsletter & SLA Standard -->
-            <div>
-                <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-red-400">SLA Audit Dispatch</h3>
-                <p class="mt-5 text-xs leading-relaxed text-slate-400">
-                    Subscribe for monthly facility management checklists, indoor air quality compliance guides, and SLA audit reports.
+            {{-- Contact --}}
+            <div class="lg:col-span-3">
+                <h2 class="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-500">Get in touch</h2>
+
+                <ul class="mt-4 space-y-3 text-xs text-slate-400">
+                    <li>
+                        <a href="tel:{{ setting('phone', '+1 (800) 492-8820') }}" class="inline-flex items-start gap-2.5 transition hover:text-white">
+                            <i class="ri-phone-line mt-px shrink-0 text-sm text-red-500"></i>
+                            <span class="font-medium">{{ setting('phone', '+1 (800) 492-8820') }}</span>
+                        </a>
+                    </li>
+                    @if(setting('whatsapp'))
+                        <li>
+                            <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', setting('whatsapp')) }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-start gap-2.5 transition hover:text-white">
+                                <i class="ri-whatsapp-line mt-px shrink-0 text-sm text-emerald-500"></i>
+                                <span class="font-medium">{{ setting('whatsapp') }}</span>
+                            </a>
+                        </li>
+                    @endif
+                    <li>
+                        <a href="mailto:{{ setting('email', 'ops@facilitypro.com') }}" class="inline-flex items-start gap-2.5 transition hover:text-white">
+                            <i class="ri-mail-line mt-px shrink-0 text-sm text-red-500"></i>
+                            <span class="font-medium">{{ setting('email', 'ops@facilitypro.com') }}</span>
+                        </a>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <i class="ri-map-pin-line mt-px shrink-0 text-sm text-red-500"></i>
+                        <span class="min-w-0 font-medium">{{ setting('address', '100 Enterprise Plaza, Suite 400') }}</span>
+                    </li>
+                </ul>
+
+                <p class="mt-4 text-[11px] leading-relaxed text-slate-500">
+                    Operations desk open 24 hours. Emergency engineers on call every day of the year.
                 </p>
-                <div class="mt-5 flex flex-col gap-2.5 sm:flex-row">
-                    <label for="footer-email" class="sr-only">Email address</label>
-                    <input
-                        id="footer-email"
-                        type="email"
-                        placeholder="facility.manager@company.com"
-                        class="w-full rounded-full border border-white/10 bg-white/5 px-4 py-2.5 text-xs text-white placeholder:text-slate-500 focus:border-red-400 focus:outline-none focus:ring-1 focus:ring-red-400 sm:flex-1"
-                    />
-                    <button
-                        type="button"
-                        class="rounded-full bg-red-600 px-5 py-2.5 text-xs font-semibold text-white transition hover:bg-red-500 shrink-0"
-                    >
-                        Subscribe
-                    </button>
-                </div>
-                <div class="mt-6 flex items-center gap-4 text-[11px] text-slate-500 border-t border-white/10 pt-4">
-                    <span class="flex items-center gap-1"><i class="ri-shield-check-line text-red-400"></i> ISO 9001</span>
-                    <span class="flex items-center gap-1"><i class="ri-leaf-line text-red-400"></i> ISSA CIMS</span>
-                    <span class="flex items-center gap-1"><i class="ri-award-line text-red-400"></i> OSHA 30-Hr</span>
-                </div>
             </div>
+
         </div>
 
-        <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-center text-xs text-slate-500 sm:flex-row sm:text-left">
-            <p>© {{ date('Y') }} {{ setting('company_name', 'FacilityPro Management Inc.') }}. All rights reserved.</p>
-            <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:justify-end">
-                <a href="#" class="transition hover:text-red-400">Privacy SLA</a>
-                <a href="#" class="transition hover:text-red-400">Terms of Operations</a>
-                <a href="#" class="transition hover:text-red-400">Security Compliance</a>
-            </div>
+        {{-- Trust Strip --}}
+        <div class="mt-9 flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] text-slate-500">
+            <span class="inline-flex items-center gap-1.5"><i class="ri-shield-user-line text-red-500"></i> Police-verified staff</span>
+            <span class="inline-flex items-center gap-1.5"><i class="ri-hospital-line text-red-500"></i> ESI &amp; PF compliant</span>
+            <span class="inline-flex items-center gap-1.5"><i class="ri-cup-line text-red-500"></i> FSSAI-trained pantry</span>
+            <span class="inline-flex items-center gap-1.5"><i class="ri-fire-line text-red-500"></i> Fire &amp; first-aid trained</span>
         </div>
+
+        {{-- Bottom Bar --}}
+        <div class="mt-6 border-t border-white/5 pt-6 text-center text-[11px] text-slate-500">
+            <p>&copy; {{ date('Y') }} {{ setting('company_name', 'FacilityPro Management Inc.') }}. All rights reserved.</p>
+        </div>
+
     </div>
 </footer>

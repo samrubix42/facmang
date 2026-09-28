@@ -9,7 +9,7 @@ new class extends Component
      */
     public function serviceLinks(): array
     {
-        $services = \App\Models\Service::where('is_active', true)->take(6)->get();
+        $services = \App\Models\Service::where('is_active', true)->take(5)->get();
 
         if ($services->isNotEmpty()) {
             return $services->map(fn ($s) => [
@@ -36,8 +36,7 @@ new class extends Component
         return [
             ['label' => 'About Us', 'href' => route('about')],
             ['label' => 'Why Choose Us', 'href' => route('home').'#why-us'],
-            ['label' => 'SLA & Standards', 'href' => route('home').'#services'],
-            ['label' => 'Scope Calculator', 'href' => route('home').'#calculator'],
+            ['label' => 'Our Services', 'href' => route('services')],
             ['label' => 'Project Gallery', 'href' => route('gallery')],
             ['label' => 'Our Clients', 'href' => route('clients')],
             ['label' => 'Careers & Jobs', 'href' => route('careers')],
