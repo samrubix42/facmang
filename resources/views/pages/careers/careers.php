@@ -10,7 +10,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-new #[Title('Careers - Join Our Operations Team - FacilityPro')] class extends Component
+new #[Title('Careers - Join Our Operations Team - Real Facility Services')] class extends Component
 {
     use WithFileUploads;
 
@@ -82,7 +82,6 @@ new #[Title('Careers - Join Our Operations Team - FacilityPro')] class extends C
 
         return null;
     }
-
 
     /**
      * @return array<string, array<string, string>>

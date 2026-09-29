@@ -32,7 +32,7 @@ class ServiceFactory extends Factory
             'is_active' => $this->faker->boolean(80),
             'short_description' => $this->faker->sentence(12),
             'content' => $this->faker->paragraphs(3, true),
-            'meta_title' => $title.' | FacilityPro',
+            'meta_title' => $title.' | Real Facility Services',
             'meta_description' => $this->faker->sentence(10),
             'meta_keyword' => implode(', ', $this->faker->words(5)),
         ];

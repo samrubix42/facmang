@@ -6,7 +6,7 @@ use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Layout('layouts::auth')] #[Title('Sign In - FacilityPro Admin')] class extends Component
+new #[Layout('layouts::auth')] #[Title('Sign In - RFS Admin')] class extends Component
 {
     #[Rule('required|email', message: 'Please enter a valid work email.')]
     public string $email = '';

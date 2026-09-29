@@ -303,7 +303,7 @@
                     <h2 class="text-base font-bold text-white tracking-tight" x-text="active ? active.title : ''"></h2>
                     <p class="text-xs text-slate-300 flex items-center gap-1.5">
                         <span class="flex h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse"></span>
-                        <span>FacilityPro Verified Live Field Photographic Audit</span>
+                        <span>Real Facility Services (RFS) Verified Live Field Photographic Audit</span>
                     </p>
                 </div>
 

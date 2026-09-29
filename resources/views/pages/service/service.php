@@ -8,7 +8,7 @@ use Livewire\Attributes\Title;
 use Livewire\Attributes\Url;
 use Livewire\Component;
 
-new #[Title('Enterprise Workplace Facility Services & SLAs - FacilityPro')] class extends Component
+new #[Title('Facility & Soft Services Portfolio - Real Facility Services (RFS)')] class extends Component
 {
     #[Url]
     public string $search = '';
@@ -59,7 +59,7 @@ new #[Title('Enterprise Workplace Facility Services & SLAs - FacilityPro')] clas
         }
 
         if (trim($this->search) !== '') {
-            $term = '%' . trim($this->search) . '%';
+            $term = '%'.trim($this->search).'%';
             $query->where(function ($q) use ($term) {
                 $q->where('title', 'like', $term)
                     ->orWhere('short_description', 'like', $term)

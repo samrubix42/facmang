@@ -8,7 +8,7 @@
                 <a href="{{ route('home') }}" class="inline-flex items-center">
                     <img
                         src="{{ asset('logo.png') }}"
-                        alt="FacilityPro Management Logo"
+                        alt="Real Facility Services (RFS) Logo"
                         loading="lazy"
                         decoding="async"
                         class="h-9 w-auto object-contain sm:h-11"
@@ -16,8 +16,8 @@
                 </a>
 
                 <p class="mt-4 max-w-xs text-xs leading-relaxed text-slate-400">
-                    Housekeeping, washrooms, pantry and MEP maintenance for offices and commercial
-                    buildings — by our own trained team, on one contract.
+                    Integrated facility and soft services for residential societies and commercial
+                    buildings — housekeeping, horticulture, technical, security and 24x7 support by our own team.
                 </p>
 
                 <div class="mt-5 flex flex-wrap items-center gap-2">
@@ -133,7 +133,7 @@
 
         {{-- Bottom Bar --}}
         <div class="mt-6 border-t border-white/5 pt-6 text-center text-[11px] text-slate-500">
-            <p>&copy; {{ date('Y') }} {{ setting('company_name', 'FacilityPro Management Inc.') }}. All rights reserved.</p>
+            <p>&copy; {{ date('Y') }} {{ setting('company_name', 'Real Facility Services (RFS)') }}. All rights reserved.</p>
         </div>
 
     </div>

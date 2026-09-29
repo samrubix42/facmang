@@ -41,7 +41,7 @@
                         id="company_name"
                         type="text"
                         wire:model="company_name"
-                        placeholder="FacilityPro Management Inc."
+                        placeholder="Real Facility Services (RFS)"
                         class="w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-xs text-slate-800 placeholder:text-slate-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500"
                     />
                     @error('company_name') <span class="text-xs text-rose-600 font-medium mt-1 block">{{ $message }}</span> @enderror

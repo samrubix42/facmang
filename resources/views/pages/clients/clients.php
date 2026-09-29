@@ -6,9 +6,8 @@ use Livewire\Attributes\Computed;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Title('Our Clients & Corporate Partners - FacilityPro')] class extends Component
+new #[Title('Our Happy Clients - Real Facility Services (RFS)')] class extends Component
 {
-    
     #[Computed]
     public function clients(): Collection
     {

@@ -11,7 +11,7 @@ use Livewire\Component;
 use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 
-new #[Layout('layouts::admin')] #[Title('Gallery - FacilityPro Admin')] class extends Component
+new #[Layout('layouts::admin')] #[Title('Gallery - RFS Admin')] class extends Component
 {
     use WithFileUploads;
     use WithPagination;

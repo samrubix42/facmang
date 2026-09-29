@@ -28,8 +28,8 @@ test('service category seeder correctly populates records', function () {
     $this->seed(ServiceCategorySeeder::class);
 
     expect(ServiceCategory::count())->toBeGreaterThanOrEqual(5);
-    expect(ServiceCategory::where('slug', 'janitorial')->exists())->toBeTrue();
-    expect(ServiceCategory::where('slug', 'technical')->exists())->toBeTrue();
+    expect(ServiceCategory::where('slug', 'mechanized-operations')->exists())->toBeTrue();
+    expect(ServiceCategory::where('slug', 'manufacturing-sector-services')->exists())->toBeTrue();
 });
 
 test('user can open create modal and save new service category', function () {

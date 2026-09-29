@@ -10,39 +10,39 @@
                         touchEndX: 0,
                         slides: [
                             {
-                                title: 'Celebrating the past & developing the future',
-                                buttonText: 'Real Estate Development',
+                                title: 'To serve the excellence in facility and soft services',
+                                buttonText: 'Our Services',
                                 buttonLink: '{{ route("services") }}',
                                 image: '{{ asset("images/estate_development.jpg") }}',
-                                alt: 'Luxury architectural estate with swimming pool and landscaped grounds'
+                                alt: 'Well maintained residential and commercial property managed by Real Facility Services'
                             },
                             {
-                                title: 'Architectural facility care for modern commercial assets',
-                                buttonText: 'Class-A Operations',
-                                buttonLink: '{{ route("services") }}',
+                                title: 'Integrated facility management for homes and business',
+                                buttonText: 'Who We Are',
+                                buttonLink: '{{ route("about") }}',
                                 image: '{{ asset("images/commercial_tower.jpg") }}',
-                                alt: 'Commercial tower headquarters and plaza'
+                                alt: 'Commercial property and office facility operations'
                             },
                             {
-                                title: 'Precision janitorial & dust-free HEPA environmental care',
-                                buttonText: 'Janitorial & Floor Care',
-                                buttonLink: '{{ route("services.show", ["slug" => "office-sweeping-cleaning"]) }}',
+                                title: 'Housekeeping, horticulture, technical and security care',
+                                buttonText: 'Soft & Technical Services',
+                                buttonLink: '{{ route("services") }}',
                                 image: '{{ asset("images/office_sweeping_cleaning.jpg") }}',
-                                alt: 'Commercial sweeping and floor restoration'
+                                alt: 'Housekeeping and cleaning services in progress'
                             },
                             {
-                                title: 'Molecular restroom hygiene & touchless sanitation telemetry',
-                                buttonText: 'Hygiene & Sanitation',
-                                buttonLink: '{{ route("services.show", ["slug" => "restroom-hygiene-sanitation"]) }}',
+                                title: 'Auditing, legal support and smooth transition consultancy',
+                                buttonText: 'Consultancy',
+                                buttonLink: '{{ route("services") }}',
                                 image: '{{ asset("images/restroom_hygiene_sanitation.jpg") }}',
-                                alt: 'Restroom hygiene and sanitation protocols'
+                                alt: 'Hygiene, documentation and compliance audit support'
                             },
                             {
-                                title: 'Preventative MEP engineering & critical HVAC infrastructure',
-                                buttonText: 'Technical Operations',
-                                buttonLink: '{{ route("services.show", ["slug" => "mep-hvac-maintenance"]) }}',
+                                title: '24x7 support for your residents, your people and your premises',
+                                buttonText: 'Talk to RFS',
+                                buttonLink: '{{ route("contact") }}',
                                 image: '{{ asset("images/mep_hvac_maintenance.jpg") }}',
-                                alt: 'MEP HVAC maintenance and technical engineering'
+                                alt: 'Technical maintenance and engineering support team'
                             }
                         ],
                         init() {
@@ -278,7 +278,7 @@
                 <div class="order-1">
                     <img
                         src="{{ asset('images/hero_facility.jpg') }}"
-                        alt="FacilityPro operations team managing a commercial workplace"
+                        alt="Real Facility Services team managing a residential and commercial property"
                         loading="lazy"
                         decoding="async"
                         class="h-[280px] w-full rounded-2xl object-cover sm:h-[380px] lg:h-[520px]"
@@ -292,37 +292,48 @@
                     </span>
 
                     <h2 class="mt-4 text-3xl font-extrabold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl">
-                        A single partner for every facility operation.
+                        Real Facility Services. To serve the excellence.
                     </h2>
 
                     <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
-                        FacilityPro is a facility management and operations company serving commercial towers, corporate
-                        headquarters and enterprise campuses. We bring housekeeping, hygiene, pantry service, security
-                        support and technical maintenance under a single contract, so property teams work with one point
-                        of accountability instead of juggling multiple vendors.
+                        Real Facility Services (RFS) has been delivering facility and soft services since 2022.
+                        We manage and maintain residential societies and commercial properties, and our goal is
+                        simple: provide quality services that satisfy the challenging requirements of our customers
+                        and clients.
                     </p>
 
                     <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
-                        Every technician is directly employed, trained and audited, and every task is digitally logged
-                        so clients can verify service levels in real time.
+                        Our strength is a strong management team of people with relevant technical and professional
+                        experience, supported by expert, well experienced technical staff and trained workers who
+                        aspire to deliver complete facility services. With more than three years of experience in
+                        managing residential societies, our integrated facility management covers housekeeping,
+                        horticulture, technical and security maintenance — supported by auditing, legal support and
+                        consultancy for smooth transition and operation, on a 24x7 support system.
                     </p>
+
+                    <div class="mt-7 rounded-2xl border-l-4 border-red-600 bg-slate-50 px-5 py-4">
+                        <p class="text-sm font-semibold italic text-slate-800 sm:text-base">
+                            “Our motto is simple: to serve the excellence.”
+                        </p>
+                        <p class="mt-1 text-xs text-slate-500">Real Facility Services (RFS)</p>
+                    </div>
 
                     <ul class="mt-7 grid gap-3 sm:grid-cols-2">
                         <li class="flex items-start gap-2.5 text-sm text-slate-700">
                             <i class="ri-checkbox-circle-fill mt-0.5 text-sm text-red-600"></i>
-                            <span>100% direct-employed crews</span>
+                            <span>Residential &amp; commercial management</span>
                         </li>
                         <li class="flex items-start gap-2.5 text-sm text-slate-700">
                             <i class="ri-checkbox-circle-fill mt-0.5 text-sm text-red-600"></i>
-                            <span>Single-contract accountability</span>
+                            <span>Housekeeping &amp; horticulture</span>
                         </li>
                         <li class="flex items-start gap-2.5 text-sm text-slate-700">
                             <i class="ri-checkbox-circle-fill mt-0.5 text-sm text-red-600"></i>
-                            <span>Digital, auditable service logs</span>
+                            <span>Technical &amp; security maintenance</span>
                         </li>
                         <li class="flex items-start gap-2.5 text-sm text-slate-700">
                             <i class="ri-checkbox-circle-fill mt-0.5 text-sm text-red-600"></i>
-                            <span>24/7 on-call technical support</span>
+                            <span>Auditing &amp; legal support</span>
                         </li>
                     </ul>
 
@@ -360,10 +371,10 @@
                     <i class="ri-shield-star-line text-xs"></i> Why Choose Us
                 </span>
                 <h2 class="mt-4 text-3xl font-extrabold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl">
-                    Why Facility Managers Choose Us
+                    Why Our Clients Choose RFS
                 </h2>
                 <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
-                    Six things that make a real difference on the ground, shift after shift.
+                    A complete team, a proven process and support that never switches off.
                 </p>
             </div>
 
@@ -371,31 +382,31 @@
             <div class="relative mt-12 overflow-hidden rounded-3xl bg-[#0B1A30] px-6 py-10 sm:px-10 sm:py-12">
                 <div class="relative grid grid-cols-2 gap-y-9 lg:grid-cols-4">
                     <div class="text-center lg:px-6">
-                        <p class="text-4xl font-extrabold tracking-tight text-white tabular-nums sm:text-5xl" x-data="countUp(99.85, 2)">
-                            <span x-text="display">0</span>%
-                        </p>
-                        <p class="mt-2 text-[11px] font-medium text-slate-400">Monthly Quality Score</p>
-                    </div>
-
-                    <div class="text-center lg:border-l lg:border-white/10 lg:px-6">
-                        <p class="text-4xl font-extrabold tracking-tight text-white tabular-nums sm:text-5xl" x-data="countUp(2400, 0)">
+                        <p class="text-4xl font-extrabold tracking-tight text-white tabular-nums sm:text-5xl" x-data="countUp(3, 0)">
                             <span x-text="display">0</span>+
                         </p>
-                        <p class="mt-2 text-[11px] font-medium text-slate-400">Trained In-House Staff</p>
+                        <p class="mt-2 text-[11px] font-medium text-slate-400">Years Managing Residential Societies</p>
                     </div>
 
                     <div class="text-center lg:border-l lg:border-white/10 lg:px-6">
-                        <p class="text-4xl font-extrabold tracking-tight text-white tabular-nums sm:text-5xl" x-data="countUp(4.8, 1)">
-                            <span x-text="display">0</span>M+
+                        <p class="text-4xl font-extrabold tracking-tight text-white tabular-nums sm:text-5xl" x-data="countUp(24, 0)">
+                            <span x-text="display">0</span>x7
                         </p>
-                        <p class="mt-2 text-[11px] font-medium text-slate-400">Sq. Ft. Under Management</p>
+                        <p class="mt-2 text-[11px] font-medium text-slate-400">Support &amp; Emergency Desk</p>
                     </div>
 
                     <div class="text-center lg:border-l lg:border-white/10 lg:px-6">
-                        <p class="text-4xl font-extrabold tracking-tight text-red-400 tabular-nums sm:text-5xl" x-data="countUp(18.4, 1)">
+                        <p class="text-4xl font-extrabold tracking-tight text-white tabular-nums sm:text-5xl" x-data="countUp(100, 0)">
                             <span x-text="display">0</span>%
                         </p>
-                        <p class="mt-2 text-[11px] font-medium text-slate-400">Average Cost Reduction</p>
+                        <p class="mt-2 text-[11px] font-medium text-slate-400">Trained In-House Workforce</p>
+                    </div>
+
+                    <div class="text-center lg:border-l lg:border-white/10 lg:px-6">
+                        <p class="text-4xl font-extrabold tracking-tight text-red-400 tabular-nums sm:text-5xl" x-data="countUp(6, 0)">
+                            <span x-text="display">0</span>+
+                        </p>
+                        <p class="mt-2 text-[11px] font-medium text-slate-400">Service Lines Under One Contract</p>
                     </div>
                 </div>
             </div>
@@ -411,10 +422,10 @@
                     <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/10 text-[#12233F] transition-colors duration-300 group-hover:bg-[#12233F] group-hover:text-white">
                         <i class="ri-user-heart-line text-lg"></i>
                     </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900">The Same Team Every Day</h3>
+                    <h3 class="mt-5 text-base font-bold text-slate-900">A Strong Management Team</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Your cleaners and technicians are on our payroll, not a rotating pool of subcontractors.
-                        You get the same trained people on your site, shift after shift.
+                        Our managers bring relevant technical and professional experience, and they stay accountable
+                        for the site they run instead of being reassigned every quarter.
                     </p>
                 </div>
 
@@ -427,10 +438,10 @@
                     <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/10 text-[#12233F] transition-colors duration-300 group-hover:bg-[#12233F] group-hover:text-white">
                         <i class="ri-links-line text-lg"></i>
                     </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900">One Invoice, One Contact</h3>
+                    <h3 class="mt-5 text-base font-bold text-slate-900">One Contract, One Point of Contact</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Housekeeping, washrooms, pantry and repairs sit on one contract. If something is missed
-                        you call one number, not four vendors pointing at each other.
+                        Housekeeping, horticulture, technical and security maintenance sit on a single agreement.
+                        If something is missed, you call one number — not four vendors pointing at each other.
                     </p>
                 </div>
 
@@ -441,12 +452,12 @@
                 >
                     <span class="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-red-600 transition-transform duration-300 group-hover:scale-x-100"></span>
                     <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/10 text-[#12233F] transition-colors duration-300 group-hover:bg-[#12233F] group-hover:text-white">
-                        <i class="ri-qr-code-line text-lg"></i>
+                        <i class="ri-community-line text-lg"></i>
                     </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900">You Can See What Was Done</h3>
+                    <h3 class="mt-5 text-base font-bold text-slate-900">3+ Years With Residential Societies</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Every task is scanned and time-stamped from a phone. Open the report and you know which
-                        washroom was cleaned, by whom, and exactly when.
+                        Society management is our core strength. We understand committee expectations, resident
+                        sensitivities and the daily rhythm of a residential community.
                     </p>
                 </div>
 
@@ -457,12 +468,12 @@
                 >
                     <span class="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-red-600 transition-transform duration-300 group-hover:scale-x-100"></span>
                     <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/10 text-[#12233F] transition-colors duration-300 group-hover:bg-[#12233F] group-hover:text-white">
-                        <i class="ri-leaf-line text-lg"></i>
+                        <i class="ri-tools-line text-lg"></i>
                     </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900">Products That Pass Your Audit</h3>
+                    <h3 class="mt-5 text-base font-bold text-slate-900">Expert Technical Staff &amp; Trained Workers</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Eco-certified chemicals and HEPA vacuums, so your health and safety checks clear
-                        without a second round of approvals and paperwork.
+                        Technical teams are hired for their expertise and trained on your site, so the same
+                        experienced people keep coming back shift after shift.
                     </p>
                 </div>
 
@@ -473,12 +484,12 @@
                 >
                     <span class="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-red-600 transition-transform duration-300 group-hover:scale-x-100"></span>
                     <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/10 text-[#12233F] transition-colors duration-300 group-hover:bg-[#12233F] group-hover:text-white">
-                        <i class="ri-flashlight-line text-lg"></i>
+                        <i class="ri-file-list-3-line text-lg"></i>
                     </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900">Help in Under 15 Minutes</h3>
+                    <h3 class="mt-5 text-base font-bold text-slate-900">Auditing &amp; Legal Support</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Leaking tap, tripped power, no AC at 2pm? Our engineers are on call 24/7
-                        and on site within 15 minutes.
+                        Monthly facility audits, documented findings and legal support for contracts, compliance and
+                        vendor matters — so your committee always has evidence of what has been done.
                     </p>
                 </div>
 
@@ -488,13 +499,14 @@
                     class="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition duration-300 hover:-translate-y-1 hover:border-[#12233F]/25 hover:shadow-lg sm:p-7"
                 >
                     <span class="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-red-600 transition-transform duration-300 group-hover:scale-x-100"></span>
+                    <span class="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-red-600 transition-transform duration-300 group-hover:scale-x-100"></span>
                     <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-red-600/10 text-red-600 transition-colors duration-300 group-hover:bg-red-600 group-hover:text-white">
-                        <i class="ri-medal-line text-lg"></i>
+                        <i class="ri-flashlight-line text-lg"></i>
                     </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900">If We Miss, You Don't Pay</h3>
+                    <h3 class="mt-5 text-base font-bold text-slate-900">24x7 Support System</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Score under 99% on the monthly audit and the credit lands on your next invoice
-                        automatically. You don't have to chase it.
+                        Leaking tap, tripped power or a gate failure at 2am? Our support desk and on-call
+                        technicians respond every hour of every day.
                     </p>
                 </div>
             </div>
@@ -504,7 +516,7 @@
                     href="{{ route('contact') }}"
                     class="inline-flex items-center gap-2 rounded-full bg-[#12233F] px-8 py-3.5 text-xs font-semibold text-white shadow-sm transition hover:bg-[#0B1A30] active:scale-[0.98] sm:text-sm"
                 >
-                    <span>Book a Free Site Walkthrough</span>
+                    <span>Request a Free Facility Walkthrough</span>
                     <i class="ri-arrow-right-line text-sm"></i>
                 </a>
             </div>
@@ -525,10 +537,11 @@
                     <i class="ri-service-line text-xs"></i> Services
                 </span>
                 <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                    Workplace Services Portfolio
+                    Facility &amp; Soft Services Portfolio
                 </h2>
                 <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-                    Single-contract facility operations engineered with strict SLAs and 100% direct-employed personnel.
+                    One integrated team for mechanized operations, washroom care, deep cleaning, landscaping and
+                    pest management across homes, workplaces and factories.
                 </p>
             </div>
 
@@ -543,26 +556,27 @@
                     <div class="relative h-48 overflow-hidden bg-slate-100">
                         <img
                             src="{{ asset('images/office_sweeping_cleaning.jpg') }}"
-                            alt="Office Sweeping & Commercial Cleaning"
+                            alt="Mechanized cleaning operations with auto scrubbers"
                             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
-                            Janitorial
+                            Mechanized
                         </span>
                     </div>
                     <div class="p-6 flex flex-1 flex-col justify-between">
                         <div>
                             <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
-                                Office Sweeping & Cleaning
+                                Mechanized Cleaning Operations
                             </h3>
                             <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                Daily HEPA sweeping, motorized orbital scrubbing, and high-shine marble crystallization with twilight zero disruption.
+                                Latest scrubbers, jet washers and pressure systems tied up with reputed equipment
+                                companies, run through a smart, checklist-driven cleaning process.
                             </p>
                         </div>
                         <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-medium text-slate-400">Daily Night Shifts</span>
+                            <span class="text-xs font-medium text-slate-400">Daily &amp; Weekly Machine Cycles</span>
                             <a 
-                                href="{{ route('services.show', ['slug' => 'office-sweeping-cleaning']) }}" 
+                                href="{{ route('services.show', ['slug' => 'mechanized-operations']) }}" 
                                 class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
                             >
                                 <span>View Scope</span>
@@ -581,26 +595,27 @@
                     <div class="relative h-48 overflow-hidden bg-slate-100">
                         <img
                             src="{{ asset('images/restroom_hygiene_sanitation.jpg') }}"
-                            alt="Restroom & Toilet Sanitation"
+                            alt="Washroom sanitation and hygiene services"
                             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
-                            Sanitation
+                            Washroom
                         </span>
                     </div>
                     <div class="p-6 flex flex-1 flex-col justify-between">
                         <div>
                             <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
-                                Restroom & Toilet Hygiene
+                                Washroom Services
                             </h3>
                             <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                Touchless sensor refills, enzymatic odor elimination, and discreet QR checkpoint logging at every door.
+                                Four to eight scheduled rounds a day with touchpoint disinfection, consumable
+                                replenishment, odour control at source and signed hygiene checklists.
                             </p>
                         </div>
                         <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-medium text-slate-400">4-Hour Audits</span>
+                            <span class="text-xs font-medium text-slate-400">4 to 8 Rounds Daily</span>
                             <a 
-                                href="{{ route('services.show', ['slug' => 'restroom-hygiene-sanitation']) }}" 
+                                href="{{ route('services.show', ['slug' => 'washroom-services']) }}" 
                                 class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
                             >
                                 <span>View Scope</span>
@@ -619,26 +634,27 @@
                     <div class="relative h-48 overflow-hidden bg-slate-100">
                         <img
                             src="{{ asset('images/office_boy_pantry_service.jpg') }}"
-                            alt="Corporate Office Boy & Pantry Staffing"
+                            alt="Deep cleaning of interiors and common areas"
                             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
-                            Hospitality
+                            Deep Cleaning
                         </span>
                     </div>
                     <div class="p-6 flex flex-1 flex-col justify-between">
                         <div>
                             <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
-                                Pantry Stewarding & Staffing
+                                Deep Cleaning Services
                             </h3>
                             <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                Background-checked attendants for executive beverage service, boardroom prep, and desk support.
+                                High-reach, high-pressure, carpet extraction and kitchen exhaust work, run on a fixed
+                                cycle with before-and-after documentation.
                             </p>
                         </div>
                         <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-medium text-slate-400">Dedicated Shifts</span>
+                            <span class="text-xs font-medium text-slate-400">Monthly &amp; Quarterly Cycles</span>
                             <a 
-                                href="{{ route('services.show', ['slug' => 'corporate-pantry-staffing']) }}" 
+                                href="{{ route('services.show', ['slug' => 'deep-cleaning-services']) }}" 
                                 class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
                             >
                                 <span>View Scope</span>
@@ -657,26 +673,27 @@
                     <div class="relative h-48 overflow-hidden bg-slate-100">
                         <img
                             src="{{ asset('images/hero_facility.jpg') }}"
-                            alt="Deep Disinfection & Sanitization"
+                            alt="Pest management and mosquito control"
                             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
-                            Disinfection
+                            Pest Management
                         </span>
                     </div>
                     <div class="p-6 flex flex-1 flex-col justify-between">
                         <div>
                             <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
-                                Deep Sanitization Blitz
+                                Pest Management
                             </h3>
                             <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                Electrostatic virucidal fogging, high-touch sanitization, and HEPA indoor air purification blitzes.
+                                Mosquito, termite, cockroach and rodent control, starting with a proper site survey
+                                and a treatment register for every visit.
                             </p>
                         </div>
                         <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-medium text-slate-400">EPA Certified</span>
+                            <span class="text-xs font-medium text-slate-400">Monthly to Quarterly</span>
                             <a 
-                                href="{{ route('services.show', ['slug' => 'deep-disinfection-sanitization']) }}" 
+                                href="{{ route('services.show', ['slug' => 'pest-management']) }}" 
                                 class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
                             >
                                 <span>View Scope</span>
@@ -686,35 +703,117 @@
                     </div>
                 </div>
 
-                <!-- Service 5: MEP Maintenance (Span 2 cols on lg) -->
+                <!-- Service 5: Landscaping -->
                 <div 
                     x-data="scrollReveal(250)"
                     :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                    class="group flex flex-col sm:flex-row rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300 sm:col-span-2 lg:col-span-2"
+                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
                 >
-                    <div class="relative h-48 sm:h-auto sm:w-1/2 overflow-hidden bg-slate-100">
+                    <div class="relative h-48 overflow-hidden bg-slate-100">
                         <img
-                            src="{{ asset('images/mep_hvac_maintenance.jpg') }}"
-                            alt="MEP & HVAC Maintenance"
+                            src="{{ asset('images/estate_development.jpg') }}"
+                            alt="Landscaping, lawns and garden maintenance"
                             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
-                            Technical Care
+                            Landscaping
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-1 flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
+                                Landscaping &amp; Horticulture
+                            </h3>
+                            <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Lawn care, seasonal planting, irrigation management, tree pruning and waste-free
+                                upkeep of gardens, podiums and terraces.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-400">Daily &amp; Weekly Cycles</span>
+                            <a 
+                                href="{{ route('services.show', ['slug' => 'landscaping']) }}" 
+                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
+                            >
+                                <span>View Scope</span>
+                                <i class="ri-arrow-right-line text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6: Office Space & Floor Management -->
+                <div 
+                    x-data="scrollReveal(300)"
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
+                >
+                    <div class="relative h-48 overflow-hidden bg-slate-100">
+                        <img
+                            src="{{ asset('images/commercial_tower.jpg') }}"
+                            alt="Office space and floor management services"
+                            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
+                            Workplace
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-1 flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
+                                Office Space &amp; Floor Management
+                            </h3>
+                            <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Floor-wise rosters for cabins, workstations, conference rooms and pantries, with
+                                night operations and verified supervisor checks.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-400">Dedicated Floor Teams</span>
+                            <a 
+                                href="{{ route('services.show', ['slug' => 'office-space-management']) }}" 
+                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
+                            >
+                                <span>View Scope</span>
+                                <i class="ri-arrow-right-line text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Sector Focused Services --}}
+            <div class="mt-6 grid gap-6 lg:grid-cols-2">
+                <!-- Service 7: Residential Society -->
+                <div 
+                    x-data="scrollReveal(0)"
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                    class="group flex flex-col sm:flex-row rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
+                >
+                    <div class="relative h-48 sm:h-auto sm:w-1/2 overflow-hidden bg-slate-100">
+                        <img
+                            src="{{ asset('images/estate_development.jpg') }}"
+                            alt="Residential society facility management"
+                            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
+                            Residential
                         </span>
                     </div>
                     <div class="p-6 sm:p-8 flex flex-1 flex-col justify-between sm:w-1/2">
                         <div>
                             <h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-red-700 transition">
-                                MEP & HVAC Preventative Maintenance
+                                Residential Society Management
                             </h3>
                             <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                Certified engineers handling HVAC air filter cycles, electrical thermal scans, and 24/7 emergency line dispatch.
+                                Housekeeping staff, horticulture, security coordination, technical upkeep, amenity
+                                care and a monthly audit report for your committee.
                             </p>
                         </div>
                         <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-medium text-[#12233F]">&lt;15m Response</span>
+                            <span class="text-xs font-medium text-[#12233F]">3+ Years Of Experience</span>
                             <a 
-                                href="{{ route('services.show', ['slug' => 'mep-hvac-maintenance']) }}" 
+                                href="{{ route('services.show', ['slug' => 'residential-society-management']) }}" 
                                 class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-5 py-2 text-xs font-medium text-white transition-colors"
                             >
                                 <span>View Scope</span>
@@ -723,6 +822,90 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Service 8: Manufacturing Sector -->
+                <div 
+                    x-data="scrollReveal(60)"
+                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                    class="group flex flex-col sm:flex-row rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
+                >
+                    <div class="relative h-48 sm:h-auto sm:w-1/2 overflow-hidden bg-slate-100">
+                        <img
+                            src="{{ asset('images/mep_hvac_maintenance.jpg') }}"
+                            alt="Manufacturing plant facility services"
+                            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
+                            Industrial
+                        </span>
+                    </div>
+                    <div class="p-6 sm:p-8 flex flex-1 flex-col justify-between sm:w-1/2">
+                        <div>
+                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-red-700 transition">
+                                Manufacturing Sector Services
+                            </h3>
+                            <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Shop floor, machine bay, spill response, dust and waste control, canteen and change
+                                room hygiene on shift-aligned rosters.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-[#12233F]">15-Min Spill Response</span>
+                            <a 
+                                href="{{ route('services.show', ['slug' => 'manufacturing-sector-services']) }}" 
+                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-5 py-2 text-xs font-medium text-white transition-colors"
+                            >
+                                <span>View Scope</span>
+                                <i class="ri-arrow-right-line text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Included With Every RFS Agreement --}}
+            <div class="mt-6 overflow-hidden rounded-3xl border border-slate-200/80 bg-slate-50/60 p-6 sm:p-8">
+                <h3 class="text-center text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+                    Included with every RFS agreement
+                </h3>
+
+                <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+                    <div class="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white px-4 py-3.5">
+                        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-amber-50 text-amber-600">
+                            <i class="ri-clipboard-line"></i>
+                        </span>
+                        <span class="text-xs font-semibold leading-snug text-slate-800">Facility Auditing</span>
+                    </div>
+                    <div class="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white px-4 py-3.5">
+                        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-sky-50 text-sky-600">
+                            <i class="ri-scales-3-line"></i>
+                        </span>
+                        <span class="text-xs font-semibold leading-snug text-slate-800">Legal &amp; Compliance Support</span>
+                    </div>
+                    <div class="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white px-4 py-3.5">
+                        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
+                            <i class="ri-refresh-line"></i>
+                        </span>
+                        <span class="text-xs font-semibold leading-snug text-slate-800">Transition Consultancy</span>
+                    </div>
+                    <div class="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white px-4 py-3.5">
+                        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-700">
+                            <i class="ri-customer-service-2-line"></i>
+                        </span>
+                        <span class="text-xs font-semibold leading-snug text-slate-800">24x7 Support Desk</span>
+                    </div>
+                    <div class="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white px-4 py-3.5">
+                        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-600">
+                            <i class="ri-heart-pulse-line"></i>
+                        </span>
+                        <span class="text-xs font-semibold leading-snug text-slate-800">Free Health Check-Up Camps</span>
+                    </div>
+                </div>
+
+                <p class="mt-6 text-center text-xs leading-relaxed text-slate-500">
+                    Every scope is tailored to your site, documented before we start, and reviewed with you at the
+                    monthly audit.
+                </p>
             </div>
 
             <!-- View All Services Rounded Pill Button -->
@@ -734,6 +917,123 @@
                     <span>View All Services &amp; SLAs</span>
                     <i class="ri-arrow-right-line text-sm"></i>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    {{-- Health Check-Up Camps --}}
+    <section 
+        id="health-camps"
+        x-data="scrollReveal(0)"
+        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
+        class="scroll-mt-20 border-y border-slate-100 bg-slate-50/50 py-14 transition-all duration-700 ease-out sm:py-20 lg:py-24"
+    >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+
+                <!-- Left Content -->
+                <div>
+                    <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
+                        <i class="ri-heart-pulse-line text-xs"></i> Employee &amp; Client Health
+                    </span>
+
+                    <h2 class="mt-4 text-3xl font-extrabold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl">
+                        Our top priority is the health of our employees.
+                    </h2>
+
+                    <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
+                        A healthy body leads to a healthy mind. Our housekeeping, horticulture, security and
+                        technical teams work physically demanding shifts every day, so their wellbeing is the first
+                        thing we invest in — not the last.
+                    </p>
+
+                    <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
+                        We organise <strong class="font-semibold text-slate-800">free health check-up camps</strong>
+                        for our employees as well as for our clients, at our sites. A healthy, screened and
+                        well-supported team shows up at work with more energy, and our clients get the same care
+                        extended to their residents and staff.
+                    </p>
+
+                    <div class="mt-8 flex flex-wrap items-center gap-3">
+                        <a
+                            href="{{ route('contact') }}"
+                            class="inline-flex items-center gap-2 rounded-full bg-[#12233F] px-6 py-3 text-xs font-semibold text-white transition hover:bg-[#0B1A30] active:scale-[0.98] sm:text-sm"
+                        >
+                            <span>Register for a Health Camp</span>
+                            <i class="ri-arrow-right-line text-sm"></i>
+                        </a>
+                        <a
+                            href="{{ route('careers') }}"
+                            class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-xs font-medium text-slate-700 transition hover:border-[#12233F]/40 hover:text-slate-900 active:scale-[0.98] sm:text-sm"
+                        >
+                            <span>Join the Team</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: What The Camps Cover -->
+                <div class="grid gap-4 sm:grid-cols-2">
+                    <div 
+                        x-data="scrollReveal(0)"
+                        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                        class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition hover:border-[#12233F]/25 hover:shadow-lg"
+                    >
+                        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600/10 text-red-600">
+                            <i class="ri-heart-add-line text-lg"></i>
+                        </span>
+                        <h3 class="mt-4 text-sm font-bold text-slate-900">Free For Employees &amp; Clients</h3>
+                        <p class="mt-1.5 text-xs leading-relaxed text-slate-600">
+                            No cost, no waiting list. Camps are held at our sites so our teams and your residents
+                            can walk in during the day.
+                        </p>
+                    </div>
+
+                    <div 
+                        x-data="scrollReveal(60)"
+                        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                        class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition hover:border-[#12233F]/25 hover:shadow-lg"
+                    >
+                        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#12233F]/10 text-[#12233F]">
+                            <i class="ri-pulse-line text-lg"></i>
+                        </span>
+                        <h3 class="mt-4 text-sm font-bold text-slate-900">Basic Screening Included</h3>
+                        <p class="mt-1.5 text-xs leading-relaxed text-slate-600">
+                            Blood pressure, blood sugar, BMI, general physician consultation and eye and dental
+                            checks wherever the camp partner supports them.
+                        </p>
+                    </div>
+
+                    <div 
+                        x-data="scrollReveal(120)"
+                        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                        class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition hover:border-[#12233F]/25 hover:shadow-lg"
+                    >
+                        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600">
+                            <i class="ri-calendar-check-line text-lg"></i>
+                        </span>
+                        <h3 class="mt-4 text-sm font-bold text-slate-900">Held Through The Year</h3>
+                        <p class="mt-1.5 text-xs leading-relaxed text-slate-600">
+                            Regular camps are scheduled across our running sites, with follow-up health advisories
+                            shared with each team and client.
+                        </p>
+                    </div>
+
+                    <div 
+                        x-data="scrollReveal(180)"
+                        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
+                        class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition hover:border-[#12233F]/25 hover:shadow-lg"
+                    >
+                        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-50 text-amber-600">
+                            <i class="ri-run-line text-lg"></i>
+                        </span>
+                        <h3 class="mt-4 text-sm font-bold text-slate-900">Awareness Sessions</h3>
+                        <p class="mt-1.5 text-xs leading-relaxed text-slate-600">
+                            Alongside checks, we run short sessions on hygiene, nutrition, safety and stress
+                            management — healthy habits that last beyond camp day.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -751,11 +1051,11 @@
                     <i class="ri-building-line text-xs"></i> Our Clients
                 </span>
                 <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                    Trusted by 500+ commercial towers and enterprise headquarters
+                    Happy clients are the evidence of our achievement
                 </h2>
                 <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-                    Property managers and corporate enterprises trust FacilityPro for single-contract,
-                    SLA-guaranteed facility operations.
+                    Our growing list of satisfied residential societies and commercial clients is proof of what
+                    a well-run facility team can deliver.
                 </p>
             </div>
 
@@ -830,7 +1130,7 @@
                         <i class="ri-feedback-line text-xs"></i> Testimonials
                     </span>
                     <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                        Trusted by Facility Leaders
+                        Trusted by Residents &amp; Clients
                     </h2>
                 </div>
 
@@ -885,7 +1185,7 @@
                                 <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#12233F] text-white font-bold text-xs" x-text="item.name.charAt(0)"></div>
                                 <div>
                                     <h3 class="text-xs sm:text-sm font-bold text-slate-900" x-text="item.name"></h3>
-                                    <p class="text-[11px] text-slate-400" x-text="item.role + ' • ' + item.company"></p>
+                                    <p class="text-[11px] text-slate-400" x-text="item.role"></p>
                                 </div>
                             </div>
                         </div>
@@ -913,7 +1213,7 @@
                     Frequently Asked Questions
                 </h2>
                 <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-                    Clear answers regarding contracts, staff vetting, and emergency guarantees.
+                    Clear answers on scope, staffing, transition and our 24x7 support system.
                 </p>
             </div>
 
@@ -924,13 +1224,13 @@
                         @click="activeFaq = (activeFaq === 1 ? null : 1)"
                         class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
                     >
-                        <span>How do you guarantee single-point SLA accountability?</span>
+                        <span>Do you manage both residential societies and commercial properties?</span>
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
                             <i :class="activeFaq === 1 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
                         </span>
                     </button>
                     <div x-show="activeFaq === 1" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
-                        We assign a dedicated SLA Director to your account who conducts weekly audits, oversees shifts, and ensures invoice credits are automatically applied if metrics fall below 99%.
+                        Yes. Integrated facility management for residential societies and commercial facilities is at the core of our work, and we have more than three years of hands-on experience managing residential society operations.
                     </div>
                 </div>
 
@@ -940,13 +1240,13 @@
                         @click="activeFaq = (activeFaq === 2 ? null : 2)"
                         class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
                     >
-                        <span>Are all janitorial and steward staff direct W-2 employees?</span>
+                        <span>Are your housekeeping, security and technical staff in-house and trained?</span>
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
                             <i :class="activeFaq === 2 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
                         </span>
                     </button>
                     <div x-show="activeFaq === 2" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
-                        Yes. 100% of our on-site operators are direct W-2 employees with full criminal background checks, standardized uniforms, health coverage, and ongoing safety training.
+                        Yes. Our technical staff are hired for their expertise and our workers are trained on the job. You get a trained, uniformed team on your site every day — not a rotating pool of daily labour.
                     </div>
                 </div>
 
@@ -956,13 +1256,13 @@
                         @click="activeFaq = (activeFaq === 3 ? null : 3)"
                         class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
                     >
-                        <span>What is your emergency dispatch response time for MEP failures?</span>
+                        <span>What does the 24x7 support system cover?</span>
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
                             <i :class="activeFaq === 3 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
                         </span>
                     </button>
                     <div x-show="activeFaq === 3" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
-                        Our emergency dispatch team guarantees an on-site technician within under 15 minutes for critical plumbing leaks, electrical power trips, or HVAC disruptions.
+                        A dedicated support desk operates every hour of the day, with on-call technical staff for breakdowns, water, electrical and security emergencies — so residents and clients always have someone to call.
                     </div>
                 </div>
 
@@ -972,13 +1272,45 @@
                         @click="activeFaq = (activeFaq === 4 ? null : 4)"
                         class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
                     >
-                        <span>How does the IoT QR code digital cleaning log work?</span>
+                        <span>Can you help us transition from our current facility vendor?</span>
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
                             <i :class="activeFaq === 4 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
                         </span>
                     </button>
                     <div x-show="activeFaq === 4" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
-                        Discreet QR checkpoints are affixed in restrooms and high-traffic zones. Operators scan after every service cycle, uploading instant timestamped audit logs to your dashboard.
+                        Yes. Transition consultancy is part of our service. We audit the current setup, prepare rosters, documentation and compliance records, and phase the handover so there is no service gap.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="rounded-2xl border border-slate-200/80 bg-white shadow-xs overflow-hidden">
+                    <button 
+                        @click="activeFaq = (activeFaq === 5 ? null : 5)"
+                        class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
+                    >
+                        <span>Do you provide auditing and legal support?</span>
+                        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
+                            <i :class="activeFaq === 5 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
+                        </span>
+                    </button>
+                    <div x-show="activeFaq === 5" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
+                        Yes. We run scheduled facility audits with documented findings and provide legal support for contracts, compliance and vendor matters, giving your committee a clear record of service delivery.
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="rounded-2xl border border-slate-200/80 bg-white shadow-xs overflow-hidden">
+                    <button 
+                        @click="activeFaq = (activeFaq === 6 ? null : 6)"
+                        class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
+                    >
+                        <span>What do the free health check-up camps include?</span>
+                        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
+                            <i :class="activeFaq === 6 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
+                        </span>
+                    </button>
+                    <div x-show="activeFaq === 6" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
+                        Free camps are organised for our employees as well as for our clients, covering basic screening such as blood pressure, blood sugar, BMI and a general physician consultation, along with short awareness sessions on hygiene, nutrition and safety.
                     </div>
                 </div>
             </div>
@@ -996,13 +1328,14 @@
             <div class="relative overflow-hidden rounded-3xl bg-[#0B1A30] px-6 py-14 sm:px-12 lg:py-16 text-center text-white border border-slate-800">
                 <div class="relative max-w-2xl mx-auto space-y-4">
                     <span class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold text-red-400">
-                        <i class="ri-customer-service-2-line text-xs"></i> 24/7 Operations Desk
+                        <i class="ri-customer-service-2-line text-xs"></i> 24x7 Operations Desk
                     </span>
                     <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                        Ready to elevate your workplace?
+                        To serve the excellence.
                     </h2>
                     <p class="text-sm text-slate-400 leading-relaxed max-w-lg mx-auto">
-                        Speak directly with an operations director for a free spatial audit and customized SLA proposal within 48 hours.
+                        Speak directly with our management team for a free facility audit, a service scope and a
+                        tailored proposal for your society or building.
                     </p>
                     
                     <div class="pt-4 flex flex-wrap items-center justify-center gap-3">

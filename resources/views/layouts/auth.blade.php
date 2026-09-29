@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>{{ $title ?? 'Sign In - FacilityPro' }}</title>
+        <title>{{ $title ?? 'Sign In - Real Facility Services' }}</title>
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
         <!-- Top Navigation Strip -->
         <div class="p-6 sm:px-10 flex items-center justify-between">
             <a href="{{ route('home') }}" class="inline-flex items-center gap-2 group">
-                <img src="{{ asset('logo.png') }}" alt="FacilityPro Logo" class="h-9 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105" />
+                <img src="{{ asset('logo.png') }}" alt="Real Facility Services Logo" class="h-9 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105" />
             </a>
 
             <a
@@ -44,7 +44,7 @@
 
         <!-- Subtle Footer -->
         <footer class="p-6 text-center text-xs text-slate-400">
-            <p>&copy; {{ date('Y') }} FacilityPro Management Inc. Secure Operations Console.</p>
+            <p>&copy; {{ date('Y') }} {{ setting('company_name', 'Real Facility Services (RFS)') }}. Secure Operations Console.</p>
         </footer>
 
         @livewireScripts

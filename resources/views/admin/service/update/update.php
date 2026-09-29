@@ -12,7 +12,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-new #[Layout('layouts::admin')] #[Title('Edit Service - FacilityPro Admin')] class extends Component
+new #[Layout('layouts::admin')] #[Title('Edit Service - RFS Admin')] class extends Component
 {
     use WithFileUploads;
 

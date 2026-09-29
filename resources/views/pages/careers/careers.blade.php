@@ -554,7 +554,7 @@
         </div>
     </section>
 
-    {{-- Value Propositions (Why FacilityPro) --}}
+    {{-- Value Propositions (Why Real Facility Services) --}}
     <section class="py-14 sm:py-18 border-y border-slate-100 bg-white">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10">
             

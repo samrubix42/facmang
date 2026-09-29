@@ -68,7 +68,7 @@
             <div class="relative overflow-hidden rounded-3xl bg-[#0B1A30] px-6 py-14 sm:px-12 lg:py-16 text-center text-white border border-slate-800 shadow-xl">
                 <div class="relative max-w-2xl mx-auto space-y-4">
                     <span class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold text-red-400">
-                        <i class="ri-handshake-line text-xs"></i> Join Our Client Network
+                        <i class="ri-shake-hands-line text-xs"></i> Join Our Client Network
                     </span>
 
                     <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-white">

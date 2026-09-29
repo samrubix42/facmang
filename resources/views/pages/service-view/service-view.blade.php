@@ -185,7 +185,7 @@
                                     <i class="ri-scales-3-line text-xs"></i> Comparison
                                 </span>
                                 <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">
-                                    FacilityPro vs Traditional Vendors
+                                    Real Facility Services vs Traditional Vendors
                                 </h2>
                                 <p class="mt-1 text-xs sm:text-sm text-slate-500">
                                     Why enterprise property directors choose single-contract SLA governance.
@@ -200,7 +200,7 @@
                                             <th class="w-1/3 p-4 bg-[#12233F]/10 text-[#12233F] border-x border-[#12233F]/10">
                                                 <div class="flex items-center gap-1.5">
                                                     <i class="ri-checkbox-circle-fill text-[#12233F]"></i>
-                                                    <span>FacilityPro Standard</span>
+                                                    <span>RFS Standard</span>
                                                 </div>
                                             </th>
                                             <th class="w-1/3 p-4 text-slate-500">Typical Contractor</th>

@@ -111,7 +111,7 @@
                 <div class="order-1">
                     <img
                         src="{{ asset('images/hero_facility.jpg') }}"
-                        alt="FacilityPro housekeeping and technical team working inside an office building"
+                        alt="Real Facility Services housekeeping and technical team working inside a building"
                         loading="lazy"
                         decoding="async"
                         class="h-[280px] w-full rounded-2xl object-cover sm:h-[380px] lg:h-[520px]"
@@ -338,7 +338,7 @@
                 <li class="grid grid-cols-1 gap-3 sm:grid-cols-[120px_1fr] sm:gap-6">
                     <div class="flex items-center sm:justify-end sm:border-r sm:border-slate-200 sm:pr-6">
                         <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-2.5 py-1 text-[11px] font-extrabold tabular-nums text-red-600 sm:border-0 sm:bg-transparent sm:p-0">
-                            <i class="ri-sun-rise-line text-xs sm:hidden"></i> 6:00 AM
+                            <i class="ri-sun-line text-xs sm:hidden"></i> 6:00 AM
                         </span>
                     </div>
                     <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs sm:p-6">
@@ -354,7 +354,7 @@
                 <li class="grid grid-cols-1 gap-3 sm:grid-cols-[120px_1fr] sm:gap-6">
                     <div class="flex items-center sm:justify-end sm:border-r sm:border-slate-200 sm:pr-6">
                         <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-2.5 py-1 text-[11px] font-extrabold tabular-nums text-red-600 sm:border-0 sm:bg-transparent sm:p-0">
-                            <i class="ri-coffee-line text-xs sm:hidden"></i> 9:30 AM
+                            <i class="ri-cup-line text-xs sm:hidden"></i> 9:30 AM
                         </span>
                     </div>
                     <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs sm:p-6">
@@ -458,16 +458,16 @@
             <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
                 <a
-                    href="{{ route('services.show', ['slug' => 'office-sweeping-cleaning']) }}"
+                    href="{{ route('services.show', ['slug' => 'mechanized-operations']) }}"
                     class="group flex flex-col rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition duration-300 hover:-translate-y-1 hover:border-[#12233F]/25 hover:shadow-lg"
                 >
                     <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/10 text-[#12233F] transition-colors duration-300 group-hover:bg-[#12233F] group-hover:text-white">
-                        <i class="ri-broom-line text-lg"></i>
+                        <i class="ri-brush-line text-lg"></i>
                     </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">Housekeeping &amp; Floor Care</h3>
+                    <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">Mechanized Cleaning Operations</h3>
                     <p class="mt-2 flex-1 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Daily dust-mopping, cabin and workstation cleaning, carpet and hard-floor scrubbing,
-                        glass and high-rise facade care.
+                        Latest equipment, tie-ups with reputed machine manufacturers, and a smart cleaning process
+                        that is measured instead of guessed.
                     </p>
                     <span class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#12233F]">
                         See scope
@@ -476,16 +476,16 @@
                 </a>
 
                 <a
-                    href="{{ route('services.show', ['slug' => 'restroom-hygiene-sanitation']) }}"
+                    href="{{ route('services.show', ['slug' => 'washroom-services']) }}"
                     class="group flex flex-col rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition duration-300 hover:-translate-y-1 hover:border-[#12233F]/25 hover:shadow-lg"
                 >
                     <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/10 text-[#12233F] transition-colors duration-300 group-hover:bg-[#12233F] group-hover:text-white">
                         <i class="ri-drop-line text-lg"></i>
                     </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">Washroom Hygiene</h3>
+                    <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">Washroom Services</h3>
                     <p class="mt-2 flex-1 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Scheduled re-cleaning through the day, consumable refills, odour control, and a QR
-                        checkpoint at every door so the log is never guesswork.
+                        Scheduled re-cleaning through the day, consumable refills, odour control, and a signed
+                        hygiene checklist at every round so the log is never guesswork.
                     </p>
                     <span class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#12233F]">
                         See scope
@@ -494,16 +494,16 @@
                 </a>
 
                 <a
-                    href="{{ route('services.show', ['slug' => 'corporate-pantry-staffing']) }}"
+                    href="{{ route('services.show', ['slug' => 'office-space-management']) }}"
                     class="group flex flex-col rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition duration-300 hover:-translate-y-1 hover:border-[#12233F]/25 hover:shadow-lg"
                 >
                     <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/10 text-[#12233F] transition-colors duration-300 group-hover:bg-[#12233F] group-hover:text-white">
-                        <i class="ri-cup-line text-lg"></i>
+                        <i class="ri-building-line text-lg"></i>
                     </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">Pantry &amp; Front Office</h3>
+                    <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">Office Space &amp; Floor Management</h3>
                     <p class="mt-2 flex-1 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Trained pantry attendants for beverage service, meeting and boardroom support, and
-                        basic front-desk and visitor coordination.
+                        Floor-wise rosters for cabins, workstations, conference rooms and pantries, with night
+                        operations and verified supervisor checks.
                     </p>
                     <span class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#12233F]">
                         See scope
@@ -512,34 +512,34 @@
                 </a>
 
                 <a
-                    href="{{ route('services.show', ['slug' => 'mep-hvac-maintenance']) }}"
-                    class="group flex flex-col rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition duration-300 hover:-translate-y-1 hover:border-[#12233F]/25 hover:shadow-lg"
-                >
-                    <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-red-600/10 text-red-600 transition-colors duration-300 group-hover:bg-red-600 group-hover:text-white">
-                        <i class="ri-wrench-line text-lg"></i>
-                    </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">AC, Electrical &amp; Repairs</h3>
-                    <p class="mt-2 flex-1 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Air conditioning service and filter cycles, switchboards and earthing, plumbing and
-                        sanitiser servicing, plus 24/7 breakdown response.
-                    </p>
-                    <span class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#12233F]">
-                        See scope
-                        <i class="ri-arrow-right-line text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
-                    </span>
-                </a>
-
-                <a
-                    href="{{ route('services.show', ['slug' => 'deep-disinfection-sanitization']) }}"
+                    href="{{ route('services.show', ['slug' => 'deep-cleaning-services']) }}"
                     class="group flex flex-col rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition duration-300 hover:-translate-y-1 hover:border-[#12233F]/25 hover:shadow-lg"
                 >
                     <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/10 text-[#12233F] transition-colors duration-300 group-hover:bg-[#12233F] group-hover:text-white">
                         <i class="ri-shield-check-line text-lg"></i>
                     </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">Deep Sanitisation</h3>
+                    <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">Deep Cleaning Services</h3>
                     <p class="mt-2 flex-1 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Periodic electrostatic and chemical sanitisation of cabins, conference rooms and
-                        high-touch surfaces, scheduled around your working hours.
+                        High-reach, high-pressure, carpet extraction and kitchen exhaust work, run on a fixed cycle
+                        with before-and-after documentation.
+                    </p>
+                    <span class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#12233F]">
+                        See scope
+                        <i class="ri-arrow-right-line text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                    </span>
+                </a>
+
+                <a
+                    href="{{ route('services.show', ['slug' => 'pest-management']) }}"
+                    class="group flex flex-col rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition duration-300 hover:-translate-y-1 hover:border-[#12233F]/25 hover:shadow-lg"
+                >
+                    <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/10 text-[#12233F] transition-colors duration-300 group-hover:bg-[#12233F] group-hover:text-white">
+                        <i class="ri-bug-line text-lg"></i>
+                    </span>
+                    <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">Pest Management</h3>
+                    <p class="mt-2 flex-1 text-xs leading-relaxed text-slate-600 sm:text-sm">
+                        Mosquito, termite, cockroach and rodent control, starting with a proper site survey and a
+                        treatment register for every visit.
                     </p>
                     <span class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#12233F]">
                         See scope
@@ -746,7 +746,7 @@
 
                 <div class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md">
                     <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#12233F] text-white">
-                        <i class="ri-clipboard-check-line text-xl"></i>
+                        <i class="ri-clipboard-line text-xl"></i>
                     </span>
                     <h3 class="mt-5 text-base font-bold text-slate-900">Site Supervisor</h3>
                     <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-red-600">Your first point of call</p>
@@ -758,7 +758,7 @@
 
                 <div class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md">
                     <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
-                        <i class="ri-broom-line text-xl"></i>
+                        <i class="ri-brush-line text-xl"></i>
                     </span>
                     <h3 class="mt-5 text-base font-bold text-slate-900">Housekeeping Lead</h3>
                     <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Plans the shifts</p>

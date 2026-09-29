@@ -7,7 +7,7 @@ use Livewire\Attributes\Computed;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Title('FacilityPro - Architectural-Grade Facility Management & Operations')] class extends Component
+new #[Title('Real Facility Services (RFS) - Integrated Facility & Soft Services Since 2022')] class extends Component
 {
     /**
      * @return Collection<int, Client>
@@ -41,25 +41,25 @@ new #[Title('FacilityPro - Architectural-Grade Facility Management & Operations'
 
         return [
             [
-                'quote' => 'FacilityPro transformed our 400,000 sq. ft commercial tower. Restroom cleanliness ratings jumped 35% in month one, and their QR code inspection logs give our executives total visibility.',
-                'name' => 'Marcus Vance',
-                'role' => 'Senior VP of Operations, Harbor Executive Towers',
+                'quote' => 'Our society earlier ran on three different vendors and nobody answered after 8pm. Real Facility Services took over housekeeping, horticulture, technical and security on one contract, and the handover happened without a single service gap.',
+                'name' => 'Rajesh Menon',
+                'role' => 'President, Green Meadows RWA',
                 'rating' => 5,
-                'metric' => '+35% Cleanliness',
+                'metric' => '3+ Yrs Managed',
             ],
             [
-                'quote' => 'The level of professionalism in their office steward staff is unmatched. Uniformed, punctual, and highly proactive during executive boardroom prep and daily pantry management.',
-                'name' => 'Sarah Jenkins',
-                'role' => 'Head of Workplace Experience, Vertex Tech Labs HQ',
+                'quote' => 'RFS has run our commercial complex for over three years. Their trained in-house technicians and 24x7 desk mean an escalator fault at 11pm is closed before our staff even notice it.',
+                'name' => 'Anita Deshpande',
+                'role' => 'Facility Head, Sunridge Business Park',
                 'rating' => 5,
-                'metric' => '100% W-2 Staff',
+                'metric' => '24x7 Support',
             ],
             [
-                'quote' => 'Managing 250,000 sq. ft of high-traffic office space required single-point SLA accountability. FacilityPro delivered an 18.4% overhead reduction with zero service disruptions.',
-                'name' => 'David Thorne',
-                'role' => 'Regional Asset Director, Brookfield Properties',
+                'quote' => 'The transition consultancy was the most professional handover we have been through. Vendor selection, rosters, documentation and compliance were all ready before we signed.',
+                'name' => 'Sameer Kulkarni',
+                'role' => 'Managing Director, Kalpataru Group',
                 'rating' => 5,
-                'metric' => '18.4% Saved',
+                'metric' => 'Zero-Downtime Shift',
             ],
         ];
     }

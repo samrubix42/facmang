@@ -12,7 +12,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-new #[Layout('layouts::admin')] #[Title('Add New Service - FacilityPro Admin')] class extends Component
+new #[Layout('layouts::admin')] #[Title('Add New Service - RFS Admin')] class extends Component
 {
     use WithFileUploads;
 
@@ -70,7 +70,7 @@ new #[Layout('layouts::admin')] #[Title('Add New Service - FacilityPro Admin')] 
         }
 
         if (trim($this->meta_title) === '') {
-            $this->meta_title = $value.' | FacilityPro';
+            $this->meta_title = $value.' | Real Facility Services';
         }
     }
 

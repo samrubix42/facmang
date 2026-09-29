@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Service;
 use Livewire\Component;
 
 new class extends Component
@@ -9,7 +10,7 @@ new class extends Component
      */
     public function serviceLinks(): array
     {
-        $services = \App\Models\Service::where('is_active', true)->take(5)->get();
+        $services = Service::where('is_active', true)->take(5)->get();
 
         if ($services->isNotEmpty()) {
             return $services->map(fn ($s) => [
@@ -19,12 +20,11 @@ new class extends Component
         }
 
         return [
-            ['label' => 'Office Cleaning & Sweeping', 'href' => route('services.show', ['slug' => 'office-sweeping-cleaning'])],
-            ['label' => 'Restroom & Toilet Hygiene', 'href' => route('services.show', ['slug' => 'restroom-hygiene-sanitation'])],
-            ['label' => 'Office Boy & Pantry Support', 'href' => route('services.show', ['slug' => 'corporate-pantry-staffing'])],
-            ['label' => 'Deep Disinfection Blitz', 'href' => route('services.show', ['slug' => 'deep-disinfection-sanitization'])],
-            ['label' => 'MEP & HVAC Maintenance', 'href' => route('services.show', ['slug' => 'mep-hvac-maintenance'])],
-            ['label' => 'High-Rise Facade Care', 'href' => route('services.show', ['slug' => 'architectural-facade-cleaning'])],
+            ['label' => 'Mechanized Cleaning Operations', 'href' => route('services.show', ['slug' => 'mechanized-operations'])],
+            ['label' => 'Washroom Services', 'href' => route('services.show', ['slug' => 'washroom-services'])],
+            ['label' => 'Deep Cleaning Services', 'href' => route('services.show', ['slug' => 'deep-cleaning-services'])],
+            ['label' => 'Landscaping', 'href' => route('services.show', ['slug' => 'landscaping'])],
+            ['label' => 'Pest Management', 'href' => route('services.show', ['slug' => 'pest-management'])],
         ];
     }
 

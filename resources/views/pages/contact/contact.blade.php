@@ -315,7 +315,7 @@
                             <i class="ri-map-pin-2-fill text-base"></i>
                         </span>
                         <div>
-                            <h3 class="text-sm font-bold text-slate-900">{{ setting('company_name', 'FacilityPro Operations HQ') }}</h3>
+                            <h3 class="text-sm font-bold text-slate-900">{{ setting('company_name', 'Real Facility Services (RFS)') }}</h3>
                             <p class="text-xs text-slate-500">{{ setting('address', '100 Enterprise Plaza, Suite 400, Financial District') }}</p>
                         </div>
                     </div>
@@ -333,7 +333,7 @@
                 <!-- Google Map Iframe -->
                 <div class="relative h-[420px] sm:h-[480px] w-full">
                     <iframe 
-                        title="FacilityPro Headquarters Location Map"
+                        title="Real Facility Services (RFS) Office Location Map"
                         src="{{ setting('google_map_link', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.95373631531825!3d-37.81627977975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2s!4v1625000000000!5m2!1sen!2s') }}" 
                         class="h-full w-full border-0" 
                         allowfullscreen="" 

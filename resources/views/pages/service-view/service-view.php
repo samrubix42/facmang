@@ -104,7 +104,7 @@ new class extends Component
 
     public function render()
     {
-        $title = ($this->service->meta_title ?: $this->service->title) . ' - FacilityPro';
+        $title = ($this->service->meta_title ?: $this->service->title).' - Real Facility Services';
 
         return view('pages.service-view.service-view')
             ->title($title);

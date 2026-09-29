@@ -11,7 +11,7 @@
                 <a href="{{ route('home') }}" class="group flex shrink-0 items-center">
                     <img 
                         src="{{ asset('logo.png') }}" 
-                        alt="FacilityPro Management Logo" 
+                        alt="Real Facility Services (RFS) Logo" 
                         class="h-10 sm:h-12 lg:h-15 w-auto object-contain transition-transform group-hover:scale-105" 
                     />
                 </a>

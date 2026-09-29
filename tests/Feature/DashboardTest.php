@@ -164,7 +164,7 @@ test('inquiry export returns a csv attachment', function () {
     Livewire::actingAs($this->admin)
         ->test('pages::admin.dashboard')
         ->call('exportInquiries')
-        ->assertFileDownloaded('facilitypro-inquiries-'.now()->format('Y-m-d').'.csv');
+        ->assertFileDownloaded('rfs-inquiries-'.now()->format('Y-m-d').'.csv');
 });
 
 test('inquiry export neutralises spreadsheet formula injection', function () {

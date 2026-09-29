@@ -13,7 +13,7 @@ class SettingSeeder extends Seeder
     public function run(): void
     {
         $settings = [
-            'company_name' => 'FacilityPro Management Inc.',
+            'company_name' => 'Real Facility Services (RFS)',
             'email' => 'ops@facilitypro.com',
             'phone' => '+1 (800) 492-8820',
             'whatsapp' => '+1 (800) 492-8820',

@@ -3,7 +3,7 @@
     <!-- Sidebar Header / Brand -->
     <div class="flex items-center justify-between h-16 px-6 border-b border-slate-100">
         <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-2.5">
-            <img src="{{ asset('logo.png') }}" alt="FacilityPro Logo" class="h-8 w-auto object-contain" />
+            <img src="{{ asset('logo.png') }}" alt="Real Facility Services Logo" class="h-8 w-auto object-contain" />
         </a>
         <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600 border border-slate-200">
             Admin

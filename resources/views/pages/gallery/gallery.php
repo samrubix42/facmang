@@ -5,7 +5,7 @@ use App\Models\Gallerycategory;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Title('Project Gallery - Verified Facility Work - FacilityPro')] class extends Component
+new #[Title('Project Gallery - Verified Facility Work - Real Facility Services')] class extends Component
 {
     /**
      * @return array<int, array{id: int, image: string, title: string, category: string, category_name: string, icon: string}>

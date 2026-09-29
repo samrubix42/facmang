@@ -28,7 +28,7 @@ test('testimonial seeder correctly populates records', function () {
     $this->seed(TestimonialSeeder::class);
 
     expect(Testimonial::count())->toBeGreaterThanOrEqual(6);
-    expect(Testimonial::where('name', 'Elena Rostova')->exists())->toBeTrue();
+    expect(Testimonial::where('name', 'Rajesh Menon')->exists())->toBeTrue();
 });
 
 test('user can open create modal and save new testimonial', function () {
@@ -42,7 +42,7 @@ test('user can open create modal and save new testimonial', function () {
         ->assertSet('isEditing', false)
         ->set('name', 'Jonathan Reed')
         ->set('designation', 'Director of Engineering, Nexus Tower')
-        ->set('testimonial', 'FacilityPro elevated our facility standards with reliable preventive maintenance.')
+        ->set('testimonial', 'RFS elevated our facility standards with reliable preventive maintenance.')
         ->set('rating', 5)
         ->set('is_active', true)
         ->call('save')

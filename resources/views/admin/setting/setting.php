@@ -33,7 +33,7 @@ new #[Layout('layouts::admin')] #[Title('Site Settings - Admin Console')] class 
 
     public function mount(): void
     {
-        $this->company_name = (string) setting('company_name', 'FacilityPro Management Inc.');
+        $this->company_name = (string) setting('company_name', 'Real Facility Services (RFS)');
         $this->email = (string) setting('email', 'ops@facilitypro.com');
         $this->phone = (string) setting('phone', '+1 (800) 492-8820');
         $this->whatsapp = (string) setting('whatsapp', '+1 (800) 492-8820');

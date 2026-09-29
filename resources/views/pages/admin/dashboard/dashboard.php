@@ -14,7 +14,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Layout('layouts::admin')] #[Title('Command Center - FacilityPro Admin')] class extends Component
+new #[Layout('layouts::admin')] #[Title('Command Center - RFS Admin')] class extends Component
 {
     /**
      * Headline counters for the metric cards.
@@ -111,7 +111,7 @@ new #[Layout('layouts::admin')] #[Title('Command Center - FacilityPro Admin')] c
     {
         return response()->streamDownload(function (): void {
             echo $this->buildInquiryCsv();
-        }, 'facilitypro-inquiries-'.now()->format('Y-m-d').'.csv', [
+        }, 'rfs-inquiries-'.now()->format('Y-m-d').'.csv', [
             'Content-Type' => 'text/csv',
         ]);
     }

@@ -5,7 +5,7 @@ use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Title('Contact Us & Office Location - Facility Management')] class extends Component
+new #[Title('Contact Us & Office Location - Real Facility Services (RFS)')] class extends Component
 {
     #[Rule('required|min:3')]
     public string $name = '';

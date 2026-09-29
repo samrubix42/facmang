@@ -9,7 +9,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-new #[Layout('layouts::admin')] #[Title('Services - FacilityPro Admin')] class extends Component
+new #[Layout('layouts::admin')] #[Title('Services - RFS Admin')] class extends Component
 {
     use WithPagination;
 
