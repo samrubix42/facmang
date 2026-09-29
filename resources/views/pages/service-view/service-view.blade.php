@@ -55,21 +55,7 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0B1A30]/70 via-transparent to-transparent"></div>
 
                         <!-- Overlay Badge -->
-                        <div class="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/20 bg-white/95 p-3.5 shadow-lg backdrop-blur-md">
-                            <div class="flex items-center gap-3">
-                                <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-red-600 text-white">
-                                    <i class="ri-qr-code-line text-lg"></i>
-                                </div>
-                                <div class="min-w-0">
-                                    <p class="text-xs font-bold text-slate-900 truncate">IoT Checkpoint Verification</p>
-                                    <p class="text-[11px] text-slate-500 truncate">Logged per shift on client operations portal</p>
-                                </div>
-                            </div>
-                            <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-[#12233F] bg-[#12233F]/10 px-3 py-1 rounded-full">
-                                <span class="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
-                                Live Auditing
-                            </span>
-                        </div>
+                     
                     </div>
 
                     <!-- Dynamic Rich Content from Database (TinyMCE) -->
@@ -92,7 +78,7 @@
                         </div>
                     @endif
 
-                    @if (!empty($catalog['scope']['daily']) || !empty($catalog['scope']['periodic']))
+                    @if (empty($service->content) && (!empty($catalog['scope']['daily']) || !empty($catalog['scope']['periodic'])))
                         <!-- Operational Scope of Work -->
                         <div class="rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-9 shadow-xs space-y-7">
                             <div>
@@ -149,7 +135,7 @@
                         </div>
                     @endif
 
-                    @if (!empty($catalog['equipment']))
+                    @if (empty($service->content) && !empty($catalog['equipment']))
                         <!-- Equipment & Chemical Technology -->
                         <div class="rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-9 shadow-xs space-y-6">
                             <div>
@@ -230,40 +216,7 @@
                         </div>
                     @endif
 
-                    <!-- SOP Quality Assurance Steps -->
-                    <div class="rounded-3xl border border-slate-200/80 bg-white p-7 sm:p-9 shadow-xs space-y-6">
-                        <div>
-                            <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3 py-1 text-xs font-semibold text-[#12233F]">
-                                <i class="ri-flow-chart text-xs"></i> SOP
-                            </span>
-                            <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">
-                                Standard Operating Execution Flow
-                            </h2>
-                        </div>
-
-                        <div class="grid gap-4 sm:grid-cols-2">
-                            <div class="rounded-2xl border border-slate-100 bg-slate-50/60 p-5">
-                                <span class="rounded-full bg-[#12233F]/10 px-2.5 py-0.5 text-[10px] font-bold uppercase text-[#12233F]">Phase 01</span>
-                                <h3 class="mt-2 text-sm font-bold text-slate-900">Pre-Shift Briefing &amp; Readiness</h3>
-                                <p class="mt-1.5 text-xs text-slate-500 leading-relaxed">Supervisors verify uniforms, personal safety equipment, and machinery battery readiness.</p>
-                            </div>
-                            <div class="rounded-2xl border border-slate-100 bg-slate-50/60 p-5">
-                                <span class="rounded-full bg-[#12233F]/10 px-2.5 py-0.5 text-[10px] font-bold uppercase text-[#12233F]">Phase 02</span>
-                                <h3 class="mt-2 text-sm font-bold text-slate-900">Systematic Zonal Execution</h3>
-                                <p class="mt-1.5 text-xs text-slate-500 leading-relaxed">Color-coded microfiber mops and HEPA vacuums deployed floor-by-floor with zero cross-contamination.</p>
-                            </div>
-                            <div class="rounded-2xl border border-slate-100 bg-slate-50/60 p-5">
-                                <span class="rounded-full bg-[#12233F]/10 px-2.5 py-0.5 text-[10px] font-bold uppercase text-[#12233F]">Phase 03</span>
-                                <h3 class="mt-2 text-sm font-bold text-slate-900">IoT QR Code Checkpoint Scan</h3>
-                                <p class="mt-1.5 text-xs text-slate-500 leading-relaxed">Staff scan QR plaques upon entering and completing each zone, creating tamper-proof timestamps.</p>
-                            </div>
-                            <div class="rounded-2xl border border-slate-100 bg-slate-50/60 p-5">
-                                <span class="rounded-full bg-[#12233F]/10 px-2.5 py-0.5 text-[10px] font-bold uppercase text-[#12233F]">Phase 04</span>
-                                <h3 class="mt-2 text-sm font-bold text-slate-900">Supervisor Audit &amp; Sign-Off</h3>
-                                <p class="mt-1.5 text-xs text-slate-500 leading-relaxed">Area managers conduct randomized tests, verify scores, and upload shift logs to client portal.</p>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                     @if (!empty($catalog['faqs']))
                         <!-- Service FAQs -->

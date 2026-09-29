@@ -26,7 +26,7 @@ test('service detail page renders successfully for a given slug', function () {
     $response->assertSuccessful();
     $response->assertSee('Mechanized Cleaning Operations');
     $response->assertSee('Service Highlights');
-    $response->assertSee('Daily Operational Routine');
+    $response->assertSee('Smart Cleaning Process');
 });
 
 test('service listing can filter by search and category in livewire', function () {

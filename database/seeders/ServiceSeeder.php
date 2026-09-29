@@ -79,92 +79,36 @@ class ServiceSeeder extends Seeder
     }
 
     /**
-     * Build the TinyMCE-ready rich content stored on the service record.
+     * Build the TinyMCE-ready content stored on the service record.
      *
-     * Only elements already styled by the `.rich-content` layer are emitted
-     * (headings, paragraphs, lists, blockquote, table) so the seeded content
-     * renders identically to content authored in the admin editor.
+     * Deliberately lean: an opening paragraph plus the catalogue highlights.
+     * The scope of work, equipment, comparison, SOP and FAQ blocks are already
+     * rendered by the service template straight from the catalogue, so
+     * duplicating them here would only bloat the admin editor. Only elements
+     * covered by the `.rich-content` layer are emitted, so seeded content
+     * matches content authored in the editor.
      *
      * @param  array<string, mixed>  $item
      */
     protected function buildContent(array $item): string
     {
-        $html = [];
+        $blocks = [];
 
         if (! empty($item['full_description'])) {
-            $html[] = '<blockquote>'.$this->escape($item['full_description']).'</blockquote>';
+            $blocks[] = '<p>'.e($item['full_description']).'</p>';
         }
 
         if (! empty($item['features']) && is_array($item['features'])) {
-            $html[] = '<h2>Service Highlights</h2>';
-            $html[] = '<ul>';
+            $blocks[] = '<h2>Service Highlights</h2>';
+            $blocks[] = '<ul>';
 
             foreach ($item['features'] as $label => $description) {
-                $html[] = '<li><strong>'.$this->escape((string) $label).':</strong> '
-                    .$this->escape((string) $description).'</li>';
+                $blocks[] = '<li><strong>'.e((string) $label).':</strong> '.e((string) $description).'</li>';
             }
 
-            $html[] = '</ul>';
+            $blocks[] = '</ul>';
         }
 
-        if (! empty($item['scope']['daily'])) {
-            $html[] = '<h2>Scope of Work</h2>';
-            $html[] = '<h3>Daily Routine</h3>';
-            $html[] = '<ul>';
-
-            foreach ($item['scope']['daily'] as $task) {
-                $html[] = '<li>'.$this->escape((string) $task).'</li>';
-            }
-
-            $html[] = '</ul>';
-        }
-
-        if (! empty($item['scope']['periodic'])) {
-            $html[] = '<h3>Periodic &amp; Deep Maintenance</h3>';
-            $html[] = '<ul>';
-
-            foreach ($item['scope']['periodic'] as $task) {
-                $html[] = '<li>'.$this->escape((string) $task).'</li>';
-            }
-
-            $html[] = '</ul>';
-        }
-
-        if (! empty($item['equipment']) && is_array($item['equipment'])) {
-            $html[] = '<h2>Equipment &amp; Technology</h2>';
-            $html[] = '<ul>';
-
-            foreach ($item['equipment'] as $equipment) {
-                $html[] = '<li>'.$this->escape((string) $equipment).'</li>';
-            }
-
-            $html[] = '</ul>';
-        }
-
-        $commitments = array_filter([
-            ($item['sla_rating_label'] ?? 'Quality Compliance') => $item['sla_rating'] ?? null,
-            'Emergency Response Window' => $item['response_time'] ?? null,
-            'Personnel Standard' => $item['staff_standard'] ?? null,
-            'Service Frequency' => $item['frequency'] ?? null,
-        ]);
-
-        if ($commitments !== []) {
-            $html[] = '<h2>Service Level Commitments</h2>';
-            $html[] = '<table><thead><tr><th>Parameter</th><th>RFS Commitment</th></tr></thead><tbody>';
-
-            foreach ($commitments as $parameter => $commitment) {
-                $html[] = '<tr><td>'.$this->escape((string) $parameter).'</td><td><strong>'
-                    .$this->escape((string) $commitment).'</strong></td></tr>';
-            }
-
-            $html[] = '</tbody></table>';
-        }
-
-        return implode("\n", $html);
-    }
-
-    protected function escape(string $value): string
-    {
-        return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+        return implode("\n", $blocks);
     }
 }
