@@ -33,7 +33,7 @@
                 
                 <!-- Card 1: Phone -->
                 <a 
-                    href="tel:{{ setting('phone', '+1 (800) 492-8820') }}"
+                    href="tel:{{ setting('phone', '+91 88105-67716') }}"
                     class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md"
                 >
                     <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-red-600 text-white">
@@ -41,14 +41,14 @@
                     </span>
                     <div class="min-w-0">
                         <p class="text-[11px] font-medium text-slate-400">24/7 Hotline</p>
-                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">{{ setting('phone', '+1 (800) 492-8820') }}</p>
+                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">{{ setting('phone', '+91 88105-67716') }}</p>
                         <p class="text-[10px] text-[#12233F] font-medium mt-0.5">&lt;15m Response</p>
                     </div>
                 </a>
 
                 <!-- Card 2: Email -->
                 <a 
-                    href="mailto:{{ setting('email', 'ops@facilitypro.com') }}"
+                    href="mailto:{{ setting('email', 'info@ndssecurityservices.com') }}"
                     class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md"
                 >
                     <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
@@ -56,7 +56,7 @@
                     </span>
                     <div class="min-w-0">
                         <p class="text-[11px] font-medium text-slate-400">Operations Email</p>
-                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">{{ setting('email', 'ops@facilitypro.com') }}</p>
+                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">{{ setting('email', 'info@ndssecurityservices.com') }}</p>
                         <p class="text-[10px] text-slate-400 mt-0.5">Response &lt;2 hours</p>
                     </div>
                 </a>
@@ -320,7 +320,7 @@
                         </div>
                     </div>
                     <a 
-                        href="{{ setting('google_map_link', 'https://maps.google.com') }}" 
+                        href="{{ setting('google_map_link', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.655923218129!2d77.4276549!3d28.610097299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5900b942d4f%3A0xcb8eeabb60fb701f!2sNDS%20Security%20Services%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1790676970101!5m2!1sen!2sin') }}" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2 text-xs font-semibold text-slate-800 shadow-xs hover:border-[#12233F]/40 hover:text-[#12233F] transition"
@@ -334,7 +334,7 @@
                 <div class="relative h-[420px] sm:h-[480px] w-full">
                     <iframe 
                         title="Real Facility Services (RFS) Office Location Map"
-                        src="{{ setting('google_map_link', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.95373631531825!3d-37.81627977975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2s!4v1625000000000!5m2!1sen!2s') }}" 
+                        src="{{ setting('google_map_link', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.655923218129!2d77.4276549!3d28.610097299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5900b942d4f%3A0xcb8eeabb60fb701f!2sNDS%20Security%20Services%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1790676970101!5m2!1sen!2sin') }}" 
                         class="h-full w-full border-0" 
                         allowfullscreen="" 
                         loading="lazy"
