@@ -434,10 +434,11 @@
                     <i class="ri-briefcase-line text-xs"></i> What We Handle
                 </span>
                 <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                    Everything a working office needs, under one roof
+                    Integrated services for people, premises, and equipment
                 </h2>
                 <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
-                    Pick the services you need today. Add more later without changing vendors.
+                    Our expertise spans technical and soft services, tailored to the needs of residential,
+                    commercial, and other operating environments.
                 </p>
             </div>
 
@@ -452,8 +453,8 @@
                     </span>
                     <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">Mechanized Cleaning Operations</h3>
                     <p class="mt-2 flex-1 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Latest equipment, tie-ups with reputed machine manufacturers, and a smart cleaning process
-                        that is measured instead of guessed.
+                        Mechanized cleaning supported by specialist equipment, including auto scrubbers,
+                        burnishers, high-pressure jets, steam cleaners, and road sweepers.
                     </p>
                     <span class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#12233F]">
                         See scope
@@ -470,8 +471,8 @@
                     </span>
                     <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">Washroom Services</h3>
                     <p class="mt-2 flex-1 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Scheduled re-cleaning through the day, consumable refills, odour control, and a signed
-                        hygiene checklist at every round so the log is never guesswork.
+                        Housekeeping and washroom care delivered as part of our soft-services offering for
+                        offices, residential societies, and other facilities.
                     </p>
                     <span class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#12233F]">
                         See scope
@@ -486,10 +487,10 @@
                     <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/10 text-[#12233F] transition-colors duration-300 group-hover:bg-[#12233F] group-hover:text-white">
                         <i class="ri-building-line text-lg"></i>
                     </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">Office Space &amp; Floor Management</h3>
+                    <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">Integrated Facility Management</h3>
                     <p class="mt-2 flex-1 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Floor-wise rosters for cabins, workstations, conference rooms and pantries, with night
-                        operations and verified supervisor checks.
+                        Coordinated management and maintenance for residential and commercial facilities,
+                        supported by technical, housekeeping, horticulture, and security services.
                     </p>
                     <span class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#12233F]">
                         See scope
@@ -506,8 +507,8 @@
                     </span>
                     <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">Deep Cleaning Services</h3>
                     <p class="mt-2 flex-1 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        High-reach, high-pressure, carpet extraction and kitchen exhaust work, run on a fixed cycle
-                        with before-and-after documentation.
+                        Deep cleaning delivered with trained manpower, mechanized methods, and suitable
+                        equipment for the facility and its requirements.
                     </p>
                     <span class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#12233F]">
                         See scope
@@ -524,8 +525,8 @@
                     </span>
                     <h3 class="mt-5 text-base font-bold text-slate-900 group-hover:text-red-700 transition">Pest Management</h3>
                     <p class="mt-2 flex-1 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Mosquito, termite, cockroach and rodent control, starting with a proper site survey and a
-                        treatment register for every visit.
+                        Scheduled inspections, careful checks on chemicals, eco-friendly procedures, safety
+                        precautions, and service records with client feedback.
                     </p>
                     <span class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#12233F]">
                         See scope
@@ -542,8 +543,8 @@
                     </span>
                     <h3 class="mt-5 text-base font-bold text-slate-900">Not sure what you need?</h3>
                     <p class="mt-2 flex-1 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Walk the building with us. We will point out what is actually needed, what can wait,
-                        and give you a fixed monthly cost for it.
+                        Explore our wider range of technical, soft-services, audit, legal-support, and
+                        consultancy capabilities.
                     </p>
                     <span class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#12233F]">
                         Browse all services
@@ -555,7 +556,7 @@
         </div>
     </section>
 
-    {{-- How We Work (Operating Model) --}}
+    {{-- Our Expertise --}}
     <section
         x-data="scrollReveal(0)"
         :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
@@ -565,13 +566,14 @@
 
             <div class="max-w-2xl mx-auto text-center">
                 <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
-                    <i class="ri-loop-right-line text-xs"></i> How We Work
+                    <i class="ri-tools-line text-xs"></i> Our Expertise
                 </span>
                 <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                    Five steps, the same way, every time
+                    Technical capability, supported by trained teams
                 </h2>
                 <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
-                    Nothing clever. Just a process that does not change when the person on shift changes.
+                    Our teams combine on-ground experience, regular training, planned maintenance, and
+                    performance monitoring across facility operations.
                 </p>
             </div>
 
@@ -581,11 +583,11 @@
                     <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F] text-white">
                         <i class="ri-user-add-line text-sm"></i>
                     </span>
-                    <p class="mt-4 text-[11px] font-bold uppercase tracking-wider text-red-600">Step 01</p>
-                    <h3 class="mt-1.5 text-base font-bold text-slate-900">We hire, we do not sub-contract</h3>
+                    <p class="mt-4 text-[11px] font-bold uppercase tracking-wider text-red-600">Technical services</p>
+                    <h3 class="mt-1.5 text-base font-bold text-slate-900">Planned and responsive maintenance</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Our technicians are on our payroll with ESI, PF and insurance. If someone performs
-                        work in your building, they are our employee and our responsibility.
+                        Planned preventive and breakdown maintenance, asset checks, and daily, weekly, and
+                        monthly inspections help keep equipment in healthy condition.
                     </p>
                 </div>
 
@@ -593,11 +595,11 @@
                     <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F] text-white">
                         <i class="ri-book-open-line text-sm"></i>
                     </span>
-                    <p class="mt-4 text-[11px] font-bold uppercase tracking-wider text-red-600">Step 02</p>
-                    <h3 class="mt-1.5 text-base font-bold text-slate-900">Trained before they are deployed</h3>
+                    <p class="mt-4 text-[11px] font-bold uppercase tracking-wider text-red-600">Operations</p>
+                    <h3 class="mt-1.5 text-base font-bold text-slate-900">Structured facility operations</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Chemical handling, machine operation, electrical safety, first aid and soft skills are
-                        all covered in induction — and paid for by us.
+                        Complaint and AMC management, equipment and machinery SOPs, asset and inventory
+                        management, and equipment health reviews support daily operations.
                     </p>
                 </div>
 
@@ -605,11 +607,11 @@
                     <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#12233F] text-white">
                         <i class="ri-repeat-line text-sm"></i>
                     </span>
-                    <p class="mt-4 text-[11px] font-bold uppercase tracking-wider text-red-600">Step 03</p>
-                    <h3 class="mt-1.5 text-base font-bold text-slate-900">Same team stays on your site</h3>
+                    <p class="mt-4 text-[11px] font-bold uppercase tracking-wider text-red-600">Soft services</p>
+                    <h3 class="mt-1.5 text-base font-bold text-slate-900">Care for the everyday environment</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Your floors, washrooms and machines are assigned to named people. They learn your
-                        building, your timings and your expectations — and they keep turning up.
+                        Housekeeping, mechanized cleaning, washroom services, landscaping, and pest
+                        management support clean, safe, and welcoming facilities.
                     </p>
                 </div>
 
@@ -617,11 +619,11 @@
                     <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-red-600 text-white">
                         <i class="ri-qr-code-line text-sm"></i>
                     </span>
-                    <p class="mt-4 text-[11px] font-bold uppercase tracking-wider text-red-600">Step 04</p>
-                    <h3 class="mt-1.5 text-base font-bold text-slate-900">Every task is scanned and logged</h3>
+                    <p class="mt-4 text-[11px] font-bold uppercase tracking-wider text-red-600">Performance</p>
+                    <h3 class="mt-1.5 text-base font-bold text-slate-900">Monitoring, audits, and reporting</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Staff scan a code at each washroom, floor and machine. You get a dated report showing
-                        what was done, by whom, and at what time.
+                        Audits, performance indicators, trend analysis, and HSQE reporting help teams review
+                        findings and follow up on corrective and preventive actions.
                     </p>
                 </div>
 
@@ -629,25 +631,26 @@
                     <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-red-600 text-white">
                         <i class="ri-calendar-check-line text-sm"></i>
                     </span>
-                    <p class="mt-4 text-[11px] font-bold uppercase tracking-wider text-red-600">Step 05</p>
-                    <h3 class="mt-1.5 text-base font-bold text-slate-900">Monthly review, automatic credits</h3>
+                    <p class="mt-4 text-[11px] font-bold uppercase tracking-wider text-red-600">People</p>
+                    <h3 class="mt-1.5 text-base font-bold text-slate-900">Training and competency development</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        We sit down with your scorecard every month. Score below 99% and the credit is applied
-                        to your next invoice — you never have to ask for it.
+                        In-house professionals and industry leaders provide regular technical and soft-skills
+                        training to help employees stay current with methods and technology.
                     </p>
                 </div>
 
                 <div class="flex flex-col justify-center rounded-2xl border border-[#12233F]/15 bg-[#0B1A30] p-6 text-white">
                     <i class="ri-phone-line text-2xl text-red-400"></i>
-                    <h3 class="mt-4 text-base font-bold text-white">Something broke right now?</h3>
+                    <h3 class="mt-4 text-base font-bold text-white">Support across your facility</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-300">
-                        Skip the queue. Call the dispatch line and an engineer heads to your site, day or night.
+                        Our integrated approach brings together facility management, maintenance, and
+                        24 x 7 support for client operations.
                     </p>
                     <a
                         href="tel:{{ setting('phone', '+1 (800) 492-8820') }}"
                         class="mt-5 inline-flex items-center gap-2 self-start rounded-full bg-red-500 px-5 py-2.5 text-xs font-semibold text-slate-950 transition hover:bg-red-400"
                     >
-                        <span>{{ setting('phone', '+1 (800) 492-8820') }}</span>
+                        <span>Contact our team</span>
                     </a>
                 </div>
 
