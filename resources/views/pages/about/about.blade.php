@@ -88,9 +88,9 @@
                 </h1>
 
                 <p class="mt-5 max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base">
-                    We are a facility management company. Housekeeping, washrooms, pantry, air conditioning,
-                    electrical and repairs  handled by our own trained people, on one contract, with a report
-                    you can actually check.
+                    Since 2022, Real Facility Services has brought technical and soft services together for
+                    residential and commercial facilities, with trained teams, quality-focused delivery,
+                    and support available around the clock.
                 </p>
 
              
@@ -124,46 +124,46 @@
                     </span>
 
                     <h2 class="mt-4 text-3xl font-extrabold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl">
-                        We started with one building and one simple promise
+                        Integrated facility services, built around your needs
                     </h2>
 
                     <div class="mt-5 space-y-4 text-sm leading-relaxed text-slate-600 sm:text-base">
                         <p>
-                            We began by managing a single office tower. Not as a contractor, and not by
-                            finding whoever was free that week — we hired our own people, put them on our
-                            payroll, and trained them ourselves.
+                            Real Facility Services has provided facility and soft services since 2022. Our
+                            management team brings relevant technical and professional experience, supported
+                            by trained workers and technical staff.
                         </p>
                         <p>
-                            That sounds obvious now. Back then, most buildings ran housekeeping on a rotating
-                            pool of daily-wage helpers. People changed every month, nobody knew who cleaned
-                            which floor, and when something was missed there was no one to ask.
+                            We bring together housekeeping, horticulture, technical and security maintenance,
+                            and other facility services for residential societies and commercial properties.
+                            Our residential facility-management experience spans more than three years.
                         </p>
                         <p>
-                            Our idea was simple: keep the same trained team on your site, show up on time,
-                            log what they did, and let you check the log. When we fall short, you should not
-                            have to chase us for a correction — it should already be on your invoice.
+                            Our work is guided by customer requirements, health and safety practices, audits,
+                            and ongoing performance review. We also provide legal support and consultancy to
+                            help clients with smooth transitions and day-to-day operations.
                         </p>
                         <p class="font-semibold text-slate-800">
-                            That is still the whole business today. Same team. Same standard. Every day.
+                            Our motto is simple: serve with excellence.
                         </p>
                     </div>
 
                     <ul class="mt-7 grid gap-3 sm:grid-cols-2">
                         <li class="flex items-start gap-2.5 text-sm text-slate-700">
                             <i class="ri-checkbox-circle-fill mt-0.5 text-sm text-red-600"></i>
-                            <span>Our own employees, never sub-contracted</span>
+                            <span>Technical and soft-services expertise</span>
                         </li>
                         <li class="flex items-start gap-2.5 text-sm text-slate-700">
                             <i class="ri-checkbox-circle-fill mt-0.5 text-sm text-red-600"></i>
-                            <span>One contract and one point of contact</span>
+                            <span>Solutions shaped around client requirements</span>
                         </li>
                         <li class="flex items-start gap-2.5 text-sm text-slate-700">
                             <i class="ri-checkbox-circle-fill mt-0.5 text-sm text-red-600"></i>
-                            <span>Phone-scanned, time-stamped task reports</span>
+                            <span>Audits, reporting, and performance review</span>
                         </li>
                         <li class="flex items-start gap-2.5 text-sm text-slate-700">
                             <i class="ri-checkbox-circle-fill mt-0.5 text-sm text-red-600"></i>
-                            <span>Engineers on call around the clock</span>
+                            <span>24 x 7 support system</span>
                         </li>
                     </ul>
                 </div>
@@ -178,31 +178,23 @@
             <div class="overflow-hidden rounded-3xl bg-[#0B1A30] px-6 py-10 sm:px-10 sm:py-12">
                 <div class="grid grid-cols-2 gap-y-9 lg:grid-cols-4">
                     <div class="text-center lg:px-6">
-                        <p class="text-4xl font-extrabold tracking-tight text-white tabular-nums sm:text-5xl" x-data="countUp(4.8, 1)">
-                            <span x-text="display">0</span>M+
-                        </p>
-                        <p class="mt-2 text-[11px] font-medium text-slate-400">Sq. Ft. Under Management</p>
+                        <p class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">2022</p>
+                        <p class="mt-2 text-[11px] font-medium text-slate-400">Providing facility services since</p>
                     </div>
 
                     <div class="text-center lg:border-l lg:border-white/10 lg:px-6">
-                        <p class="text-4xl font-extrabold tracking-tight text-white tabular-nums sm:text-5xl" x-data="countUp(2400, 0)">
-                            <span x-text="display">0</span>+
-                        </p>
-                        <p class="mt-2 text-[11px] font-medium text-slate-400">Trained In-House Staff</p>
+                        <p class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">3+ years</p>
+                        <p class="mt-2 text-[11px] font-medium text-slate-400">Residential facility experience</p>
                     </div>
 
                     <div class="text-center lg:border-l lg:border-white/10 lg:px-6">
-                        <p class="text-4xl font-extrabold tracking-tight text-white tabular-nums sm:text-5xl" x-data="countUp(99.85, 2)">
-                            <span x-text="display">0</span>%
-                        </p>
-                        <p class="mt-2 text-[11px] font-medium text-slate-400">Monthly Quality Score</p>
+                        <p class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">24 x 7</p>
+                        <p class="mt-2 text-[11px] font-medium text-slate-400">Support system</p>
                     </div>
 
                     <div class="text-center lg:border-l lg:border-white/10 lg:px-6">
-                        <p class="text-4xl font-extrabold tracking-tight text-red-400 tabular-nums sm:text-5xl" x-data="countUp(15, 0)">
-                            &lt;<span x-text="display">0</span>
-                        </p>
-                        <p class="mt-2 text-[11px] font-medium text-slate-400">Minute Emergency Response</p>
+                        <p class="text-3xl font-extrabold tracking-tight text-red-400 sm:text-4xl">ISO 9001:2015</p>
+                        <p class="mt-2 text-[11px] font-medium text-slate-400">Quality management</p>
                     </div>
                 </div>
             </div>
@@ -219,13 +211,13 @@
 
             <div class="max-w-2xl mx-auto text-center">
                 <span class="inline-flex items-center gap-1.5 rounded-full bg-red-50 px-3.5 py-1 text-xs font-semibold text-red-600">
-                    <i class="ri-emotion-sad-line text-xs"></i> Sound Familiar?
+                    <i class="ri-shield-star-line text-xs"></i> Our Core Values
                 </span>
                 <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                    The problems every building ends up with
+                    The principles behind our service
                 </h2>
                 <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
-                    If any of these feel like your building, this is exactly the work we take off your plate.
+                    Safety, excellence, customer focus, and reliability guide how we serve our clients.
                 </p>
             </div>
 
@@ -236,10 +228,10 @@
                         <i class="ri-close-circle-line text-sm"></i>
                     </span>
                     <div>
-                        <h3 class="text-sm font-bold text-slate-900">The washroom is spotless at 9 AM and unusable by lunch</h3>
+                        <h3 class="text-sm font-bold text-slate-900">Safety</h3>
                         <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            Soap, paper and cleaning are consumed all day. Refills and re-cleaning have to be
-                            scheduled through the day, not just once in the morning.
+                            We put employee and workplace health and safety first through inductions, risk
+                            assessments, training, audits, and emergency planning.
                         </p>
                     </div>
                 </div>
@@ -249,10 +241,10 @@
                         <i class="ri-close-circle-line text-sm"></i>
                     </span>
                     <div>
-                        <h3 class="text-sm font-bold text-slate-900">Nobody can say who cleaned the 12th floor last night</h3>
+                        <h3 class="text-sm font-bold text-slate-900">Excellence</h3>
                         <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            Without a record, every complaint turns into an argument. With scan-based logs you
-                            know the floor, the person and the exact time.
+                            We aim to provide quality services and practical technical solutions that meet the
+                            requirements of each client.
                         </p>
                     </div>
                 </div>
@@ -262,10 +254,10 @@
                         <i class="ri-close-circle-line text-sm"></i>
                     </span>
                     <div>
-                        <h3 class="text-sm font-bold text-slate-900">Four vendors, four invoices, and everyone blames someone else</h3>
+                        <h3 class="text-sm font-bold text-slate-900">Customer centric</h3>
                         <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            Housekeeping says it is the plumber. The plumber says it is the electrician. You
-                            just need to run the building.
+                            We work to understand our clients’ needs and shape facility services around their
+                            requirements.
                         </p>
                     </div>
                 </div>
@@ -275,10 +267,9 @@
                         <i class="ri-close-circle-line text-sm"></i>
                     </span>
                     <div>
-                        <h3 class="text-sm font-bold text-slate-900">The AC stops at 2 PM and you hear about it tomorrow</h3>
+                        <h3 class="text-sm font-bold text-slate-900">Reliable</h3>
                         <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            A hot floor and unhappy people cost more than the repair. Our engineers answer
-                            24/7 and reach site in under 15 minutes.
+                            Our teams and 24 x 7 support system are focused on dependable facility operations.
                         </p>
                     </div>
                 </div>
@@ -288,10 +279,10 @@
                         <i class="ri-close-circle-line text-sm"></i>
                     </span>
                     <div>
-                        <h3 class="text-sm font-bold text-slate-900">A new face on your floor every single week</h3>
+                        <h3 class="text-sm font-bold text-slate-900">Accountability</h3>
                         <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            Constant turnover means constant retraining, and your team keeps explaining the
-                            same things. Our people stay assigned to your site.
+                            Internal and external audits, incident reporting, and closure of findings help us
+                            review work and take corrective action.
                         </p>
                     </div>
                 </div>
@@ -301,10 +292,10 @@
                         <i class="ri-close-circle-line text-sm"></i>
                     </span>
                     <div>
-                        <h3 class="text-sm font-bold text-slate-900">Your compliance audit is a stack of papers nobody trusts</h3>
+                        <h3 class="text-sm font-bold text-slate-900">Continuous improvement</h3>
                         <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            If the proof is scattered across WhatsApp and registers, an inspection turns into a
-                            panic. We keep one clean digital record.
+                            KPI and trend analysis, performance monitoring, lessons learned, and management
+                            review help strengthen our service framework.
                         </p>
                     </div>
                 </div>
@@ -323,13 +314,14 @@
 
             <div class="max-w-2xl mx-auto text-center">
                 <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
-                    <i class="ri-time-line text-xs"></i> A Day With Us
+                    <i class="ri-shield-check-line text-xs"></i> Our HSE Framework
                 </span>
                 <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                    What actually happens in your building
+                    Health and safety built into our operations
                 </h2>
                 <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
-                    A typical shift, from the first cleaning round to the last engineer signing off.
+                    Our framework combines policies, risk management, staff competency, active monitoring,
+                    audits, incident learning, and management review.
                 </p>
             </div>
 
@@ -338,15 +330,14 @@
                 <li class="grid grid-cols-1 gap-3 sm:grid-cols-[120px_1fr] sm:gap-6">
                     <div class="flex items-center sm:justify-end sm:border-r sm:border-slate-200 sm:pr-6">
                         <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-2.5 py-1 text-[11px] font-extrabold tabular-nums text-red-600 sm:border-0 sm:bg-transparent sm:p-0">
-                            <i class="ri-sun-line text-xs sm:hidden"></i> 6:00 AM
+                            <i class="ri-shield-line text-xs sm:hidden"></i> Framework
                         </span>
                     </div>
                     <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs sm:p-6">
-                        <h3 class="text-sm font-bold text-slate-900">Washrooms and floors first, before anyone walks in</h3>
+                        <h3 class="text-sm font-bold text-slate-900">Policies, roles, and emergency planning</h3>
                         <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            Every washroom is cleaned, sanitised and restocked. Floors are dust-mopped across
-                            all occupied cabins. Waste is pulled out. The building is ready before the first
-                            employee walks in — not while people are working.
+                            Policies, objectives, an organogram, safety charter, governance, a safety committee,
+                            and emergency planning establish responsibilities across the operation.
                         </p>
                     </div>
                 </li>
@@ -354,15 +345,14 @@
                 <li class="grid grid-cols-1 gap-3 sm:grid-cols-[120px_1fr] sm:gap-6">
                     <div class="flex items-center sm:justify-end sm:border-r sm:border-slate-200 sm:pr-6">
                         <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-2.5 py-1 text-[11px] font-extrabold tabular-nums text-red-600 sm:border-0 sm:bg-transparent sm:p-0">
-                            <i class="ri-cup-line text-xs sm:hidden"></i> 9:30 AM
+                            <i class="ri-file-list-3-line text-xs sm:hidden"></i> Assess
                         </span>
                     </div>
                     <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs sm:p-6">
-                        <h3 class="text-sm font-bold text-slate-900">Pantry opens, and housekeeping catches up</h3>
+                        <h3 class="text-sm font-bold text-slate-900">Risk assessments and safe systems of work</h3>
                         <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            Pantry attendants are ready with hot beverage service. Meanwhile the morning crew
-                            finishes pending tasks, clears conference rooms after meetings, and tops up
-                            washroom consumables before the 11 AM rush.
+                            Risk assessments and safe systems of work (SSOWs) help identify hazards and guide
+                            safe task delivery at client sites.
                         </p>
                     </div>
                 </li>
@@ -370,15 +360,14 @@
                 <li class="grid grid-cols-1 gap-3 sm:grid-cols-[120px_1fr] sm:gap-6">
                     <div class="flex items-center sm:justify-end sm:border-r sm:border-slate-200 sm:pr-6">
                         <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-2.5 py-1 text-[11px] font-extrabold tabular-nums text-red-600 sm:border-0 sm:bg-transparent sm:p-0">
-                            <i class="ri-search-eye-line text-xs sm:hidden"></i> 1:00 PM
+                            <i class="ri-graduation-cap-line text-xs sm:hidden"></i> Develop
                         </span>
                     </div>
                     <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs sm:p-6">
-                        <h3 class="text-sm font-bold text-slate-900">Scheduled checks: air, water, power, panels</h3>
+                        <h3 class="text-sm font-bold text-slate-900">Competency development</h3>
                         <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            The engineer runs a fixed checklist — AC filters and cooling output, drinking water
-                            quality, electrical panels and earthing, lift lobby and escalator area. Anything
-                            unusual gets logged the same day, not discovered next month.
+                            Safety induction, health and safety training, team engagement, and toolbox talks
+                            help develop the knowledge and skills required for each role.
                         </p>
                     </div>
                 </li>
@@ -386,15 +375,14 @@
                 <li class="grid grid-cols-1 gap-3 sm:grid-cols-[120px_1fr] sm:gap-6">
                     <div class="flex items-center sm:justify-end sm:border-r sm:border-slate-200 sm:pr-6">
                         <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-2.5 py-1 text-[11px] font-extrabold tabular-nums text-red-600 sm:border-0 sm:bg-transparent sm:p-0">
-                            <i class="ri-login-circle-line text-xs sm:hidden"></i> 4:00 PM
+                            <i class="ri-eye-line text-xs sm:hidden"></i> Monitor
                         </span>
                     </div>
                     <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs sm:p-6">
-                        <h3 class="text-sm font-bold text-slate-900">Evening shift takes over — same faces, same standard</h3>
+                        <h3 class="text-sm font-bold text-slate-900">Active monitoring and site management</h3>
                         <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            No new unknowns. The evening lead is someone your team already knows, briefed on
-                            the day's open items, and the supervisor does a walk-through with them before the
-                            shift starts.
+                            Site management, communication, and performance monitoring support consistent
+                            oversight of health, safety, and service activities.
                         </p>
                     </div>
                 </li>
@@ -402,15 +390,14 @@
                 <li class="grid grid-cols-1 gap-3 sm:grid-cols-[120px_1fr] sm:gap-6">
                     <div class="flex items-center sm:justify-end sm:border-r sm:border-slate-200 sm:pr-6">
                         <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-2.5 py-1 text-[11px] font-extrabold tabular-nums text-red-600 sm:border-0 sm:bg-transparent sm:p-0">
-                            <i class="ri-moon-line text-xs sm:hidden"></i> 8:00 PM
+                            <i class="ri-alarm-warning-line text-xs sm:hidden"></i> Learn
                         </span>
                     </div>
                     <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs sm:p-6">
-                        <h3 class="text-sm font-bold text-slate-900">Office floors are cleaned while the desks are empty</h3>
+                        <h3 class="text-sm font-bold text-slate-900">Incident reporting and lessons learned</h3>
                         <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            Machines scrubbers run on the open floors, dust is wiped from workstations and
-                            partitions, glass and high-touch surfaces are sanitised. Nobody works around
-                            wet floors or noise.
+                            Incident and accident investigation, reporting, and lessons learned help identify
+                            actions that can prevent recurrence.
                         </p>
                     </div>
                 </li>
@@ -418,15 +405,14 @@
                 <li class="grid grid-cols-1 gap-3 sm:grid-cols-[120px_1fr] sm:gap-6">
                     <div class="flex items-center sm:justify-end sm:border-r sm:border-slate-200 sm:pr-6">
                         <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-2.5 py-1 text-[11px] font-extrabold tabular-nums text-red-600 sm:border-0 sm:bg-transparent sm:p-0">
-                            <i class="ri-alarm-warning-line text-xs sm:hidden"></i> Any Time
+                            <i class="ri-bar-chart-line text-xs sm:hidden"></i> Review
                         </span>
                     </div>
                     <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs sm:p-6">
-                        <h3 class="text-sm font-bold text-slate-900">Leak, trip or breakdown? One number, under 15 minutes</h3>
+                        <h3 class="text-sm font-bold text-slate-900">Audits, indicators, and management review</h3>
                         <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            You call a single number and describe the problem. The on-call engineer is
-                            dispatched, the work gets logged, and you get a completion update. No ticket
-                            chasing, no four vendors pointing at each other.
+                            Audit findings, KPIs, trends, corrective and preventive actions, and management
+                            review support ongoing performance improvement.
                         </p>
                     </div>
                 </li>
@@ -722,79 +708,6 @@
 
    
 
-    {{-- The People On Your Site --}}
-    <section
-        x-data="scrollReveal(0)"
-        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
-        class="border-b border-slate-100 bg-white py-14 transition-all duration-700 ease-out sm:py-20 lg:py-24"
-    >
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-            <div class="max-w-2xl mx-auto text-center">
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
-                    <i class="ri-user-star-line text-xs"></i> Your Team
-                </span>
-                <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                    Who you will actually meet
-                </h2>
-                <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
-                    No call centres and no rotating unknowns. These four roles cover everything on your site.
-                </p>
-            </div>
-
-            <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-
-                <div class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md">
-                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#12233F] text-white">
-                        <i class="ri-clipboard-line text-xl"></i>
-                    </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900">Site Supervisor</h3>
-                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-red-600">Your first point of call</p>
-                    <p class="mt-3 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        On site every day. Runs the morning checklist, spot-checks floors and washrooms,
-                        records complaints, and is the person who answers when you call.
-                    </p>
-                </div>
-
-                <div class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md">
-                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
-                        <i class="ri-brush-line text-xl"></i>
-                    </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900">Housekeeping Lead</h3>
-                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Plans the shifts</p>
-                    <p class="mt-3 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Assigns people to floors and washrooms, keeps the same faces on your site, and makes
-                        sure night shift finishes what the day shift could not.
-                    </p>
-                </div>
-
-                <div class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md">
-                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-red-600 text-white">
-                        <i class="ri-tools-line text-xl"></i>
-                    </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900">MEP Technician</h3>
-                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-red-600">24/7 breakdown response</p>
-                    <p class="mt-3 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Air conditioning, electrical, plumbing and machines. On call through the night, on
-                        site in under 15 minutes when something fails.
-                    </p>
-                </div>
-
-                <div class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md">
-                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
-                        <i class="ri-bar-chart-box-line text-xl"></i>
-                    </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900">Account Manager</h3>
-                    <p class="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Your monthly review</p>
-                    <p class="mt-3 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Owns the contract, brings the monthly scorecard, handles escalations, and applies SLA
-                        credits automatically if we fall short.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     {{-- Final CTA --}}
     <section
