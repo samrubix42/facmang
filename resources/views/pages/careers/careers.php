@@ -92,8 +92,8 @@ new #[Title('Careers - Join Our Operations Team - Real Facility Services')] clas
             'applicantName' => ['required', 'string', 'min:2', 'max:100'],
             'applicantEmail' => ['required', 'email', 'max:150'],
             'applicantPhone' => ['required', 'string', 'min:7', 'max:30'],
-            'selectedJobId' => ['required', 'exists:job_applications,id'],
-            'experience' => ['required', 'string'],
+            'selectedJobId' => ['nullable', 'exists:job_applications,id'],
+            'experience' => ['nullable', 'string'],
             'shift' => ['required', 'string'],
             'address' => ['nullable', 'string', 'max:255'],
             'message' => ['nullable', 'string', 'max:1000'],
@@ -125,7 +125,7 @@ new #[Title('Careers - Join Our Operations Team - Real Facility Services')] clas
         $this->submitted = true;
 
         $this->dispatch('toast-show', [
-            'message' => 'Thank you, '.$this->applicantName.'! Your application for '.$this->selectedJob.' has been received.',
+            'message' => 'Thank you, '.$this->applicantName.'! Your application'.($this->selectedJob ? ' for '.$this->selectedJob : '').' has been received.',
             'type' => 'success',
             'position' => 'top-right',
         ]);

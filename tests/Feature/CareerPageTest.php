@@ -34,7 +34,6 @@ test('user can submit application with resume on career page', function () {
         ->set('applicantName', 'Jane Doe')
         ->set('applicantEmail', 'jane.doe@example.com')
         ->set('applicantPhone', '9876543210')
-        ->set('experience', '1-3 years')
         ->set('shift', 'Day Shift')
         ->set('message', 'Certified ISSA floor care technician.')
         ->set('resume', $fakeResume)
@@ -46,6 +45,7 @@ test('user can submit application with resume on career page', function () {
     $applied = JobApplied::first();
     expect($applied->name)->toBe('Jane Doe')
         ->and($applied->job_id)->toBe($job->id)
+        ->and($applied->experince)->toBe('')
         ->and($applied->resume)->not->toBeNull();
 });
 
@@ -53,7 +53,21 @@ test('application requires mandatory fields', function () {
     Livewire::test('pages::careers')
         ->set('selectedJobId', null)
         ->call('apply')
-        ->assertHasErrors(['applicantName', 'applicantEmail', 'applicantPhone', 'selectedJobId', 'experience']);
+        ->assertHasErrors(['applicantName', 'applicantEmail', 'applicantPhone']);
+});
+
+test('user can submit application without a selected job', function () {
+    Livewire::test('pages::careers')
+        ->set('selectedJobId', null)
+        ->set('applicantName', 'Jane Doe')
+        ->set('applicantEmail', 'jane.doe@example.com')
+        ->set('applicantPhone', '9876543210')
+        ->set('shift', 'Day Shift')
+        ->call('apply')
+        ->assertHasNoErrors()
+        ->assertDispatched('toast-show');
+
+    expect(JobApplied::first()->job_id)->toBeNull();
 });
 
 test('after applying user sees only we will get back to you message', function () {
@@ -70,4 +84,3 @@ test('after applying user sees only we will get back to you message', function (
         ->assertSee('We will get back to you shortly.')
         ->assertDontSee('Submit Another Application');
 });
-

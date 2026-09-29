@@ -311,12 +311,6 @@
                         consultancy for smooth transition and operation, on a 24x7 support system.
                     </p>
 
-                    <div class="mt-7 rounded-2xl border-l-4 border-red-600 bg-slate-50 px-5 py-4">
-                        <p class="text-sm font-semibold italic text-slate-800 sm:text-base">
-                            “Our motto is simple: to serve the excellence.”
-                        </p>
-                        <p class="mt-1 text-xs text-slate-500">Real Facility Services (RFS)</p>
-                    </div>
 
                     <ul class="mt-7 grid gap-3 sm:grid-cols-2">
                         <li class="flex items-start gap-2.5 text-sm text-slate-700">

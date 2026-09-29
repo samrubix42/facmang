@@ -362,7 +362,7 @@
                                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                                             <div class="space-y-1">
                                                 <label for="experience" class="text-xs font-bold text-slate-800">
-                                                    Years of Experience <span class="text-red-500">*</span>
+                                                    Years of Experience
                                                 </label>
                                                 <select
                                                     id="experience"
