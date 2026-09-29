@@ -68,7 +68,7 @@
                     </span>
                     <div class="min-w-0">
                         <p class="text-[11px] font-medium text-slate-400">Corporate HQ</p>
-                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">{{ setting('address', '100 Enterprise Plaza, Suite 400') }}</p>
+                        <p class="text-xs sm:text-sm font-bold text-slate-900 line-clamp-2" title="{{ setting('address', 'Plot No. 128, Haibatpur, Near Gaur City Mall, Greater Noida - 201318 (U.P.)') }}">{{ setting('address', 'Plot No. 128, Haibatpur, Near Gaur City Mall, Greater Noida - 201318 (U.P.)') }}</p>
                     </div>
                 </div>
 
@@ -316,7 +316,7 @@
                         </span>
                         <div>
                             <h3 class="text-sm font-bold text-slate-900">{{ setting('company_name', 'Real Facility Services (RFS)') }}</h3>
-                            <p class="text-xs text-slate-500">{{ setting('address', '100 Enterprise Plaza, Suite 400, Financial District') }}</p>
+                            <p class="text-xs text-slate-500">{{ setting('address', 'Plot No. 128, Haibatpur, Near Gaur City Mall, Greater Noida - 201318 (U.P.)') }}</p>
                         </div>
                     </div>
                     <a 

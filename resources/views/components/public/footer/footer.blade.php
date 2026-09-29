@@ -112,7 +112,7 @@
                     </li>
                     <li class="flex items-start gap-2.5">
                         <i class="ri-map-pin-line mt-px shrink-0 text-sm text-red-500"></i>
-                        <span class="min-w-0 font-medium">{{ setting('address', '100 Enterprise Plaza, Suite 400') }}</span>
+                        <span class="min-w-0 font-medium">{{ setting('address', 'Plot No. 128, Haibatpur, Near Gaur City Mall, Greater Noida - 201318 (U.P.)') }}</span>
                     </li>
                 </ul>
 
