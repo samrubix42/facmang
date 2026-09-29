@@ -541,320 +541,49 @@
 
             <!-- Service Cards Grid -->
             <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                <!-- Service 1 -->
-                <div 
-                    x-data="scrollReveal(50)"
-                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
-                >
-                    <div class="relative h-48 overflow-hidden bg-slate-100">
-                        <img
-                            src="{{ asset('images/office_sweeping_cleaning.jpg') }}"
-                            alt="Mechanized cleaning operations with auto scrubbers"
-                            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
-                            Mechanized
-                        </span>
-                    </div>
-                    <div class="p-6 flex flex-1 flex-col justify-between">
-                        <div>
-                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
-                                Mechanized Cleaning Operations
-                            </h3>
-                            <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                Latest scrubbers, jet washers and pressure systems tied up with reputed equipment
-                                companies, run through a smart, checklist-driven cleaning process.
-                            </p>
+                @forelse ($this->services as $service)
+                    <article
+                        wire:key="home-service-{{ $service->id }}"
+                        class="group flex flex-col overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-xs transition-all duration-300 hover:border-[#12233F]/30 hover:shadow-xl"
+                    >
+                        <a href="{{ route('services.show', ['slug' => $service->slug]) }}" class="relative block h-48 overflow-hidden bg-slate-100">
+                            <img
+                                src="{{ asset($service->image ?: 'images/hero_facility.jpg') }}"
+                                alt="{{ $service->title }}"
+                                loading="lazy"
+                                decoding="async"
+                                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                            <span class="absolute top-4 left-4 rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold text-slate-800">
+                                {{ $service->category?->title ?? 'Facility Service' }}
+                            </span>
+                        </a>
+                        <div class="flex flex-1 flex-col justify-between p-6">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 transition group-hover:text-red-700">
+                                    {{ $service->title }}
+                                </h3>
+                                <p class="mt-2 line-clamp-3 text-xs leading-relaxed text-slate-600 sm:text-sm">
+                                    {{ $service->short_description }}
+                                </p>
+                            </div>
+                            <div class="mt-6 flex items-center justify-between border-t border-slate-100 pt-4">
+                                <span class="text-xs font-medium text-slate-400">{{ $service->category?->title ?? 'Facility Service' }}</span>
+                                <a
+                                    href="{{ route('services.show', ['slug' => $service->slug]) }}"
+                                    class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] px-4 py-2 text-xs font-medium text-white transition-colors group-hover:bg-red-600"
+                                >
+                                    <span>View Scope</span>
+                                    <i class="ri-arrow-right-line text-xs"></i>
+                                </a>
+                            </div>
                         </div>
-                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-medium text-slate-400">Daily &amp; Weekly Machine Cycles</span>
-                            <a 
-                                href="{{ route('services.show', ['slug' => 'mechanized-operations']) }}" 
-                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
-                            >
-                                <span>View Scope</span>
-                                <i class="ri-arrow-right-line text-xs"></i>
-                            </a>
-                        </div>
+                    </article>
+                @empty
+                    <div class="col-span-full rounded-2xl border border-dashed border-slate-300 p-8 text-center text-sm text-slate-600">
+                        Service details will be available soon.
                     </div>
-                </div>
-
-                <!-- Service 2 -->
-                <div 
-                    x-data="scrollReveal(100)"
-                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
-                >
-                    <div class="relative h-48 overflow-hidden bg-slate-100">
-                        <img
-                            src="{{ asset('images/restroom_hygiene_sanitation.jpg') }}"
-                            alt="Washroom sanitation and hygiene services"
-                            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
-                            Washroom
-                        </span>
-                    </div>
-                    <div class="p-6 flex flex-1 flex-col justify-between">
-                        <div>
-                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
-                                Washroom Services
-                            </h3>
-                            <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                Four to eight scheduled rounds a day with touchpoint disinfection, consumable
-                                replenishment, odour control at source and signed hygiene checklists.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-medium text-slate-400">4 to 8 Rounds Daily</span>
-                            <a 
-                                href="{{ route('services.show', ['slug' => 'washroom-services']) }}" 
-                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
-                            >
-                                <span>View Scope</span>
-                                <i class="ri-arrow-right-line text-xs"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 3 -->
-                <div 
-                    x-data="scrollReveal(150)"
-                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
-                >
-                    <div class="relative h-48 overflow-hidden bg-slate-100">
-                        <img
-                            src="{{ asset('images/office_boy_pantry_service.jpg') }}"
-                            alt="Deep cleaning of interiors and common areas"
-                            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
-                            Deep Cleaning
-                        </span>
-                    </div>
-                    <div class="p-6 flex flex-1 flex-col justify-between">
-                        <div>
-                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
-                                Deep Cleaning Services
-                            </h3>
-                            <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                High-reach, high-pressure, carpet extraction and kitchen exhaust work, run on a fixed
-                                cycle with before-and-after documentation.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-medium text-slate-400">Monthly &amp; Quarterly Cycles</span>
-                            <a 
-                                href="{{ route('services.show', ['slug' => 'deep-cleaning-services']) }}" 
-                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
-                            >
-                                <span>View Scope</span>
-                                <i class="ri-arrow-right-line text-xs"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div 
-                    x-data="scrollReveal(200)"
-                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
-                >
-                    <div class="relative h-48 overflow-hidden bg-slate-100">
-                        <img
-                            src="{{ asset('images/hero_facility.jpg') }}"
-                            alt="Pest management and mosquito control"
-                            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
-                            Pest Management
-                        </span>
-                    </div>
-                    <div class="p-6 flex flex-1 flex-col justify-between">
-                        <div>
-                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
-                                Pest Management
-                            </h3>
-                            <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                Mosquito, termite, cockroach and rodent control, starting with a proper site survey
-                                and a treatment register for every visit.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-medium text-slate-400">Monthly to Quarterly</span>
-                            <a 
-                                href="{{ route('services.show', ['slug' => 'pest-management']) }}" 
-                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
-                            >
-                                <span>View Scope</span>
-                                <i class="ri-arrow-right-line text-xs"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 5: Landscaping -->
-                <div 
-                    x-data="scrollReveal(250)"
-                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
-                >
-                    <div class="relative h-48 overflow-hidden bg-slate-100">
-                        <img
-                            src="{{ asset('images/estate_development.jpg') }}"
-                            alt="Landscaping, lawns and garden maintenance"
-                            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
-                            Landscaping
-                        </span>
-                    </div>
-                    <div class="p-6 flex flex-1 flex-col justify-between">
-                        <div>
-                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
-                                Landscaping &amp; Horticulture
-                            </h3>
-                            <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                Lawn care, seasonal planting, irrigation management, tree pruning and waste-free
-                                upkeep of gardens, podiums and terraces.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-medium text-slate-400">Daily &amp; Weekly Cycles</span>
-                            <a 
-                                href="{{ route('services.show', ['slug' => 'landscaping']) }}" 
-                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
-                            >
-                                <span>View Scope</span>
-                                <i class="ri-arrow-right-line text-xs"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 6: Office Space & Floor Management -->
-                <div 
-                    x-data="scrollReveal(300)"
-                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                    class="group flex flex-col rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
-                >
-                    <div class="relative h-48 overflow-hidden bg-slate-100">
-                        <img
-                            src="{{ asset('images/commercial_tower.jpg') }}"
-                            alt="Office space and floor management services"
-                            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
-                            Workplace
-                        </span>
-                    </div>
-                    <div class="p-6 flex flex-1 flex-col justify-between">
-                        <div>
-                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-700 transition">
-                                Office Space &amp; Floor Management
-                            </h3>
-                            <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                Floor-wise rosters for cabins, workstations, conference rooms and pantries, with
-                                night operations and verified supervisor checks.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-medium text-slate-400">Dedicated Floor Teams</span>
-                            <a 
-                                href="{{ route('services.show', ['slug' => 'office-space-management']) }}" 
-                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-4 py-2 text-xs font-medium text-white transition-colors"
-                            >
-                                <span>View Scope</span>
-                                <i class="ri-arrow-right-line text-xs"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {{-- Sector Focused Services --}}
-            <div class="mt-6 grid gap-6 lg:grid-cols-2">
-                <!-- Service 7: Residential Society -->
-                <div 
-                    x-data="scrollReveal(0)"
-                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                    class="group flex flex-col sm:flex-row rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
-                >
-                    <div class="relative h-48 sm:h-auto sm:w-1/2 overflow-hidden bg-slate-100">
-                        <img
-                            src="{{ asset('images/estate_development.jpg') }}"
-                            alt="Residential society facility management"
-                            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
-                            Residential
-                        </span>
-                    </div>
-                    <div class="p-6 sm:p-8 flex flex-1 flex-col justify-between sm:w-1/2">
-                        <div>
-                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-red-700 transition">
-                                Residential Society Management
-                            </h3>
-                            <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                Housekeeping staff, horticulture, security coordination, technical upkeep, amenity
-                                care and a monthly audit report for your committee.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-medium text-[#12233F]">3+ Years Of Experience</span>
-                            <a 
-                                href="{{ route('services.show', ['slug' => 'residential-society-management']) }}" 
-                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-5 py-2 text-xs font-medium text-white transition-colors"
-                            >
-                                <span>View Scope</span>
-                                <i class="ri-arrow-right-line text-xs"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 8: Manufacturing Sector -->
-                <div 
-                    x-data="scrollReveal(60)"
-                    :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                    class="group flex flex-col sm:flex-row rounded-3xl border border-slate-200/80 bg-white overflow-hidden shadow-xs hover:shadow-xl hover:border-[#12233F]/30 transition-all duration-300"
-                >
-                    <div class="relative h-48 sm:h-auto sm:w-1/2 overflow-hidden bg-slate-100">
-                        <img
-                            src="{{ asset('images/mep_hvac_maintenance.jpg') }}"
-                            alt="Manufacturing plant facility services"
-                            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        <span class="absolute top-4 left-4 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-slate-800">
-                            Industrial
-                        </span>
-                    </div>
-                    <div class="p-6 sm:p-8 flex flex-1 flex-col justify-between sm:w-1/2">
-                        <div>
-                            <h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-red-700 transition">
-                                Manufacturing Sector Services
-                            </h3>
-                            <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                Shop floor, machine bay, spill response, dust and waste control, canteen and change
-                                room hygiene on shift-aligned rosters.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-medium text-[#12233F]">15-Min Spill Response</span>
-                            <a 
-                                href="{{ route('services.show', ['slug' => 'manufacturing-sector-services']) }}" 
-                                class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F] group-hover:bg-red-600 px-5 py-2 text-xs font-medium text-white transition-colors"
-                            >
-                                <span>View Scope</span>
-                                <i class="ri-arrow-right-line text-xs"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @endforelse
             </div>
 
             {{-- Included With Every RFS Agreement --}}

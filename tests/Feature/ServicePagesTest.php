@@ -20,6 +20,16 @@ test('services page renders successfully with status 200', function () {
     $response->assertSee('Washroom Services');
 });
 
+test('home page displays active services with their saved photos', function () {
+    $response = $this->get(route('home'));
+
+    $response->assertSuccessful();
+    $response->assertSee('Mechanized Cleaning Operations');
+    $response->assertSee('images/services/mechanized-operations.jpg');
+    $response->assertDontSee('Residential Society Management');
+    $response->assertDontSee('Manufacturing Sector Services');
+});
+
 test('service detail page renders successfully for a given slug', function () {
     $response = $this->get(route('services.show', ['slug' => 'mechanized-operations']));
 

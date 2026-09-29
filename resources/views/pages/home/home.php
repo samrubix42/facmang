@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Client;
+use App\Models\Service;
 use App\Models\Testimonial;
 use Illuminate\Database\Eloquent\Collection;
 use Livewire\Attributes\Computed;
@@ -9,6 +10,19 @@ use Livewire\Component;
 
 new #[Title('Real Facility Services (RFS) - Integrated Facility & Soft Services Since 2022')] class extends Component
 {
+    /**
+     * @return Collection<int, Service>
+     */
+    #[Computed]
+    public function services(): Collection
+    {
+        return Service::where('is_active', true)
+            ->with('category')
+            ->orderBy('id')
+            ->take(6)
+            ->get();
+    }
+
     /**
      * @return Collection<int, Client>
      */
