@@ -573,7 +573,8 @@
                 </h2>
                 <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
                     Our teams combine on-ground experience, regular training, planned maintenance, and
-                    performance monitoring across facility operations.
+                    performance monitoring across facility operations. Our flexible solutions cover soft and
+                    hard facilities management, along with management and administration.
                 </p>
             </div>
 
@@ -586,8 +587,8 @@
                     <p class="mt-4 text-[11px] font-bold uppercase tracking-wider text-red-600">Technical services</p>
                     <h3 class="mt-1.5 text-base font-bold text-slate-900">Planned and responsive maintenance</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                        Planned preventive and breakdown maintenance, asset checks, and daily, weekly, and
-                        monthly inspections help keep equipment in healthy condition.
+                        Planned preventive and breakdown maintenance for MEP, HVAC, power and backup systems,
+                        BMS, and other building assets, supported by scheduled equipment checks.
                     </p>
                 </div>
 
@@ -635,7 +636,8 @@
                     <h3 class="mt-1.5 text-base font-bold text-slate-900">Training and competency development</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
                         In-house professionals and industry leaders provide regular technical and soft-skills
-                        training to help employees stay current with methods and technology.
+                        training to help employees stay current with methods and technology. The company also
+                        supports client events and health check-up camps for employees and clients.
                     </p>
                 </div>
 
@@ -673,16 +675,16 @@
                         <i class="ri-compass-3-line text-xl"></i>
                     </span>
                     <span class="text-xs font-semibold uppercase tracking-wider text-[#12233F]">Our Mission</span>
-                    <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">Care you can measure</h2>
+                    <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">Quality services, shaped by client needs</h2>
                     <p class="mt-3 text-sm leading-relaxed text-slate-600">
-                        To run offices, technology campuses and commercial buildings so well that the people
-                        inside never have to think about cleaning, air conditioning or repairs — and so the
-                        people managing them can prove exactly what was done, every single day.
+                        To provide quality integrated facility services that meet our clients' requirements,
+                        supported by experienced management, trained teams, and a strong focus on health and
+                        safety.
                     </p>
                     <div class="mt-6 flex flex-wrap gap-2 border-t border-slate-100 pt-5 text-xs font-medium text-slate-700">
-                        <span class="rounded-full border border-slate-200/80 bg-slate-50 px-3 py-1">Our own payroll</span>
-                        <span class="rounded-full border border-slate-200/80 bg-slate-50 px-3 py-1">Digital daily reports</span>
-                        <span class="rounded-full border border-slate-200/80 bg-slate-50 px-3 py-1">SLA credits</span>
+                        <span class="rounded-full border border-slate-200/80 bg-slate-50 px-3 py-1">Customer focus</span>
+                        <span class="rounded-full border border-slate-200/80 bg-slate-50 px-3 py-1">Safety first</span>
+                        <span class="rounded-full border border-slate-200/80 bg-slate-50 px-3 py-1">Service excellence</span>
                     </div>
                 </div>
 
@@ -692,16 +694,15 @@
                         <i class="ri-eye-line text-xl"></i>
                     </span>
                     <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Our Vision</span>
-                    <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">Buildings that look after themselves</h2>
+                    <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">A trusted partner for facility operations</h2>
                     <p class="mt-3 text-sm leading-relaxed text-slate-600">
-                        To grow into the facility partner every commercial building expects — where experienced
-                        on-ground staff work hand in hand with digital monitoring, so problems are spotted
-                        before anyone has to complain about them.
+                        To support the smooth transition and operation of residential and commercial facilities
+                        through integrated services, technical expertise, and dependable client support.
                     </p>
                     <div class="mt-6 flex flex-wrap gap-2 border-t border-slate-100 pt-5 text-xs font-medium text-slate-700">
-                        <span class="rounded-full border border-slate-200/80 bg-slate-50 px-3 py-1">QR task tracking</span>
-                        <span class="rounded-full border border-slate-200/80 bg-slate-50 px-3 py-1">Preventive maintenance</span>
-                        <span class="rounded-full border border-slate-200/80 bg-slate-50 px-3 py-1">Ongoing training</span>
+                        <span class="rounded-full border border-slate-200/80 bg-slate-50 px-3 py-1">Technical services</span>
+                        <span class="rounded-full border border-slate-200/80 bg-slate-50 px-3 py-1">Soft services</span>
+                        <span class="rounded-full border border-slate-200/80 bg-slate-50 px-3 py-1">24 x 7 support</span>
                     </div>
                 </div>
 
@@ -711,6 +712,55 @@
 
    
 
+
+    {{-- Focused Sectors --}}
+    <section
+        x-data="scrollReveal(0)"
+        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+        class="border-t border-slate-100 bg-slate-50/50 py-14 transition-all duration-700 ease-out sm:py-20 lg:py-24"
+    >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
+                    <i class="ri-building-4-line text-xs"></i> Focused Sectors
+                </span>
+                <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                    Facility expertise across sectors
+                </h2>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
+                    Our client environments include residential and master communities, retail, commercial,
+                    private and public sector properties, and specialist operating sites.
+                </p>
+            </div>
+
+            <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="border-l-2 border-red-600 bg-white p-5">
+                    <h3 class="text-sm font-bold text-slate-900">Residential</h3>
+                    <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">Residential societies and master communities.</p>
+                </div>
+                <div class="border-l-2 border-[#12233F] bg-white p-5">
+                    <h3 class="text-sm font-bold text-slate-900">Retail &amp; Malls</h3>
+                    <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">Retail properties and mall environments.</p>
+                </div>
+                <div class="border-l-2 border-emerald-600 bg-white p-5">
+                    <h3 class="text-sm font-bold text-slate-900">Commercial</h3>
+                    <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">Commercial buildings and office environments.</p>
+                </div>
+                <div class="border-l-2 border-amber-500 bg-white p-5">
+                    <h3 class="text-sm font-bold text-slate-900">Manufacturing Units</h3>
+                    <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">Facility operations for manufacturing sites.</p>
+                </div>
+                <div class="border-l-2 border-sky-600 bg-white p-5">
+                    <h3 class="text-sm font-bold text-slate-900">Healthcare</h3>
+                    <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">Healthcare facilities and hospital environments.</p>
+                </div>
+                <div class="border-l-2 border-rose-500 bg-white p-5">
+                    <h3 class="text-sm font-bold text-slate-900">Export Houses &amp; Automobiles</h3>
+                    <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">Export-house and automobile-sector facilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     {{-- Final CTA --}}
     <section
@@ -725,12 +775,11 @@
                         <i class="ri-customer-service-2-line text-xs"></i> Direct Operations Desk
                     </span>
                     <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                        See what your building actually needs
+                        Facility services built around your requirements
                     </h2>
                     <p class="mx-auto max-w-lg text-sm leading-relaxed text-slate-400">
-                        Book a free site walkthrough. We will walk the floors with you, point out what is
-                        genuinely required, and give you a fixed monthly cost — no long contract, no hidden
-                        charges.
+                        Tell us about your facility, operational priorities, and service requirements. Our team
+                        can discuss an integrated approach across technical and soft services.
                     </p>
 
                     <div class="flex flex-wrap items-center justify-center gap-3 pt-4">
@@ -738,7 +787,7 @@
                             href="{{ route('contact') }}"
                             class="inline-flex items-center gap-2 rounded-full bg-red-500 px-7 py-3.5 text-xs font-semibold text-slate-950 shadow-sm transition hover:bg-red-400 active:scale-[0.98] sm:text-sm"
                         >
-                            <span>Request Free Site Walkthrough</span>
+                            <span>Discuss Your Requirements</span>
                             <i class="ri-arrow-right-line text-sm"></i>
                         </a>
                         <a
