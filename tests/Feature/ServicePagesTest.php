@@ -25,7 +25,7 @@ test('home page displays active services with their saved photos', function () {
 
     $response->assertSuccessful();
     $response->assertSee('Mechanized Cleaning Operations');
-    $response->assertSee('images/services/mechanized-operations.jpg');
+    $response->assertSee('images/services/mechanized_operations.jpg');
     $response->assertDontSee('Residential Society Management');
     $response->assertDontSee('Manufacturing Sector Services');
 });

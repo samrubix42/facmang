@@ -13,35 +13,35 @@
                                 title: 'To serve the excellence in facility and soft services',
                                 buttonText: 'Our Services',
                                 buttonLink: '{{ route("services") }}',
-                                image: '{{ asset("images/estate_development.jpg") }}',
+                                image: '{{ asset("images/slider/hero_slide_1.jpg") }}',
                                 alt: 'Well maintained residential and commercial property managed by Real Facility Services'
                             },
                             {
                                 title: 'Integrated facility management for homes and business',
                                 buttonText: 'Who We Are',
                                 buttonLink: '{{ route("about") }}',
-                                image: '{{ asset("images/commercial_tower.jpg") }}',
+                                image: '{{ asset("images/slider/hero_slide_2.jpg") }}',
                                 alt: 'Commercial property and office facility operations'
                             },
                             {
                                 title: 'Housekeeping, horticulture, technical and security care',
                                 buttonText: 'Soft & Technical Services',
                                 buttonLink: '{{ route("services") }}',
-                                image: '{{ asset("images/office_sweeping_cleaning.jpg") }}',
+                                image: '{{ asset("images/slider/hero_slide_3.jpg") }}',
                                 alt: 'Housekeeping and cleaning services in progress'
                             },
                             {
                                 title: 'Auditing, legal support and smooth transition consultancy',
                                 buttonText: 'Consultancy',
                                 buttonLink: '{{ route("services") }}',
-                                image: '{{ asset("images/restroom_hygiene_sanitation.jpg") }}',
+                                image: '{{ asset("images/slider/hero_slide_4.jpg") }}',
                                 alt: 'Hygiene, documentation and compliance audit support'
                             },
                             {
                                 title: '24x7 support for your residents, your people and your premises',
                                 buttonText: 'Talk to RFS',
                                 buttonLink: '{{ route("contact") }}',
-                                image: '{{ asset("images/mep_hvac_maintenance.jpg") }}',
+                                image: '{{ asset("images/slider/hero_slide_5.jpg") }}',
                                 alt: 'Technical maintenance and engineering support team'
                             }
                         ],
