@@ -332,10 +332,18 @@
 
                                 <button
                                     type="submit"
-                                    class="w-full inline-flex items-center justify-center gap-2 rounded-full bg-red-600 px-6 py-3 text-xs font-semibold text-white shadow-xs transition hover:bg-red-700 active:scale-[0.98] cursor-pointer"
+                                    wire:loading.attr="disabled"
+                                    class="w-full inline-flex items-center justify-center gap-2 rounded-full bg-red-600 px-6 py-3 text-xs font-semibold text-white shadow-xs transition hover:bg-red-700 active:scale-[0.98] cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
                                 >
-                                    <span>Submit SLA Scope Request</span>
-                                    <i class="ri-arrow-right-line"></i>
+                                    <span wire:loading.remove wire:target="submitQuote" class="inline-flex items-center gap-2">
+                                        <span>Submit SLA Scope Request</span>
+                                        <i class="ri-arrow-right-line"></i>
+                                    </span>
+
+                                    <span wire:loading wire:target="submitQuote" class="inline-flex items-center gap-2">
+                                        <i class="ri-loader-4-line text-sm animate-spin"></i>
+                                        <span>Submitting Request...</span>
+                                    </span>
                                 </button>
 
                                 <p class="text-[10px] text-center text-slate-400 flex items-center justify-center gap-1">
@@ -354,8 +362,8 @@
                                 <i class="ri-phone-fill text-base"></i>
                             </span>
                             <div>
-                                <a href="tel:{{ setting('phone', '+1 (800) 492-8820') }}" class="text-sm font-bold text-slate-900 hover:text-[#12233F] transition block">
-                                    {{ setting('phone', '+1 (800) 492-8820') }}
+                                <a href="tel:{{ setting('phone', '+91 88105-67716') }}" class="text-sm font-bold text-slate-900 hover:text-[#12233F] transition block">
+                                    {{ setting('phone', '+91 88105-67716') }}
                                 </a>
                                 <p class="text-[11px] text-slate-400 mt-0.5">24/7 Control Center Dispatch</p>
                             </div>

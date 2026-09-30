@@ -42,7 +42,8 @@
                     <div class="min-w-0">
                         <p class="text-[11px] font-medium text-slate-400">24/7 Hotline</p>
                         <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">{{ setting('phone', '+91 88105-67716') }}</p>
-                        <p class="text-[10px] text-[#12233F] font-medium mt-0.5">&lt;15m Response</p>
+
+                        <p class="text-[10px] text-[#12233F] font-medium mt-0.5">Direct Support</p>
                     </div>
                 </a>
 
@@ -220,64 +221,64 @@
                 <div class="lg:col-span-5 space-y-6">
                     <div>
                         <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
-                            <i class="ri-shield-check-line text-xs"></i> Direct Support
+                            <i class="ri-shield-check-line text-xs"></i> Direct Management
                         </span>
                         <h2 class="mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">Why Partner With Us?</h2>
                         <p class="mt-2 text-xs sm:text-sm text-slate-500 leading-relaxed">
-                            Direct management ensures accountability, zero vendor margin, and rapid emergency intervention.
+                            Integrated soft and technical facility solutions shaped around your requirements, backed by trained teams, ISO-certified standards, and 24/7 support.
                         </p>
                     </div>
 
                     <div class="space-y-4">
                         <div class="flex gap-4 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs">
                             <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
-                                <i class="ri-flashlight-line text-lg"></i>
+                                <i class="ri-building-2-line text-lg"></i>
                             </span>
                             <div>
-                                <h3 class="text-sm font-bold text-slate-900">&lt;15 Min Dispatch Guarantee</h3>
-                                <p class="mt-1 text-xs text-slate-500 leading-relaxed">Emergency plumbing leaks, electrical trips, or HVAC disruptions resolved promptly by on-call engineers.</p>
+                                <h3 class="text-sm font-bold text-slate-900">Integrated Facility Services</h3>
+                                <p class="mt-1 text-xs text-slate-500 leading-relaxed">Bringing housekeeping, mechanized operations, horticulture, and technical MEP maintenance together under one accountable management team.</p>
                             </div>
                         </div>
 
                         <div class="flex gap-4 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs">
                             <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#12233F] text-white">
-                                <i class="ri-file-search-line text-lg"></i>
+                                <i class="ri-shield-star-line text-lg"></i>
                             </span>
                             <div>
-                                <h3 class="text-sm font-bold text-slate-900">Free Spatial Audit</h3>
-                                <p class="mt-1 text-xs text-slate-500 leading-relaxed">Our senior operations director inspects your layout and delivers a benchmark SLA report within 48h.</p>
+                                <h3 class="text-sm font-bold text-slate-900">Audits &amp; SLA Compliance</h3>
+                                <p class="mt-1 text-xs text-slate-500 leading-relaxed">ISO 9001:2015 certified processes with digital supervisor checklists, internal audits, and transparent performance reviews.</p>
                             </div>
                         </div>
 
                         <div class="flex gap-4 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs">
                             <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
-                                <i class="ri-shield-user-line text-lg"></i>
+                                <i class="ri-customer-service-2-line text-lg"></i>
                             </span>
                             <div>
-                                <h3 class="text-sm font-bold text-slate-900">Dedicated Account Director</h3>
-                                <p class="mt-1 text-xs text-slate-500 leading-relaxed">A single point of contact responsible for weekly QR cleaning logs and monthly optimization reviews.</p>
+                                <h3 class="text-sm font-bold text-slate-900">24/7 Operational Support</h3>
+                                <p class="mt-1 text-xs text-slate-500 leading-relaxed">Round-the-clock support desk and trained technical staff ensuring reliable, uninterrupted facility operations.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Certification Strip -->
                     <div class="rounded-3xl bg-[#0B1A30] p-6 text-white shadow-sm border border-slate-800">
-                        <p class="text-[10px] font-semibold uppercase tracking-wider text-red-400">Compliance Standard</p>
-                        <p class="mt-1 text-xs font-semibold text-slate-200">ISSA CIMS &amp; ISO 41001 Certified Facility Partner</p>
+                        <p class="text-[10px] font-semibold uppercase tracking-wider text-red-400">Quality Management</p>
+                        <p class="mt-1 text-xs font-semibold text-slate-200">ISO 9001:2015 Certified Facility Partner</p>
                     </div>
 
                     <!-- Emergency Dispatch CTA -->
                     <a
-                        href="tel:{{ setting('phone', '+1 (800) 492-8820') }}"
+                        href="tel:{{ setting('phone', '+91 88105-67716') }}"
                         class="flex items-center justify-between gap-4 rounded-3xl bg-red-600 p-6 text-white shadow-sm transition hover:bg-red-700 active:scale-[0.99]"
                     >
                         <div class="flex items-center gap-3">
                             <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/15">
-                                <i class="ri-customer-service-2-line text-lg"></i>
+                                <i class="ri-phone-fill text-lg"></i>
                             </span>
                             <div>
-                                <h3 class="text-sm font-bold">24/7 Emergency Dispatch</h3>
-                                <p class="text-[10px] text-white/80">Direct operations line — always live ({{ setting('phone', '+1 (800) 492-8820') }})</p>
+                                <h3 class="text-sm font-bold">24/7 Operational Helpline</h3>
+                                <p class="text-[10px] text-white/80">Direct operations line — always live ({{ setting('phone', '+91 88105-67716') }})</p>
                             </div>
                         </div>
                         <i class="ri-arrow-right-line text-lg"></i>

@@ -169,34 +169,6 @@
                     </div>
                 </template>
 
-                {{-- Interactive CTA Card at end of grid (Dark Blue with Red Highlights) --}}
-                <a
-                    href="{{ route('contact') }}"
-                    class="group relative aspect-[3/2] w-full flex flex-col justify-between overflow-hidden rounded-2xl bg-[#12233F] p-7 sm:p-8 text-white border border-[#12233F] shadow-xs hover:bg-[#0B1A30] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-                >
-                    <div class="relative flex items-center justify-between">
-                        <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-red-600 text-white shadow-sm">
-                            <i class="ri-clipboard-line text-2xl"></i>
-                        </span>
-                        <span class="rounded-full bg-red-600/20 px-2.5 py-0.5 text-[10px] font-bold text-red-400 border border-red-500/30">
-                            Free Assessment
-                        </span>
-                    </div>
-
-                    <div class="relative space-y-2">
-                        <h3 class="text-lg sm:text-xl font-bold tracking-tight text-white leading-tight">
-                            Request Live Site Photographic Audit
-                        </h3>
-                        <p class="text-sm text-slate-300 leading-relaxed">
-                            Receive a filmed, time-stamped visual audit of your facilities with tailored SLA benchmarks.
-                        </p>
-                    </div>
-
-                    <div class="relative flex items-center gap-1.5 text-sm font-semibold text-red-400 group-hover:text-red-300 transition">
-                        <span>Book 30-Min Audit</span>
-                        <i class="ri-arrow-right-line transition-transform group-hover:translate-x-1"></i>
-                    </div>
-                </a>
 
             </div>
 
