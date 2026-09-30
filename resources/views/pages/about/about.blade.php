@@ -176,25 +176,40 @@
     <section class="bg-slate-50/50 py-12 sm:py-16">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="overflow-hidden rounded-3xl bg-[#0B1A30] px-6 py-10 sm:px-10 sm:py-12">
-                <div class="grid grid-cols-2 gap-y-9 lg:grid-cols-4">
-                    <div class="text-center lg:px-6">
-                        <p class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">2022</p>
-                        <p class="mt-2 text-[11px] font-medium text-slate-400">Providing facility services since</p>
+                <div class="grid grid-cols-2 gap-y-9 sm:grid-cols-3 lg:grid-cols-5">
+                    <div class="text-center lg:px-4">
+                        <p class="text-3xl font-extrabold tracking-tight text-white tabular-nums sm:text-4xl lg:text-5xl" x-data="countUp(50, 0)">
+                            <span x-text="display">0</span>+
+                        </p>
+                        <p class="mt-2 text-[11px] sm:text-xs font-medium text-slate-300">Residential Towers</p>
                     </div>
 
-                    <div class="text-center lg:border-l lg:border-white/10 lg:px-6">
-                        <p class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">3+ years</p>
-                        <p class="mt-2 text-[11px] font-medium text-slate-400">Residential facility experience</p>
+                    <div class="text-center sm:border-l sm:border-white/10 lg:px-4">
+                        <p class="text-3xl font-extrabold tracking-tight text-white tabular-nums sm:text-4xl lg:text-5xl" x-data="countUp(25, 0)">
+                            <span x-text="display">0</span>+
+                        </p>
+                        <p class="mt-2 text-[11px] sm:text-xs font-medium text-slate-300">Malls &amp; Hospitals</p>
                     </div>
 
-                    <div class="text-center lg:border-l lg:border-white/10 lg:px-6">
-                        <p class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">24 x 7</p>
-                        <p class="mt-2 text-[11px] font-medium text-slate-400">Support system</p>
+                    <div class="text-center sm:border-l sm:border-white/10 lg:px-4">
+                        <p class="text-3xl font-extrabold tracking-tight text-white tabular-nums sm:text-4xl lg:text-5xl" x-data="countUp(10, 0)">
+                            <span x-text="display">0</span>+
+                        </p>
+                        <p class="mt-2 text-[11px] sm:text-xs font-medium text-slate-300">Corporate Towers</p>
                     </div>
 
-                    <div class="text-center lg:border-l lg:border-white/10 lg:px-6">
-                        <p class="text-3xl font-extrabold tracking-tight text-red-400 sm:text-4xl">ISO 9001:2015</p>
-                        <p class="mt-2 text-[11px] font-medium text-slate-400">Quality management</p>
+                    <div class="text-center lg:border-l lg:border-white/10 lg:px-4">
+                        <p class="text-3xl font-extrabold tracking-tight text-white tabular-nums sm:text-4xl lg:text-5xl" x-data="countUp(2000, 0)">
+                            <span x-text="display">0</span>+
+                        </p>
+                        <p class="mt-2 text-[11px] sm:text-xs font-medium text-slate-300">Guards Deployed</p>
+                    </div>
+
+                    <div class="text-center lg:border-l lg:border-white/10 lg:px-4 col-span-2 sm:col-span-1">
+                        <p class="text-3xl font-extrabold tracking-tight text-red-400 tabular-nums sm:text-4xl lg:text-5xl" x-data="countUp(3, 0)">
+                            <span x-text="display">0</span>+
+                        </p>
+                        <p class="mt-2 text-[11px] sm:text-xs font-medium text-slate-300">Years of Trust</p>
                     </div>
                 </div>
             </div>
