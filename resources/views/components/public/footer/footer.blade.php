@@ -119,8 +119,9 @@
         
 
         {{-- Bottom Bar --}}
-        <div class="mt-6 border-t border-slate-200 pt-6 text-center text-xs text-slate-500">
+        <div class="mt-6 border-t border-slate-200 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
             <p>&copy; {{ date('Y') }} {{ setting('company_name', 'Real Facility Services (RFS)') }}. All rights reserved.</p>
+            <p>Powered by <a href="https://www.techonika.com/" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-700 hover:text-red-600 transition">Techonika</a></p>
         </div>
 
     </div>
