@@ -29,59 +29,58 @@
     {{-- Contact Quick Pills Grid --}}
     <section class="py-12 border-b border-slate-100 bg-slate-50/50">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
                 
                 <!-- Card 1: Phone -->
                 <a 
                     href="tel:{{ setting('phone', '+91 88105-67716') }}"
-                    class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md"
+                    class="flex items-start gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-red-600/40 hover:shadow-md"
                 >
                     <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-red-600 text-white">
                         <i class="ri-phone-fill text-lg"></i>
                     </span>
-                    <div class="min-w-0">
-                        <p class="text-[11px] font-medium text-slate-400">24/7 Hotline</p>
-                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">{{ setting('phone', '+91 88105-67716') }}</p>
-
-                        <p class="text-[10px] text-[#12233F] font-medium mt-0.5">Direct Support</p>
+                    <div class="min-w-0 flex-1">
+                        <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Phone Support</p>
+                        <p class="mt-1 text-xs sm:text-sm font-bold text-slate-900 leading-snug">{{ setting('phone', '+91 88105-67716') }}</p>
+                        <p class="text-[11px] text-emerald-600 font-medium mt-1">Direct Support</p>
                     </div>
                 </a>
 
                 <!-- Card 2: Email -->
                 <a 
                     href="mailto:{{ setting('email', 'info@realfacilityservices.com') }}"
-                    class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md"
+                    class="flex items-start gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-[#12233F]/40 hover:shadow-md"
                 >
                     <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                         <i class="ri-mail-fill text-lg"></i>
                     </span>
-                    <div class="min-w-0">
-                        <p class="text-[11px] font-medium text-slate-400">Operations Email</p>
-                        <p class="text-xs sm:text-sm font-bold text-slate-900 break-all">{{ setting('email', 'info@realfacilityservices.com') }}</p>
-                        <p class="text-[10px] text-slate-400 mt-0.5">Direct Inquiry</p>
+                    <div class="min-w-0 flex-1">
+                        <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Email Address</p>
+                        <p class="mt-1 text-xs sm:text-sm font-bold text-slate-900 break-all leading-snug">{{ setting('email', 'info@realfacilityservices.com') }}</p>
+                        <p class="text-[11px] text-slate-500 font-medium mt-1">Quick Response</p>
                     </div>
                 </a>
 
                 <!-- Card 3: Location -->
-                <div class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs">
+                <div class="flex items-start gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs">
                     <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                         <i class="ri-map-pin-2-fill text-lg"></i>
                     </span>
-                    <div class="min-w-0">
-                        <p class="text-[11px] font-medium text-slate-400">Corporate HQ</p>
-                        <p class="text-xs sm:text-sm font-bold text-slate-900 leading-snug">{{ setting('address', 'Office No. 2, First Floor, Plot No. 128, New Haibatpur, Near Gaur City Mall, Sector 4, Greater Noida West (U.P.) 201318') }}</p>
+                    <div class="min-w-0 flex-1">
+                        <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Corporate HQ</p>
+                        <p class="mt-1 text-xs sm:text-sm font-bold text-slate-900 leading-snug">{{ setting('address', 'Office No. 2, First Floor, Plot No. 128, New Haibatpur, Near Gaur City Mall, Sector 4, Greater Noida West (U.P.) 201318') }}</p>
                     </div>
                 </div>
 
                 <!-- Card 4: Hours -->
-                <div class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs">
+                <div class="flex items-start gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs">
                     <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
                         <i class="ri-time-fill text-lg"></i>
                     </span>
-                    <div class="min-w-0">
-                        <p class="text-[11px] font-medium text-slate-400">Operating Hours</p>
-                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">Mon - Sat: 7am - 9pm</p>
-                        <p class="text-[10px] text-[#12233F] font-medium mt-0.5">Dispatch Active 24/7</p>
+                    <div class="min-w-0 flex-1">
+                        <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Office Timings</p>
+                        <p class="mt-1 text-xs sm:text-sm font-bold text-slate-900 leading-snug">{{ setting('office_hours', 'Mon - Sat: 10:00 AM - 7:00 PM') }}</p>
+                        <p class="text-[11px] text-slate-500 font-medium mt-1">Sunday Closed</p>
                     </div>
                 </div>
 
