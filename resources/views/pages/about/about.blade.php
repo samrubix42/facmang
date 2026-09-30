@@ -304,123 +304,6 @@
         </div>
     </section>
 
-    {{-- A Day With Us (Working Rhythm) --}}
-    <section
-        x-data="scrollReveal(0)"
-        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
-        class="scroll-mt-24 bg-slate-50/50 py-14 transition-all duration-700 ease-out sm:py-20 lg:py-24"
-    >
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-            <div class="max-w-2xl mx-auto text-center">
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
-                    <i class="ri-shield-check-line text-xs"></i> Our HSE Framework
-                </span>
-                <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                    Health and safety built into our operations
-                </h2>
-                <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
-                    Our framework combines policies, risk management, staff competency, active monitoring,
-                    audits, incident learning, and management review.
-                </p>
-            </div>
-
-            <ol class="mx-auto mt-12 max-w-4xl space-y-4">
-
-                <li class="grid grid-cols-1 gap-3 sm:grid-cols-[120px_1fr] sm:gap-6">
-                    <div class="flex items-center sm:justify-end sm:border-r sm:border-slate-200 sm:pr-6">
-                        <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-2.5 py-1 text-[11px] font-extrabold tabular-nums text-red-600 sm:border-0 sm:bg-transparent sm:p-0">
-                            <i class="ri-shield-line text-xs sm:hidden"></i> Framework
-                        </span>
-                    </div>
-                    <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs sm:p-6">
-                        <h3 class="text-sm font-bold text-slate-900">Policies, roles, and emergency planning</h3>
-                        <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            Policies, objectives, an organogram, safety charter, governance, a safety committee,
-                            and emergency planning establish responsibilities across the operation.
-                        </p>
-                    </div>
-                </li>
-
-                <li class="grid grid-cols-1 gap-3 sm:grid-cols-[120px_1fr] sm:gap-6">
-                    <div class="flex items-center sm:justify-end sm:border-r sm:border-slate-200 sm:pr-6">
-                        <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-2.5 py-1 text-[11px] font-extrabold tabular-nums text-red-600 sm:border-0 sm:bg-transparent sm:p-0">
-                            <i class="ri-file-list-3-line text-xs sm:hidden"></i> Assess
-                        </span>
-                    </div>
-                    <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs sm:p-6">
-                        <h3 class="text-sm font-bold text-slate-900">Risk assessments and safe systems of work</h3>
-                        <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            Risk assessments and safe systems of work (SSOWs) help identify hazards and guide
-                            safe task delivery at client sites.
-                        </p>
-                    </div>
-                </li>
-
-                <li class="grid grid-cols-1 gap-3 sm:grid-cols-[120px_1fr] sm:gap-6">
-                    <div class="flex items-center sm:justify-end sm:border-r sm:border-slate-200 sm:pr-6">
-                        <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-2.5 py-1 text-[11px] font-extrabold tabular-nums text-red-600 sm:border-0 sm:bg-transparent sm:p-0">
-                            <i class="ri-graduation-cap-line text-xs sm:hidden"></i> Develop
-                        </span>
-                    </div>
-                    <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs sm:p-6">
-                        <h3 class="text-sm font-bold text-slate-900">Competency development</h3>
-                        <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            Safety induction, health and safety training, team engagement, and toolbox talks
-                            help develop the knowledge and skills required for each role.
-                        </p>
-                    </div>
-                </li>
-
-                <li class="grid grid-cols-1 gap-3 sm:grid-cols-[120px_1fr] sm:gap-6">
-                    <div class="flex items-center sm:justify-end sm:border-r sm:border-slate-200 sm:pr-6">
-                        <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-2.5 py-1 text-[11px] font-extrabold tabular-nums text-red-600 sm:border-0 sm:bg-transparent sm:p-0">
-                            <i class="ri-eye-line text-xs sm:hidden"></i> Monitor
-                        </span>
-                    </div>
-                    <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs sm:p-6">
-                        <h3 class="text-sm font-bold text-slate-900">Active monitoring and site management</h3>
-                        <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            Site management, communication, and performance monitoring support consistent
-                            oversight of health, safety, and service activities.
-                        </p>
-                    </div>
-                </li>
-
-                <li class="grid grid-cols-1 gap-3 sm:grid-cols-[120px_1fr] sm:gap-6">
-                    <div class="flex items-center sm:justify-end sm:border-r sm:border-slate-200 sm:pr-6">
-                        <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-2.5 py-1 text-[11px] font-extrabold tabular-nums text-red-600 sm:border-0 sm:bg-transparent sm:p-0">
-                            <i class="ri-alarm-warning-line text-xs sm:hidden"></i> Learn
-                        </span>
-                    </div>
-                    <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs sm:p-6">
-                        <h3 class="text-sm font-bold text-slate-900">Incident reporting and lessons learned</h3>
-                        <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            Incident and accident investigation, reporting, and lessons learned help identify
-                            actions that can prevent recurrence.
-                        </p>
-                    </div>
-                </li>
-
-                <li class="grid grid-cols-1 gap-3 sm:grid-cols-[120px_1fr] sm:gap-6">
-                    <div class="flex items-center sm:justify-end sm:border-r sm:border-slate-200 sm:pr-6">
-                        <span class="inline-flex items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-2.5 py-1 text-[11px] font-extrabold tabular-nums text-red-600 sm:border-0 sm:bg-transparent sm:p-0">
-                            <i class="ri-bar-chart-line text-xs sm:hidden"></i> Review
-                        </span>
-                    </div>
-                    <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs sm:p-6">
-                        <h3 class="text-sm font-bold text-slate-900">Audits, indicators, and management review</h3>
-                        <p class="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
-                            Audit findings, KPIs, trends, corrective and preventive actions, and management
-                            review support ongoing performance improvement.
-                        </p>
-                    </div>
-                </li>
-
-            </ol>
-        </div>
-    </section>
-
     {{-- What We Handle (Service Lines) --}}
     <section
         x-data="scrollReveal(0)"
@@ -556,12 +439,119 @@
         </div>
     </section>
 
+    {{-- Advanced Machinery & Specialist Equipment --}}
+    <section
+        x-data="scrollReveal(0)"
+        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+        class="border-b border-slate-100 bg-white py-14 transition-all duration-700 ease-out sm:py-20 lg:py-24"
+    >
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+            <div class="max-w-2xl mx-auto text-center">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-red-50 px-3.5 py-1 text-xs font-semibold text-red-600">
+                    <i class="ri-settings-5-line text-xs"></i> Machinery &amp; Equipment
+                </span>
+                <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                    Advanced Machinery &amp; Specialist Tools
+                </h2>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
+                    We deploy commercial-grade mechanized equipment and high-quality manual tools to deliver superior cleanliness and operational efficiency across all premises.
+                </p>
+            </div>
+
+            <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-5 transition duration-300 hover:border-red-300 hover:bg-white hover:shadow-md">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600 text-white">
+                        <i class="ri-bubble-chart-line text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-sm font-bold text-slate-900">Auto Scrubber</h3>
+                    <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">Continuous automated floor scrubbing and drying for high-traffic corridors.</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-5 transition duration-300 hover:border-red-300 hover:bg-white hover:shadow-md">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#12233F] text-white">
+                        <i class="ri-sparkling-fill text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-sm font-bold text-slate-900">High Speed Burnisher</h3>
+                    <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">High-RPM gloss restoration and deep buffing for marble &amp; granite floors.</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-5 transition duration-300 hover:border-red-300 hover:bg-white hover:shadow-md">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600 text-white">
+                        <i class="ri-water-flash-line text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-sm font-bold text-slate-900">High Jet Pressure</h3>
+                    <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">Heavy-duty water pressure washing for exterior driveways, parking &amp; facades.</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-5 transition duration-300 hover:border-red-300 hover:bg-white hover:shadow-md">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#12233F] text-white">
+                        <i class="ri-temp-hot-line text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-sm font-bold text-slate-900">Steam Cleaner</h3>
+                    <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">Thermal steam sanitization for hygienic washrooms, upholstery &amp; grout lines.</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-5 transition duration-300 hover:border-red-300 hover:bg-white hover:shadow-md">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600 text-white">
+                        <i class="ri-windy-line text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-sm font-bold text-slate-900">Wet &amp; Dry Vacuum</h3>
+                    <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">Dual-action suction machines for liquid spill recovery and dust extraction.</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-5 transition duration-300 hover:border-red-300 hover:bg-white hover:shadow-md">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#12233F] text-white">
+                        <i class="ri-roadster-line text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-sm font-bold text-slate-900">Road Sweeper</h3>
+                    <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">Large-area mechanized road and perimeter sweeping for townships &amp; parks.</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-5 transition duration-300 hover:border-red-300 hover:bg-white hover:shadow-md">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600 text-white">
+                        <i class="ri-node-tree text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-sm font-bold text-slate-900">Mobile Ladder</h3>
+                    <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">High-reach mobile access platforms for glass cleaning &amp; elevated technical work.</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-5 transition duration-300 hover:border-red-300 hover:bg-white hover:shadow-md">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#12233F] text-white">
+                        <i class="ri-disc-line text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-sm font-bold text-slate-900">Single Disc Scrubber</h3>
+                    <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">Versatile single-disc scrubbing for hard floor stripping, washing &amp; crystallization.</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-5 transition duration-300 hover:border-red-300 hover:bg-white hover:shadow-md">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600 text-white">
+                        <i class="ri-steering-line text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-sm font-bold text-slate-900">Ride On</h3>
+                    <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">Ride-on heavy duty scrubbers for rapid coverage of large basements &amp; concourses.</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-5 transition duration-300 hover:border-red-300 hover:bg-white hover:shadow-md">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#12233F] text-white">
+                        <i class="ri-tools-line text-lg"></i>
+                    </span>
+                    <h3 class="mt-4 text-sm font-bold text-slate-900">High Quality Manual Tools</h3>
+                    <p class="mt-1.5 text-xs text-slate-600 leading-relaxed">Ergonomic color-coded mops, squeegees, microfiber cloths &amp; janitorial carts.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     {{-- Our Expertise --}}
     <section
         x-data="scrollReveal(0)"
         :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
         class="bg-slate-50/50 py-14 transition-all duration-700 ease-out sm:py-20 lg:py-24"
     >
+
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
             <div class="max-w-2xl mx-auto text-center">

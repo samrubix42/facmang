@@ -195,66 +195,7 @@
         </div>
     </section>
 
-    {{-- SLA & Operational Standards Differentiator Strip --}}
-    <section class="border-y border-slate-100 bg-slate-50/50 py-14 sm:py-20">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="max-w-xl mx-auto text-center">
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
-                    <i class="ri-shield-flash-line text-xs"></i> Distinction
-                </span>
-                <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                    Why Property Managers Switch
-                </h2>
-                <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-                    Engineering operational discipline through technology and direct in-house staff.
-                </p>
-            </div>
 
-            <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F] mb-4">
-                        <i class="ri-contract-line text-lg"></i>
-                    </span>
-                    <h3 class="text-base font-bold text-slate-900">Single Master SLA</h3>
-                    <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        One contract and one consolidated monthly invoice. No vendor disputes between cleaning and engineering.
-                    </p>
-                </div>
-
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F] text-white mb-4">
-                        <i class="ri-qr-code-line text-lg"></i>
-                    </span>
-                    <h3 class="text-base font-bold text-slate-900">IoT QR Telemetry</h3>
-                    <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Every washroom and floor cleaning is digitally signed off via scannable QR tags with live timestamps.
-                    </p>
-                </div>
-
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F] mb-4">
-                        <i class="ri-user-star-line text-lg"></i>
-                    </span>
-                    <h3 class="text-base font-bold text-slate-900">100% W-2 Direct Staff</h3>
-                    <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Zero subcontracting. All stewards and janitors undergo background checks and standardized hospitality training.
-                    </p>
-                </div>
-
-                <div class="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs hover:border-[#12233F]/30 transition">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#12233F] text-white mb-4">
-                        <i class="ri-leaf-line text-lg"></i>
-                    </span>
-                    <h3 class="text-base font-bold text-slate-900">Green Seal Eco-Formulas</h3>
-                    <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Hospital-grade virucidal solutions using non-toxic chemistries that preserve indoor air quality.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     {{-- Bottom High-Conversion CTA (Rounded-Full Buttons) --}}
     <section class="py-14 sm:py-20 lg:py-24">
