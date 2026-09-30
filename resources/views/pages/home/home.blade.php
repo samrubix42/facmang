@@ -586,50 +586,7 @@
                 @endforelse
             </div>
 
-            {{-- Included With Every RFS Agreement --}}
-            <div class="mt-6 overflow-hidden rounded-3xl border border-slate-200/80 bg-slate-50/60 p-6 sm:p-8">
-                <h3 class="text-center text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
-                    Included with every RFS agreement
-                </h3>
-
-                <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-                    <div class="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white px-4 py-3.5">
-                        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-amber-50 text-amber-600">
-                            <i class="ri-clipboard-line"></i>
-                        </span>
-                        <span class="text-xs font-semibold leading-snug text-slate-800">Facility Auditing</span>
-                    </div>
-                    <div class="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white px-4 py-3.5">
-                        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-sky-50 text-sky-600">
-                            <i class="ri-scales-3-line"></i>
-                        </span>
-                        <span class="text-xs font-semibold leading-snug text-slate-800">Legal &amp; Compliance Support</span>
-                    </div>
-                    <div class="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white px-4 py-3.5">
-                        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
-                            <i class="ri-refresh-line"></i>
-                        </span>
-                        <span class="text-xs font-semibold leading-snug text-slate-800">Transition Consultancy</span>
-                    </div>
-                    <div class="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white px-4 py-3.5">
-                        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-700">
-                            <i class="ri-customer-service-2-line"></i>
-                        </span>
-                        <span class="text-xs font-semibold leading-snug text-slate-800">24x7 Support Desk</span>
-                    </div>
-                    <div class="flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white px-4 py-3.5">
-                        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-600">
-                            <i class="ri-heart-pulse-line"></i>
-                        </span>
-                        <span class="text-xs font-semibold leading-snug text-slate-800">Free Health Check-Up Camps</span>
-                    </div>
-                </div>
-
-                <p class="mt-6 text-center text-xs leading-relaxed text-slate-500">
-                    Every scope is tailored to your site, documented before we start, and reviewed with you at the
-                    monthly audit.
-                </p>
-            </div>
+         
 
             <!-- View All Services Rounded Pill Button -->
             <div class="mt-12 text-center">
@@ -637,129 +594,13 @@
                     href="{{ route('services') }}"
                     class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-8 py-3.5 text-xs sm:text-sm font-semibold text-slate-800 shadow-xs hover:border-[#12233F]/40 hover:text-[#12233F] transition active:scale-[0.98]"
                 >
-                    <span>View All Services &amp; SLAs</span>
+                    <span>View All Services</span>
                     <i class="ri-arrow-right-line text-sm"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    {{-- Health Check-Up Camps --}}
-    <section 
-        id="health-camps"
-        x-data="scrollReveal(0)"
-        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'"
-        class="scroll-mt-20 border-y border-slate-100 bg-slate-50/50 py-14 transition-all duration-700 ease-out sm:py-20 lg:py-24"
-    >
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-
-                <!-- Left Content -->
-                <div>
-                    <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
-                        <i class="ri-heart-pulse-line text-xs"></i> Employee &amp; Client Health
-                    </span>
-
-                    <h2 class="mt-4 text-3xl font-extrabold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl">
-                        Our top priority is the health of our employees.
-                    </h2>
-
-                    <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
-                        A healthy body leads to a healthy mind. Our housekeeping, horticulture, security and
-                        technical teams work physically demanding shifts every day, so their wellbeing is the first
-                        thing we invest in — not the last.
-                    </p>
-
-                    <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
-                        We organise <strong class="font-semibold text-slate-800">free health check-up camps</strong>
-                        for our employees as well as for our clients, at our sites. A healthy, screened and
-                        well-supported team shows up at work with more energy, and our clients get the same care
-                        extended to their residents and staff.
-                    </p>
-
-                    <div class="mt-8 flex flex-wrap items-center gap-3">
-                        <a
-                            href="{{ route('contact') }}"
-                            class="inline-flex items-center gap-2 rounded-full bg-[#12233F] px-6 py-3 text-xs font-semibold text-white transition hover:bg-[#0B1A30] active:scale-[0.98] sm:text-sm"
-                        >
-                            <span>Register for a Health Camp</span>
-                            <i class="ri-arrow-right-line text-sm"></i>
-                        </a>
-                        <a
-                            href="{{ route('careers') }}"
-                            class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-xs font-medium text-slate-700 transition hover:border-[#12233F]/40 hover:text-slate-900 active:scale-[0.98] sm:text-sm"
-                        >
-                            <span>Join the Team</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right: What The Camps Cover -->
-                <div class="grid gap-4 sm:grid-cols-2">
-                    <div 
-                        x-data="scrollReveal(0)"
-                        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                        class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition hover:border-[#12233F]/25 hover:shadow-lg"
-                    >
-                        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-600/10 text-red-600">
-                            <i class="ri-heart-add-line text-lg"></i>
-                        </span>
-                        <h3 class="mt-4 text-sm font-bold text-slate-900">Free For Employees &amp; Clients</h3>
-                        <p class="mt-1.5 text-xs leading-relaxed text-slate-600">
-                            No cost, no waiting list. Camps are held at our sites so our teams and your residents
-                            can walk in during the day.
-                        </p>
-                    </div>
-
-                    <div 
-                        x-data="scrollReveal(60)"
-                        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                        class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition hover:border-[#12233F]/25 hover:shadow-lg"
-                    >
-                        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#12233F]/10 text-[#12233F]">
-                            <i class="ri-pulse-line text-lg"></i>
-                        </span>
-                        <h3 class="mt-4 text-sm font-bold text-slate-900">Basic Screening Included</h3>
-                        <p class="mt-1.5 text-xs leading-relaxed text-slate-600">
-                            Blood pressure, blood sugar, BMI, general physician consultation and eye and dental
-                            checks wherever the camp partner supports them.
-                        </p>
-                    </div>
-
-                    <div 
-                        x-data="scrollReveal(120)"
-                        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                        class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition hover:border-[#12233F]/25 hover:shadow-lg"
-                    >
-                        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600">
-                            <i class="ri-calendar-check-line text-lg"></i>
-                        </span>
-                        <h3 class="mt-4 text-sm font-bold text-slate-900">Held Through The Year</h3>
-                        <p class="mt-1.5 text-xs leading-relaxed text-slate-600">
-                            Regular camps are scheduled across our running sites, with follow-up health advisories
-                            shared with each team and client.
-                        </p>
-                    </div>
-
-                    <div 
-                        x-data="scrollReveal(180)"
-                        :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
-                        class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition hover:border-[#12233F]/25 hover:shadow-lg"
-                    >
-                        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-50 text-amber-600">
-                            <i class="ri-run-line text-lg"></i>
-                        </span>
-                        <h3 class="mt-4 text-sm font-bold text-slate-900">Awareness Sessions</h3>
-                        <p class="mt-1.5 text-xs leading-relaxed text-slate-600">
-                            Alongside checks, we run short sessions on hygiene, nutrition, safety and stress
-                            management — healthy habits that last beyond camp day.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     {{-- Client Logos Grid --}}
     <section 
