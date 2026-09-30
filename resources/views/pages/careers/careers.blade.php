@@ -556,71 +556,7 @@
         </div>
     </section>
 
-    {{-- Value Propositions (Why Real Facility Services) --}}
-    <section class="py-14 sm:py-18 border-y border-slate-100 bg-white">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10">
-            
-            <div class="text-center max-w-2xl mx-auto space-y-2.5">
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
-                    <i class="ri-star-line text-red-600"></i> Benefits &amp; Growth
-                </span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">
-                    Why Exceptional Field Staff Choose Us
-                </h2>
-                <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                    We treat facilities management as a dignified, professional trade. Every technician receives genuine respect, modern equipment, and guaranteed career advancement.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                {{-- Benefit 1 --}}
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-[#12233F]/30 hover:bg-white hover:shadow-md transition-all space-y-3">
-                    <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/5 text-[#12233F] border border-[#12233F]/10">
-                        <i class="ri-shield-user-line text-xl text-red-600"></i>
-                    </span>
-                    <h3 class="text-base font-bold text-slate-900">Direct On-Roll Hiring</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Never worry about middleman deductions. Enjoy timely monthly bank deposits, complete ESI medical cover, and Provident Fund (PF) contributions.
-                    </p>
-                </div>
-
-                {{-- Benefit 2 --}}
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-[#12233F]/30 hover:bg-white hover:shadow-md transition-all space-y-3">
-                    <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/5 text-[#12233F] border border-[#12233F]/10">
-                        <i class="ri-award-line text-xl text-[#12233F]"></i>
-                    </span>
-                    <h3 class="text-base font-bold text-slate-900">Sponsored Certifications</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Learn while earning. We sponsor certifications for ISSA CIMS hygiene, automated ride-on machinery operation, high-rise safety, and electrical MEP systems.
-                    </p>
-                </div>
-
-                {{-- Benefit 3 --}}
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-[#12233F]/30 hover:bg-white hover:shadow-md transition-all space-y-3">
-                    <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/5 text-[#12233F] border border-[#12233F]/10">
-                        <i class="ri-line-chart-line text-xl text-red-600"></i>
-                    </span>
-                    <h3 class="text-base font-bold text-slate-900">Fast Promotion Pathway</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Over 75% of our shift team leads and site facility executives started as front-line specialists. Hard work and punctuality are rewarded rapidly.
-                    </p>
-                </div>
-
-                {{-- Benefit 4 --}}
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-[#12233F]/30 hover:bg-white hover:shadow-md transition-all space-y-3">
-                    <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/5 text-[#12233F] border border-[#12233F]/10">
-                        <i class="ri-heart-pulse-line text-xl text-[#12233F]"></i>
-                    </span>
-                    <h3 class="text-base font-bold text-slate-900">Medical Cover &amp; Welfare</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Comprehensive accident insurance, clean branded safety uniforms, protective footwear, and annual festival allowances for all operational staff.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
+   
 
     {{-- The Hiring Process (4 Steps) --}}
     <section class="py-14 sm:py-18 bg-slate-50/40">
@@ -689,47 +625,5 @@
         </div>
     </section>
 
-    {{-- Call to Action Banner (Dark Navy #0B1A30 with Red Highlights) --}}
-    <section class="py-14 sm:py-18">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="relative overflow-hidden rounded-3xl bg-[#0B1A30] px-6 py-12 sm:px-12 lg:py-16 text-center text-white border border-slate-800 shadow-xl">
-                {{-- Decorative background glow --}}
-                <div class="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-red-600/15 blur-3xl pointer-events-none"></div>
-                <div class="absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-[#12233F]/40 blur-3xl pointer-events-none"></div>
-
-                <div class="relative max-w-2xl mx-auto space-y-5">
-                    <div class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold text-red-400 border border-white/10">
-                        <i class="ri-customer-service-2-line text-xs"></i>
-                        <span>Direct Operations Helpline</span>
-                    </div>
-
-                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
-                        Don't See Your Specialty Listed?
-                    </h2>
-
-                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-lg mx-auto">
-                        We are continuously onboarding experienced deep cleaning crews, pantry stewards, electromechanical technicians, and site leaders across regions.
-                    </p>
-
-                    <div class="pt-3 flex flex-wrap items-center justify-center gap-3">
-                        <a
-                            href="#careers-board"
-                            class="inline-flex items-center gap-2 rounded-full bg-red-600 hover:bg-red-500 px-6 py-3 text-xs sm:text-sm font-semibold text-white shadow-sm transition active:scale-[0.98] cursor-pointer"
-                        >
-                            <span>Apply for Current Openings</span>
-                            <i class="ri-arrow-right-line text-sm"></i>
-                        </a>
-                        <a
-                            href="tel:+918004928820"
-                            class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-xs sm:text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/20 active:scale-[0.98] cursor-pointer"
-                        >
-                            <i class="ri-phone-line text-sm text-red-400"></i>
-                            <span>Call Hiring Desk: +91 (800) 492-8820</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+ 
 </div>

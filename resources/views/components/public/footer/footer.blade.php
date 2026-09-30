@@ -17,7 +17,7 @@
 
                 <p class="mt-4 max-w-xs text-sm leading-relaxed text-slate-600">
                     Integrated facility and soft services for residential societies and commercial
-                    buildings — housekeeping, horticulture, technical, security and 24x7 support by our own team.
+                    buildings housekeeping, horticulture, technical, security and 24x7 support by our own team.
                 </p>
 
                 <div class="mt-5 flex flex-wrap items-center gap-2">
@@ -48,13 +48,6 @@
                     @endif
                 </div>
 
-                <a
-                    href="{{ route('contact') }}"
-                    class="mt-5 inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2.5 text-xs font-semibold text-slate-800 transition hover:bg-red-600 hover:text-white"
-                >
-                    <i class="ri-calendar-check-line text-sm"></i>
-                    <span>Book a free site walkthrough</span>
-                </a>
             </div>
 
             {{-- Services --}}
@@ -123,13 +116,7 @@
 
         </div>
 
-        {{-- Trust Strip --}}
-        <div class="mt-9 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-600">
-            <span class="inline-flex items-center gap-1.5"><i class="ri-shield-user-line text-red-500"></i> Police-verified staff</span>
-            <span class="inline-flex items-center gap-1.5"><i class="ri-hospital-line text-red-500"></i> ESI &amp; PF compliant</span>
-            <span class="inline-flex items-center gap-1.5"><i class="ri-cup-line text-red-500"></i> FSSAI-trained pantry</span>
-            <span class="inline-flex items-center gap-1.5"><i class="ri-fire-line text-red-500"></i> Fire &amp; first-aid trained</span>
-        </div>
+        
 
         {{-- Bottom Bar --}}
         <div class="mt-6 border-t border-slate-200 pt-6 text-center text-xs text-slate-500">

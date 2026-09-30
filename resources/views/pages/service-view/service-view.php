@@ -1,8 +1,12 @@
 <?php
 
+use App\Mail\ServiceProposalRequestedMail;
+use App\Models\Contact;
 use App\Models\Service;
 use App\Services\ServiceCatalog;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
@@ -16,19 +20,14 @@ new class extends Component
     #[Rule('required|min:3', message: 'Please enter your full name')]
     public string $name = '';
 
-    #[Rule('required|email', message: 'Please enter a valid business email')]
-    public string $email = '';
-
     #[Rule('required|min:7', message: 'Please enter a valid phone number')]
     public string $phone = '';
 
-    public string $propertyType = 'Commercial Office';
+    #[Rule('required|min:3', message: 'Please enter a subject')]
+    public string $subject = '';
 
-    public string $squareFootage = '10,000 - 25,000 sq ft';
-
-    public string $shiftPreference = 'Twilight / Night Shift';
-
-    public string $notes = '';
+    #[Rule('required|min:5', message: 'Please enter details for your request')]
+    public string $description = '';
 
     public bool $submitted = false;
 
@@ -62,8 +61,38 @@ new class extends Component
     {
         $this->validate();
 
+        Contact::create([
+            'name' => $this->name,
+            'phone' => $this->phone,
+            'subject' => $this->subject,
+            'message' => $this->description,
+            'property_type' => $this->service->title,
+        ]);
+
+        $recipient = config('mail.to_address')
+            ?: env('MAIL_TO_ADDRESS')
+            ?: env('MAIL_TO')
+            ?: config('mail.from.address')
+            ?: setting('email');
+
+        if ($recipient) {
+            try {
+                Mail::to($recipient)->send(
+                    new ServiceProposalRequestedMail(
+                        name: $this->name,
+                        phone: $this->phone,
+                        subjectText: $this->subject,
+                        description: $this->description,
+                        serviceTitle: $this->service->title
+                    )
+                );
+            } catch (Throwable $e) {
+                Log::error('Failed to send service proposal request mail: '.$e->getMessage());
+            }
+        }
+
         $this->submitted = true;
-        $this->reset(['name', 'email', 'phone', 'notes']);
+        $this->reset(['name', 'phone', 'subject', 'description']);
     }
 
     /**

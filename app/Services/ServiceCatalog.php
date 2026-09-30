@@ -24,12 +24,13 @@ class ServiceCatalog
                 'response_time' => 'Same-Shift Spot Response',
                 'staff_standard' => 'Machines Operated By Trained In-House Technicians',
                 'frequency' => 'Daily Shifts & Weekly Machine Cycles',
-                'full_description' => 'Mechanized cleaning replaces bucket-and-mop effort with measured cycles. Every zone is cleaned by a defined machine, at a defined frequency, by a trained operator, and verified on a zone checklist. Equipment is kept current through reputed OEM tie-ups, and completed runs are captured in your monthly audit report.',
+                'full_description' => 'Mechanized Cleaning Operations provide high-efficiency, technology-driven floor maintenance designed for commercial, industrial, and residential properties. Traditional manual mopping methods often push dirt around, consume excessive water, and produce inconsistent hygiene results across large square footage. Our mechanized cleaning solutions replace manual labor with advanced auto-scrubber driers, high-pressure jet washers, wet and dry industrial vacuum cleaners, and single-disc floor polishing machinery. Every machine operator on site is a trained technician skilled in chemical dosing, equipment safety, and surface-specific scrubbing techniques. Our operations cover daily shift maintenance, post-working-hour deep scrubs, and periodic floor restoration. Auto-scrubbers instantly distribute clean water mixed with specialized eco-friendly cleaning formulas, scrub the floor surface thoroughly using high-torque brushes, and vacuum up the slurry in a single pass, leaving floors clean, dry, and safe for immediate foot traffic. By standardizing machine deployment schedules, managing OEM equipment tie-ups, and logging every operational run via supervisor sign-offs, we deliver a 99.5% machine cycle compliance rate. Whether maintaining marble lobbies, vitrified tile corridors, granite aprons, or industrial concrete bays, mechanized cleaning ensures maximum surface hygiene, reduced water usage, and extended floor lifespan without interrupting daily site activities.',
                 'features' => [
-                    'Latest Equipment' => 'Auto scrubbers, jet washers and shampoo machines kept current through OEM tie-ups.',
-                    'Smart Cleaning Process' => 'Every zone on a fixed frequency, verified and logged by a supervisor.',
-                    'Operator Safety' => 'Trained technicians with daily machine checks and safe chemical handling.',
-                    'Measured Results' => 'Controlled dosing cuts water and chemical use without reducing output.',
+                    'High-Performance Fleet' => 'Industrial auto scrubbers, pressure jet washers, wet/dry vacuums, and floor polishers.',
+                    'Checklist-Driven Cycles' => 'Pre-shift machine checks, daily zone scrubbing, and logged supervisor verifications.',
+                    'Eco-Dosing & Water Saving' => 'Controlled chemical dilution and high-efficiency recovery systems.',
+                    'Trained Tech Operators' => 'Certified technicians skilled in machine safety, battery care, and surface chemistry.',
+                    'Zero-Disruption Scheduling' => 'Execution planned during off-peak and post-office hours for seamless site flow.',
                 ],
                 'scope' => [
                     'daily' => [
@@ -52,26 +53,6 @@ class ServiceCatalog
                     'Carpet and Upholstery Shampoo Extractors',
                     'Microfibre and Colour-Coded Cleaning Tools',
                 ],
-                'comparison' => [
-                    ['feature' => 'Cleaning Method', 'us' => 'Machine-assisted, checklist-driven process', 'others' => 'Manual mopping with the same effort and cost'],
-                    ['feature' => 'Equipment', 'us' => 'Latest machines through reputed company tie-ups', 'others' => 'Aged push mops and one shared vacuum'],
-                    ['feature' => 'Water & Chemical Use', 'us' => 'Controlled dosing with measurable consumption', 'others' => 'Unmeasured buckets refilled repeatedly'],
-                    ['feature' => 'Proof of Work', 'us' => 'Zone-wise logged checklist with supervisor sign-off', 'others' => 'Verbal assurance with nothing on record'],
-                ],
-                'faqs' => [
-                    [
-                        'q' => 'Do you bring your own machines, or do we need to own them?',
-                        'a' => 'We bring, operate and maintain our own equipment as part of the contract. For large sites we can deploy additional or dedicated machines for a particular floor or zone.',
-                    ],
-                    [
-                        'q' => 'Can machine cleaning be scheduled after working hours?',
-                        'a' => 'Yes. Most machine cycles are planned for post-working hours so that noise, water and chemical use never disturb your staff or residents.',
-                    ],
-                    [
-                        'q' => 'How is the smart cleaning process measured?',
-                        'a' => 'Each zone has a defined task list and frequency. The duty supervisor completes and signs the checklist, and the completed report becomes part of the monthly audit shared with you.',
-                    ],
-                ],
             ],
             [
                 'slug' => 'washroom-services',
@@ -87,12 +68,13 @@ class ServiceCatalog
                 'response_time' => '15-Minute Spill & Overflow Response',
                 'staff_standard' => 'Uniformed Staff Trained In Washroom Hygiene & Safety',
                 'frequency' => '4 To 8 Rounds Per Day',
-                'full_description' => 'Washrooms are the first thing visitors judge, so we keep them consistent on a fixed round schedule with extra rounds during peak hours. Every round covers fixtures, touchpoints, floors, consumables and waste, and is verified by a duty supervisor. Odour is treated at the source with enzymatic drain care.',
+                'full_description' => 'Washroom Services are critical to maintaining health standards, tenant satisfaction, and property reputation across corporate offices, commercial towers, and residential communities. Washrooms are the highest-footfall touchpoints in any building and require structured, multi-round sanitation rather than occasional basic cleaning. Our dedicated washroom hygiene management system operates on a scheduled round schedule, increasing cleaning frequency during morning, afternoon, and evening peak usage windows to prevent foul odors, empty dispensers, and dirty surfaces. Every service round follows strict hygiene protocols covering touchpoint disinfection, fixture descaling, floor drying, consumable restocking, and waste disposal. All high-touch areas—including door handles, faucet levers, flush buttons, partition latches, paper dispensers, and waste bins—are disinfected with hospital-grade, non-corrosive sanitizing agents. Consumables such as liquid hand soap, paper towels, tissue rolls, and sanitary bags are monitored continuously to ensure dispensers never run empty. To eliminate foul odors at their root cause, we utilize enzymatic drain and trap treatments that break down organic waste inside pipes rather than masking odors with heavy synthetic sprays. Every washroom carries a visible daily checklist updated and signed by duty supervisors, providing complete audit compliance.',
                 'features' => [
-                    'Scheduled Rounds' => 'Fixed rounds through the day, with extra coverage during peak footfall.',
-                    'Touchpoint Disinfection' => 'Handles, taps, flush levers, partitions and bins disinfected on every round.',
-                    'Consumable Replenishment' => 'Soap, tissue and sanitary units stocked before they run out.',
-                    'Signed Checklists' => 'Every washroom carries a daily checklist completed and signed by a supervisor.',
+                    'Scheduled Multi-Round Care' => 'Fixed daily cleaning rounds (4 to 8 rounds per day) with peak-hour coverage.',
+                    'Touchpoint Disinfection' => 'Frequent sanitization of handles, taps, flush levers, partitions, and dispenser buttons.',
+                    'Consumable Management' => 'Proactive replenishment of soap, tissue rolls, hand towels, and sanitary supplies.',
+                    'Enzymatic Odor Control' => 'Root-cause odor treatment targeting drain traps and urinal pipes without harsh fumes.',
+                    'Digital & Signed Checklists' => 'Supervisor-verified inspection logs displayed in every washroom for complete transparency.',
                 ],
                 'scope' => [
                     'daily' => [
@@ -115,26 +97,6 @@ class ServiceCatalog
                     'Colour-Coded Microfibre Cloths and Mops',
                     'Handheld Wet & Dry Vacuum Units',
                 ],
-                'comparison' => [
-                    ['feature' => 'Coverage', 'us' => 'Fixed multi-round schedule with peak-hour buffers', 'others' => 'One or two hurried visits a day'],
-                    ['feature' => 'Verification', 'us' => 'Signed washroom checklist per round', 'others' => 'No record of who cleaned what'],
-                    ['feature' => 'Odour Control', 'us' => 'Enzymatic root-cause treatment', 'others' => 'Strong sprays that only mask the smell'],
-                    ['feature' => 'Safety', 'us' => 'Correct dilution, PPE and wet-floor barricading', 'others' => 'Open chemicals and unattended wet floors'],
-                ],
-                'faqs' => [
-                    [
-                        'q' => 'How many times a day are washrooms serviced?',
-                        'a' => 'Between four and eight rounds depending on the usage pattern of the building. High-traffic commercial and society washrooms get additional rounds during morning and evening peaks.',
-                    ],
-                    [
-                        'q' => 'Are the chemicals safe for children and residents?',
-                        'a' => 'Yes. We use eco-friendly, low-toxicity chemistry with correct dilution, and staff are trained to keep washrooms usable and safe while treatment is in progress.',
-                    ],
-                    [
-                        'q' => 'What happens if a washroom is not up to standard?',
-                        'a' => 'The supervisor re-services the washroom the same shift, and the miss is recorded in our monthly audit report along with the corrective action taken.',
-                    ],
-                ],
             ],
             [
                 'slug' => 'deep-cleaning-services',
@@ -150,12 +112,13 @@ class ServiceCatalog
                 'response_time' => 'Scheduled Slots Confirmed 72 Hours In Advance',
                 'staff_standard' => 'Specialist Deep-Cleaning Crew With Full PPE',
                 'frequency' => 'Monthly, Quarterly & Pre-Event Slots',
-                'full_description' => 'Deep cleaning separates a maintained building from a neglected one. We deliver it as a planned programme: grout, tiles, high-reach surfaces, carpets, kitchen exhausts and service areas are worked through on a fixed monthly, quarterly and pre-event cycle by a dedicated specialist crew, with a documented before-and-after checklist.',
+                'full_description' => 'Deep Cleaning Services deliver intensive, periodic sanitation targeting embedded grime, hard water stains, high-reach dust, and heavy soil build-up that standard daily housekeeping cannot address. Over time, dust accumulates on ceiling beams, air conditioning vents, light fixtures, and structural ledges, while grout lines, carpets, upholstery, and hard floors absorb grease and deep-seated dirt. Our specialized deep cleaning crews operate on planned monthly, quarterly, and pre-event cycles to restore property interiors and exteriors to pristine condition. Equipped with hot-water carpet extractors, heavy-duty steam vaporizers, floor stripping machines, and high-reach cleaning rods, our teams execute systematic deep cleans for corporate offices, commercial facilities, and residential premises. Hard floors undergo deep scrubbing, chemical descaling, and protective polishing; carpets and fabric chairs undergo hot-water shampoo extraction and targeted stain removal; and kitchen exhausts and grease traps receive thorough degreasing. All work is conducted adhering to height safety standards using appropriate scaffolding and safety harnesses. Before initiating work, our supervisors conduct a site walkthrough, and upon completion, a comprehensive before-and-after audit checklist with photo documentation is delivered.',
                 'features' => [
-                    'Defined Cycle' => 'A published monthly, quarterly and pre-event schedule for all deep work.',
-                    'High-Reach Cleaning' => 'Ceilings, ducts, fans, light fittings and ledges cleaned with reach equipment.',
-                    'High-Pressure Work' => 'Driveways, podiums, ramps and external passages cleaned with jet washers.',
-                    'Carpet & Upholstery' => 'Hot water extraction and stain treatment for carpets, sofas and chairs.',
+                    'High-Reach & Overhead Dusting' => 'Cleaning of ductwork, ceiling beams, light fixtures, and overhead ledges.',
+                    'Hard Floor Scrubbing & Polishing' => 'Deep scrubbing, descaling, and polishing for tile, marble, and granite floors.',
+                    'Hot-Water Carpet Extraction' => 'Deep shampoo extraction and stain treatment for carpets, sofas, and office chairs.',
+                    'Kitchen & Exhaust Degreasing' => 'Specialized removal of heavy oil, carbon, and grease from exhausts and kitchen surfaces.',
+                    'Documented Quality Audit' => 'Before-and-after inspection report complete with photo evidence and sign-offs.',
                 ],
                 'scope' => [
                     'daily' => [
@@ -178,26 +141,6 @@ class ServiceCatalog
                     'Dry Steam Vaporizers and Reach Rods',
                     'Height Access Equipment and Safety Harnesses',
                 ],
-                'comparison' => [
-                    ['feature' => 'Planning', 'us' => 'Published deep-clean cycle with a named crew', 'others' => 'Called when something looks visibly bad'],
-                    ['feature' => 'High Reach', 'us' => 'Access equipment and trained operators', 'others' => 'Ladders and skipped ceilings'],
-                    ['feature' => 'Reporting', 'us' => 'Before-and-after checklist with photographs', 'others' => 'Verbal completion, no evidence'],
-                    ['feature' => 'Scheduling', 'us' => 'Phased slots agreed around site operations', 'others' => 'Work blocking everyday activity'],
-                ],
-                'faqs' => [
-                    [
-                        'q' => 'How do you plan a deep cleaning programme?',
-                        'a' => 'We walk the site, identify areas by condition and usage, then issue a monthly and quarterly calendar. Areas such as carpets, exhausts and high-reach zones are placed on their own frequency.',
-                    ],
-                    [
-                        'q' => 'Can deep cleaning be done without disturbing daily operations?',
-                        'a' => 'Yes. Work is phased floor by floor and, where possible, scheduled after hours or on weekends so residents, staff and production are not impacted.',
-                    ],
-                    [
-                        'q' => 'Is deep cleaning included in the standard contract?',
-                        'a' => 'It can be bundled into the annual contract at a fixed number of cycles, or taken as scheduled one-off slots depending on your budget and site condition.',
-                    ],
-                ],
             ],
             [
                 'slug' => 'landscaping',
@@ -213,12 +156,13 @@ class ServiceCatalog
                 'response_time' => '24-Hour Post-Storm Clearance',
                 'staff_standard' => 'Trained Horticulture Crew With Protective Equipment',
                 'frequency' => 'Daily Touch-Up & Weekly Maintenance Cycles',
-                'full_description' => 'Green areas are the first thing residents notice. One trained horticulture crew looks after lawns, planting beds, hedges, trees, planters, podiums and terraces against a fixed weekly checklist, and also manages irrigation timing, seasonal planting and post-monsoon cleanup so the landscape stays presentable through every season.',
+                'full_description' => 'Landscaping & Horticulture Services provide end-to-end management for green spaces, gardens, lawns, podium decks, and indoor planters across residential societies and corporate campuses. Beautifully maintained landscapes enhance property value, improve air quality, and create welcoming environments for residents, staff, and visitors. Our dedicated horticulture teams combine routine daily maintenance with planned seasonal planting, lawn care, tree pruning, and irrigation management to keep greenery lush and healthy year-round. Our scope of work includes regular lawn mowing, turf aeration, edge trimming, weed removal, and soil conditioning using organic fertilizers and compost. We oversee manual and automated irrigation systems—including drip lines and sprinkler heads—performing regular pressure checks to prevent water waste and dry zones. Qualified gardeners manage shrub shaping, seasonal flower bed planting, and safe tree pruning to prevent overgrown branches from obstructing lighting or building structures. Following storms or seasonal leaf sheds, our crews immediately clear green waste and route all organic matter to approved composting units, ensuring zero waste accumulation on site.',
                 'features' => [
-                    'Complete Green Area Coverage' => 'Lawns, beds, hedges, trees, planters and terraces under a single crew.',
-                    'Lawn Care' => 'Mowing, edging, aeration and weed control for lawns and open areas.',
-                    'Irrigation Management' => 'Sprinkler and drip operation with watering schedules and leak checks.',
-                    'Tree Care & Pruning' => 'Pruning, shaping and safety trimming of trees near buildings and walkways.',
+                    'Lawn & Turf Management' => 'Precision mowing, edging, weed control, turf aeration, and seasonal overseeding.',
+                    'Irrigation System Upkeep' => 'Daily operation and leak checks for sprinkler and drip irrigation networks.',
+                    'Tree Pruning & Shrub Shaping' => 'Safe branch trimming, hedge shaping, and structural pruning near building facades.',
+                    'Soil Health & Organic Feeding' => 'Regular application of eco-friendly fertilizers, compost, and soil conditioners.',
+                    'Green Waste Handling' => 'Systematic collection, shredding, and composting of leaves and organic cuttings.',
                 ],
                 'scope' => [
                     'daily' => [
@@ -241,26 +185,6 @@ class ServiceCatalog
                     'Sprinkler and Drip Irrigation Systems',
                     'Personal Protective Equipment',
                 ],
-                'comparison' => [
-                    ['feature' => 'Crew', 'us' => 'Trained, uniformed and equipped horticulture crew', 'others' => 'One helper with hand tools'],
-                    ['feature' => 'Irrigation', 'us' => 'Managed schedules with leak and coverage checks', 'others' => 'Unscheduled manual watering'],
-                    ['feature' => 'Seasonal Work', 'us' => 'Planned planting and foliage cycles', 'others' => 'Plantings that die after a month'],
-                    ['feature' => 'Green Waste', 'us' => 'Collected and routed to approved handling', 'others' => 'Piled up and burnt or dumped'],
-                ],
-                'faqs' => [
-                    [
-                        'q' => 'Do you look after lawns, planters and trees both?',
-                        'a' => 'Yes. Our scope covers lawns, planting beds, hedges, trees, planters, podium gardens and terraces. If a specific element is maintained by the society, we simply exclude it from the scope.',
-                    ],
-                    [
-                        'q' => 'Who supplies plants and garden materials?',
-                        'a' => 'We can supply plants, soil, fertilizer and pots as part of the contract, or work with materials you already maintain on site. Both models are fine.',
-                    ],
-                    [
-                        'q' => 'How is the monsoon handled?',
-                        'a' => 'Pre-monsoon pruning and drainage checks are done in advance, and a dedicated post-monsoon cleanup cycle clears leaves, silt and blockages from gardens, drains and paths.',
-                    ],
-                ],
             ],
             [
                 'slug' => 'pest-management',
@@ -276,12 +200,13 @@ class ServiceCatalog
                 'response_time' => '24-Hour Response On New Sightings',
                 'staff_standard' => 'Trained Applicators With PPE & Approved Chemistries',
                 'frequency' => 'Monthly To Quarterly Treatment Cycles',
-                'full_description' => 'Pest control should start with a survey, not a spray. We identify the pest, its entry route and breeding source, then design a treatment cycle for that specific problem. Applications use approved chemistry safe for occupied buildings, every treatment is recorded, and any pest that reappears within the cycle is treated again at no extra cost.',
+                'full_description' => 'Pest Management Services deliver targeted, scientific pest elimination and prevention for commercial buildings, corporate offices, industrial facilities, and residential societies. Pest infestations pose severe risks to occupant health, hygiene compliance, structural woodwork, and corporate reputation. Rather than relying on generic blanket sprays, our approach begins with a comprehensive site survey to identify pest species, entry pathways, moisture hot spots, and nesting sites before developing a tailored treatment protocol. Our pest control operations tackle mosquitoes, cockroaches, termites, rodents, ants, bedbugs, and site-specific vermin using odorless, low-toxicity, EPA-approved chemicals that are completely safe for occupied spaces. Mosquito management includes standing water larviciding, cold fogging, and window screen checks; rodent control utilizes secure bait stations, snap traps, and entry-point wire mesh sealing; and termite management incorporates soil barrier injections and wood treatment. Every service visit is documented in a detailed pest register recording chemicals applied, dilution ratios, targeted areas, and recommended preventative measures.',
                 'features' => [
-                    'Site Survey First' => 'Pest identification, entry-point mapping and source analysis before any treatment.',
-                    'Mosquito Control' => 'Larviciding, fogging and screens to cut mosquito breeding and entry.',
-                    'Termite & Vermin Control' => 'Structural termite treatment plus cockroach and rodent baiting and trapping.',
-                    'Documented History' => 'A treatment register with date, area, product and follow-up for every visit.',
+                    'Survey-Based Strategy' => 'Initial inspection mapping pest species, entry points, and breeding harborage.',
+                    'Odorless & Safe Chemistry' => 'Use of eco-friendly, low-toxicity, government-approved chemical formulations.',
+                    'Comprehensive Pest Coverage' => 'Targeted control for mosquitoes, cockroaches, termites, rodents, and ants.',
+                    'Rodent Proofing & Baiting' => 'Placement of tamper-resistant bait stations and structural entry-point sealing.',
+                    'Detailed Service Logbook' => 'Documented registers of treatment dates, chemicals used, and warranty follow-up visits.',
                 ],
                 'scope' => [
                     'daily' => [
@@ -304,26 +229,6 @@ class ServiceCatalog
                     'Termite Injection and Drilling Equipment',
                     'Handheld Sprayers and Dosing Measures',
                 ],
-                'comparison' => [
-                    ['feature' => 'Approach', 'us' => 'Survey, identify, treat the source', 'others' => 'Same spray on every visit regardless of pest'],
-                    ['feature' => 'Coverage', 'us' => 'Hot spots, entry routes and breeding sites', 'others' => 'Visible areas only'],
-                    ['feature' => 'Safety', 'us' => 'Approved chemistry, PPE, scheduled windows', 'others' => 'Strong spray applied in occupied areas'],
-                    ['feature' => 'Records', 'us' => 'Treatment register shared with the client', 'others' => 'No history, no follow-up'],
-                ],
-                'faqs' => [
-                    [
-                        'q' => 'How often should pest control be done?',
-                        'a' => 'It depends on the site. Most residential societies and commercial facilities need monthly preventive treatment, with quarterly termite and pre-monsoon mosquito cycles added on top.',
-                    ],
-                    [
-                        'q' => 'Is the treatment safe for children, pets and residents?',
-                        'a' => 'Yes. We use approved, low-toxicity chemistry with correct dilution, and treatments are scheduled in windows when the area can be kept unused. Instructions are provided after every application.',
-                    ],
-                    [
-                        'q' => 'What if the same pest comes back after treatment?',
-                        'a' => 'We re-inspect the area, identify why the treatment did not hold and re-apply at no additional cost within the agreed cycle.',
-                    ],
-                ],
             ],
             [
                 'slug' => 'office-space-management',
@@ -339,12 +244,13 @@ class ServiceCatalog
                 'response_time' => '30-Minute Response During Office Hours',
                 'staff_standard' => 'Uniformed, Background-Checked Floor Teams',
                 'frequency' => 'Daily Shifts With Weekly Deep Cycles',
-                'full_description' => 'An office floor is a daily operation, not a monthly clean. We roster teams floor by floor so cabins, workstations, conference rooms, pantries and washrooms are covered by name, with defined tasks per shift. Daytime staff handle live requests and hygiene checks; night shifts handle machine cleaning and deep vacuuming so every floor is ready before the first arrival.',
+                'full_description' => 'Office Space & Floor Management provides dedicated, floor-wise facility maintenance tailored to corporate workplaces, IT parks, and administrative centers. A clean, organized office directly boosts employee productivity, reduces sick leaves, and upholds corporate brand standards. We deploy trained, background-verified floor teams assigned to specific floors, ensuring personal accountability for every cabin, workstation, conference room, pantry, and restroom throughout the workday. Daytime attendants maintain continuous presence for live service requests, spill cleanup, conference room resets, and pantries, while night crews execute heavy floor scrubbing and deep vacuuming so desks and carpets are fresh before office hours. Workstations undergo desk wiping, computer-safe dusting, chair vacuuming, and trash bin emptying. Pantries are sanitized continuously with special attention to microwaves, coffee machines, refrigerators, and sinks. We also enforce strict waste segregation at source, separating organic, recyclable, and hazardous electronic waste to align with corporate sustainability goals.',
                 'features' => [
-                    'Floor-Wise Rostering' => 'Named attendants and backups per floor, with attendance tracked daily.',
-                    'Cabin & Workstation Care' => 'Dust-free desks, plus chair and partition cleaning across workstations.',
-                    'Pantry & Conference Rooms' => 'Pantry hygiene, appliance care and room reset after every use.',
-                    'Waste Segregation' => 'Daily wet and dry segregation at source with handover.',
+                    'Dedicated Floor Rostering' => 'Named floor attendants with backup coverage for daily continuity.',
+                    'Workstation & Cabin Care' => 'Sanitization of desk surfaces, partition panels, chairs, and electronic fixtures.',
+                    'Pantry & Breakroom Sanitation' => 'Hygiene maintenance for appliances, counter tops, sink traps, and dining spaces.',
+                    'Source Waste Segregation' => 'Systematic separation of wet, dry, and recyclable waste at office collection points.',
+                    'Conference Room Reset' => 'Prompt cleaning, table wiping, and chair arrangement between meetings.',
                 ],
                 'scope' => [
                     'daily' => [
@@ -367,26 +273,6 @@ class ServiceCatalog
                     'Colour-Coded Microfibre Cleaning Kits',
                     'Washroom Sanitation and Disinfection Units',
                 ],
-                'comparison' => [
-                    ['feature' => 'Deployment', 'us' => 'Named floor teams with backup cover', 'others' => 'One pool of staff moved across floors'],
-                    ['feature' => 'Shift Planning', 'us' => 'Day support plus night machine cleaning', 'others' => 'Cleaning finished before the office fills'],
-                    ['feature' => 'Checks', 'us' => 'Supervisor walk with recorded floor checklist', 'others' => 'No documented verification'],
-                    ['feature' => 'Response', 'us' => 'On-floor staff resolve issues immediately', 'others' => 'Wait for a central dispatch call'],
-                ],
-                'faqs' => [
-                    [
-                        'q' => 'Do you assign dedicated staff to our floor?',
-                        'a' => 'Yes. Each floor is assigned named attendants with a trained backup, so attendance, quality and escalation are clear every day.',
-                    ],
-                    [
-                        'q' => 'How do you handle work during office hours?',
-                        'a' => 'Daytime staff stay on the floor for live service requests and hygiene rounds, while machine cleaning and deep vacuuming are scheduled after hours to avoid disturbing your team.',
-                    ],
-                    [
-                        'q' => 'Can you also manage the pantry and consumables?',
-                        'a' => 'Yes. Pantry hygiene, appliance care, consumable checks and daily stock reporting can all be included, along with periodic deep cleaning of the pantry itself.',
-                    ],
-                ],
             ],
             [
                 'slug' => 'residential-society-management',
@@ -402,12 +288,13 @@ class ServiceCatalog
                 'response_time' => '24x7 Support Desk & On-Call Technical Staff',
                 'staff_standard' => 'Trained, Uniformed & Background-Verified Residential Staff',
                 'frequency' => 'Daily Operations With Monthly Committee Reporting',
-                'full_description' => 'Our society work goes far beyond cleaning. We deploy and supervise housekeeping staff, keep the landscape presentable, coordinate security, and stay ahead of technical maintenance so lifts, pumps and DG sets do not fail. A dedicated manager owns the site, and every month the committee receives a clear audit report.',
+                'full_description' => 'Residential Society Management offers comprehensive, end-to-end facility governance for housing societies, gated communities, and apartment complexes. Managing a residential society requires seamless coordination across multiple operational domains—including housekeeping, horticulture, technical utility upkeep, security oversight, and vendor management. We deploy a dedicated on-site Facility Manager who acts as the single point of contact for the managing committee and residents, overseeing daily operations and maintaining quality standards. Our residential team covers daily cleaning of common lobbies, elevators, staircases, clubhouses, gymnasiums, and parking decks. Technical staff conduct daily walkthroughs inspecting water pumps, overhead tanks, diesel generators, lift machinery, and common area lighting to prevent unexpected utility failures. Horticulture crews care for lawns and gardens, while our support desk manages resident complaints 24/7. Every month, the management committee receives a transparent facility audit report covering service scores, equipment maintenance status, energy usage, and resolved ticket summaries.',
                 'features' => [
-                    'Staff Deployment' => 'Housekeeping staffing set by area and occupancy, with daily supervision.',
-                    'Horticulture & Green Areas' => 'Lawn care, planting, irrigation and tree maintenance across common areas.',
-                    'Technical Upkeep' => 'Planned maintenance of lifts, pumps, tanks, DG sets and common lighting.',
-                    'Monthly Audit & Committee Report' => 'A documented report of scores, actions and support desk use.',
+                    'Single Point Accountability' => 'Dedicated on-site Facility Manager overseeing all operations and vendor teams.',
+                    'Common Area Housekeeping' => 'Daily cleaning of lobbies, corridors, elevators, stairwells, and amenities.',
+                    'Technical & Utility Walkthroughs' => 'Routine checks of pumps, DG sets, water storage tanks, and common electricals.',
+                    '24/7 Resident Support Desk' => 'Round-the-clock helpdesk for maintenance logging and quick emergency response.',
+                    'Monthly Committee Reporting' => 'Transparent audit reports covering compliance scores, maintenance logs, and budget tracking.',
                 ],
                 'scope' => [
                     'daily' => [
@@ -430,26 +317,6 @@ class ServiceCatalog
                     'Technical Hand Tools and Safety Equipment',
                     'Checklist Boards, Registers and Reporting Tools',
                 ],
-                'comparison' => [
-                    ['feature' => 'Ownership', 'us' => 'One manager accountable for the whole site', 'others' => 'Four vendors pointing at each other'],
-                    ['feature' => 'Support', 'us' => '24x7 support desk and on-call technical staff', 'others' => 'Phone calls answered the next morning'],
-                    ['feature' => 'Visibility', 'us' => 'Monthly audit and committee report', 'others' => 'No record, only verbal updates'],
-                    ['feature' => 'Continuity', 'us' => 'Trained staff who stay on your society', 'others' => 'Changing helpers every month'],
-                ],
-                'faqs' => [
-                    [
-                        'q' => 'How many staff will be required for our society?',
-                        'a' => 'It depends on the number of towers, the size of common areas and the amenities. We assess the site, then propose a staffing plan with shifts and backups for your approval.',
-                    ],
-                    [
-                        'q' => 'Will we have one point of contact?',
-                        'a' => 'Yes. Each society is assigned a dedicated manager who handles resident requests, vendors, audits and committee reporting, backed by our 24x7 support desk.',
-                    ],
-                    [
-                        'q' => 'How do you report to the management committee?',
-                        'a' => 'Through a monthly facility audit that covers service scores, open issues, corrective actions, vendor coordination and any support desk usage during the month.',
-                    ],
-                ],
             ],
             [
                 'slug' => 'manufacturing-sector-services',
@@ -465,12 +332,13 @@ class ServiceCatalog
                 'response_time' => '15-Minute On-Site Spill Response',
                 'staff_standard' => 'Shop-Floor Trained Crew With Zone-Specific Induction',
                 'frequency' => 'Shift-Aligned Daily Rounds & Planned Overhauls',
-                'full_description' => 'Production cannot stop, and machines and floors carry oil, dust and hazardous residue. Our crews work on shift-aligned rosters with zone-specific induction, covering shop floor and machine bay cleaning, spill response, dust and waste control, and canteen and change room hygiene. Every task follows the plant safety rules.',
+                'full_description' => 'Manufacturing Sector Services deliver specialized industrial facility maintenance for factories, processing plants, warehouses, and manufacturing units. Industrial environments present complex operational challenges—including heavy oil and grease accumulation, airborne dust, chemical residue, and strict factory safety mandates. Our factory cleaning teams work on shift-aligned rosters synchronized with production schedules, ensuring plant cleanliness without disrupting manufacturing lines or machinery output. Our crews undergo zone-specific safety inductions and wear full Personal Protective Equipment (PPE) tailored to plant requirements. Scope of work includes machine bay cleaning, shop floor scrubbing, overhead truss dusting, and hazardous spill containment. In the event of oil, coolant, or chemical spills, our trained technicians deploy specialized absorbents and containment booms for immediate cleanup and safe waste disposal. Additionally, we maintain high hygiene standards across non-production zones—such as worker canteens, change rooms, locker facilities, and plant restrooms—promoting worker health and safety compliance.',
                 'features' => [
-                    'Shift-Aligned Rosters' => 'Cleaning crews mapped to production shifts with named supervisors per zone.',
-                    'Shop Floor & Machine Bay Care' => 'Machine surrounds, aisles and grates cleaned on a defined cycle.',
-                    'Spill Response' => 'Trained containment, absorption and safe disposal for oil and chemical spills.',
-                    'Waste Control' => 'Segregated, labelled waste handed to approved handlers.',
+                    'Production Shift Alignment' => 'Cleaning rosters designed around plant working shifts to minimize downtime.',
+                    'Shop Floor & Machine Surround Care' => 'Removal of industrial oil, coolant, grease, and metal shavings from aisles and bays.',
+                    'Rapid Spill Containment' => 'Absorbent response kits and trained protocols for chemical and oil spill cleanup.',
+                    'Plant Safety & PPE Compliance' => 'Strict adherence to factory safety rules, work permits, and mandatory safety gear.',
+                    'Canteen & Amenity Sanitation' => 'High-frequency hygienic cleaning for worker canteens, change rooms, and restrooms.',
                 ],
                 'scope' => [
                     'daily' => [
@@ -492,26 +360,6 @@ class ServiceCatalog
                     'Industrial Wet & Dry Vacuum Cleaners',
                     'Oil Absorbent and Spill Containment Kits',
                     'Zone-Specific PPE and Safety Equipment',
-                ],
-                'comparison' => [
-                    ['feature' => 'Planning', 'us' => 'Rosters built around your production shifts', 'others' => 'Cleaning scheduled against plant output'],
-                    ['feature' => 'Safety', 'us' => 'Zone induction, PPE and permit coordination', 'others' => 'Untrained cleaners on the shop floor'],
-                    ['feature' => 'Spills', 'us' => 'Trained response with containment and disposal', 'others' => 'Water added to an oil spill'],
-                    ['feature' => 'Waste', 'us' => 'Segregated, labelled and handed to approved handlers', 'others' => 'Mixed waste left for the next shift'],
-                ],
-                'faqs' => [
-                    [
-                        'q' => 'Can cleaning be done while production is running?',
-                        'a' => 'Yes, within agreed windows and zones. We align the cleaning plan with your shift schedule and movement windows so that production is never blocked and safety rules are respected.',
-                    ],
-                    [
-                        'q' => 'How do you handle chemical or oil spills?',
-                        'a' => 'Our crews are trained in spill response: immediate containment with absorbents, cleanup, safe disposal of the contaminated material and a record of the incident in the shift report.',
-                    ],
-                    [
-                        'q' => 'Do your staff need plant safety induction?',
-                        'a' => 'Yes. Every crew member completes zone-specific safety induction before entering the area, and follows your PPE, access and work permit requirements while on site.',
-                    ],
                 ],
             ],
         ];

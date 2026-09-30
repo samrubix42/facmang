@@ -48,7 +48,7 @@
 
                 <!-- Card 2: Email -->
                 <a 
-                    href="mailto:{{ setting('email', 'info@ndssecurityservices.com') }}"
+                    href="mailto:{{ setting('email', 'info@realfacilityservices.com') }}"
                     class="flex items-center gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-md"
                 >
                     <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
@@ -56,8 +56,8 @@
                     </span>
                     <div class="min-w-0">
                         <p class="text-[11px] font-medium text-slate-400">Operations Email</p>
-                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">{{ setting('email', 'info@ndssecurityservices.com') }}</p>
-                        <p class="text-[10px] text-slate-400 mt-0.5">Response &lt;2 hours</p>
+                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">{{ setting('email', 'info@realfacilityservices.com') }}</p>
+                        <p class="text-[10px] text-slate-400 mt-0.5">Direct Inquiry</p>
                     </div>
                 </a>
 
@@ -68,7 +68,7 @@
                     </span>
                     <div class="min-w-0">
                         <p class="text-[11px] font-medium text-slate-400">Corporate HQ</p>
-                        <p class="text-xs sm:text-sm font-bold text-slate-900 line-clamp-2" title="{{ setting('address', 'Plot No. 128, Haibatpur, Near Gaur City Mall, Greater Noida - 201318 (U.P.)') }}">{{ setting('address', 'Plot No. 128, Haibatpur, Near Gaur City Mall, Greater Noida - 201318 (U.P.)') }}</p>
+                        <p class="text-xs sm:text-sm font-bold text-slate-900 leading-snug">{{ setting('address', 'Office No. 2, First Floor, Plot No. 128, New Haibatpur, Near Gaur City Mall, Sector 4, Greater Noida West (U.P.) 201318') }}</p>
                     </div>
                 </div>
 
@@ -120,21 +120,6 @@
                             </div>
                         @endif
 
-                        <!-- Response Time Expectations -->
-                        <div class="mb-6 grid grid-cols-3 gap-2 rounded-2xl border border-slate-200/80 bg-slate-50/50 p-4 sm:gap-3">
-                            <div class="text-center">
-                                <p class="text-xs font-bold text-[#12233F]">&lt;2 hrs</p>
-                                <p class="text-[10px] leading-tight text-slate-500 mt-0.5">Email response</p>
-                            </div>
-                            <div class="text-center border-x border-slate-200">
-                                <p class="text-xs font-bold text-[#12233F]">24 hrs</p>
-                                <p class="text-[10px] leading-tight text-slate-500 mt-0.5">SLA proposal</p>
-                            </div>
-                            <div class="text-center">
-                                <p class="text-xs font-bold text-red-600">&lt;15 min</p>
-                                <p class="text-[10px] leading-tight text-slate-500 mt-0.5">Dispatch SLA</p>
-                            </div>
-                        </div>
 
                         <form wire:submit.prevent="addcontact" class="space-y-5">
                             
@@ -316,7 +301,7 @@
                         </span>
                         <div>
                             <h3 class="text-sm font-bold text-slate-900">{{ setting('company_name', 'Real Facility Services (RFS)') }}</h3>
-                            <p class="text-xs text-slate-500">{{ setting('address', 'Plot No. 128, Haibatpur, Near Gaur City Mall, Greater Noida - 201318 (U.P.)') }}</p>
+                            <p class="text-xs text-slate-500">{{ setting('address', 'Office No. 2, First Floor, Plot No. 128, New Haibatpur, Near Gaur City Mall, Sector 4, Greater Noida West (U.P.) 201318') }}</p>
                         </div>
                     </div>
                     <a 

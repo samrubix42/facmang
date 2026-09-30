@@ -99,7 +99,7 @@ class ServiceSeeder extends Seeder
         }
 
         if (! empty($item['features']) && is_array($item['features'])) {
-            $blocks[] = '<h2>Service Highlights</h2>';
+            $blocks[] = '<h2>Key Points</h2>';
             $blocks[] = '<ul>';
 
             foreach ($item['features'] as $label => $description) {

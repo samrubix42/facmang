@@ -133,9 +133,6 @@
                                 <i class="ri-shield-check-line text-[#12233F] mr-1"></i> {{ $service->category?->title ?? 'Facility Service' }}
                             </span>
 
-                            <span class="absolute bottom-3 left-3 rounded-full bg-[#12233F]/90 px-3 py-1 text-[10px] font-semibold text-red-400">
-                                SLA Guaranteed
-                            </span>
                         </div>
 
                         <!-- Card Body -->

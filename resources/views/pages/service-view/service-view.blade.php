@@ -298,64 +298,36 @@
                                 </div>
 
                                 <div>
-                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1">Corporate Email *</label>
-                                    <input
-                                        type="email"
-                                        wire:model="email"
-                                        placeholder="d.henderson@enterprise.com"
-                                        class="w-full rounded-full border border-slate-200 bg-white px-4 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition"
-                                    />
-                                    @error('email') <span class="text-[11px] text-rose-600 mt-0.5 block">{{ $message }}</span> @enderror
-                                </div>
-
-                                <div>
-                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1">Direct Phone *</label>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1">Phone Number *</label>
                                     <input
                                         type="text"
                                         wire:model="phone"
-                                        placeholder="+1 (555) 019-2834"
+                                        placeholder="+91 98765 43210"
                                         class="w-full rounded-full border border-slate-200 bg-white px-4 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition"
                                     />
                                     @error('phone') <span class="text-[11px] text-rose-600 mt-0.5 block">{{ $message }}</span> @enderror
                                 </div>
 
-                                <div class="grid grid-cols-2 gap-3">
-                                    <div>
-                                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1">Property</label>
-                                        <select
-                                            wire:model="propertyType"
-                                            class="w-full rounded-full border border-slate-200 bg-white px-3.5 py-2.5 text-xs text-slate-900 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition cursor-pointer"
-                                        >
-                                            <option>Corporate Office</option>
-                                            <option>IT &amp; Tech Park</option>
-                                            <option>Commercial Tower</option>
-                                            <option>Healthcare Center</option>
-                                            <option>Educational Campus</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1">Square Feet</label>
-                                        <select
-                                            wire:model="squareFootage"
-                                            class="w-full rounded-full border border-slate-200 bg-white px-3.5 py-2.5 text-xs text-slate-900 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition cursor-pointer"
-                                        >
-                                            <option>&lt; 10,000 sq ft</option>
-                                            <option>10,000 - 25,000 sq ft</option>
-                                            <option>25,000 - 75,000 sq ft</option>
-                                            <option>75,000 - 150,000 sq ft</option>
-                                            <option>&gt; 150,000 sq ft</option>
-                                        </select>
-                                    </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1">Subject *</label>
+                                    <input
+                                        type="text"
+                                        wire:model="subject"
+                                        placeholder="e.g. Washroom Hygiene Inquiry"
+                                        class="w-full rounded-full border border-slate-200 bg-white px-4 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition"
+                                    />
+                                    @error('subject') <span class="text-[11px] text-rose-600 mt-0.5 block">{{ $message }}</span> @enderror
                                 </div>
 
                                 <div>
-                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1">Specific Requirements (Optional)</label>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1">Description *</label>
                                     <textarea
-                                        wire:model="notes"
-                                        rows="2"
-                                        placeholder="e.g. Daily restroom rounds and evening floor scrub..."
+                                        wire:model="description"
+                                        rows="3"
+                                        placeholder="Please enter details of your request..."
                                         class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition resize-none"
                                     ></textarea>
+                                    @error('description') <span class="text-[11px] text-rose-600 mt-0.5 block">{{ $message }}</span> @enderror
                                 </div>
 
                                 <button

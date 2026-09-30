@@ -35,8 +35,7 @@ test('service detail page renders successfully for a given slug', function () {
 
     $response->assertSuccessful();
     $response->assertSee('Mechanized Cleaning Operations');
-    $response->assertSee('Service Highlights');
-    $response->assertSee('Smart Cleaning Process');
+    $response->assertSee('Key Points');
 });
 
 test('service listing can filter by search and category in livewire', function () {
@@ -52,9 +51,9 @@ test('service listing can filter by search and category in livewire', function (
 test('service detail quote form validates and submits successfully', function () {
     Livewire::test('pages::service-view', ['slug' => 'washroom-services'])
         ->set('name', 'John Doe')
-        ->set('email', 'john@enterprise.com')
-        ->set('phone', '+1 555-019-2834')
-        ->set('notes', 'Looking for 3 daily rounds')
+        ->set('phone', '+91 98765 43210')
+        ->set('subject', 'Washroom SLA Inquiry')
+        ->set('description', 'Looking for 3 daily rounds of washroom care.')
         ->call('submitQuote')
         ->assertHasNoErrors()
         ->assertSet('submitted', true);
