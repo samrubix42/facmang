@@ -3,7 +3,6 @@
 namespace App\Livewire\Pages;
 
 use App\Mail\JobAppliedMail;
-use App\Mail\JobAppliedReceiptMail;
 use App\Models\JobApplication;
 use App\Models\JobApplied;
 use Illuminate\Database\Eloquent\Collection;
@@ -94,14 +93,15 @@ new #[Title('Careers - Join Our Operations Team - Real Facility Services')] clas
     {
         return [
             'applicantName' => ['required', 'string', 'min:2', 'max:100'],
-            'applicantEmail' => ['required', 'email', 'max:150'],
+            'applicantEmail' => ['nullable', 'email', 'max:150'],
             'applicantPhone' => ['required', 'string', 'min:7', 'max:30'],
             'selectedJobId' => ['nullable', 'exists:job_applications,id'],
             'experience' => ['nullable', 'string'],
             'shift' => ['required', 'string'],
             'address' => ['nullable', 'string', 'max:255'],
             'message' => ['nullable', 'string', 'max:1000'],
-            'resume' => ['nullable', 'file', 'mimes:pdf,doc,docx', 'max:10240'],
+            'resume' => ['required', 'file', 'mimes:pdf,doc,docx', 'max:10240'],
+
         ];
     }
 
@@ -117,7 +117,7 @@ new #[Title('Careers - Join Our Operations Team - Real Facility Services')] clas
         $jobApplied = JobApplied::create([
             'job_id' => $this->selectedJobId,
             'name' => $this->applicantName,
-            'email' => $this->applicantEmail,
+            'email' => $this->applicantEmail ?: null,
             'phone' => $this->applicantPhone,
             'address' => $this->address ?: null,
             'resume' => $resumePath,
@@ -128,19 +128,10 @@ new #[Title('Careers - Join Our Operations Team - Real Facility Services')] clas
 
         $targetEmail = config('mail.to_address');
         if (! empty($targetEmail)) {
-
             try {
                 Mail::to($targetEmail)->send(new JobAppliedMail($jobApplied));
             } catch (\Throwable $e) {
                 Log::error('Failed to send career application admin mail: '.$e->getMessage());
-            }
-        }
-
-        if ($jobApplied->email) {
-            try {
-                Mail::to($jobApplied->email)->send(new JobAppliedReceiptMail($jobApplied));
-            } catch (\Throwable $e) {
-                Log::error('Failed to send career application receipt mail: '.$e->getMessage());
             }
         }
 

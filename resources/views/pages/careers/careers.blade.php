@@ -423,9 +423,10 @@
                                         {{-- Resume Upload Component (Clean & Refined) --}}
                                         <div class="space-y-1">
                                             <label for="resume-file" class="text-xs font-bold text-slate-800 flex items-center justify-between">
-                                                <span>Attach Resume / Bio-Data</span>
+                                                <span>Attach Resume / Bio-Data <span class="text-red-500">*</span></span>
                                                 <span class="text-[10px] text-slate-400 font-normal">PDF, DOC, DOCX up to 10MB</span>
                                             </label>
+
 
                                             <div
                                                 x-data="{ isUploading: false, progress: 0 }"
@@ -478,7 +479,8 @@
                                                                     <span>Click to attach resume</span>
                                                                     <span class="font-normal text-slate-500 hidden sm:inline">or drag &amp; drop</span>
                                                                 </p>
-                                                                <p class="text-[10px] text-slate-400">Optional: you can also apply without resume</p>
+                                                                <p class="text-[10px] text-slate-400">PDF, DOC, DOCX up to 10MB</p>
+
                                                             </div>
                                                         </div>
                                                     </div>

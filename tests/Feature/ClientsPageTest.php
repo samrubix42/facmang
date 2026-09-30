@@ -7,8 +7,9 @@ test('clients page renders successfully with status 200', function () {
     $response = $this->get(route('clients'));
 
     $response->assertSuccessful();
-    $response->assertSee('Our Valued Clients');
-    $response->assertSee('Enterprise Facility Partnerships');
+    $response->assertSee('Our Clients');
+    $response->assertSee('The businesses that trust us with their buildings');
+
 });
 
 test('clients page renders client images from database', function () {

@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('job_id')->nullable()->constrained('job_applications')->cascadeOnDelete()->nullable();
             $table->string('name');
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->string('phone');
+
             $table->string('address')->nullable();
             $table->string('resume')->nullable();
             $table->text('message')->nullable();

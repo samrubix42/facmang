@@ -1,6 +1,5 @@
 <?php
 
-use App\Mail\ContactReceiptMail;
 use App\Mail\ContactSubmittedMail;
 use App\Models\Contact;
 use Illuminate\Support\Facades\Log;
@@ -14,7 +13,7 @@ new #[Title('Contact Us & Office Location - Real Facility Services (RFS)')] clas
     #[Rule('required|min:3')]
     public string $name = '';
 
-    #[Rule('required|email')]
+    #[Rule('nullable|email')]
     public string $email = '';
 
     #[Rule('required')]
@@ -33,7 +32,7 @@ new #[Title('Contact Us & Office Location - Real Facility Services (RFS)')] clas
 
         $contact = Contact::create([
             'name' => $this->name,
-            'email' => $this->email,
+            'email' => $this->email ?: null,
             'phone' => $this->phone,
             'property_type' => $this->propertyType,
             'subject' => 'SLA Proposal Request - '.$this->propertyType,
@@ -43,19 +42,10 @@ new #[Title('Contact Us & Office Location - Real Facility Services (RFS)')] clas
 
         $targetEmail = config('mail.to_address');
         if (! empty($targetEmail)) {
-
             try {
                 Mail::to($targetEmail)->send(new ContactSubmittedMail($contact));
             } catch (Throwable $e) {
                 Log::error('Failed to send contact admin mail: '.$e->getMessage());
-            }
-        }
-
-        if ($contact->email) {
-            try {
-                Mail::to($contact->email)->send(new ContactReceiptMail($contact));
-            } catch (Throwable $e) {
-                Log::error('Failed to send contact receipt mail: '.$e->getMessage());
             }
         }
 

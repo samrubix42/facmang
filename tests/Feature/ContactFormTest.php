@@ -1,6 +1,5 @@
 <?php
 
-use App\Mail\ContactReceiptMail;
 use App\Mail\ContactSubmittedMail;
 use App\Models\Contact;
 use App\Models\User;
@@ -29,7 +28,7 @@ test('public contact form submits successfully and saves inquiry to database', f
     expect($contact->is_read)->toBeFalse();
 });
 
-test('contact form sends emails when submitted', function () {
+test('contact form sends email notification to target email when submitted', function () {
     Mail::fake();
 
     Livewire::test('pages::contact')
@@ -43,10 +42,6 @@ test('contact form sends emails when submitted', function () {
 
     Mail::assertSent(ContactSubmittedMail::class, function ($mail) {
         return $mail->hasTo('samcool3203@gmail.com') && $mail->contact->email === 'jsmith@enterprise.com';
-    });
-
-    Mail::assertSent(ContactReceiptMail::class, function ($mail) {
-        return $mail->hasTo('jsmith@enterprise.com');
     });
 });
 
@@ -63,7 +58,6 @@ test('contact form does not send admin mail if target email is empty', function 
         ->call('addcontact');
 
     Mail::assertNotSent(ContactSubmittedMail::class);
-    Mail::assertSent(ContactReceiptMail::class);
 });
 
 test('admin contacts management renders inquiries list and toggles read status', function () {
