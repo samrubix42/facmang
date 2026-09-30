@@ -8,6 +8,12 @@
                     searchQuery: '',
                     active: null,
                     currentIndex: 0,
+                    page: 1,
+                    perPage: 6,
+                    init() {
+                        this.$watch('category', () => { this.page = 1; });
+                        this.$watch('searchQuery', () => { this.page = 1; });
+                    },
                     list() {
                         return this.items.filter(item => {
                             const matchCategory = this.category === 'all' || item.category === this.category;
@@ -16,9 +22,21 @@
                             return matchCategory && matchSearch;
                         });
                     },
+                    totalPages() {
+                        return Math.max(1, Math.ceil(this.list().length / this.perPage));
+                    },
+                    paginatedList() {
+                        const start = (this.page - 1) * this.perPage;
+                        return this.list().slice(start, start + this.perPage);
+                    },
+                    goToPage(p) {
+                        if (p >= 1 && p <= this.totalPages()) {
+                            this.page = p;
+                        }
+                    },
                     open(item, index) {
                         this.active = item;
-                        this.currentIndex = index;
+                        this.currentIndex = (this.page - 1) * this.perPage + index;
                         document.body.style.overflow = 'hidden';
                     },
                     close() {
@@ -139,7 +157,7 @@
             {{-- Gallery Cards Grid --}}
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
 
-                <template x-for="(item, index) in list()" :key="item.id || (item.image + index)">
+                <template x-for="(item, index) in paginatedList()" :key="item.id || (item.image + index)">
                     <div
                         @click="open(item, index)"
                         class="group relative aspect-[3/2] w-full overflow-hidden rounded-2xl border border-slate-200/80 bg-[#0B1A30] shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-[#12233F]/40 cursor-pointer"
@@ -169,7 +187,50 @@
                     </div>
                 </template>
 
+            </div>
 
+            {{-- Pagination Navigation Bar --}}
+            <div x-show="totalPages() > 1" class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-100 pt-6">
+                <p class="text-xs text-slate-500">
+                    Showing page <span class="font-bold text-[#12233F]" x-text="page"></span> of <span class="font-bold text-[#12233F]" x-text="totalPages()"></span>
+                </p>
+
+                <div class="flex items-center gap-1.5">
+                    {{-- Previous Button --}}
+                    <button
+                        type="button"
+                        @click="goToPage(page - 1)"
+                        :disabled="page === 1"
+                        class="inline-flex h-9 items-center justify-center gap-1 rounded-full border border-slate-200 bg-white px-3.5 text-xs font-semibold text-slate-700 transition hover:border-[#12233F]/40 hover:text-[#12233F] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                    >
+                        <i class="ri-arrow-left-s-line text-sm"></i>
+                        <span>Prev</span>
+                    </button>
+
+                    {{-- Page Numbers --}}
+                    <template x-for="p in totalPages()" :key="p">
+                        <button
+                            type="button"
+                            @click="goToPage(p)"
+                            class="inline-flex h-9 w-9 items-center justify-center rounded-full text-xs font-bold transition cursor-pointer"
+                            :class="p === page 
+                                ? 'bg-red-600 text-white shadow-xs' 
+                                : 'bg-white border border-slate-200 text-slate-700 hover:border-[#12233F]/40 hover:text-[#12233F]'"
+                            x-text="p"
+                        ></button>
+                    </template>
+
+                    {{-- Next Button --}}
+                    <button
+                        type="button"
+                        @click="goToPage(page + 1)"
+                        :disabled="page === totalPages()"
+                        class="inline-flex h-9 items-center justify-center gap-1 rounded-full border border-slate-200 bg-white px-3.5 text-xs font-semibold text-slate-700 transition hover:border-[#12233F]/40 hover:text-[#12233F] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                    >
+                        <span>Next</span>
+                        <i class="ri-arrow-right-s-line text-sm"></i>
+                    </button>
+                </div>
             </div>
 
             {{-- Empty State (when search has no matches) --}}
@@ -292,62 +353,7 @@
         </div>
     </section>
 
-    {{-- Field Telemetry & Quality Standards Bar (Brand Dark Blue & Red) --}}
-    <section class="border-y border-slate-100 bg-slate-50/50 py-16">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 gap-6 sm:gap-8 lg:grid-cols-4">
-                
-                {{-- Metric 1 --}}
-                <div class="space-y-2 text-center sm:text-left">
-                    <div class="flex flex-wrap items-center justify-center gap-x-2 sm:justify-start">
-                        <i class="ri-qr-code-line text-xl text-red-600"></i>
-                        <span class="text-2xl sm:text-3xl font-extrabold text-[#12233F] tracking-tight">12,400+</span>
-                    </div>
-                    <p class="text-xs font-bold text-slate-900">QR Checkpoints Logged</p>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">
-                        Every shift sweep, sanitize cycle, and filter replacement recorded with timestamp.
-                    </p>
-                </div>
-
-                {{-- Metric 2 --}}
-                <div class="space-y-2 text-center sm:text-left">
-                    <div class="flex flex-wrap items-center justify-center gap-x-2 sm:justify-start">
-                        <i class="ri-building-line text-xl text-[#12233F]"></i>
-                        <span class="text-2xl sm:text-3xl font-extrabold text-[#12233F] tracking-tight">480+</span>
-                    </div>
-                    <p class="text-xs font-bold text-slate-900">Delivered Facilities</p>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">
-                        Class-A office headquarters, logistics distribution centers, and healthcare campuses.
-                    </p>
-                </div>
-
-                {{-- Metric 3 --}}
-                <div class="space-y-2 text-center sm:text-left">
-                    <div class="flex flex-wrap items-center justify-center gap-x-2 sm:justify-start">
-                        <i class="ri-user-star-line text-xl text-[#12233F]"></i>
-                        <span class="text-2xl sm:text-3xl font-extrabold text-[#12233F] tracking-tight">100%</span>
-                    </div>
-                    <p class="text-xs font-bold text-slate-900">W-2 Certified Personnel</p>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">
-                        Background verified, uniformed, and safety certified direct workforce.
-                    </p>
-                </div>
-
-                {{-- Metric 4 --}}
-                <div class="space-y-2 text-center sm:text-left">
-                    <div class="flex flex-wrap items-center justify-center gap-x-2 sm:justify-start">
-                        <i class="ri-shield-check-line text-xl text-red-600"></i>
-                        <span class="text-2xl sm:text-3xl font-extrabold text-red-600 tracking-tight">99.85%</span>
-                    </div>
-                    <p class="text-xs font-bold text-slate-900">SLA Adherence Rate</p>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">
-                        Strict contracted turnaround SLA windows guaranteed with live dashboard tracking.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
+   
 
     {{-- Call to Action Banner (Dark Navy #0B1A30 with Red Accents) --}}
     <section class="py-14 sm:py-20 lg:py-24">

@@ -98,9 +98,9 @@
                         </li>
                     @endif
                     <li>
-                        <a href="mailto:{{ setting('email', 'ops@facilitypro.com') }}" class="inline-flex items-start gap-2.5 transition hover:text-red-600">
+                        <a href="mailto:{{ setting('email', 'info@realfacilityservices.com') }}" class="inline-flex items-start gap-2.5 transition hover:text-red-600">
                             <i class="ri-mail-line mt-px shrink-0 text-base text-red-500"></i>
-                            <span class="font-medium">{{ setting('email', 'ops@facilitypro.com') }}</span>
+                            <span class="font-medium">{{ setting('email', 'info@realfacilityservices.com') }}</span>
                         </a>
                     </li>
                     <li class="flex items-start gap-2.5">

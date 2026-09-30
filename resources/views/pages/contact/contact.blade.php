@@ -57,7 +57,7 @@
                     </span>
                     <div class="min-w-0">
                         <p class="text-[11px] font-medium text-slate-400">Operations Email</p>
-                        <p class="text-xs sm:text-sm font-bold text-slate-900 truncate">{{ setting('email', 'info@realfacilityservices.com') }}</p>
+                        <p class="text-xs sm:text-sm font-bold text-slate-900 break-all">{{ setting('email', 'info@realfacilityservices.com') }}</p>
                         <p class="text-[10px] text-slate-400 mt-0.5">Direct Inquiry</p>
                     </div>
                 </a>
