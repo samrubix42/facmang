@@ -1,7 +1,10 @@
 <?php
 
+use App\Mail\ContactReceiptMail;
+use App\Mail\ContactSubmittedMail;
 use App\Models\Contact;
 use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 use Livewire\Livewire;
 
 test('public contact form submits successfully and saves inquiry to database', function () {
@@ -24,6 +27,43 @@ test('public contact form submits successfully and saves inquiry to database', f
     expect($contact->phone)->toBe('+1 (555) 123-4567');
     expect($contact->property_type)->toBe('Corporate Office Tower');
     expect($contact->is_read)->toBeFalse();
+});
+
+test('contact form sends emails when submitted', function () {
+    Mail::fake();
+
+    Livewire::test('pages::contact')
+        ->set('name', 'John Smith')
+        ->set('email', 'jsmith@enterprise.com')
+        ->set('phone', '+1 (555) 123-4567')
+        ->set('propertyType', 'Corporate Office Tower')
+        ->set('message', 'Requesting an on-site spatial audit and SLA proposal.')
+        ->call('addcontact')
+        ->assertSet('submitted', true);
+
+    Mail::assertSent(ContactSubmittedMail::class, function ($mail) {
+        return $mail->hasTo('samcool3203@gmail.com') && $mail->contact->email === 'jsmith@enterprise.com';
+    });
+
+    Mail::assertSent(ContactReceiptMail::class, function ($mail) {
+        return $mail->hasTo('jsmith@enterprise.com');
+    });
+});
+
+test('contact form does not send admin mail if target email is empty', function () {
+    Mail::fake();
+    config(['mail.to_address' => null]);
+
+    Livewire::test('pages::contact')
+        ->set('name', 'John Smith')
+        ->set('email', 'jsmith@enterprise.com')
+        ->set('phone', '+1 (555) 123-4567')
+        ->set('propertyType', 'Corporate Office Tower')
+        ->set('message', 'Requesting an on-site spatial audit and SLA proposal.')
+        ->call('addcontact');
+
+    Mail::assertNotSent(ContactSubmittedMail::class);
+    Mail::assertSent(ContactReceiptMail::class);
 });
 
 test('admin contacts management renders inquiries list and toggles read status', function () {

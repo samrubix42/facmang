@@ -110,7 +110,7 @@
 
                 <div class="order-1">
                     <img
-                        src="{{ asset('images/hero_facility.jpg') }}"
+                        src="{{ asset('images/PIC_4918.webp') }}"
                         alt="Real Facility Services housekeeping and technical team working inside a building"
                         loading="lazy"
                         decoding="async"

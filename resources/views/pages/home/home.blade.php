@@ -277,7 +277,7 @@
                 <!-- Left Image (Clean, No Overlay Or Badge) -->
                 <div class="order-1">
                     <img
-                        src="{{ asset('images/hero_facility.jpg') }}"
+                        src="{{ asset('images/PIC_4918.webp') }}"
                         alt="Real Facility Services team managing a residential and commercial property"
                         loading="lazy"
                         decoding="async"

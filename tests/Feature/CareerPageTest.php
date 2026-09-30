@@ -1,10 +1,13 @@
 <?php
 
+use App\Mail\JobAppliedMail;
+use App\Mail\JobAppliedReceiptMail;
 use App\Models\JobApplication;
 use App\Models\JobApplied;
 use Database\Seeders\JobApplicationSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Livewire;
 
@@ -23,7 +26,8 @@ test('career page is accessible via /careers and displays rupees', function () {
     $response->assertSee('₹');
 });
 
-test('user can submit application with resume on career page', function () {
+test('user can submit application with resume on career page and emails are sent', function () {
+    Mail::fake();
     Storage::fake('public');
 
     $job = JobApplication::first();
@@ -47,6 +51,31 @@ test('user can submit application with resume on career page', function () {
         ->and($applied->job_id)->toBe($job->id)
         ->and($applied->experince)->toBe('')
         ->and($applied->resume)->not->toBeNull();
+
+    Mail::assertSent(JobAppliedMail::class, function ($mail) {
+        return $mail->hasTo('samcool3203@gmail.com') && $mail->jobApplied->email === 'jane.doe@example.com';
+    });
+
+    Mail::assertSent(JobAppliedReceiptMail::class, function ($mail) {
+        return $mail->hasTo('jane.doe@example.com');
+    });
+});
+
+test('career application does not send admin mail if target email is empty', function () {
+    Mail::fake();
+    config(['mail.to_address' => null]);
+    $job = JobApplication::first();
+
+    Livewire::test('pages::careers')
+        ->set('selectedJobId', $job->id)
+        ->set('applicantName', 'Jane Doe')
+        ->set('applicantEmail', 'jane.doe@example.com')
+        ->set('applicantPhone', '9876543210')
+        ->set('shift', 'Day Shift')
+        ->call('apply');
+
+    Mail::assertNotSent(JobAppliedMail::class);
+    Mail::assertSent(JobAppliedReceiptMail::class);
 });
 
 test('application requires mandatory fields', function () {

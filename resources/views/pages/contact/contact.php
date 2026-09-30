@@ -1,6 +1,10 @@
 <?php
 
+use App\Mail\ContactReceiptMail;
+use App\Mail\ContactSubmittedMail;
 use App\Models\Contact;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -27,7 +31,7 @@ new #[Title('Contact Us & Office Location - Real Facility Services (RFS)')] clas
     {
         $this->validate();
 
-        Contact::create([
+        $contact = Contact::create([
             'name' => $this->name,
             'email' => $this->email,
             'phone' => $this->phone,
@@ -36,6 +40,24 @@ new #[Title('Contact Us & Office Location - Real Facility Services (RFS)')] clas
             'message' => $this->message,
             'is_read' => false,
         ]);
+
+        $targetEmail = config('mail.to_address');
+        if (! empty($targetEmail)) {
+
+            try {
+                Mail::to($targetEmail)->send(new ContactSubmittedMail($contact));
+            } catch (Throwable $e) {
+                Log::error('Failed to send contact admin mail: '.$e->getMessage());
+            }
+        }
+
+        if ($contact->email) {
+            try {
+                Mail::to($contact->email)->send(new ContactReceiptMail($contact));
+            } catch (Throwable $e) {
+                Log::error('Failed to send contact receipt mail: '.$e->getMessage());
+            }
+        }
 
         session()->flash('success', 'Your proposal request has been submitted successfully! Our operations director will contact you within 24 hours.');
 

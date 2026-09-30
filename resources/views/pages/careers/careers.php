@@ -2,9 +2,13 @@
 
 namespace App\Livewire\Pages;
 
+use App\Mail\JobAppliedMail;
+use App\Mail\JobAppliedReceiptMail;
 use App\Models\JobApplication;
 use App\Models\JobApplied;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -110,7 +114,7 @@ new #[Title('Careers - Join Our Operations Team - Real Facility Services')] clas
             $resumePath = $this->resume->store('resumes', 'public');
         }
 
-        JobApplied::create([
+        $jobApplied = JobApplied::create([
             'job_id' => $this->selectedJobId,
             'name' => $this->applicantName,
             'email' => $this->applicantEmail,
@@ -121,6 +125,24 @@ new #[Title('Careers - Join Our Operations Team - Real Facility Services')] clas
             'experince' => $this->experience,
             'status' => 'pending',
         ]);
+
+        $targetEmail = config('mail.to_address');
+        if (! empty($targetEmail)) {
+
+            try {
+                Mail::to($targetEmail)->send(new JobAppliedMail($jobApplied));
+            } catch (\Throwable $e) {
+                Log::error('Failed to send career application admin mail: '.$e->getMessage());
+            }
+        }
+
+        if ($jobApplied->email) {
+            try {
+                Mail::to($jobApplied->email)->send(new JobAppliedReceiptMail($jobApplied));
+            } catch (\Throwable $e) {
+                Log::error('Failed to send career application receipt mail: '.$e->getMessage());
+            }
+        }
 
         $this->submitted = true;
 
