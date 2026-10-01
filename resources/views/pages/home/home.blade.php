@@ -683,17 +683,41 @@
             x-data="{
                 active: 0,
                 testimonials: @js($this->testimonials),
-                next() {
+                timer: null,
+                startAutoplay() {
+                    this.stopAutoplay();
                     if (this.testimonials.length > 0) {
-                        this.active = (this.active + 1) % this.testimonials.length;
+                        this.timer = setInterval(() => {
+                            this.next(false);
+                        }, 4000);
                     }
                 },
-                prev() {
+                stopAutoplay() {
+                    if (this.timer) {
+                        clearInterval(this.timer);
+                        this.timer = null;
+                    }
+                },
+                next(resetTimer = true) {
+                    if (this.testimonials.length > 0) {
+                        this.active = (this.active + 1) % this.testimonials.length;
+                        if (resetTimer) this.startAutoplay();
+                    }
+                },
+                prev(resetTimer = true) {
                     if (this.testimonials.length > 0) {
                         this.active = (this.active - 1 + this.testimonials.length) % this.testimonials.length;
+                        if (resetTimer) this.startAutoplay();
                     }
+                },
+                goTo(index) {
+                    this.active = index;
+                    this.startAutoplay();
                 }
             }"
+            x-init="startAutoplay()"
+            @mouseenter="stopAutoplay()"
+            @mouseleave="startAutoplay()"
         >
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-10">
                 <div class="text-center sm:text-left">
@@ -705,8 +729,19 @@
                     </h2>
                 </div>
 
-                <!-- Clean Rounded Prev/Next Controls -->
-                <div class="flex items-center gap-2">
+                <!-- Clean Rounded Prev/Next Controls & Indicator Dots -->
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-1.5 mr-2">
+                        <template x-for="(item, idx) in testimonials" :key="idx">
+                            <button 
+                                @click="goTo(idx)"
+                                :aria-label="'Go to testimonial ' + (idx + 1)"
+                                :class="active === idx ? 'w-6 bg-red-600' : 'w-2 bg-slate-300 hover:bg-slate-400'"
+                                class="h-2 rounded-full transition-all duration-300 cursor-pointer"
+                            ></button>
+                        </template>
+                    </div>
+
                     <button 
                         @click="prev()" 
                         aria-label="Previous Testimonial"
