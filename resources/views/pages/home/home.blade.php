@@ -784,7 +784,7 @@
                     Frequently Asked Questions
                 </h2>
                 <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-                    Clear answers on scope, staffing, transition and our 24x7 support system.
+                    Clear answers on our ISO 9001:2015 certified standards, technical services, soft operations, HSE framework, and 24x7 support system.
                 </p>
             </div>
 
@@ -795,13 +795,13 @@
                         @click="activeFaq = (activeFaq === 1 ? null : 1)"
                         class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
                     >
-                        <span>Do you manage both residential societies and commercial properties?</span>
+                        <span>What is Real Facility Services (RFS), and what certifications do you hold?</span>
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
                             <i :class="activeFaq === 1 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
                         </span>
                     </button>
                     <div x-show="activeFaq === 1" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
-                        Yes. Integrated facility management for residential societies and commercial facilities is at the core of our work, and we have more than three years of hands-on experience managing residential society operations.
+                        Real Facility Services (RFS) is an ISO 9001:2015 certified integrated facility management provider operating since 2022. With over 3 years of specialized experience in residential society and commercial facility management, our motto is "To serve the excellence" through safe, reliable, and customized facility solutions.
                     </div>
                 </div>
 
@@ -811,13 +811,13 @@
                         @click="activeFaq = (activeFaq === 2 ? null : 2)"
                         class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
                     >
-                        <span>Are your housekeeping, security and technical staff in-house and trained?</span>
+                        <span>Which sectors and property types does RFS specialize in managing?</span>
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
                             <i :class="activeFaq === 2 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
                         </span>
                     </button>
                     <div x-show="activeFaq === 2" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
-                        Yes. Our technical staff are hired for their expertise and our workers are trained on the job. You get a trained, uniformed team on your site every day — not a rotating pool of daily labour.
+                        We deliver tailored facility solutions across Residential Societies, Commercial Office Spaces, Retail & Shopping Malls, Healthcare Facilities & Hospitals, Manufacturing Plants, Export Houses, and Automotive Sectors in both private and public sectors.
                     </div>
                 </div>
 
@@ -827,13 +827,13 @@
                         @click="activeFaq = (activeFaq === 3 ? null : 3)"
                         class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
                     >
-                        <span>What does the 24x7 support system cover?</span>
+                        <span>How does RFS ensure Health, Safety & Environment (HSE) compliance?</span>
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
                             <i :class="activeFaq === 3 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
                         </span>
                     </button>
                     <div x-show="activeFaq === 3" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
-                        A dedicated support desk operates every hour of the day, with on-call technical staff for breakdowns, water, electrical and security emergencies — so residents and clients always have someone to call.
+                        We prioritize employee and workplace safety through our structured PDCA (Plan-Do-Check-Act) HSE Framework. This includes mandatory workplace risk assessments, safety inductions, Tool Box Talks (TBTs), monthly management safety rounds, risk-based & pictorial audits, emergency response procedures, and incident investigations.
                     </div>
                 </div>
 
@@ -843,13 +843,13 @@
                         @click="activeFaq = (activeFaq === 4 ? null : 4)"
                         class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
                     >
-                        <span>Can you help us transition from our current facility vendor?</span>
+                        <span>What technical and Mechanical/Electrical (MEP) services do you provide?</span>
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
                             <i :class="activeFaq === 4 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
                         </span>
                     </button>
                     <div x-show="activeFaq === 4" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
-                        Yes. Transition consultancy is part of our service. We audit the current setup, prepare rosters, documentation and compliance records, and phase the handover so there is no service gap.
+                        Our technical experts manage complete Hard FM operations, including MEP engineering, HVAC recalibration & duct cleaning, power & backup systems (DG sets, HT/LT panels, Transformers), BMS operations, rotating machines, Planned Preventive Maintenance (PPM), breakdown maintenance, EICR audits, AMC management, and energy consumption optimization.
                     </div>
                 </div>
 
@@ -859,13 +859,13 @@
                         @click="activeFaq = (activeFaq === 5 ? null : 5)"
                         class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
                     >
-                        <span>Do you provide auditing and legal support?</span>
+                        <span>What Soft FM services do you offer and what mechanized equipment is used?</span>
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
                             <i :class="activeFaq === 5 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
                         </span>
                     </button>
                     <div x-show="activeFaq === 5" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
-                        Yes. We run scheduled facility audits with documented findings and provide legal support for contracts, compliance and vendor matters, giving your committee a clear record of service delivery.
+                        Our Soft Services cover professional housekeeping, deep cleaning, floor management, washroom hygiene, landscaping/horticulture, and eco-friendly pest management. We use high-grade in-house machinery including Auto Scrubbers, High-Speed Burnishers, High-Jet Pressure Washers, Steam Cleaners, Road Sweepers, Ride-On scrubbers, and Wet & Dry Vacuums.
                     </div>
                 </div>
 
@@ -875,15 +875,49 @@
                         @click="activeFaq = (activeFaq === 6 ? null : 6)"
                         class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
                     >
-                        <span>What do the free health check-up camps include?</span>
+                        <span>How does your 24/7 Support Desk handle emergency requests and maintenance?</span>
                         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
                             <i :class="activeFaq === 6 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
                         </span>
                     </button>
                     <div x-show="activeFaq === 6" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
-                        Free camps are organised for our employees as well as for our clients, covering basic screening such as blood pressure, blood sugar, BMI and a general physician consultation, along with short awareness sessions on hygiene, nutrition and safety.
+                        We run a 24x7 Helpdesk system with round-the-clock complaint management, response tracking, and SLA monitoring. Our on-call technical response teams are available 24/7 for urgent electrical, HVAC, plumbing, or security breakdowns.
                     </div>
                 </div>
+
+                <!-- FAQ 7 -->
+                <div class="rounded-2xl border border-slate-200/80 bg-white shadow-xs overflow-hidden">
+                    <button 
+                        @click="activeFaq = (activeFaq === 7 ? null : 7)"
+                        class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
+                    >
+                        <span>Can RFS help us transition from our current facility management vendor?</span>
+                        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
+                            <i :class="activeFaq === 7 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
+                        </span>
+                    </button>
+                    <div x-show="activeFaq === 7" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
+                        Yes. We provide transition consultancy to guarantee a smooth, zero-downtime handover. Our team performs site audits, equipment condition reports, snagging & handover assistance, asset inventory reviews, and SOP formulation.
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="rounded-2xl border border-slate-200/80 bg-white shadow-xs overflow-hidden">
+                    <button 
+                        @click="activeFaq = (activeFaq === 8 ? null : 8)"
+                        class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-slate-900 transition hover:text-red-700 cursor-pointer gap-4"
+                    >
+                        <span>Do you provide auditing, legal support, and statutory compliance management?</span>
+                        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500">
+                            <i :class="activeFaq === 8 ? 'ri-subtract-line text-red-600' : 'ri-add-line'"></i>
+                        </span>
+                    </button>
+                    <div x-show="activeFaq === 8" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
+                        Yes. We conduct regular internal and external facility audits, maintain risk & legal registers, assist with AMC contracts, and provide transparent reporting on productivity, statutory compliance, and HSQE trends.
+                    </div>
+                </div>
+
+               
             </div>
         </div>
     </section>
