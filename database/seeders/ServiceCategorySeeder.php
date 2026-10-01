@@ -25,6 +25,14 @@ class ServiceCategorySeeder extends Seeder
         'floor-management',
         'residential-society',
         'manufacturing-sectors',
+        'mechanized-operations',
+        'washroom-services',
+        'deep-cleaning-services',
+        'landscaping',
+        'pest-management',
+        'office-space-management',
+        'residential-society-management',
+        'manufacturing-sector-services',
     ];
 
     /**
@@ -34,60 +42,22 @@ class ServiceCategorySeeder extends Seeder
     {
         $categories = [
             [
-                'title' => 'Mechanized Operations',
-                'slug' => 'mechanized-operations',
-                'description' => 'Machine-assisted cleaning operations using the latest equipment, tied up with reputed manufacturers, and run through a smart, measurable cleaning process.',
+                'title' => 'Soft Services',
+                'slug' => 'soft-services',
+                'description' => 'Professional housekeeping, mechanized cleaning, washroom hygiene, landscaping & horticulture, pest management, and general facility operations.',
                 'is_active' => true,
             ],
             [
-                'title' => 'Washroom Services',
-                'slug' => 'washroom-services',
-                'description' => 'Scheduled washroom rounds, touchpoint disinfection, consumable replenishment and documented hygiene checklists.',
-                'is_active' => true,
-            ],
-            [
-                'title' => 'Deep Cleaning Services',
-                'slug' => 'deep-cleaning-services',
-                'description' => 'Periodic deep cleaning of flats, cabins, common areas and hard floors, including high-reach, high-pressure and carpet work.',
-                'is_active' => true,
-            ],
-            [
-                'title' => 'Landscaping',
-                'slug' => 'landscaping',
-                'description' => 'Lawn maintenance, planting, irrigation, tree care, seasonal foliage and waste-free green area upkeep.',
-                'is_active' => true,
-            ],
-            [
-                'title' => 'Pest Management',
-                'slug' => 'pest-management',
-                'description' => 'Scheduled and on-demand control of mosquitoes, termites, cockroaches, rodents and other site-specific pests.',
-                'is_active' => true,
-            ],
-            [
-                'title' => 'Office Space & Floor Management',
-                'slug' => 'office-space-management',
-                'description' => 'Cabin, workstation, conference room, pantry and floor-level housekeeping for corporate workplaces.',
-                'is_active' => true,
-            ],
-            [
-                'title' => 'Residential Society Management',
-                'slug' => 'residential-society-management',
-                'description' => 'Complete society operations: housekeeping staff, horticulture, security, technical upkeep, amenity care and resident reporting.',
-                'is_active' => true,
-            ],
-            [
-                'title' => 'Manufacturing Sector Services',
-                'slug' => 'manufacturing-sector-services',
-                'description' => 'Shop floor, machine bay and canteen cleaning, spill response, dust control and hygiene compliance for plants and factories.',
+                'title' => 'Technical Services',
+                'slug' => 'technical-services',
+                'description' => 'Mechanical, Electrical & Plumbing (MEP) maintenance, HVAC systems, DG sets, BMS operations, rotating machinery, Planned Preventive Maintenance (PPM), and asset due diligence.',
                 'is_active' => true,
             ],
         ];
 
         $slugs = array_column($categories, 'slug');
 
-        ServiceCategory::whereIn('slug', $this->retiredSlugs)
-            ->whereNotIn('slug', $slugs)
-            ->delete();
+        ServiceCategory::whereNotIn('slug', $slugs)->delete();
 
         foreach ($categories as $data) {
             ServiceCategory::updateOrCreate(

@@ -44,9 +44,8 @@ class ServiceSeeder extends Seeder
             $categories = ServiceCategory::all()->keyBy('slug');
         }
 
-        Service::whereIn('slug', $this->retiredSlugs)
-            ->whereNotIn('slug', array_column($catalog, 'slug'))
-            ->delete();
+        $catalogSlugs = array_column($catalog, 'slug');
+        Service::whereNotIn('slug', $catalogSlugs)->delete();
 
         foreach ($catalog as $item) {
             $category = $categories->get($item['category'] ?? '') ?? $categories->first();

@@ -27,9 +27,9 @@ test('authenticated user can view service categories page', function () {
 test('service category seeder correctly populates records', function () {
     $this->seed(ServiceCategorySeeder::class);
 
-    expect(ServiceCategory::count())->toBeGreaterThanOrEqual(5);
-    expect(ServiceCategory::where('slug', 'mechanized-operations')->exists())->toBeTrue();
-    expect(ServiceCategory::where('slug', 'manufacturing-sector-services')->exists())->toBeTrue();
+    expect(ServiceCategory::count())->toBe(2);
+    expect(ServiceCategory::where('slug', 'soft-services')->exists())->toBeTrue();
+    expect(ServiceCategory::where('slug', 'technical-services')->exists())->toBeTrue();
 });
 
 test('user can open create modal and save new service category', function () {

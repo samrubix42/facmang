@@ -40,7 +40,7 @@ test('service detail page renders successfully for a given slug', function () {
 
 test('service listing can filter by search and category in livewire', function () {
     Livewire::test('pages::service')
-        ->set('category', 'residential-society-management')
+        ->set('category', 'soft-services')
         ->assertSee('Residential Society Management')
         ->set('search', 'Pest')
         ->assertSee('Pest Management')
