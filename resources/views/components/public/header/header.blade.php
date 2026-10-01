@@ -71,7 +71,7 @@
                     
                     <!-- 24/7 Hotline -->
                     <a
-                        href="tel:{{ setting('phone', '+1 (800) 492-8820') }}"
+                        href="tel:{{ setting('phone', '+91 88005-93143') }}"
                         class="hidden items-center gap-2.5 rounded-full border border-slate-200 bg-slate-50/60 px-3.5 py-1.5 text-xs font-semibold text-slate-700 transition hover:border-red-300 hover:bg-white hover:text-red-700 xl:flex"
                     >
                         <span class="relative flex h-7 w-7 items-center justify-center rounded-full bg-red-600 text-white shadow-xs">
@@ -83,7 +83,7 @@
                         </span>
                         <div>
                             <p class="text-[9px] font-bold uppercase tracking-wider text-slate-400 leading-tight">24/7 Dispatch</p>
-                            <p class="text-xs font-bold text-slate-900 leading-tight">{{ setting('phone', '+1 (800) 492-8820') }}</p>
+                            <p class="text-xs font-bold text-slate-900 leading-tight">{{ setting('phone', '+91 88005-93143') }}</p>
                         </div>
                     </a>
 
@@ -167,7 +167,7 @@
 
                     <!-- Mobile Hotline Link -->
                     <a
-                        href="tel:{{ setting('phone', '+1 (800) 492-8820') }}"
+                        href="tel:{{ setting('phone', '+91 88005-93143') }}"
                         class="mt-3 flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-800"
                     >
                         <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-red-600 text-white">
@@ -175,7 +175,7 @@
                         </span>
                         <div>
                             <p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Emergency Dispatch</p>
-                            <p class="text-xs font-bold text-slate-900">{{ setting('phone', '+1 (800) 492-8820') }}</p>
+                            <p class="text-xs font-bold text-slate-900">{{ setting('phone', '+91 88005-93143') }}</p>
                         </div>
                     </a>
 

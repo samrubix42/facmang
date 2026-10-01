@@ -84,9 +84,9 @@
 
                 <ul class="mt-4 space-y-3 text-sm text-slate-600">
                     <li>
-                        <a href="tel:{{ setting('phone', '+1 (800) 492-8820') }}" class="inline-flex items-start gap-2.5 transition hover:text-red-600">
+                        <a href="tel:{{ setting('phone', '+91 88005-93143') }}" class="inline-flex items-start gap-2.5 transition hover:text-red-600">
                             <i class="ri-phone-line mt-px shrink-0 text-base text-red-500"></i>
-                            <span class="font-medium">{{ setting('phone', '+1 (800) 492-8820') }}</span>
+                            <span class="font-medium">{{ setting('phone', '+91 88005-93143') }}</span>
                         </a>
                     </li>
                     @if(setting('whatsapp'))

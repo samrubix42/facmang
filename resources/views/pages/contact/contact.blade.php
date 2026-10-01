@@ -33,7 +33,7 @@
                 
                 <!-- Card 1: Phone -->
                 <a 
-                    href="tel:{{ setting('phone', '+91 88105-67716') }}"
+                    href="tel:{{ setting('phone', '+91 88005-93143') }}"
                     class="flex items-start gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-red-600/40 hover:shadow-md"
                 >
                     <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-red-600 text-white">
@@ -41,7 +41,7 @@
                     </span>
                     <div class="min-w-0 flex-1">
                         <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Phone Support</p>
-                        <p class="mt-1 text-xs sm:text-sm font-bold text-slate-900 leading-snug">{{ setting('phone', '+91 88105-67716') }}</p>
+                        <p class="mt-1 text-xs sm:text-sm font-bold text-slate-900 leading-snug">{{ setting('phone', '+91 88005-93143') }}</p>
                         <p class="text-[11px] text-emerald-600 font-medium mt-1">Direct Support</p>
                     </div>
                 </a>
@@ -268,7 +268,7 @@
 
                     <!-- Emergency Dispatch CTA -->
                     <a
-                        href="tel:{{ setting('phone', '+91 88105-67716') }}"
+                        href="tel:{{ setting('phone', '+91 88005-93143') }}"
                         class="flex items-center justify-between gap-4 rounded-3xl bg-red-600 p-6 text-white shadow-sm transition hover:bg-red-700 active:scale-[0.99]"
                     >
                         <div class="flex items-center gap-3">
@@ -277,7 +277,7 @@
                             </span>
                             <div>
                                 <h3 class="text-sm font-bold">24/7 Operational Helpline</h3>
-                                <p class="text-[10px] text-white/80">Direct operations line — always live ({{ setting('phone', '+91 88105-67716') }})</p>
+                                <p class="text-[10px] text-white/80">Direct operations line — always live ({{ setting('phone', '+91 88005-93143') }})</p>
                             </div>
                         </div>
                         <i class="ri-arrow-right-line text-lg"></i>

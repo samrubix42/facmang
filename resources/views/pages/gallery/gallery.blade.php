@@ -382,11 +382,11 @@
                             <i class="ri-arrow-right-line text-sm"></i>
                         </a>
                         <a
-                            href="tel:{{ setting('phone', '+1 (800) 492-8820') }}"
+                            href="tel:{{ setting('phone', '+91 88005-93143') }}"
                             class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-xs sm:text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/20 active:scale-[0.98] cursor-pointer"
                         >
                             <i class="ri-phone-line text-sm text-red-400"></i>
-                            <span>{{ setting('phone', '+1 (800) 492-8820') }}</span>
+                            <span>{{ setting('phone', '+91 88005-93143') }}</span>
                         </a>
                     </div>
                 </div>
