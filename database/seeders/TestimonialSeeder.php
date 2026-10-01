@@ -15,53 +15,73 @@ class TestimonialSeeder extends Seeder
         $testimonials = [
             [
                 'name' => 'Rajesh Menon',
-                'designation' => 'President, Green Meadows Residents Welfare Association',
-                'testimonial' => 'Our 640-home society had three different vendors and nobody answering the phone. Real Facility Services took over housekeeping, horticulture, security and technical care on one contract, and the transition was completed without a single service gap.',
+                'designation' => 'President, Mahagun Meadows Society',
+                'testimonial' => 'Real Facility Services has transformed our residential complex maintenance. Housekeeping, security, and HVAC services are managed seamlessly under one accountable contract.',
                 'rating' => 5,
                 'is_active' => true,
             ],
             [
                 'name' => 'Anita Deshpande',
-                'designation' => 'Facility Head, Sunridge Business Park',
-                'testimonial' => 'RFS has managed our commercial complex for over three years. Their 24x7 helpdesk and trained in-house technicians mean an escalator fault at 11pm is closed out before residents or staff even notice.',
+                'designation' => 'Facility Head, Parkway Commercial Complex',
+                'testimonial' => 'RFS has managed our corporate towers for over three years. Their 24x7 helpdesk and rapid response technicians ensure zero downtime for our commercial tenants.',
                 'rating' => 5,
                 'is_active' => true,
             ],
             [
                 'name' => 'Sameer Kulkarni',
-                'designation' => 'Managing Director, Kalpataru Group',
-                'testimonial' => 'The RFS transition consultancy was the most professional handover we have been through. Vendor selection, rosters, documentation and statutory compliance were all prepared before we signed.',
+                'designation' => 'Managing Director, ACE Group',
+                'testimonial' => 'The facility transition conducted by RFS was seamless. Rosters, statutory compliance, and trained manpower were fully deployed ahead of schedule.',
                 'rating' => 5,
                 'is_active' => true,
             ],
             [
                 'name' => 'Farida Sheikh',
-                'designation' => 'Secretary, Lakeview Heights Society',
-                'testimonial' => 'Their monthly facility audit and legal support have saved our committee hours of work every month. Findings are documented, actioned and closed out — we finally have evidence of what has been done.',
+                'designation' => 'Operations Manager, Asiana Commercial Towers',
+                'testimonial' => 'Their monthly facility audit reports and proactive maintenance schedules have saved our management team countless hours. Outstanding service standards across all floors.',
                 'rating' => 5,
                 'is_active' => true,
             ],
             [
                 'name' => 'Vikram Rao',
-                'designation' => 'Head of Administration, Techno Park India',
-                'testimonial' => 'What stands out is the care RFS takes of their own people. Free health check-up camps for the ground staff, full training and uniform support. That is exactly why attrition on their teams is so low.',
+                'designation' => 'Head of Administration, BB Tech Park',
+                'testimonial' => 'What stands out is the high quality of staff training and low staff attrition. RFS delivers top-tier cleaning, MEP, and security services consistently.',
                 'rating' => 5,
                 'is_active' => true,
             ],
             [
-                'name' => 'Deepa Nair',
-                'designation' => 'Chief Executive Officer, Meridian Commercial Estates',
-                'testimonial' => 'Housekeeping, horticulture, technical maintenance and security under a single accountable partner since 2022. Our service quality audits have stayed consistently above the promised benchmark.',
+                'name' => 'Amit Sharma',
+                'designation' => 'Admin Lead, Kia Motors Facility',
+                'testimonial' => 'Extremely satisfied with the professional housekeeping and facility support at our main center. The team is disciplined, well-groomed, and attentive.',
                 'rating' => 5,
-                'is_active' => false,
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Dr. Sunita Verma',
+                'designation' => 'Director, Vivekanand Institute',
+                'testimonial' => 'Managing campus hygiene and technical services across multiple buildings was a challenge until RFS took over. Their team delivers prompt and reliable support daily.',
+                'rating' => 5,
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Sandeep Mehta',
+                'designation' => 'General Manager, KIO Enterprise Hub',
+                'testimonial' => 'RFS provides top-notch facility management services. Their single point of contact and transparent reporting make complex campus management effortless.',
+                'rating' => 5,
+                'is_active' => true,
             ],
         ];
 
+        // Seed or update testimonials
+        $seededNames = [];
         foreach ($testimonials as $data) {
+            $seededNames[] = $data['name'];
             Testimonial::updateOrCreate(
-                ['name' => $data['name'], 'designation' => $data['designation']],
+                ['name' => $data['name']],
                 $data
             );
         }
+
+        // Clean up legacy testimonials not in the seed list
+        Testimonial::whereNotIn('name', $seededNames)->delete();
     }
 }

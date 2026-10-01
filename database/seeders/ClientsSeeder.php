@@ -6,7 +6,7 @@ use App\Models\Client;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
 
-class ClientSeeder extends Seeder
+class ClientsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -27,16 +27,24 @@ class ClientSeeder extends Seeder
         // Sort files by filename naturally
         usort($files, fn ($a, $b) => strnatcasecmp($a->getFilename(), $b->getFilename()));
 
+        $validImagePaths = [];
+
         $index = 1;
         foreach ($files as $file) {
             $filename = $file->getFilename();
             $relativePath = 'images/clients/'.$filename;
+            $validImagePaths[] = $relativePath;
 
             // Clean title based on filename
             $baseName = pathinfo($filename, PATHINFO_FILENAME);
             $cleanName = preg_replace('/-150x150$/', '', $baseName);
             $cleanName = preg_replace('/-1$/', '', $cleanName);
-            $title = 'Partner '.strtoupper(str_replace(['_', '-'], ' ', $cleanName));
+
+            if (preg_match('/^client-logo-(\d+)$/i', $cleanName, $matches)) {
+                $title = 'Partner Logo '.$matches[1];
+            } else {
+                $title = 'Partner '.strtoupper(str_replace(['_', '-'], ' ', $cleanName));
+            }
 
             Client::updateOrCreate(
                 ['image' => $relativePath],
@@ -49,5 +57,8 @@ class ClientSeeder extends Seeder
 
             $index++;
         }
+
+        // Remove old database records whose image file no longer exists on disk
+        Client::whereNotIn('image', $validImagePaths)->delete();
     }
 }
