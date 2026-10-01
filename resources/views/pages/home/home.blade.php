@@ -307,7 +307,7 @@
                         experience, supported by expert, well experienced technical staff and trained workers who
                         aspire to deliver complete facility services. With more than three years of experience in
                         managing residential societies, our integrated facility management covers housekeeping,
-                        horticulture, technical and security maintenance — supported by auditing, legal support and
+                        horticulture, technical and security maintenance supported by auditing, legal support and
                         consultancy for smooth transition and operation, on a 24x7 support system.
                     </p>
 
@@ -442,7 +442,7 @@
                     <h3 class="mt-5 text-base font-bold text-slate-900">One Contract, One Point of Contact</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
                         Housekeeping, horticulture, technical and security maintenance sit on a single agreement.
-                        If something is missed, you call one number — not four vendors pointing at each other.
+                        If something is missed, you call one number not four vendors pointing at each other.
                     </p>
                 </div>
 
@@ -490,7 +490,7 @@
                     <h3 class="mt-5 text-base font-bold text-slate-900">Auditing &amp; Legal Support</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
                         Monthly facility audits, documented findings and legal support for contracts, compliance and
-                        vendor matters — so your committee always has evidence of what has been done.
+                        vendor matters so your committee always has evidence of what has been done.
                     </p>
                 </div>
 
