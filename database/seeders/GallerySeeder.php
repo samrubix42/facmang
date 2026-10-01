@@ -27,6 +27,8 @@ class GallerySeeder extends Seeder
             ['image' => 'images/gallery/PIC_4924.webp', 'title' => 'Dedicated Housekeeping Crew', 'category' => 'housekeeping-staffing'],
             ['image' => 'images/gallery/PIC_4926.webp', 'title' => 'On-Site Team Pledge & Inspection', 'category' => 'on-site-inspection'],
             ['image' => 'images/gallery/PIC_4928.webp', 'title' => 'RFS Facility Management Team', 'category' => 'team-operations'],
+            ['image' => 'images/gallery/gallery-facility-operations.jpeg', 'title' => 'Facility Maintenance & Operational Support', 'category' => 'team-operations'],
+            ['image' => 'images/gallery/gallery-quality-supervision.jpeg', 'title' => 'On-Site Quality & Service Supervision', 'category' => 'on-site-inspection'],
         ];
 
         foreach ($items as $data) {
