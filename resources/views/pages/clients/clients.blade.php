@@ -76,7 +76,7 @@
                     </h2>
 
                     <p class="text-sm text-slate-400 leading-relaxed max-w-lg mx-auto">
-                        Connect with our operations team to benchmark your facilities management and receive an SLA-guaranteed proposal.
+                        Connect with our operations team to benchmark your facilities management and receive a customized proposal.
                     </p>
 
                     <div class="pt-4 flex flex-wrap items-center justify-center gap-3">

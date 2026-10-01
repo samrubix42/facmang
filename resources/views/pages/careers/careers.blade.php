@@ -236,9 +236,7 @@
                                     <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
                                         Submit Your Application
                                     </h2>
-                                    <p class="text-xs text-slate-500 mt-1">
-                                        Takes less than 2 minutes. Our operations team reviews all applications within 24 hours.
-                                    </p>
+
                                 </div>
 
                                 {{-- Active Position Banner --}}

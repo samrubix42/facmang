@@ -881,7 +881,7 @@
                         </span>
                     </button>
                     <div x-show="activeFaq === 6" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
-                        We run a 24x7 Helpdesk system with round-the-clock complaint management, response tracking, and SLA monitoring. Our on-call technical response teams are available 24/7 for urgent electrical, HVAC, plumbing, or security breakdowns.
+                        We run a 24x7 Helpdesk system with round-the-clock complaint management, response tracking, and performance monitoring. Our on-call technical response teams are available 24/7 for urgent electrical, HVAC, plumbing, or security breakdowns.
                     </div>
                 </div>
 

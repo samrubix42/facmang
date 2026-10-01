@@ -214,14 +214,14 @@
                 </label>
                 <div
                     wire:ignore
-                    x-data="tinymceEditor({ model: 'content', height: 380, placeholder: 'Write comprehensive service scope, technical specs, shift frequencies, equipment, and SLA guarantees...' })"
+                    x-data="tinymceEditor({ model: 'content', height: 380, placeholder: 'Write comprehensive service scope, technical specs, shift frequencies, equipment, and quality guarantees...' })"
                     class="rounded-md border border-slate-200 overflow-hidden shadow-xs bg-white"
                 >
                     <textarea
                         x-ref="textarea"
                         id="service_edit_content"
                         class="w-full min-h-[300px] p-3 text-xs text-slate-800 focus:outline-none leading-relaxed font-sans"
-                        placeholder="Write comprehensive service scope, technical specs, shift frequencies, equipment, and SLA guarantees..."
+                        placeholder="Write comprehensive service scope, technical specs, shift frequencies, equipment, and quality guarantees..."
                     >{{ $content }}</textarea>
                 </div>
                 @error('content')

@@ -17,7 +17,7 @@
                     </span>
                 @endif
             </div>
-            <p class="text-xs text-slate-500 mt-0.5">Manage and review contact form submissions and SLA proposal requests from client leads.</p>
+            <p class="text-xs text-slate-500 mt-0.5">Manage and review contact form submissions and proposal requests from client leads.</p>
         </div>
     </div>
 

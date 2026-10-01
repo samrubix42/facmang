@@ -14,7 +14,7 @@ test('public contact form submits successfully and saves inquiry to database', f
         ->set('email', 'jsmith@enterprise.com')
         ->set('phone', '+1 (555) 123-4567')
         ->set('propertyType', 'Corporate Office Tower')
-        ->set('message', 'Requesting an on-site spatial audit and SLA proposal.')
+        ->set('message', 'Requesting an on-site spatial audit and facility proposal.')
         ->call('addcontact')
         ->assertSet('submitted', true);
 
@@ -36,7 +36,7 @@ test('contact form sends email notification to target email when submitted', fun
         ->set('email', 'jsmith@enterprise.com')
         ->set('phone', '+1 (555) 123-4567')
         ->set('propertyType', 'Corporate Office Tower')
-        ->set('message', 'Requesting an on-site spatial audit and SLA proposal.')
+        ->set('message', 'Requesting an on-site spatial audit and facility proposal.')
         ->call('addcontact')
         ->assertSet('submitted', true);
 
@@ -54,7 +54,7 @@ test('contact form does not send admin mail if target email is empty', function 
         ->set('email', 'jsmith@enterprise.com')
         ->set('phone', '+1 (555) 123-4567')
         ->set('propertyType', 'Corporate Office Tower')
-        ->set('message', 'Requesting an on-site spatial audit and SLA proposal.')
+        ->set('message', 'Requesting an on-site spatial audit and facility proposal.')
         ->call('addcontact');
 
     Mail::assertNotSent(ContactSubmittedMail::class);

@@ -329,7 +329,7 @@
                             id="testimonial"
                             wire:model="testimonial"
                             rows="4"
-                            placeholder="Provide the client's detailed review regarding facility quality, SLA compliance, or operational standards..."
+                            placeholder="Provide the client's detailed review regarding facility quality, service compliance, or operational standards..."
                             class="flex min-h-[90px] w-full rounded-md border border-slate-200 bg-transparent px-3 py-2 text-xs shadow-xs placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-950 leading-relaxed"
                         ></textarea>
                         @error('testimonial')

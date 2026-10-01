@@ -208,7 +208,7 @@
                     </h2>
 
                     <p class="text-sm text-slate-400 leading-relaxed max-w-lg mx-auto">
-                        Speak directly with an operations director for a free spatial audit and customized SLA proposal within 48 hours.
+                        Speak directly with an operations director for a free spatial audit and customized proposal within 48 hours.
                     </p>
 
                     <div class="pt-4 flex flex-wrap items-center justify-center gap-3">

@@ -57,9 +57,9 @@ class JobApplicationSeeder extends Seeder
                 'location' => 'Regional Corporate Operations Fleet',
                 'salary' => '₹45,000 – ₹60,000 / month',
                 'status' => 'active',
-                'job_description' => '<p>Supervise front-line teams across client facilities. Conduct daily shift briefings, manage chemical supply rosters, verify QR audit checkpoints, and maintain 99.85% SLA compliance.</p><ul><li>Oversee a crew of 20+ cleaning and maintenance technicians across site zones.</li><li>Conduct regular quality audits, scorecards, and resolve client requests promptly.</li><li>Prepare attendance rosters, shift rotations, and consumable inventory indents.</li><li>Enforce strict occupational health and safety protocols across all work zones.</li></ul>',
+                'job_description' => '<p>Supervise front-line teams across client facilities. Conduct daily shift briefings, manage chemical supply rosters, verify QR audit checkpoints, and maintain 99.85% quality compliance.</p><ul><li>Oversee a crew of 20+ cleaning and maintenance technicians across site zones.</li><li>Conduct regular quality audits, scorecards, and resolve client requests promptly.</li><li>Prepare attendance rosters, shift rotations, and consumable inventory indents.</li><li>Enforce strict occupational health and safety protocols across all work zones.</li></ul>',
                 'qualification_requirements' => '2+ years leadership or supervisory experience in facilities services. Excellent team coordination and reporting skills.',
-                'responsibilities' => 'Shift oversight, SLA compliance, workforce allocation, client liaison, safety audits.',
+                'responsibilities' => 'Shift oversight, quality compliance, workforce allocation, client liaison, safety audits.',
             ],
             [
                 'title' => 'High-Rise Architectural Facade Technician',

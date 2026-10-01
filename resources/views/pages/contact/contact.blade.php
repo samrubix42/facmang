@@ -101,9 +101,9 @@
                             <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
                                 <i class="ri-send-plane-line text-xs"></i> Proposal
                             </span>
-                            <h2 class="mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">Request SLA Proposal</h2>
+                            <h2 class="mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">Request Proposal</h2>
                             <p class="mt-2 text-xs sm:text-sm text-slate-500">
-                                Complete the brief form below to receive a benchmark SLA proposal within 24 hours.
+                                Complete the brief form below to receive a benchmark proposal within 24 hours.
                             </p>
                         </div>
 
@@ -244,7 +244,7 @@
                                 <i class="ri-shield-star-line text-lg"></i>
                             </span>
                             <div>
-                                <h3 class="text-sm font-bold text-slate-900">Audits &amp; SLA Compliance</h3>
+                                <h3 class="text-sm font-bold text-slate-900">Audits &amp; Quality Compliance</h3>
                                 <p class="mt-1 text-xs text-slate-500 leading-relaxed">ISO 9001:2015 certified processes with digital supervisor checklists, internal audits, and transparent performance reviews.</p>
                             </div>
                         </div>

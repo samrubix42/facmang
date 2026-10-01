@@ -174,7 +174,7 @@
                                     Real Facility Services vs Traditional Vendors
                                 </h2>
                                 <p class="mt-1 text-xs sm:text-sm text-slate-500">
-                                    Why enterprise property directors choose single-contract SLA governance.
+                                    Why property managers choose Real Facility Services over traditional vendors.
                                 </p>
                             </div>
 
@@ -263,7 +263,7 @@
                             </span>
                             <div>
                                 <h3 class="text-base font-bold text-slate-900">Request Scope Proposal</h3>
-                                <p class="text-xs text-slate-500">Get SLA pricing &amp; schedule a walkthrough</p>
+                                <p class="text-xs text-slate-500">Get customized pricing &amp; schedule a walkthrough</p>
                             </div>
                         </div>
 
@@ -336,7 +336,7 @@
                                     class="w-full inline-flex items-center justify-center gap-2 rounded-full bg-red-600 px-6 py-3 text-xs font-semibold text-white shadow-xs transition hover:bg-red-700 active:scale-[0.98] cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
                                 >
                                     <span wire:loading.remove wire:target="submitQuote" class="inline-flex items-center gap-2">
-                                        <span>Submit SLA Scope Request</span>
+                                        <span>Submit Proposal Request</span>
                                         <i class="ri-arrow-right-line"></i>
                                     </span>
 
@@ -447,8 +447,8 @@
                                     {{ $related->short_description }}
                                 </p>
                             </div>
-                            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
-                                <span class="text-[11px] font-semibold text-[#12233F]">SLA Guaranteed</span>
+                             <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                                <span class="text-[11px] font-semibold text-[#12233F]">Quality Guaranteed</span>
                                 <a
                                     href="{{ route('services.show', ['slug' => $related->slug]) }}"
                                     class="inline-flex items-center gap-1 text-xs font-semibold text-slate-900 hover:text-[#12233F] transition"
@@ -476,7 +476,7 @@
                         Upgrade your facility service standard
                     </h2>
                     <p class="text-sm text-slate-400 leading-relaxed max-w-lg mx-auto">
-                        Book a confidential 30-minute facility assessment. We audit your layout, benchmark your costs, and prepare an SLA proposal.
+                        Book a confidential 30-minute facility assessment. We audit your layout, benchmark your costs, and prepare a customized proposal.
                     </p>
                     <div class="pt-4 flex flex-wrap items-center justify-center gap-3">
                         <a

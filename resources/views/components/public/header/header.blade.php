@@ -130,9 +130,8 @@
 
                     <!-- Mobile Badges Footer -->
                     <div class="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[11px] text-slate-400 border-t border-slate-100 pt-4">
-                        <span class="flex items-center gap-1"><i class="ri-shield-star-line text-red-600"></i> ISO 41001</span>
-                        <span class="flex items-center gap-1"><i class="ri-award-line text-red-600"></i> ISSA CIMS</span>
-                        <span class="flex items-center gap-1"><i class="ri-check-line text-red-600"></i> 100% W-2</span>
+                        <span class="flex items-center gap-1"><i class="ri-shield-star-line text-red-600"></i> ISO 9001:2015</span>
+                        <span class="flex items-center gap-1"><i class="ri-customer-service-2-line text-red-600"></i> 24x7 Support</span>
                     </div>
                 </nav>
             </div>

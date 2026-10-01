@@ -35,7 +35,7 @@ new #[Title('Contact Us & Office Location - Real Facility Services (RFS)')] clas
             'email' => $this->email ?: null,
             'phone' => $this->phone,
             'property_type' => $this->propertyType,
-            'subject' => 'SLA Proposal Request - '.$this->propertyType,
+            'subject' => 'Proposal Request - '.$this->propertyType,
             'message' => $this->message,
             'is_read' => false,
         ]);

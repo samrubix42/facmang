@@ -370,7 +370,7 @@
                     </h2>
 
                     <p class="text-sm text-slate-300 leading-relaxed max-w-lg mx-auto">
-                        Schedule a complimentary 30-minute on-site assessment. Receive a documented, filmed audit log with tailored SLA specifications within 24 hours.
+                        Schedule a complimentary 30-minute on-site assessment. Receive a documented, filmed audit log with tailored service specifications within 24 hours.
                     </p>
 
                     <div class="pt-4 flex flex-wrap items-center justify-center gap-3">

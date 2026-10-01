@@ -90,7 +90,7 @@ test('user can save new service on add page', function () {
         ->set('image', $fakeImage)
         ->set('is_active', true)
         ->set('short_description', 'Automated robotic cleaning systems for commercial rooftop photovoltaic solar arrays.')
-        ->set('content', 'Full SLA coverage with thermal inspection and water recovery.')
+        ->set('content', 'Full service coverage with thermal inspection and water recovery.')
         ->set('meta_title', 'Solar Array Cleaning | RFS')
         ->set('meta_description', 'High-efficiency robotic solar cleaning for industrial parks.')
         ->set('meta_keyword', 'solar, robotic, industrial, maintenance')
@@ -152,7 +152,7 @@ test('user can save and update rich html content in content column', function ()
     $category = ServiceCategory::factory()->create();
     $fakeImage = UploadedFile::fake()->image('test-tinymce.jpg');
 
-    $htmlContent = '<h3>Service Inclusions</h3><ul><li>24/7 Monitoring</li><li>Thermal Imaging</li></ul><p>Guaranteed 99.9% uptime SLA.</p>';
+    $htmlContent = '<h3>Service Inclusions</h3><ul><li>24/7 Monitoring</li><li>Thermal Imaging</li></ul><p>Guaranteed 99.9% uptime quality.</p>';
 
     Livewire::actingAs($user)
         ->test('admin::service.add')
