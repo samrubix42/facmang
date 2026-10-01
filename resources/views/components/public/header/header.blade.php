@@ -21,14 +21,48 @@
                     @foreach ($this->navLinks() as $link)
                         @php
                             $isActive = request()->routeIs($link['route']);
+                            $hasDropdown = ! empty($link['dropdown']);
                         @endphp
 
-                        <a
-                            href="{{ $link['href'] }}"
-                            class="relative pb-1 text-sm font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-red-600 after:transition-transform after:duration-200 hover:text-red-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-red-600 after:scale-x-100' : 'text-[#12233F]' }}"
-                        >
-                            {{ $link['label'] }}
-                        </a>
+                        @if ($hasDropdown)
+                            <div class="relative flex items-center" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+                                <a
+                                    href="{{ $link['href'] }}"
+                                    class="relative pb-1 text-sm font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-red-600 after:transition-transform after:duration-200 hover:text-red-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-red-600 after:scale-x-100' : 'text-[#12233F]' }}"
+                                >
+                                    {{ $link['label'] }}
+                                </a>
+
+                                <div
+                                    x-show="open"
+                                    x-cloak
+                                    x-transition:enter="transition ease-out duration-150"
+                                    x-transition:enter-start="opacity-0 translate-y-1"
+                                    x-transition:enter-end="opacity-100 translate-y-0"
+                                    x-transition:leave="transition ease-in duration-100"
+                                    x-transition:leave-start="opacity-100 translate-y-0"
+                                    x-transition:leave-end="opacity-0 translate-y-1"
+                                    class="absolute top-full left-0 w-52 rounded-2xl bg-white p-2 shadow-xl ring-1 ring-slate-900/5 z-50 border border-slate-100"
+                                >
+                                    @foreach ($link['dropdown'] as $sub)
+                                        <a
+                                            href="{{ $sub['href'] }}"
+                                            class="flex items-center justify-between rounded-xl px-3.5 py-2.5 text-xs font-semibold text-slate-700 hover:bg-red-50 hover:text-red-600 transition"
+                                        >
+                                            <span>{{ $sub['label'] }}</span>
+                                            <i class="ri-arrow-right-s-line text-slate-400 text-xs"></i>
+                                        </a>
+                                    @endforeach
+                                </div>
+                            </div>
+                        @else
+                            <a
+                                href="{{ $link['href'] }}"
+                                class="relative pb-1 text-sm font-medium transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-red-600 after:transition-transform after:duration-200 hover:text-red-600 hover:after:scale-x-100 {{ $isActive ? 'font-semibold text-red-600 after:scale-x-100' : 'text-[#12233F]' }}"
+                            >
+                                {{ $link['label'] }}
+                            </a>
+                        @endif
                     @endforeach
                 </nav>
 
@@ -92,16 +126,43 @@
                     @foreach ($this->navLinks() as $link)
                         @php
                             $isActive = request()->routeIs($link['route']);
+                            $hasDropdown = ! empty($link['dropdown']);
                         @endphp
 
-                        <a
-                            href="{{ $link['href'] }}"
-                            class="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold transition {{ $isActive ? 'bg-red-50 text-red-600 font-bold' : 'text-[#12233F] hover:bg-slate-50 hover:text-red-600' }}"
-                            @click="menuOpen = false"
-                        >
-                            <span>{{ $link['label'] }}</span>
-                            <i class="ri-arrow-right-s-line text-slate-400"></i>
-                        </a>
+                        @if ($hasDropdown)
+                            <div x-data="{ subOpen: true }">
+                                <a
+                                    href="{{ $link['href'] }}"
+                                    class="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold transition {{ $isActive ? 'bg-red-50 text-red-600 font-bold' : 'text-[#12233F] hover:bg-slate-50 hover:text-red-600' }}"
+                                    @click="menuOpen = false"
+                                >
+                                    <span>{{ $link['label'] }}</span>
+                                    <i class="ri-arrow-right-s-line text-slate-400"></i>
+                                </a>
+
+                                <div x-show="subOpen" class="ml-4 my-1 space-y-1 border-l-2 border-slate-100 pl-3">
+                                    @foreach ($link['dropdown'] as $sub)
+                                        <a
+                                            href="{{ $sub['href'] }}"
+                                            class="flex items-center justify-between rounded-lg px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-red-50 hover:text-red-600 transition"
+                                            @click="menuOpen = false"
+                                        >
+                                            <span>{{ $sub['label'] }}</span>
+                                            <i class="ri-arrow-right-s-line text-slate-400 text-xs"></i>
+                                        </a>
+                                    @endforeach
+                                </div>
+                            </div>
+                        @else
+                            <a
+                                href="{{ $link['href'] }}"
+                                class="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold transition {{ $isActive ? 'bg-red-50 text-red-600 font-bold' : 'text-[#12233F] hover:bg-slate-50 hover:text-red-600' }}"
+                                @click="menuOpen = false"
+                            >
+                                <span>{{ $link['label'] }}</span>
+                                <i class="ri-arrow-right-s-line text-slate-400"></i>
+                            </a>
+                        @endif
                     @endforeach
 
                     <!-- Mobile Hotline Link -->

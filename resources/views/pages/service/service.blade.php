@@ -1,31 +1,30 @@
-<script>
-    (function() {
-        const registerScrollReveal = () => {
-            if (typeof Alpine !== 'undefined' && !Alpine.data('scrollReveal')) {
-                Alpine.data('scrollReveal', (delay = 0) => ({
-                    shown: false,
-                    init() {
-                        const observer = new IntersectionObserver((entries) => {
-                            entries.forEach(entry => {
-                                if (entry.isIntersecting) {
-                                    setTimeout(() => {
-                                        this.shown = true;
-                                    }, delay);
-                                    observer.unobserve(entry.target);
-                                }
-                            });
-                        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-                        observer.observe(this.$el);
-                    }
-                }));
-            }
-        };
-        document.addEventListener('alpine:init', registerScrollReveal);
-        if (window.Alpine) { registerScrollReveal(); }
-    })();
-</script>
-
 <div class="bg-white text-slate-800 antialiased font-sans selection:bg-red-500 selection:text-white">
+    <script>
+        (function() {
+            const registerScrollReveal = () => {
+                if (typeof Alpine !== 'undefined' && !Alpine.data('scrollReveal')) {
+                    Alpine.data('scrollReveal', (delay = 0) => ({
+                        shown: false,
+                        init() {
+                            const observer = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                    if (entry.isIntersecting) {
+                                        setTimeout(() => {
+                                            this.shown = true;
+                                        }, delay);
+                                        observer.unobserve(entry.target);
+                                    }
+                                });
+                            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+                            observer.observe(this.$el);
+                        }
+                    }));
+                }
+            };
+            document.addEventListener('alpine:init', registerScrollReveal);
+            if (window.Alpine) { registerScrollReveal(); }
+        })();
+    </script>
 
     {{-- Page Hero --}}
     <section class="bg-[#0B1A30]">
@@ -55,36 +54,54 @@
     <section class="py-14 sm:py-20 lg:py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             
-            <!-- Controls Bar: Title & Search -->
+            <!-- Controls Bar: Title, Category Dropdown & Search -->
             <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between border-b border-slate-100 pb-6">
                 <div>
                     <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                         Operational Capabilities
                     </h2>
                     <p class="mt-1 text-xs sm:text-sm text-slate-500">
-                        Filter by category or search specific workplace requirements.
+                        Filter by service category dropdown or search specific workplace requirements.
                     </p>
                 </div>
 
-                <!-- Search Input (Rounded-Full) -->
-                <div class="relative min-w-[260px] sm:w-80">
-                    <i class="ri-search-line absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
-                    <input
-                        type="text"
-                        wire:model.live.debounce.200ms="search"
-                        placeholder="Search services, janitorial, MEP..."
-                        class="w-full rounded-full border border-slate-200 bg-white pl-10 pr-9 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition"
-                    />
-                    @if ($search !== '')
-                        <button
-                            type="button"
-                            wire:click="$set('search', '')"
-                            class="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
-                            aria-label="Clear search"
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+                    <!-- Category Select Dropdown -->
+                    <div class="relative min-w-[210px]">
+                        <select
+                            id="category-dropdown-filter"
+                            wire:model.live="category"
+                            class="w-full appearance-none rounded-full border border-slate-200 bg-white pl-4 pr-10 py-2.5 text-xs font-semibold text-slate-800 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition cursor-pointer shadow-xs"
+                            aria-label="Filter services by category dropdown"
                         >
-                            <i class="ri-close-circle-fill text-sm"></i>
-                        </button>
-                    @endif
+                            <option value="all">All Service Categories ({{ $this->totalServicesCount }})</option>
+                            @foreach ($this->categories as $cat)
+                                <option value="{{ $cat->slug }}">{{ $cat->title }} ({{ $cat->services_count }})</option>
+                            @endforeach
+                        </select>
+                        <i class="ri-arrow-down-s-line absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-base"></i>
+                    </div>
+
+                    <!-- Search Input (Rounded-Full) -->
+                    <div class="relative min-w-[240px] sm:w-72">
+                        <i class="ri-search-line absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                        <input
+                            type="text"
+                            wire:model.live.debounce.200ms="search"
+                            placeholder="Search services, janitorial, MEP..."
+                            class="w-full rounded-full border border-slate-200 bg-white pl-10 pr-9 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 transition"
+                        />
+                        @if ($search !== '')
+                            <button
+                                type="button"
+                                wire:click="$set('search', '')"
+                                class="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+                                aria-label="Clear search"
+                            >
+                                <i class="ri-close-circle-fill text-sm"></i>
+                            </button>
+                        @endif
+                    </div>
                 </div>
             </div>
 
@@ -92,7 +109,7 @@
             <div class="mt-6 flex flex-wrap items-center gap-2 overflow-x-auto pb-2">
                 <button
                     type="button"
-                    wire:click="setCategory('all')"
+                    wire:click="$set('category', 'all')"
                     class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === 'all' ? 'bg-red-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
                 >
                     All Services ({{ $this->totalServicesCount }})
@@ -101,7 +118,7 @@
                     <button
                         type="button"
                         wire:key="category-pill-{{ $cat->id }}"
-                        wire:click="setCategory('{{ $cat->slug }}')"
+                        wire:click="$set('category', '{{ $cat->slug }}')"
                         class="rounded-full px-5 py-2 text-xs font-semibold transition cursor-pointer {{ $category === $cat->slug ? 'bg-red-600 text-white shadow-xs' : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200/80' }}"
                     >
                         <span>{{ $cat->title }}</span>
