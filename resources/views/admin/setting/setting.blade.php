@@ -1,10 +1,20 @@
 <div class="space-y-6">
 
     <!-- Page Header -->
-    <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+    <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
             <h1 class="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">Site Settings</h1>
             <p class="text-xs text-slate-500 mt-0.5">Manage global company contact info, address, social media links, and Google Maps embed.</p>
+        </div>
+        <div>
+            <a
+                href="{{ route('admin.password') }}"
+                wire:navigate
+                class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-2xs hover:border-red-400 hover:text-red-700 transition"
+            >
+                <i class="ri-shield-keyhole-line text-sm text-red-600"></i>
+                <span>Change Admin Password</span>
+            </a>
         </div>
     </div>
 

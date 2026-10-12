@@ -13,20 +13,6 @@
             </p>
         </div>
 
-        <!-- Quick Demo Credentials Callout -->
-        <div class="mt-5 rounded-2xl border border-emerald-200/80 bg-emerald-50/60 p-3.5 text-xs text-emerald-900 flex items-center justify-between gap-2">
-            <div class="flex items-center gap-2">
-                <i class="ri-key-2-line text-emerald-600 text-base shrink-0"></i>
-                <div class="text-[11px] leading-tight">
-                    <span class="font-bold">Demo Login:</span>
-                    <span class="text-emerald-700">admin@facilitypro.com</span> / <span class="text-emerald-700">password</span>
-                </div>
-            </div>
-            <span class="rounded-full bg-emerald-100 px-2 py-0.5 text-[9px] font-bold uppercase text-emerald-800 shrink-0">
-                Pre-filled
-            </span>
-        </div>
-
         <!-- Form -->
         <form wire:submit="authenticate" class="mt-6 space-y-4">
             
@@ -41,7 +27,7 @@
                         id="email"
                         type="email"
                         wire:model="email"
-                        placeholder="admin@facilitypro.com"
+                        placeholder="name@company.com"
                         autocomplete="email"
                         required
                         class="w-full rounded-full border border-slate-200 bg-white pl-10 pr-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 transition"

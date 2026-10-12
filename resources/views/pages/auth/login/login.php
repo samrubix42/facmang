@@ -16,15 +16,6 @@ new #[Layout('layouts::auth')] #[Title('Sign In - RFS Admin')] class extends Com
 
     public bool $remember = false;
 
-    public function mount(): void
-    {
-        // For convenience, fill demo credentials if empty
-        if (empty($this->email)) {
-            $this->email = 'admin@facilitypro.com';
-            $this->password = 'password';
-        }
-    }
-
     public function authenticate()
     {
         $this->validate();

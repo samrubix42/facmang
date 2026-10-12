@@ -35,6 +35,16 @@
             <span class="hidden sm:inline">View Site</span>
         </a>
 
+        <!-- Change Password Link -->
+        <a
+            href="{{ route('admin.password') }}"
+            wire:navigate
+            class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-semibold text-slate-700 shadow-2xs hover:border-slate-400 hover:text-slate-900 transition {{ request()->routeIs('admin.password') ? 'bg-slate-100 text-slate-900 border-slate-300' : '' }}"
+        >
+            <i class="ri-shield-keyhole-line text-xs"></i>
+            <span class="hidden sm:inline">Change Password</span>
+        </a>
+
         <!-- Sign Out Button -->
         <button
             type="button"

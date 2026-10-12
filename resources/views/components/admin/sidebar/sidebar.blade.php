@@ -153,6 +153,18 @@
                         <span>Site Settings</span>
                     </div>
                 </a>
+
+                <!-- Change Password -->
+                <a
+                    href="{{ route('admin.password') }}"
+                    wire:navigate
+                    class="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold transition {{ request()->routeIs('admin.password') ? 'bg-slate-900 text-white shadow-xs' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900' }}"
+                >
+                    <div class="flex items-center gap-2.5">
+                        <i class="ri-shield-keyhole-line text-sm"></i>
+                        <span>Change Password</span>
+                    </div>
+                </a>
             </nav>
         </div>
 
@@ -161,7 +173,7 @@
     <!-- User Profile & Logout Footer -->
     <div class="p-4 border-t border-slate-100">
         <div class="flex items-center justify-between p-2 rounded-2xl border border-slate-200/80 bg-slate-50/60">
-            <div class="flex items-center gap-2.5 min-w-0">
+            <a href="{{ route('admin.password') }}" wire:navigate title="Change password" class="flex items-center gap-2.5 min-w-0 flex-1 hover:opacity-85 transition">
                 <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-slate-900 text-white font-bold text-xs">
                     {{ substr(auth()->user()?->name ?? 'Admin', 0, 1) }}
                 </div>
@@ -173,16 +185,26 @@
                         {{ auth()->user()?->email ?? 'admin@facilitypro.com' }}
                     </p>
                 </div>
-            </div>
+            </a>
 
-            <button
-                type="button"
-                wire:click="logout"
-                title="Sign out"
-                class="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition cursor-pointer"
-            >
-                <i class="ri-logout-box-r-line text-base"></i>
-            </button>
+            <div class="flex items-center gap-1">
+                <a
+                    href="{{ route('admin.password') }}"
+                    wire:navigate
+                    title="Change Password"
+                    class="p-1.5 rounded-lg text-slate-400 hover:text-slate-900 hover:bg-slate-200/60 transition cursor-pointer"
+                >
+                    <i class="ri-key-2-line text-base"></i>
+                </a>
+                <button
+                    type="button"
+                    wire:click="logout"
+                    title="Sign out"
+                    class="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition cursor-pointer"
+                >
+                    <i class="ri-logout-box-r-line text-base"></i>
+                </button>
+            </div>
         </div>
     </div>
 
