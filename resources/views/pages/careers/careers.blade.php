@@ -224,12 +224,7 @@
                             
                             {{-- Clean Form Header --}}
                             <div class="border-b border-slate-100 p-6 sm:p-7 space-y-4">
-                                <div class="flex items-center justify-between">
-                                    <div class="inline-flex items-center gap-1.5 rounded-full bg-red-50 px-3 py-1 text-xs font-bold text-red-600 border border-red-100">
-                                        <span class="flex h-1.5 w-1.5 rounded-full bg-red-600"></span>
-                                        <span>Direct On-Roll Application</span>
-                                    </div>
-                                </div>
+                            
 
                                 <div>
                                     <h2 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
@@ -335,7 +330,7 @@
                                             {{-- Email --}}
                                             <div class="space-y-1">
                                                 <label for="applicantEmail" class="text-xs font-bold text-slate-800">
-                                                    Email Address <span class="text-[10px] font-normal text-slate-400">Optional</span>
+                                                    Email Address
                                                 </label>
                                                 <div class="relative">
                                                     <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 pointer-events-none">
@@ -380,7 +375,6 @@
                                             <div class="space-y-1">
                                                 <label for="address" class="text-xs font-bold text-slate-800 flex items-center justify-between">
                                                     <span>City / Residential Area</span>
-                                                    <span class="text-[10px] text-slate-400 font-normal">Optional</span>
                                                 </label>
                                                 <div class="relative">
                                                     <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 pointer-events-none">
@@ -476,9 +470,8 @@
 
                                         {{-- Prior Experience Notes --}}
                                         <div class="space-y-1">
-                                            <label for="message" class="text-xs font-bold text-slate-800 flex items-center justify-between">
-                                                <span>Prior Experience &amp; Notes</span>
-                                                <span class="text-[10px] text-slate-400 font-normal">Optional</span>
+                                            <label for="message" class="text-xs font-bold text-slate-800">
+                                                Prior Experience &amp; Notes
                                             </label>
                                             <textarea
                                                 id="message"

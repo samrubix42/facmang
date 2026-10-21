@@ -27,6 +27,15 @@ test('home page displays active services with their saved photos', function () {
     $response->assertSuccessful();
     $response->assertSee('Mechanized Cleaning Operations');
     $response->assertSee('images/services/mechanized_operations.webp');
+    $response->assertSee('images/slider/PIC_4905.webp');
+    $response->assertSee('images/slider/PIC_4914.webp');
+    $response->assertSee('images/slider/PIC_4920.webp');
+    $response->assertSee('images/slider/PIC_4921.webp');
+    $response->assertDontSee('images/slider/hero_slide_1.webp');
+    $response->assertDontSee('images/slider/hero_slide_2.webp');
+    $response->assertDontSee('images/slider/hero_slide_3.webp');
+    $response->assertDontSee('images/slider/hero_slide_4.webp');
+    $response->assertDontSee('images/slider/hero_slide_5.webp');
     $response->assertSee('4+ Years With Residential Societies');
     $response->assertDontSee('Residential Society Management');
     $response->assertDontSee('Manufacturing Sector Services');

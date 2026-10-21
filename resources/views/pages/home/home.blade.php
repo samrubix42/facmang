@@ -10,39 +10,32 @@
                         touchEndX: 0,
                         slides: [
                             {
-                                title: 'To serve the excellence in facility and soft services',
+                                title: 'Facility management that keeps every space running smoothly',
                                 buttonText: 'Our Services',
                                 buttonLink: '{{ route("services") }}',
-                                image: '{{ asset("images/slider/hero_slide_1.webp") }}',
-                                alt: 'Well maintained residential and commercial property managed by Real Facility Services'
+                                image: '{{ asset("images/slider/PIC_4905.webp") }}',
+                                alt: 'Facility management project by Real Facility Services'
                             },
                             {
-                                title: 'Integrated facility management for homes and business',
+                                title: 'Integrated care for residential communities and workplaces',
                                 buttonText: 'Who We Are',
                                 buttonLink: '{{ route("about") }}',
-                                image: '{{ asset("images/slider/hero_slide_2.webp") }}',
-                                alt: 'Commercial property and office facility operations'
+                                image: '{{ asset("images/slider/PIC_4914.webp") }}',
+                                alt: 'Real Facility Services supporting residential and commercial facilities'
                             },
                             {
-                                title: 'Housekeeping, horticulture, technical and security care',
-                                buttonText: 'Soft & Technical Services',
-                                buttonLink: '{{ route("services") }}',
-                                image: '{{ asset("images/slider/hero_slide_3.webp") }}',
-                                alt: 'Housekeeping and cleaning services in progress'
+                                title: 'Reliable teams and consistent facility standards',
+                                buttonText: 'Our Clients',
+                                buttonLink: '{{ route("clients") }}',
+                                image: '{{ asset("images/slider/PIC_4920.webp") }}',
+                                alt: 'Facility services delivered by Real Facility Services'
                             },
                             {
-                                title: 'Auditing, legal support and smooth transition consultancy',
-                                buttonText: 'Consultancy',
-                                buttonLink: '{{ route("services") }}',
-                                image: '{{ asset("images/slider/hero_slide_4.webp") }}',
-                                alt: 'Hygiene, documentation and compliance audit support'
-                            },
-                            {
-                                title: '24x7 support for your residents, your people and your premises',
+                                title: 'Creating better environments through attentive service',
                                 buttonText: 'Talk to RFS',
                                 buttonLink: '{{ route("contact") }}',
-                                image: '{{ asset("images/slider/hero_slide_5.webp") }}',
-                                alt: 'Technical maintenance and engineering support team'
+                                image: '{{ asset("images/slider/PIC_4921.webp") }}',
+                                alt: 'Real Facility Services project supporting client facilities'
                             }
                         ],
                         init() {

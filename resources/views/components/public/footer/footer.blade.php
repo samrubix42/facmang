@@ -109,9 +109,7 @@
                     </li>
                 </ul>
 
-                <p class="mt-4 text-xs leading-relaxed text-slate-500">
-                    Operations desk open 24 hours. Emergency engineers on call every day of the year.
-                </p>
+
             </div>
 
         </div>

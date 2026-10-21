@@ -29,58 +29,46 @@
     {{-- Contact Quick Pills Grid --}}
     <section class="py-12 border-b border-slate-100 bg-slate-50/50">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
                 
                 <!-- Card 1: Phone -->
                 <a 
                     href="tel:{{ setting('phone', '+91 88005-93143') }}"
-                    class="flex items-start gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-red-600/40 hover:shadow-md"
+                    class="flex items-start gap-5 rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs transition hover:border-red-600/40 hover:shadow-md sm:p-8"
                 >
-                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-red-600 text-white">
-                        <i class="ri-phone-fill text-lg"></i>
+                    <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-red-600 text-white">
+                        <i class="ri-phone-fill text-xl"></i>
                     </span>
                     <div class="min-w-0 flex-1">
-                        <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Phone Support</p>
-                        <p class="mt-1 text-xs sm:text-sm font-bold text-slate-900 leading-snug">{{ setting('phone', '+91 88005-93143') }}</p>
-                        <p class="text-[11px] text-emerald-600 font-medium mt-1">Direct Support</p>
+                        <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Phone Support</p>
+                        <p class="mt-2 text-sm sm:text-base font-bold text-slate-900 leading-snug">{{ setting('phone', '+91 88005-93143') }}</p>
+                        <p class="text-xs text-emerald-600 font-medium mt-2">Direct Support</p>
                     </div>
                 </a>
 
                 <!-- Card 2: Email -->
                 <a 
                     href="mailto:{{ setting('email', 'info@realfacilityservices.com') }}"
-                    class="flex items-start gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-[#12233F]/40 hover:shadow-md"
+                    class="flex items-start gap-5 rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs transition hover:border-[#12233F]/40 hover:shadow-md sm:p-8"
                 >
-                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
-                        <i class="ri-mail-fill text-lg"></i>
+                    <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
+                        <i class="ri-mail-fill text-xl"></i>
                     </span>
                     <div class="min-w-0 flex-1">
-                        <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Email Address</p>
-                        <p class="mt-1 text-xs sm:text-sm font-bold text-slate-900 break-all leading-snug">{{ setting('email', 'info@realfacilityservices.com') }}</p>
-                        <p class="text-[11px] text-slate-500 font-medium mt-1">Quick Response</p>
+                        <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Email Address</p>
+                        <p class="mt-2 text-sm sm:text-base font-bold text-slate-900 break-all leading-snug">{{ setting('email', 'info@realfacilityservices.com') }}</p>
+                        <p class="text-xs text-slate-500 font-medium mt-2">Quick Response</p>
                     </div>
                 </a>
 
                 <!-- Card 3: Location -->
-                <div class="flex items-start gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs">
-                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
-                        <i class="ri-map-pin-2-fill text-lg"></i>
+                <div class="flex items-start gap-5 rounded-3xl border border-slate-200/80 bg-white p-7 shadow-xs sm:p-8">
+                    <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
+                        <i class="ri-map-pin-2-fill text-xl"></i>
                     </span>
                     <div class="min-w-0 flex-1">
-                        <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Corporate HQ</p>
-                        <p class="mt-1 text-xs sm:text-sm font-bold text-slate-900 leading-snug">{{ setting('address', 'Office No. 2, First Floor, Plot No. 128, New Haibatpur, Near Gaur City Mall, Sector 4, Greater Noida West (U.P.) 201318') }}</p>
-                    </div>
-                </div>
-
-                <!-- Card 4: Hours -->
-                <div class="flex items-start gap-4 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xs">
-                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#12233F]/10 text-[#12233F]">
-                        <i class="ri-time-fill text-lg"></i>
-                    </span>
-                    <div class="min-w-0 flex-1">
-                        <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Office Timings</p>
-                        <p class="mt-1 text-xs sm:text-sm font-bold text-slate-900 leading-snug">{{ setting('office_hours', 'Mon - Sat: 10:00 AM - 7:00 PM') }}</p>
-                        <p class="text-[11px] text-slate-500 font-medium mt-1">Sunday Closed</p>
+                        <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Corporate HQ</p>
+                        <p class="mt-2 text-sm sm:text-base font-bold text-slate-900 leading-snug">{{ setting('address', 'Office No. 2, First Floor, Plot No. 128, New Haibatpur, Near Gaur City Mall, Sector 4, Greater Noida West (U.P.) 201318') }}</p>
                     </div>
                 </div>
 
@@ -139,7 +127,7 @@
                             <!-- Email & Phone -->
                             <div class="grid gap-4 sm:grid-cols-2">
                                 <div>
-                                    <label for="contact-email" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5">Work Email <span class="font-normal text-slate-400">Optional</span></label>
+                                    <label for="contact-email" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5">Work Email</label>
                                     <input
                                         id="contact-email"
                                         type="email"

@@ -40,7 +40,11 @@ test('contact page uses the configured map embed link for the map and directions
     $this->get(route('contact'))
         ->assertSee('src="'.$mapUrl.'"', false)
         ->assertSee('href="'.$mapUrl.'"', false)
-        ->assertSee('referrerpolicy="strict-origin-when-cross-origin"', false);
+        ->assertSee('referrerpolicy="strict-origin-when-cross-origin"', false)
+        ->assertSee('lg:grid-cols-3')
+        ->assertSee('sm:p-8')
+        ->assertDontSee('Office Timings')
+        ->assertDontSee('Sunday Closed');
 });
 
 test('contact form sends email notification to target email when submitted', function () {
