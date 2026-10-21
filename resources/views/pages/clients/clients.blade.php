@@ -28,23 +28,20 @@
     <section class="py-14 sm:py-20 lg:py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6">
+            <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8 lg:grid-cols-5">
                 @forelse ($this->clients as $client)
                     <div 
                         wire:key="client-logo-{{ $client->id }}"
-                        class="group relative flex h-36 sm:h-40 items-center justify-center rounded-2xl sm:rounded-3xl border border-slate-200/80 bg-white p-4 sm:p-6 shadow-xs hover:border-[#12233F]/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden cursor-default"
+                        class="group relative z-0 flex h-44 items-center justify-center transition-transform duration-300 hover:z-10 hover:-translate-y-2 hover:scale-110 sm:h-52 lg:h-56 motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
-                        <div class="relative flex h-full w-full items-center justify-center">
+                        <div class="flex h-full w-full items-center justify-center">
                             <img
                                 src="{{ asset($client->image) }}"
                                 alt="{{ $client->title ?? 'Client Logo' }}"
-                                class="max-h-20 sm:max-h-24 max-w-[85%] object-contain transition-all duration-300 group-hover:scale-110 filter saturate-90 group-hover:saturate-100"
+                                class="max-h-32 max-w-[95%] object-contain transition-transform duration-300 group-hover:scale-105 sm:max-h-40 lg:max-h-44 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
                                 onerror="this.onerror=null; this.src='https://placehold.co/150x150?text=Client';"
                             />
                         </div>
-
-                        <!-- Subtle decorative hover border glow -->
-                        <div class="absolute inset-0 rounded-2xl sm:rounded-3xl border-2 border-transparent group-hover:border-red-500/20 pointer-events-none transition-colors"></div>
                     </div>
                 @empty
                     <div class="col-span-full rounded-3xl border border-dashed border-slate-200 bg-white p-8 text-center sm:p-12">

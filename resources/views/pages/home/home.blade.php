@@ -277,7 +277,7 @@
                 <!-- Left Image (Clean, No Overlay Or Badge) -->
                 <div class="order-1">
                     <img
-                        src="{{ asset('images/PIC_4918.webp') }}"
+                        src="{{ asset('images/PIC_4923.webp') }}"
                         alt="Real Facility Services team managing a residential and commercial property"
                         loading="lazy"
                         decoding="async"
@@ -630,18 +630,18 @@
                 </p>
             </div>
 
-            <div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-6">
+            <div class="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8 lg:grid-cols-5">
                 @forelse ($this->clients as $client)
                     <div
                         wire:key="client-logo-{{ $client->id }}"
-                        class="flex h-32 items-center justify-center rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs transition hover:border-[#12233F]/30 hover:shadow-lg sm:h-36"
+                        class="group relative z-0 flex h-44 items-center justify-center transition-transform duration-300 hover:z-10 hover:-translate-y-2 hover:scale-110 sm:h-52 motion-reduce:transition-none motion-reduce:hover:transform-none"
                     >
                         <img
                             src="{{ asset($client->image) }}"
                             alt="{{ $client->title ?? 'Client Logo' }}"
                             loading="lazy"
                             decoding="async"
-                            class="max-h-20 max-w-[85%] object-contain"
+                            class="max-h-32 max-w-[95%] object-contain transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:transform-none"
                             onerror="this.onerror=null; this.src='https://placehold.co/150x150?text=Client';"
                         />
                     </div>

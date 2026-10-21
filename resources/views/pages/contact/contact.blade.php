@@ -305,7 +305,7 @@
                         </div>
                     </div>
                     <a 
-                        href="{{ setting('google_map_link', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.655923218129!2d77.4276549!3d28.610097299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5900b942d4f%3A0xcb8eeabb60fb701f!2sNDS%20Security%20Services%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1790676970101!5m2!1sen!2sin') }}" 
+                        href="{{ setting('google_map_link', 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3502.6540133758394!2d77.42513697549995!3d28.610154575677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM2JzM2LjYiTiA3N8KwMjUnMzkuOCJF!5e0!3m2!1sen!2sin!4v1792579945736!5m2!1sen!2sin') }}"
                         target="_blank" 
                         rel="noopener noreferrer"
                         class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2 text-xs font-semibold text-slate-800 shadow-xs hover:border-[#12233F]/40 hover:text-[#12233F] transition"
@@ -319,10 +319,11 @@
                 <div class="relative h-[420px] sm:h-[480px] w-full">
                     <iframe 
                         title="Real Facility Services (RFS) Office Location Map"
-                        src="{{ setting('google_map_link', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.655923218129!2d77.4276549!3d28.610097299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5900b942d4f%3A0xcb8eeabb60fb701f!2sNDS%20Security%20Services%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1790676970101!5m2!1sen!2sin') }}" 
+                        src="{{ setting('google_map_link', 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3502.6540133758394!2d77.42513697549995!3d28.610154575677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM2JzM2LjYiTiA3N8KwMjUnMzkuOCJF!5e0!3m2!1sen!2sin!4v1792579945736!5m2!1sen!2sin') }}"
                         class="h-full w-full border-0" 
                         allowfullscreen="" 
                         loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"
                     ></iframe>
                 </div>
 

@@ -2,6 +2,7 @@
 
 use App\Mail\ContactSubmittedMail;
 use App\Models\Contact;
+use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 use Livewire\Livewire;
@@ -26,6 +27,20 @@ test('public contact form submits successfully and saves inquiry to database', f
     expect($contact->phone)->toBe('+1 (555) 123-4567');
     expect($contact->property_type)->toBe('Corporate Office Tower');
     expect($contact->is_read)->toBeFalse();
+});
+
+test('contact page uses the configured map embed link for the map and directions', function () {
+    $mapUrl = 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3502.6540133758394!2d77.42513697549995!3d28.610154575677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM2JzM2LjYiTiA3N8KwMjUnMzkuOCJF!5e0!3m2!1sen!2sin!4v1792579945736!5m2!1sen!2sin';
+
+    Setting::updateOrCreate(
+        ['key' => 'google_map_link'],
+        ['value' => $mapUrl]
+    );
+
+    $this->get(route('contact'))
+        ->assertSee('src="'.$mapUrl.'"', false)
+        ->assertSee('href="'.$mapUrl.'"', false)
+        ->assertSee('referrerpolicy="strict-origin-when-cross-origin"', false);
 });
 
 test('contact form sends email notification to target email when submitted', function () {

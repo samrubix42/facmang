@@ -32,7 +32,7 @@ new #[Title('Real Facility Services (RFS) - Integrated Facility & Soft Services 
         return Client::where('is_active', true)
             ->orderBy('sort_order')
             ->orderBy('id')
-            ->take(12)
+            ->take(10)
             ->get();
     }
 
