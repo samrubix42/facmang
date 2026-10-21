@@ -29,8 +29,6 @@ new #[Title('Careers - Join Our Operations Team - Real Facility Services')] clas
 
     public string $experience = '';
 
-    public string $shift = 'Day Shift';
-
     public string $address = '';
 
     public string $message = '';
@@ -97,7 +95,6 @@ new #[Title('Careers - Join Our Operations Team - Real Facility Services')] clas
             'applicantPhone' => ['required', 'string', 'min:7', 'max:30'],
             'selectedJobId' => ['nullable', 'exists:job_applications,id'],
             'experience' => ['nullable', 'string'],
-            'shift' => ['required', 'string'],
             'address' => ['nullable', 'string', 'max:255'],
             'message' => ['nullable', 'string', 'max:1000'],
             'resume' => ['required', 'file', 'mimes:pdf,doc,docx', 'max:10240'],

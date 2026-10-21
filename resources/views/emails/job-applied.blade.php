@@ -10,7 +10,7 @@ A new job application has been submitted for **{{ $jobApplied->job?->title ?: 'G
 * **Applicant Name:** {{ $jobApplied->name }}
 * **Email Address:** {{ $jobApplied->email }}
 * **Phone Number:** {{ $jobApplied->phone }}
-* **Address:** {{ $jobApplied->address ?: 'Not provided' }}
+* **City / Residential Area:** {{ $jobApplied->address ?: 'Not provided' }}
 * **Experience:** {{ $jobApplied->experince ?: 'Not specified' }}
 * **Applied Date:** {{ $jobApplied->created_at ? $jobApplied->created_at->format('M d, Y - h:i A') : now()->format('M d, Y - h:i A') }}
 @if($jobApplied->resume)

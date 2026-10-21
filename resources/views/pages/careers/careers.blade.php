@@ -335,7 +335,7 @@
                                             {{-- Email --}}
                                             <div class="space-y-1">
                                                 <label for="applicantEmail" class="text-xs font-bold text-slate-800">
-                                                    Email Address <span class="text-red-500">*</span>
+                                                    Email Address <span class="text-[10px] font-normal text-slate-400">Optional</span>
                                                 </label>
                                                 <div class="relative">
                                                     <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 pointer-events-none">
@@ -355,7 +355,7 @@
                                             </div>
                                         </div>
 
-                                        {{-- Experience & Shift Preference (2 Columns) --}}
+                                        {{-- Experience & City / Residential Area --}}
                                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                                             <div class="space-y-1">
                                                 <label for="experience" class="text-xs font-bold text-slate-800">
@@ -378,42 +378,22 @@
                                             </div>
 
                                             <div class="space-y-1">
-                                                <label for="shift" class="text-xs font-bold text-slate-800">
-                                                    Preferred Shift <span class="text-red-500">*</span>
+                                                <label for="address" class="text-xs font-bold text-slate-800 flex items-center justify-between">
+                                                    <span>City / Residential Area</span>
+                                                    <span class="text-[10px] text-slate-400 font-normal">Optional</span>
                                                 </label>
-                                                <select
-                                                    id="shift"
-                                                    wire:model="shift"
-                                                    class="flex h-10 w-full rounded-xl border border-slate-200 bg-white px-3 py-1 text-xs shadow-2xs transition text-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500/20 focus-visible:border-red-500 cursor-pointer"
-                                                >
-                                                    <option value="Day Shift">Day Shift (7:00 AM – 3:30 PM)</option>
-                                                    <option value="Evening Shift">Evening Shift (3:00 PM – 11:30 PM)</option>
-                                                    <option value="Night Shift">Night Shift (11:00 PM – 7:30 AM)</option>
-                                                    <option value="Rotational / Any Shift">Rotational / Any Shift</option>
-                                                </select>
-                                                @error('shift')
-                                                    <p class="text-[11px] text-red-500 font-medium">{{ $message }}</p>
-                                                @enderror
-                                            </div>
-                                        </div>
-
-                                        {{-- City / Area (Optional) --}}
-                                        <div class="space-y-1">
-                                            <label for="address" class="text-xs font-bold text-slate-800 flex items-center justify-between">
-                                                <span>City / Residential Area</span>
-                                                <span class="text-[10px] text-slate-400 font-normal">Optional</span>
-                                            </label>
-                                            <div class="relative">
-                                                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 pointer-events-none">
-                                                    <i class="ri-map-pin-line text-xs"></i>
-                                                </span>
-                                                <input
-                                                    type="text"
-                                                    id="address"
-                                                    wire:model="address"
-                                                    placeholder="e.g. Whitefield, Bengaluru"
-                                                    class="flex h-10 w-full rounded-xl border border-slate-200 bg-white pl-9 pr-3 py-1 text-xs shadow-2xs transition placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500/20 focus-visible:border-red-500"
-                                                />
+                                                <div class="relative">
+                                                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 pointer-events-none">
+                                                        <i class="ri-map-pin-line text-xs"></i>
+                                                    </span>
+                                                    <input
+                                                        type="text"
+                                                        id="address"
+                                                        wire:model="address"
+                                                        placeholder="e.g. Whitefield, Bengaluru"
+                                                        class="flex h-10 w-full rounded-xl border border-slate-200 bg-white pl-9 pr-3 py-1 text-xs shadow-2xs transition placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500/20 focus-visible:border-red-500"
+                                                    />
+                                                </div>
                                             </div>
                                         </div>
 

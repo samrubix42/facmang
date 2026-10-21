@@ -28,9 +28,13 @@ class JobAppliedMail extends Mailable
     {
         $jobTitle = $this->jobApplied->job?->title ?: 'General Position';
 
+        $replyTo = $this->jobApplied->email
+            ? [new Address($this->jobApplied->email, $this->jobApplied->name)]
+            : [];
+
         return new Envelope(
             subject: "New Job Application [{$jobTitle}]: {$this->jobApplied->name}",
-            replyTo: [new Address($this->jobApplied->email, $this->jobApplied->name)],
+            replyTo: $replyTo,
         );
     }
 

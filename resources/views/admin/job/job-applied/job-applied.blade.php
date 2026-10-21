@@ -240,7 +240,11 @@
                     </div>
                     <div>
                         <span class="text-[10px] uppercase font-bold text-slate-400 block">Email</span>
-                        <a href="mailto:{{ $selectedApplication->email }}" class="font-bold text-slate-800 hover:text-red-600 transition truncate block">{{ $selectedApplication->email }}</a>
+                        @if ($selectedApplication->email)
+                            <a href="mailto:{{ $selectedApplication->email }}" class="font-bold text-slate-800 hover:text-red-600 transition truncate block">{{ $selectedApplication->email }}</a>
+                        @else
+                            <span class="font-semibold text-slate-500">Not provided</span>
+                        @endif
                     </div>
                     <div>
                         <span class="text-[10px] uppercase font-bold text-slate-400 block">Experience</span>
@@ -279,7 +283,7 @@
                 {{-- Address if provided --}}
                 @if ($selectedApplication->address)
                     <div class="space-y-1">
-                        <p class="text-[10px] uppercase font-bold text-slate-400">Address / Location</p>
+                        <p class="text-[10px] uppercase font-bold text-slate-400">City / Residential Area</p>
                         <p class="text-xs text-slate-700 bg-slate-50 p-2.5 rounded-lg border border-slate-100">{{ $selectedApplication->address }}</p>
                     </div>
                 @endif

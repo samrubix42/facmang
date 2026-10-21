@@ -58,6 +58,25 @@ test('contact form sends email notification to target email when submitted', fun
     Mail::assertSent(ContactSubmittedMail::class, function ($mail) {
         return $mail->hasTo('samcool3203@gmail.com') && $mail->contact->email === 'jsmith@enterprise.com';
     });
+
+    test('contact form can be submitted without an email address', function () {
+        Mail::fake();
+
+        Livewire::test('pages::contact')
+            ->set('name', 'John Smith')
+            ->set('phone', '+1 (555) 123-4567')
+            ->set('propertyType', 'Corporate Office Tower')
+            ->set('message', 'Requesting an on-site spatial audit and facility proposal.')
+            ->call('addcontact')
+            ->assertHasNoErrors()
+            ->assertSet('submitted', true);
+
+        expect(Contact::first()->email)->toBeNull();
+
+        Mail::assertSent(ContactSubmittedMail::class, function ($mail) {
+            return $mail->envelope()->replyTo === [];
+        });
+    });
 });
 
 test('contact form does not send admin mail if target email is empty', function () {

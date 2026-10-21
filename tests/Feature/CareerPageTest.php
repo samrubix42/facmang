@@ -22,6 +22,8 @@ test('career page is accessible via /careers and displays rupees', function () {
     $response->assertSuccessful();
     $response->assertSee('Careers');
     $response->assertSee('Open roles with guaranteed pay');
+    $response->assertSee('City / Residential Area');
+    $response->assertDontSee('Preferred Shift');
     $response->assertSee('₹');
 });
 
@@ -37,7 +39,7 @@ test('user can submit application with resume on career page and emails are sent
         ->set('applicantName', 'Jane Doe')
         ->set('applicantEmail', 'jane.doe@example.com')
         ->set('applicantPhone', '9876543210')
-        ->set('shift', 'Day Shift')
+        ->set('address', 'Whitefield, Bengaluru')
         ->set('message', 'Certified ISSA floor care technician.')
         ->set('resume', $fakeResume)
         ->call('apply')
@@ -48,6 +50,7 @@ test('user can submit application with resume on career page and emails are sent
     $applied = JobApplied::first();
     expect($applied->name)->toBe('Jane Doe')
         ->and($applied->job_id)->toBe($job->id)
+        ->and($applied->address)->toBe('Whitefield, Bengaluru')
         ->and($applied->experince)->toBe('')
         ->and($applied->resume)->not->toBeNull();
 
@@ -68,7 +71,6 @@ test('career application does not send admin mail if target email is empty', fun
         ->set('applicantName', 'Jane Doe')
         ->set('applicantEmail', 'jane.doe@example.com')
         ->set('applicantPhone', '9876543210')
-        ->set('shift', 'Day Shift')
         ->set('resume', $fakeResume)
         ->call('apply');
 
@@ -91,7 +93,6 @@ test('user can submit application without a selected job', function () {
         ->set('applicantName', 'Jane Doe')
         ->set('applicantEmail', 'jane.doe@example.com')
         ->set('applicantPhone', '9876543210')
-        ->set('shift', 'Day Shift')
         ->set('resume', $fakeResume)
         ->call('apply')
         ->assertHasNoErrors()
@@ -111,9 +112,31 @@ test('after applying user sees only we will get back to you message', function (
         ->set('applicantEmail', 'jane.doe@example.com')
         ->set('applicantPhone', '9876543210')
         ->set('experience', '1-3 years')
-        ->set('shift', 'Day Shift')
         ->set('resume', $fakeResume)
         ->call('apply')
         ->assertSee('We will get back to you shortly.')
         ->assertDontSee('Submit Another Application');
+});
+
+test('career application can be submitted without an email address', function () {
+    Mail::fake();
+    Storage::fake('public');
+    $fakeResume = UploadedFile::fake()->create('resume.pdf', 500, 'application/pdf');
+
+    Livewire::test('pages::careers')
+        ->set('selectedJobId', null)
+        ->set('applicantName', 'Jane Doe')
+        ->set('applicantPhone', '9876543210')
+        ->set('address', 'Whitefield, Bengaluru')
+        ->set('resume', $fakeResume)
+        ->call('apply')
+        ->assertHasNoErrors()
+        ->assertDispatched('toast-show');
+
+    expect(JobApplied::first()->email)->toBeNull()
+        ->and(JobApplied::first()->address)->toBe('Whitefield, Bengaluru');
+
+    Mail::assertSent(JobAppliedMail::class, function ($mail) {
+        return $mail->envelope()->replyTo === [];
+    });
 });

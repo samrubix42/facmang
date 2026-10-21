@@ -139,7 +139,7 @@
                             <!-- Email & Phone -->
                             <div class="grid gap-4 sm:grid-cols-2">
                                 <div>
-                                    <label for="contact-email" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5">Work Email *</label>
+                                    <label for="contact-email" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5">Work Email <span class="font-normal text-slate-400">Optional</span></label>
                                     <input
                                         id="contact-email"
                                         type="email"
