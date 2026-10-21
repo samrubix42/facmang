@@ -393,7 +393,7 @@
                         <p class="text-3xl font-extrabold tracking-tight text-white tabular-nums sm:text-4xl lg:text-5xl" x-data="countUp(2000, 0)">
                             <span x-text="display">0</span>+
                         </p>
-                        <p class="mt-2 text-[11px] sm:text-xs font-medium text-slate-300">Guards Deployed</p>
+                        <p class="mt-2 text-[11px] sm:text-xs font-medium text-slate-300">Employees Deployed</p>
                     </div>
 
                     <div class="text-center lg:border-l lg:border-white/10 lg:px-4 col-span-2 sm:col-span-1">
@@ -784,7 +784,6 @@
                                 <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#12233F] text-white font-bold text-xs" x-text="item.name.charAt(0)"></div>
                                 <div>
                                     <h3 class="text-xs sm:text-sm font-bold text-slate-900" x-text="item.name"></h3>
-                                    <p class="text-[11px] text-slate-400" x-text="item.role"></p>
                                 </div>
                             </div>
                         </div>

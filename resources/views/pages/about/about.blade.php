@@ -202,7 +202,7 @@
                         <p class="text-3xl font-extrabold tracking-tight text-white tabular-nums sm:text-4xl lg:text-5xl" x-data="countUp(2000, 0)">
                             <span x-text="display">0</span>+
                         </p>
-                        <p class="mt-2 text-[11px] sm:text-xs font-medium text-slate-300">Guards Deployed</p>
+                        <p class="mt-2 text-[11px] sm:text-xs font-medium text-slate-300">Employees Deployed</p>
                     </div>
 
                     <div class="text-center lg:border-l lg:border-white/10 lg:px-4 col-span-2 sm:col-span-1">

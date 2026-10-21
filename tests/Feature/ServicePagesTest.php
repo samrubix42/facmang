@@ -59,6 +59,19 @@ test('home page displays four-year experience from active testimonials', functio
         ->assertSee('over four years');
 });
 
+test('home testimonials show first name and last initial without designation', function () {
+    Testimonial::factory()->create([
+        'name' => 'Dr. Rajesh Menon',
+        'designation' => 'President, Green Meadows RWA',
+        'testimonial' => 'A sample testimonial from our residential client.',
+    ]);
+
+    $this->get(route('home'))
+        ->assertSee('Rajesh M.')
+        ->assertDontSee('Dr. Rajesh Menon')
+        ->assertDontSee('President, Green Meadows RWA');
+});
+
 test('service detail page renders successfully for a given slug', function () {
     $response = $this->get(route('services.show', ['slug' => 'mechanized-operations']));
 

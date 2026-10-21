@@ -46,8 +46,7 @@ new #[Title('Real Facility Services (RFS) - Integrated Facility & Soft Services 
         if ($dbItems && $dbItems->isNotEmpty()) {
             return $dbItems->map(fn ($item) => [
                 'quote' => $item->testimonial,
-                'name' => $item->name,
-                'role' => $item->designation,
+                'name' => $this->formatTestimonialName($item->name),
                 'rating' => $item->rating,
                 'metric' => 'Verified Client',
             ])->all();
@@ -56,25 +55,34 @@ new #[Title('Real Facility Services (RFS) - Integrated Facility & Soft Services 
         return [
             [
                 'quote' => 'Our society earlier ran on three different vendors and nobody answered after 8pm. Real Facility Services took over housekeeping, horticulture, technical and security on one contract, and the handover happened without a single service gap.',
-                'name' => 'Rajesh Menon',
-                'role' => 'President, Green Meadows RWA',
+                'name' => 'Rajesh M.',
                 'rating' => 5,
                 'metric' => '4+ Yrs Managed',
             ],
             [
                 'quote' => 'RFS has run our commercial complex for over four years. Their trained in-house technicians and 24x7 desk mean an escalator fault at 11pm is closed before our staff even notice it.',
-                'name' => 'Anita Deshpande',
-                'role' => 'Facility Head, Sunridge Business Park',
+                'name' => 'Anita D.',
                 'rating' => 5,
                 'metric' => '24x7 Support',
             ],
             [
                 'quote' => 'The transition consultancy was the most professional handover we have been through. Vendor selection, rosters, documentation and compliance were all ready before we signed.',
-                'name' => 'Sameer Kulkarni',
-                'role' => 'Managing Director, Kalpataru Group',
+                'name' => 'Sameer K.',
                 'rating' => 5,
                 'metric' => 'Zero-Downtime Shift',
             ],
         ];
+    }
+
+    private function formatTestimonialName(string $name): string
+    {
+        $name = preg_replace('/^(?:Dr|Mr|Mrs|Ms)\.?\s+/i', '', trim($name)) ?? trim($name);
+        $nameParts = preg_split('/\s+/', $name, flags: PREG_SPLIT_NO_EMPTY);
+
+        if (count($nameParts) < 2) {
+            return $nameParts[0] ?? '';
+        }
+
+        return $nameParts[0].' '.mb_substr($nameParts[array_key_last($nameParts)], 0, 1).'.';
     }
 };
