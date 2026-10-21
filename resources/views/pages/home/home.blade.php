@@ -305,7 +305,7 @@
                     <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
                         Our strength is a strong management team of people with relevant technical and professional
                         experience, supported by expert, well experienced technical staff and trained workers who
-                        aspire to deliver complete facility services. With more than three years of experience in
+                        aspire to deliver complete facility services. With more than four years of experience in
                         managing residential societies, our integrated facility management covers housekeeping,
                         horticulture, technical and security maintenance supported by auditing, legal support and
                         consultancy for smooth transition and operation, on a 24x7 support system.
@@ -404,7 +404,7 @@
                     </div>
 
                     <div class="text-center lg:border-l lg:border-white/10 lg:px-4 col-span-2 sm:col-span-1">
-                        <p class="text-3xl font-extrabold tracking-tight text-red-400 tabular-nums sm:text-4xl lg:text-5xl" x-data="countUp(3, 0)">
+                        <p class="text-3xl font-extrabold tracking-tight text-red-400 tabular-nums sm:text-4xl lg:text-5xl" x-data="countUp(4, 0)">
                             <span x-text="display">0</span>+
                         </p>
                         <p class="mt-2 text-[11px] sm:text-xs font-medium text-slate-300">Years of Trust</p>
@@ -455,7 +455,7 @@
                     <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#12233F]/10 text-[#12233F] transition-colors duration-300 group-hover:bg-[#12233F] group-hover:text-white">
                         <i class="ri-community-line text-lg"></i>
                     </span>
-                    <h3 class="mt-5 text-base font-bold text-slate-900">3+ Years With Residential Societies</h3>
+                    <h3 class="mt-5 text-base font-bold text-slate-900">4+ Years With Residential Societies</h3>
                     <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">
                         Society management is our core strength. We understand committee expectations, resident
                         sensitivities and the daily rhythm of a residential community.
@@ -836,7 +836,7 @@
                         </span>
                     </button>
                     <div x-show="activeFaq === 1" x-collapse class="px-5 pb-5 text-xs sm:text-sm leading-relaxed text-slate-600 border-t border-slate-100 pt-3">
-                        Real Facility Services (RFS) is an ISO 9001:2015 certified integrated facility management provider operating since 2022. With over 3 years of specialized experience in residential society and commercial facility management, our motto is "To serve the excellence" through safe, reliable, and customized facility solutions.
+                        Real Facility Services (RFS) is an ISO 9001:2015 certified integrated facility management provider operating since 2022. With over 4 years of specialized experience in residential society and commercial facility management, our motto is "To serve the excellence" through safe, reliable, and customized facility solutions.
                     </div>
                 </div>
 

@@ -229,7 +229,6 @@
                                         <span class="flex h-1.5 w-1.5 rounded-full bg-red-600"></span>
                                         <span>Direct On-Roll Application</span>
                                     </div>
-                                    <span class="text-xs text-slate-400 font-medium">Free • No Placement Fee</span>
                                 </div>
 
                                 <div>
@@ -527,21 +526,6 @@
                                     </form>
                                 @endif
 
-                                {{-- Trust Badges --}}
-                                <div class="mt-5 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] text-slate-500 font-medium">
-                                    <span class="inline-flex items-center gap-1">
-                                        <i class="ri-checkbox-circle-fill text-emerald-600"></i>
-                                        <span>100% Free Application</span>
-                                    </span>
-                                    <span class="inline-flex items-center gap-1">
-                                        <i class="ri-shield-check-fill text-[#12233F]"></i>
-                                        <span>Direct On-Roll Hiring</span>
-                                    </span>
-                                    <span class="inline-flex items-center gap-1">
-                                        <i class="ri-phone-line text-red-600"></i>
-                                        <span>Call in 24 Hours</span>
-                                    </span>
-                                </div>
 
                             </div>
                         </div>
@@ -556,72 +540,6 @@
 
    
 
-    {{-- The Hiring Process (4 Steps) --}}
-    <section class="py-14 sm:py-18 bg-slate-50/40">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10">
-            
-            <div class="text-center max-w-2xl mx-auto space-y-2.5">
-                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#12233F]/10 px-3.5 py-1 text-xs font-semibold text-[#12233F]">
-                    <i class="ri-footprint-line text-red-600"></i> Simple 4-Step Process
-                </span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">
-                    How We Hire &amp; Welcome You
-                </h2>
-                <p class="text-xs sm:text-sm text-slate-500">
-                    A respectful, swift journey from your online application to your first paid assignment.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                {{-- Step 1 --}}
-                <div class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs space-y-3">
-                    <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#12233F] text-white text-xs font-bold">
-                        1
-                    </span>
-                    <h3 class="text-sm font-bold text-slate-900">2-Minute Application</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Pick your preferred position on the left, fill out your mobile number and experience, and submit directly.
-                    </p>
-                </div>
-
-                {{-- Step 2 --}}
-                <div class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs space-y-3">
-                    <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-white text-xs font-bold">
-                        2
-                    </span>
-                    <h3 class="text-sm font-bold text-slate-900">10-Min Phone Call</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Our HR manager calls to understand your nearby facility location preference, shifts, and wage details.
-                    </p>
-                </div>
-
-                {{-- Step 3 --}}
-                <div class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs space-y-3">
-                    <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#12233F] text-white text-xs font-bold">
-                        3
-                    </span>
-                    <h3 class="text-sm font-bold text-slate-900">Document Verification</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Quick submission of standard identity proof (Aadhaar/PAN/Bank Details) for on-roll compliance and ESI/PF registration.
-                    </p>
-                </div>
-
-                {{-- Step 4 --}}
-                <div class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs space-y-3">
-                    <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white text-xs font-bold">
-                        4
-                    </span>
-                    <h3 class="text-sm font-bold text-slate-900">Paid Induction &amp; Uniforms</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Receive branded uniforms, safety equipment, equipment walkthroughs, and begin your first shift with full pay.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
 
  
 </div>

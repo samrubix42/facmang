@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Testimonial;
 use Database\Seeders\ServiceCategorySeeder;
 use Database\Seeders\ServiceSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -26,8 +27,27 @@ test('home page displays active services with their saved photos', function () {
     $response->assertSuccessful();
     $response->assertSee('Mechanized Cleaning Operations');
     $response->assertSee('images/services/mechanized_operations.webp');
+    $response->assertSee('4+ Years With Residential Societies');
     $response->assertDontSee('Residential Society Management');
     $response->assertDontSee('Manufacturing Sector Services');
+});
+
+test('public pages describe four years of company experience', function () {
+    $this->get(route('home'))
+        ->assertSee('more than four years of experience');
+
+    $this->get(route('about'))
+        ->assertSee('more than four years.')
+        ->assertSee('countUp(4, 0)', false);
+});
+
+test('home page displays four-year experience from active testimonials', function () {
+    Testimonial::factory()->create([
+        'testimonial' => 'RFS has managed our corporate towers for over four years.',
+    ]);
+
+    $this->get(route('home'))
+        ->assertSee('over four years');
 });
 
 test('service detail page renders successfully for a given slug', function () {

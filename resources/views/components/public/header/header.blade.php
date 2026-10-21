@@ -82,7 +82,6 @@
                             </span>
                         </span>
                         <div>
-                            <p class="text-[9px] font-bold uppercase tracking-wider text-slate-400 leading-tight">24/7 Dispatch</p>
                             <p class="text-xs font-bold text-slate-900 leading-tight">{{ setting('phone', '+91 88005-93143') }}</p>
                         </div>
                     </a>
